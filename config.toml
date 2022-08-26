@@ -14,10 +14,10 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/banner.png"
-  SEOTitle = "Janyl Jumadinova"
+  #SEOTitle = "Janyl Jumadinova"
   description = "Janyl Jumadinova。Teacher. Researcher. Mother."
   keyword = "janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent"
-  slogan = "let's do it"
+  #slogan = "let's do it"
 
   image_404 = "img/404-bg.jpg"
   title_404 = "Page not found :("
@@ -86,32 +86,32 @@ home = ["HTML", "RSS", "Algolia"]
   #xing          = "https://www.xing.com/profile/yourxingid"
   #git           = "full profile url for git user"
 
-  [[params.friend_link]]
-  title = "Linda的博客"
-  href =  "https://zhaozhihan.com"
+  #[[params.friend_link]]
+  #title = "Linda的博客"
+  #href =  "https://zhaozhihan.com"
 
-  [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
-  [[params.bookmark_link]]
-  title = "ServiceMesher"
-  href =  "http://www.servicemesher.com"
-  [[params.bookmark_link]]
-  title =  "Pxhere"
-  href = "https://pxhere.com"
-  [[params.bookmark_link]]
-  title = "unsplash"
-  href = "https://unsplash.com"
+  #[[params.bookmark_link]]
+  #title =  "Martin Fowler"
+  #href =  "https://martinfowler.com"
+  #[[params.bookmark_link]]
+  #title = "ServiceMesher"
+  #href =  "http://www.servicemesher.com"
+  #[[params.bookmark_link]]
+  #title =  "Pxhere"
+  #href = "https://pxhere.com"
+  #[[params.bookmark_link]]
+  #title = "unsplash"
+  #href = "https://unsplash.com"
 
-  [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
-  [[params.addtional_menus]]
-  title =  "ARCHIVE"
-  href =  "/top/archive/"
-  [[params.addtional_menus]]
-  title =  "ABOUT"
-  href =  "/top/about/"
+  #[[params.addtional_menus]]
+  #title =  "BOOKS"
+  #href =  "/top/books/"
+  #[[params.addtional_menus]]
+  #title =  "ARCHIVE"
+  #href =  "/top/archive/"
+  #[[params.addtional_menus]]
+  #title =  "ABOUT"
+  #href =  "/top/about/"
 
 [outputFormats.Algolia]
 baseName = "algolia"
