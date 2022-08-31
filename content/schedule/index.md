@@ -12,6 +12,8 @@ author: Janyl Jumadinova
 
 To meet with me during my office hours you need to schedule an appointment. My general office hours are:
 
+Day      | Time 
+ ----------- | ----------- 
 Monday | 9am - 11am
 Monday | 1:30pm - 3:30pm
 Tuesday | 1pm - 2pm
