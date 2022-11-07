@@ -10,7 +10,7 @@ author: Janyl Jumadinova
 
 # Scheduling Office Hours
 
-To schedule a meeting with me during my office hours, please [book an appointment](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUFoazVfUk9aZUhBfGRlZmF1bHR8ZjYyMGE3MTdhNWViMzg2OTcxNTQxMzJmNTU5ZjY2NmM). You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.
+To schedule a meeting with me during my office hours, please [book an appointment](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUlkYVE2bFBENnZEfGRlZmF1bHR8NjQ3NzRkNjBjY2EzNzAwMDAxMmY1MmMwZTQ5MTA2MmI). You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.
 
 # Office Hour Location
 
