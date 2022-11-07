@@ -18,7 +18,7 @@ Unless otherwise specified, all office hour appointments will take place in my o
 
 # Online Office Hours
 
-After you schedule office hour via Google calendar but you prefer to meet over Google Meet, please send me a Discord message so I can set up a video link in advance.
+If you prefer or need to meet over Google Meet, please send me a Discord message so I can set up a video link in advance of our scheduled appointment.
 
 # Meeting outside Office Hours
 
