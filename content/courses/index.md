@@ -2,9 +2,24 @@
 layout: page
 title: Courses
 subtitle: Teaching at Allegheny College
-date: 2022-08-22T00:00:00.000Z
+date: 2023-01-17T00:00:00.000Z
 author: Janyl Jumadinova
 ---
+
+# Spring 2023
+
+## CMPSC 201: Programming Languages
+
+A study of the fundamental concepts that arise in different programming language paradigms. Students learn how programming languages are designed and implemented, and how these factors affect the overall usability, performance, and effectiveness of computer software. Participating in hands-on activities that often require teamwork, students gain experience in leveraging the styles and features of programming languages to implement and evaluate correct and efficient computer software. During a weekly laboratory session, students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
+
+### [Course Organization](https://github.com/CMPSC-201-Spring2023)
+
+## CMPSC 310: Artificial Intelligence
+
+A study of the design and implementation of intelligent computer systems that can learn, plan, and solve problems autonomously. In addition to examining techniques for designing intelligent software agents, students investigate the social, political, and ethical implications of intelligent systems. Through hands-on activities that often require team-work, students explore the application of artificial intelligence methods in areas such as computer vision, natural language processing, and video game development. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
+
+### [Course Organization](https://github.com/CMPSC-310-AI-Spring2023)
+
 
 # Fall 2022
 
