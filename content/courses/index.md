@@ -8,6 +8,25 @@ author: Janyl Jumadinova
 
 # Spring 2023
 
+## Crawford Central
+
+### Game Development Resources
+
+- [Godot Key Concepts](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html#)
+
+### Robotics
+
+#### January 27th Tasks:
+
+1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
+2. Go to mygopigo.com
+3. Drive the robot around using remote control (buttons)
+4. Go to Code -> Bloxter
+5. Try existing block-based code
+6. Create own code for robot movement
+7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
+
+
 ## CMPSC 201: Programming Languages
 
 A study of the fundamental concepts that arise in different programming language paradigms. Students learn how programming languages are designed and implemented, and how these factors affect the overall usability, performance, and effectiveness of computer software. Participating in hands-on activities that often require teamwork, students gain experience in leveraging the styles and features of programming languages to implement and evaluate correct and efficient computer software. During a weekly laboratory session, students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
@@ -34,22 +53,4 @@ A human-centric study of the principles used during the engineering of high-qual
 A study of the design and implementation of autonomous software agents and robotic systems that cooperatively complete complex tasks. In addition to examining techniques for large-scale coordination and group-based decision-making, students learn how to apply the field's technologies to address the challenges facing local and global communities. Participating in hands-on activities that often require teamwork, students develop and evaluate several multi-agent or multi-robot systems, while also reflecting on the civic issues surrounding the use of these systems. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.
 
 ### [Course Organization](https://github.com/CMPSC-311-Allegheny-College-Fall-2022)
-
-## Crawford Central
-
-### Game Development Resources
-
-- [Godot Key Concepts](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html#)
-
-### Robotics
-
-#### January 27th Tasks:
-
-1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
-2. Go to [mygopigo.com](mygopigo.com)
-3. Drive the robot around using remote control (buttons)
-4. Go to Code -> Bloxter
-5. Try existing block-based code
-6. Create own code for robot movement
-7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
 
