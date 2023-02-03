@@ -10,15 +10,38 @@ author: Janyl Jumadinova
 
 ## Crawford Central
 
-### Game Development Resources
+### High School Game Development
 
 - [Godot Key Concepts](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html#)
 
-### Robotics
+### High School Robotics
+
+#### January 27th Tasks:
+
+1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
+2. Go to mygopigo.com
+3. Drive the robot around using remote control (buttons)
+4. Go to Code -> Bloxter
+5. Try existing block-based code
+6. Create own code for robot movement
+7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
+
+### Middle School Robotics Majors
 
 - [Build instructions](https://www.youtube.com/watch?v=GQi99xmohdw)
 - [Try IR remote control programs](https://www.youtube.com/watch?v=1msnPf8uimU&feature=youtu.be&themeRefresh=1)
 
+### Middle School Robotics Minors
+
+#### February 3rd Tasks:
+
+1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
+2. Go to mygopigo.com
+3. Drive the robot around using remote control (buttons)
+4. Go to Code -> Bloxter
+5. Try existing block-based code
+6. Create own code for robot movement
+7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
 
 ## CMPSC 201: Programming Languages
 
