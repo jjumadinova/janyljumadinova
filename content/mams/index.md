@@ -15,6 +15,11 @@ author: Janyl Jumadinova
 
 ## Middle School Robotics Minors
 
+### February 24th Tasks:
+
+- Get to know Python programming language
+- Write a program in Python for specified robot movement
+
 ### February 3rd Tasks for gopigo:
 
 1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
