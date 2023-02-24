@@ -12,6 +12,7 @@ author: Janyl Jumadinova
 
 - [Build instructions](https://www.youtube.com/watch?v=GQi99xmohdw)
 - [Try IR remote control programs](https://www.youtube.com/watch?v=1msnPf8uimU&feature=youtu.be&themeRefresh=1)
+- [Code Tutorial](https://www.elegoo.com/blogs/arduino-projects/elegoo-smart-robot-car-kit-v4-0-tutorial)
 
 ## Middle School Robotics Minors
 
