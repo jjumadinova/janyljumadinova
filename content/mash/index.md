@@ -20,11 +20,11 @@ author: Janyl Jumadinova
 ### Supplemental Task: Enhancing the game
 
 - Start thinking of ideas to enhance the 2D game you have developed. How can you make the game a little bit your own?
-- f you have time, start putting those ideas to practice. 
+- If you have time, start putting those ideas to practice. 
 	
 ## High School Robotics: Tasks for March 31st
 
-### Task 1 1: Robotic Races
+### Task 1: Robotic Races
 
 We will hold robotic racing challenges! Last time you programmed your robot to be able to complete in a sprint and box pushing races. You could elect to develop either an ethical (e.g., respectful) or an aggressive (e.g., interfering) robot behavior. Today, we will actually run those races. **Everyone must participate for evaluation.**
 
