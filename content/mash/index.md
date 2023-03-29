@@ -8,63 +8,59 @@ author: Janyl Jumadinova
 
 # Crawford Central MASH
 
-## High School Game Development
+## High School Game Development: Tasks for March 31st
 
-- [Godot Key Concepts](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html#)
-- [Step by Step Learning Concepts](https://docs.godotengine.org/en/stable/getting_started/step_by_step/index.html)
-- [First 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
-	- Starter Code for `Player`
+###  Main Task: Finish [First 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
+
+- Last time we finished [Coding the player](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html)
+- First, please verify your player is able to move around appropriately.
+- Then, move on to [Creating the enemy](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html) and the following sections. 
+- By the end of the session, you should aim to have a 2D game that is playable.
+
+### Supplemental Task: Enhancing the game
+
+- Start thinking of ideas to enhance the 2D game you have developed. How can you make the game a little bit your own?
+- f you have time, start putting those ideas to practice. 
+	
+## High School Robotics: Tasks for March 31st
+
+### Task 1 1: Robotic Races
+
+We will hold robotic racing challenges! Last time you programmed your robot to be able to complete in a sprint and box pushing races. You could elect to develop either an ethical (e.g., respectful) or an aggressive (e.g., interfering) robot behavior. Today, we will actually run those races. **Everyone must participate for evaluation.**
+
+#### Race Rules
+
+All robots will begin on the same line. The end line will be marked with tape. 
+
+1. **Sprint race:** Robots will race along a straight path for three meters until the end line is reached. The robot that reaches the end line _first_ wins.
+2. **Push race:** Each robot will have a small box right in front of it (front center). The robot needs to push the box along a straight path for three meters until it pushes the box across the end line. The robot that pushes the small box across the end line _first_ wins.
+
+### Task 2: Implement a dancing gopigo robot
+
+After races are complete, use the remainder of the session, to begin developing a dancing `gopigo` robot. You will finish this project during our next session and will demonstrate it for evaluation.
+
+#### Requirements
+
+- Your robot must use a speaker and play music.
+- Your code must use an `if` statement. Ask a teaching assistant for help with this task!
+- Your code must use a loop (such as `for` or `while` loop). Ask a teaching assistant for help with this task!
+
+To use the provided speakers, you can play any `mp3` sound you find by running the following code:
 ```
-extends Area2D
+import pygame
 
-signal hit
-
-export var speed = 400 # How fast the player will move (pixels/sec).
-var screen_size # Size of the game window.
-
-func _ready():
-	screen_size = get_viewport_rect().size
-	hide()
-
-func _process(delta):
-	var velocity = Vector2.ZERO # The player's movement vector.
-	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("move_down"):
-		velocity.y += 1
-	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
-
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		$AnimatedSprite2D.play()
-	else:
-		$AnimatedSprite2D.stop()
-
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+pygame.mixer.init()    
+pygame.mixer.music.load("music.mp3")
+pygame.mixer.music.set_volume(1)
+pygame.mixer.music.play()
+# do something
+pygame.mixer.music.stop()
 ```
 
-## High School Robotics
-
-### Working with Robots
+### Reminder: Working with Robots
 
 1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
 2. Connect to robot's wifi
 3. Go to mygopigo.com and click on `Code` -> `Python`
 4. Complete the activity 
 5. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
-
-### Activity: Robotic Races - March 17
-
-We will hold robotic racing challenges! You will need to program your robot to be able to complete in a sprint and box pushing races. You can elect to develop either an ethical (e.g., respectful) or an aggressive (e.g., interfering) robot behavior.
-
-#### Race Rules
-
-All robots will begin on the same line. The end line will be marked with tape. Robot positions (left/right) will be determined randomly by the instructor.
-
-1. **Sprint race:** Robots will race along a straight path for three meters until the end line is reached. The robot that reaches the end line _first_ wins.
-2. **Push race:** Each robot will have a small box right in front of it (front center). The robot needs to push the box along a straight path for three meters until it pushes the box across the end line. The robot that pushes the small box across the end line _first_ wins.
