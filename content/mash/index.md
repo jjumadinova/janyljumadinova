@@ -19,7 +19,7 @@ author: Janyl Jumadinova
 
 ### Supplemental Task: Enhancing the game
 
-- Start thinking of ideas to enhance the 2D game you have developed. How can you make the game a little bit your own?
+- Start thinking of ideas to enhance the 2D game you have developed. How can you make the game your own to some degree?
 - If you have time, start putting those ideas to practice. 
 	
 ## High School Robotics: Tasks for March 31st
