@@ -10,7 +10,7 @@ author: Janyl Jumadinova
 
 ## High School Game Development: Tasks for March 31st
 
-###  Main Task: Finish [First 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
+###  Main Task: Finish [First 2D Game](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html).
 
 - Last time we finished [Coding the player](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html)
 - First, please verify your player is able to move around appropriately.
