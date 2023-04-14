@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Meadville Area Middle School Courses
+title: Crawford Central Middle School Courses
 subtitle: Teaching MAMS
 date: 2023-03-24T00:00:00.000Z
 author: Janyl Jumadinova
@@ -18,6 +18,19 @@ author: Janyl Jumadinova
 5. Try existing Python code
 6. Create own code for robot races
 7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
+
+To use the provided speakers, you can play any `mp3` sound you find by running the following code:
+```
+import pygame
+
+pygame.mixer.init()    
+pygame.mixer.music.load("music.mp3")
+pygame.mixer.music.set_volume(1)
+pygame.mixer.music.play()
+# do something
+pygame.mixer.music.stop()
+```
+
 
 ### Arduino Robots
 
