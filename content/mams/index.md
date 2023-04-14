@@ -31,6 +31,11 @@ pygame.mixer.music.play()
 pygame.mixer.music.stop()
 ```
 
+### Music Files
+
+- [Happy](Happy.mp3)
+- [Wii_Music](Wii_Music.mp3)
+- [No_Role_Modelz](No_Role_Modelz.mp3)
 
 ### Arduino Robots
 
