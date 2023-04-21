@@ -14,7 +14,7 @@ author: Janyl Jumadinova
 
 - Have a playable 2D game based on the [First 2D Game tutorial](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html).
 
-- Enhance the 2D game you have developed. How can you make the game your own to some degree? %- If you have time, start putting those ideas to practice.
+- Enhance the 2D game you have developed. How can you make the game your own to some degree?
 
 ## High School Robotics
 
