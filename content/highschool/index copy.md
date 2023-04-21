@@ -14,13 +14,31 @@ author: Janyl Jumadinova
 
 - Have a playable 2D game based on the [First 2D Game tutorial](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html).
 
+%- Last time we finished [Coding the player](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html) %- First, please verify your player is able to move around appropriately. %- Then, move on to [Creating the enemy](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html) and the following sections. %- By the end of the session, you should aim to have a 2D game that is playable.
+
+%### Supplemental Task: Enhancing the game
+
 - Enhance the 2D game you have developed. How can you make the game your own to some degree? %- If you have time, start putting those ideas to practice.
 
-## High School Robotics
+## High School Robotics %: Tasks for March 31st
 
-Develop a dancing `gopigo` robot.
+%### Task 1: Robotic Races
 
-### Tasks
+%We will hold robotic racing challenges! Last time you programmed your robot to be able to complete in a sprint and box pushing races. You could elect to develop either an ethical (e.g., respectful) or an aggressive (e.g., interfering) robot behavior. Today, we will actually run those races. **Everyone must participate for evaluation.**
+
+%#### Race Rules
+
+%All robots will begin on the same line. The end line will be marked with tape.
+
+%1\. **Sprint race:** Robots will race along a straight path for three meters until the end line is reached. The robot that reaches the end line _first_ wins. %2\. **Push race:** Each robot will have a small box right in front of it (front center). The robot needs to push the box along a straight path for three meters until it pushes the box across the end line. The robot that pushes the small box across the end line _first_ wins.
+
+### Tasks %2: Implement a dancing gopigo robot
+
+%After races are complete, use the remainder of the session, to begin
+
+Developing a dancing `gopigo` robot. %You will finish this project during our next session and will demonstrate it for evaluation.
+
+#### Requirements
 
 - Your robot must use a speaker and play music.
 - Your code must use an `if` statement. Ask a teaching assistant for help with this task!
