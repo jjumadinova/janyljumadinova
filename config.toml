@@ -99,11 +99,11 @@ home = ["HTML", "RSS", "Algolia"]
   title =  "COURSES"
   href =  "/courses/"
   [[params.addtional_menus]]
-  title =  "MASH"
-  href =  "/mash/"
+  title =  "HighSchool"
+  href =  "/highschool/"
   [[params.addtional_menus]]
-  title =  "MAMS"
-  href =  "/mams/"
+  title =  "MiddleSchool"
+  href =  "/middleschool/"
   [[params.addtional_menus]]
   title =  "RESEARCH"
   href =  "/research/"
