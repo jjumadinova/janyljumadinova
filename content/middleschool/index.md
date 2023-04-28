@@ -19,6 +19,7 @@ Below is the sample code using a speaker and some sample music files:
 
 ```
 import easygopigo3 as easy
+import pygame
 
 gpg = easy.EasyGoPiGo3()
 
