@@ -2,7 +2,7 @@
 layout: page
 title: Courses
 subtitle: The courses I am teaching at Allegheny College.
-date: 2023-01-18T00:00:00.000Z
+date: 2023-04-18T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
@@ -10,8 +10,8 @@ author: Janyl Jumadinova
 
 ## Crawford Central
 
-- [MASH courses](https://janyljumadinova.com/mash/)
-- [MAMS courses](https://janyljumadinova.com/mams/)
+- [High School courses](https://janyljumadinova.com/highschool/)
+- [Middle School courses](https://janyljumadinova.com/middleschool/)
 
 ## CMPSC 201: Programming Languages
 
