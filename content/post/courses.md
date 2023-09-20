@@ -6,12 +6,34 @@ date: 2023-04-18T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
+
+# Fall 2023
+
+## Enrichment Program
+
+- [High School](https://janyljumadinova.com/highschool/)
+- [Middle School](https://janyljumadinova.com/middleschool/)
+
+## CMPSC 100: Computational Expression
+
+An introduction to the principles of computer science with an emphasis on creative expression through the medium of a programming language. Participating in hands-on activities that often require teamwork, students learn the computational structures needed to solve problems and produce computational artifacts which address these problems in real-world contexts. Students also learn how to organize and document a program's source code so that it effectively communicates with the intended users and maintainers. Additionally, the introduction includes an overview of the discipline of computer science and computational thinking. During a weekly laboratory session students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
+
+### [Course Organization](https://github.com/cmpsc100-allegheny-college)
+
+## FS 101: Academic Discourse I
+
+An exploration of oral and written communication with a focus on description and summary. The topical material covered in the seminar varies from section to section and year to year. All first-year students take Academic Discourse I during the fall semester.
+
+### Topic Description
+
+An exploration of various texts produced by Artificial Intelligence technology. Students learn about natural language tools, including the companies and business models behind them, and investigate the types of texts these tools are able to produce. We also examine misuses, ethical issues, and existing and work-in-progress policies surrounding these technologies. Coursework emphasizes the development of effective oral and written communication skills with a focus on description, summary, and critical thinking.
+
 # Spring 2023
 
-## Crawford Central
+## Enrichment Program
 
-- [High School courses](https://janyljumadinova.com/highschool/)
-- [Middle School courses](https://janyljumadinova.com/middleschool/)
+- [High School courses](https://janyljumadinova.com/highschool_s2023/)
+- [Middle School courses](https://janyljumadinova.com/middleschool_s2023/)
 
 ## CMPSC 201: Programming Languages
 

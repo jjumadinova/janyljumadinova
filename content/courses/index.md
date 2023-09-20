@@ -8,17 +8,10 @@ author: Janyl Jumadinova
 
 # Fall 2023
 
-## Robotics Immersion Program
+## Robotics Enrichment Program
 
-#### Getting started with `gopigo`:
-
-1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
-2. Go to mygopigo.com
-3. Drive the robot around using remote control (buttons)
-4. Go to Code -> Bloxter
-5. Write block-based code for robot movement
-6. Write Python code for robot movement
-7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
+- [High School courses](https://janyljumadinova.com/highschool/)
+- [Middle School courses](https://janyljumadinova.com/middleschool/)
 
 ## CMPSC 100: Computational Expression
 
@@ -35,6 +28,11 @@ An exploration of oral and written communication with a focus on description and
 An exploration of various texts produced by Artificial Intelligence technology. Students learn about natural language tools, including the companies and business models behind them, and investigate the types of texts these tools are able to produce. We also examine misuses, ethical issues, and existing and work-in-progress policies surrounding these technologies. Coursework emphasizes the development of effective oral and written communication skills with a focus on description, summary, and critical thinking.
 
 # Spring 2023
+
+## Enrichment Program
+
+- [High School courses](https://janyljumadinova.com/highschool_s2023/)
+- [Middle School courses](https://janyljumadinova.com/middleschool_s2023/)
 
 ## CMPSC 201: Programming Languages
 
