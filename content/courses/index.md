@@ -2,50 +2,39 @@
 layout: page
 title: Courses
 subtitle: Teaching at Allegheny College
-date: 2023-01-17T00:00:00.000Z
+date: 2023-09-17T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
+# Fall 2023
+
+## Robotics Immersion Program
+
+#### Getting started with `gopigo`:
+
+1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
+2. Go to mygopigo.com
+3. Drive the robot around using remote control (buttons)
+4. Go to Code -> Bloxter
+5. Write block-based code for robot movement
+6. Write Python code for robot movement
+7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
+
+## CMPSC 100: Computational Expression
+
+An introduction to the principles of computer science with an emphasis on creative expression through the medium of a programming language. Participating in hands-on activities that often require teamwork, students learn the computational structures needed to solve problems and produce computational artifacts which address these problems in real-world contexts. Students also learn how to organize and document a program's source code so that it effectively communicates with the intended users and maintainers. Additionally, the introduction includes an overview of the discipline of computer science and computational thinking. During a weekly laboratory session students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
+
+### [Course Organization](https://github.com/cmpsc100-allegheny-college)
+
+## FS 101: Academic Discourse I
+
+An exploration of oral and written communication with a focus on description and summary. The topical material covered in the seminar varies from section to section and year to year. All first-year students take Academic Discourse I during the fall semester.
+
+### Topic Description
+
+An exploration of various texts produced by Artificial Intelligence technology. Students learn about natural language tools, including the companies and business models behind them, and investigate the types of texts these tools are able to produce. We also examine misuses, ethical issues, and existing and work-in-progress policies surrounding these technologies. Coursework emphasizes the development of effective oral and written communication skills with a focus on description, summary, and critical thinking.
+
 # Spring 2023
-
-## Crawford Central
-
-### High School Game Development
-
-- [Godot Key Concepts](https://docs.godotengine.org/en/stable/getting_started/introduction/key_concepts_overview.html#)
-
-### High School Robotics
-
-#### January 27th Tasks:
-
-1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
-2. Go to mygopigo.com
-3. Drive the robot around using remote control (buttons)
-4. Go to Code -> Bloxter
-5. Try existing block-based code
-6. Create own code for robot movement
-7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
-
-### Middle School Robotics Majors
-
-- [Build instructions](https://www.youtube.com/watch?v=GQi99xmohdw)
-- [Try IR remote control programs](https://www.youtube.com/watch?v=1msnPf8uimU&feature=youtu.be&themeRefresh=1)
-
-### Middle School Robotics Minors
-
-#### February 3rd Tasks for gopigo:
-
-1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
-2. Go to mygopigo.com
-3. Drive the robot around using remote control (buttons)
-4. Go to Code -> Bloxter
-5. Try existing block-based code
-6. Create own code for robot movement
-7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
-
-#### February 3rd Tasks for Elegoo robot
-
-- [Try IR remote control programs](https://www.youtube.com/watch?v=1msnPf8uimU&feature=youtu.be&themeRefresh=1)
 
 ## CMPSC 201: Programming Languages
 
@@ -58,7 +47,6 @@ A study of the fundamental concepts that arise in different programming language
 A study of the design and implementation of intelligent computer systems that can learn, plan, and solve problems autonomously. In addition to examining techniques for designing intelligent software agents, students investigate the social, political, and ethical implications of intelligent systems. Through hands-on activities that often require team-work, students explore the application of artificial intelligence methods in areas such as computer vision, natural language processing, and video game development. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions. 
 
 ### [Course Organization](https://github.com/CMPSC-310-AI-Spring2023)
-
 
 # Fall 2022
 
