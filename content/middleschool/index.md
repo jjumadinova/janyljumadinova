@@ -33,7 +33,10 @@ Navigate in a maze with lights blinking and sound blasting without hitting anyth
 
 1. Plug in the speaker
 2. Find a open-source tune
-3. Try it in the code
+   - [Sound Examples](https://ccrma.stanford.edu/~jos/pasp/Sound_Examples.html)
+   - [Sound Effects](https://bvker.com/foley-sound-effects/)
+   - [Sound Events](https://zenodo.org/record/5117901)
+4. Try it in the code
 
 ```
 import pygame
