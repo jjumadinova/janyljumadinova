@@ -37,6 +37,7 @@ Navigate in a maze with lights blinking and sound blasting without hitting anyth
    - [Sound Effects](https://bvker.com/foley-sound-effects/)
    - [Sound Events](https://zenodo.org/record/5117901)
 4. Try it in the code
+  - [pygame.mixer commands](https://www.pygame.org/docs/ref/mixer.html)
 
 ```
 import pygame
