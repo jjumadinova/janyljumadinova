@@ -12,7 +12,7 @@ author: Janyl Jumadinova
 
 [EasyGoPiGo Documentation](https://gopigo3.readthedocs.io/en/master/api-basic/easygopigo3.html#)
 
-## Sessions 2 & 3
+## Sessions 2, 3 & 4
 
 ### Search & Rescue Mission
 
