@@ -47,9 +47,6 @@ pygame.mixer.init()
 pygame.mixer.music.load("music.mp3")
 pygame.mixer.music.set_volume(1)
 pygame.mixer.music.play()
-
-# Stop playing music
-pygame.mixer.music.stop()
 ```
 
 ### Distance Sensor
