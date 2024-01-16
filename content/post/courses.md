@@ -2,10 +2,17 @@
 layout: page
 title: Courses
 subtitle: The courses I am teaching at Allegheny College.
-date: 2023-04-18T00:00:00.000Z
+date: 2024-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
+# Spring 2024
+
+## CMPSC 311: Robotic Agents
+
+A study of the design and implementation of autonomous software agents and robotic systems that cooperatively complete complex tasks. In addition to examining techniques for large-scale coordination and group-based decision-making, students learn how to apply the field's technologies to address the challenges facing local and global communities. Participating in hands-on activities that often require teamwork, students develop and evaluate several multi-agent or multi-robot systems, while also reflecting on the civic issues surrounding the use of these systems. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.
+
+### [Course Organization](https://github.com/CMPSC-304-Robotic-Agents-Spring-2024)
 
 # Fall 2023
 

@@ -2,7 +2,7 @@
 layout: page
 title: Courses
 subtitle: Teaching at Allegheny College
-date: 2023-09-17T00:00:00.000Z
+date: 2024-01-16T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
