@@ -12,7 +12,7 @@ author: Janyl Jumadinova
 
 [EasyGoPiGo Documentation](https://gopigo3.readthedocs.io/en/master/api-basic/easygopigo3.html#)
 
-## Sessions 2 & 3
+## Sessions 2, 3 & 4
 
 ### Search & Rescue Mission
 
@@ -47,9 +47,6 @@ pygame.mixer.init()
 pygame.mixer.music.load("music.mp3")
 pygame.mixer.music.set_volume(1)
 pygame.mixer.music.play()
-
-# Stop playing music
-pygame.mixer.music.stop()
 ```
 
 ### Distance Sensor
@@ -58,10 +55,19 @@ pygame.mixer.music.stop()
 2. Try it out in the code
 
 ```
+import easygopigo3 as easy
+
 gpg = easy.EasyGoPiGo3()
 my_distance_sensor = gpg.init_distance_sensor() # init the distance sensor
-# the distance is measured in millimeters
-print(my_distance_sensor.read_mm())
+steps = 100 # times
+t = 0
+while t < steps:
+    dist = my_distance_sensor.read_inches()
+    if dist > 20:
+        gpg.drive_inches(5)
+    else:
+        gpg.turn_degrees(90)
+    t = t + 1
 ```
 
 ## Session 1
