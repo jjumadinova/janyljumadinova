@@ -2,7 +2,7 @@
 layout: page
 title: Middle School
 subtitle: Teaching Enrichment
-date: 2023-03-24T00:00:00.000Z
+date: 2024-01-24T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
@@ -11,6 +11,16 @@ author: Janyl Jumadinova
 ## Middle School Robotics Majors
 
 [EasyGoPiGo Documentation](https://gopigo3.readthedocs.io/en/master/api-basic/easygopigo3.html#)
+
+## Session 1
+
+### Getting started with `gopigo`:
+
+1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
+2. Go to mygopigo.com or `10.10.10.10`
+3. Write Bloxter code for robot movement
+4. Write Python code for robot movement
+5. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
 
 ## Sessions 2, 3 & 4
 
@@ -26,8 +36,7 @@ Navigate in a maze with lights blinking and sound blasting without hitting anyth
 
 ### Camera
 
-1. Install the camera on a raspberri pi.
-2. Try out the program called `TakingPhotos.ipynb` located on `gopigo` under "Examples" 
+Try out the program called `TakingPhotos.ipynb` located on `gopigo` under "Examples" 
 
 ### Speakers
 
@@ -45,7 +54,6 @@ import pygame
 # Play music
 pygame.mixer.init()    
 pygame.mixer.music.load("music.mp3")
-pygame.mixer.music.set_volume(1)
 pygame.mixer.music.play()
 ```
 
@@ -69,15 +77,6 @@ while t < steps:
         gpg.turn_degrees(90)
     t = t + 1
 ```
-
-## Session 1
-
-### Getting started with `gopigo`:
-
-1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
-2. Go to mygopigo.com
-6. Write Python code for robot movement
-7. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
 
 ## Middle School Robotics Minors
 
