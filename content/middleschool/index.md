@@ -2,7 +2,7 @@
 layout: page
 title: Middle School
 subtitle: Teaching Enrichment
-date: 2024-01-24T00:00:00.000Z
+date: 2024-02-09T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
@@ -19,24 +19,16 @@ author: Janyl Jumadinova
 1. [Turn on battery and turn on the robot](https://www.youtube.com/watch?v=aKPE6Sn8EKI&t=40s)
 2. Go to mygopigo.com or `10.10.10.10`
 3. Write Bloxter code for robot movement
-4. Write Python code for robot movement
 5. [Shut down the robot](https://www.youtube.com/watch?time_continue=39&v=Co2i673mCQ4&embeds_euri=https%3A%2F%2Fwww.google.com%2F&source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&feature=emb_logo)
 
-## Sessions 2, 3 & 4
+## Session 2
 
-### Search & Rescue Mission
-
-Navigate in a maze with lights blinking and sound blasting without hitting anything until locate a lost object (reach the end). Once located, take a picture.
-
-### LED Lights
+1. Write Python code for robot movement
+2. Write Python code for light manipulation
 
 [LED Blinkers Code](https://github.com/DexterInd/GoPiGo_Python_Examples/blob/master/Sample_Programs_GoPiGo3/easy_Blinkers.py)
 
 [LED Eyes Code](https://github.com/DexterInd/GoPiGo_Python_Examples/blob/master/Sample_Programs_GoPiGo3/easy_DexEyes.py)
-
-### Camera
-
-Try out the program called `TakingPhotos.ipynb` located on `gopigo` under "Examples" 
 
 ### Speakers
 
@@ -56,6 +48,12 @@ pygame.mixer.init()
 pygame.mixer.music.load("music.mp3")
 pygame.mixer.music.play()
 ```
+
+### Race
+
+Straight line race with music playing and lights blinking.
+
+## Session 3
 
 ### Distance Sensor
 
