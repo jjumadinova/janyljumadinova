@@ -75,6 +75,34 @@ while t < steps:
         gpg.turn_degrees(90)
     t = t + 1
 ```
+## Session 4
+
+### Moisture monitoring
+
+```
+/*
+*Simple sketch to demonstrate sending data over Serial to a computer
+*Program reads data from the moisture sensor
+*/
+
+int soilMoistureValue = 0;
+
+void setup(){
+  Serial.begin(9600); // Start up Serial Port
+  Serial.println("Simple Logging Sketch - send serial data to CSV");
+}
+
+void loop(){
+  // Wait for computer to send character
+  // Once character received, start sending data to computer
+  soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
+  Serial.print("Moisture reading: ");
+  Serial.println(soilMoistureValue);
+  // 2500 gives two outputs per second
+  // 25000 give two outputs every 25 seconds
+  delay(10000);
+}
+```
 
 ## Middle School Robotics Minors
 
