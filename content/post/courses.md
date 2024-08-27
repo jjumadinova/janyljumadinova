@@ -2,15 +2,7 @@
 layout: page
 title: Courses
 subtitle: The courses I am teaching at Allegheny College.
-date: 2024-01-15T00:00:00.000Z
-author: Janyl Jumadinova
----
-
----
-layout: page
-title: Courses
-subtitle: Teaching at Allegheny College
-date: 2024-08-26T00:00:00.000Z
+date: 2024-08-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
