@@ -10,7 +10,7 @@ author: Janyl Jumadinova
 
 ## Schedule
 
-Basic Electronics &#8594; Programming Boards &#8594; Sensors &#8594; Connecting to Internet &#8594; Environmental Monitoring Project
+### Basic Electronics &#8594; Programming Boards &#8594; Sensors &#8594; Connecting to Internet &#8594; Environmental Monitoring Project
 
 ## Session 1
 
