@@ -16,4 +16,6 @@ author: Janyl Jumadinova
 
 [Introduction to Arduino](https://docs.google.com/presentation/d/1Uzj6hXgbsv0XJcUhdJ__9KNt1Tii-QKJaGz4chCLlt8/pub?start=false&loop=false&delayms=3000)
 
+## Session 2
+
 [Coding with Arduino](https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&loop=false&delayms=3000)
