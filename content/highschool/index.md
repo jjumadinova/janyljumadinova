@@ -19,3 +19,7 @@ author: Janyl Jumadinova
 ## Session 2
 
 [Coding with Arduino](https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&loop=false&delayms=3000)
+
+## Session 3
+
+[Working with Sensors](https://docs.google.com/document/d/1xhmEOlyb5ZhjXJy2qlHyxbbLeyG3f_lW_OV2ltz-Ud0/edit?usp=sharing)
