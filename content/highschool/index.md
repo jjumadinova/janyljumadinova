@@ -26,5 +26,4 @@ author: Janyl Jumadinova
 
 ## Session 4
 
-- [ROV Design](https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&loop=false&delayms=3000)
-- [Building the ROV Frame](https://docs.google.com/document/d/1JO1pM3XBeRCmAP9afXCYYmD5eIm-PML3H3EooP9FBmE/edit?usp=sharing)
+
