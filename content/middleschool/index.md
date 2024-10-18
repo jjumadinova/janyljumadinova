@@ -32,16 +32,14 @@ author: Janyl Jumadinova
 int soilMoistureValue = 0;
 
 void setup(){
-Serial.begin(9600); // Start up Serial Port
-Serial.println("Simple Data Reading Program - send data over serial");
+  Serial.begin(9600); // Start up Serial Port
+  Serial.println("Simple Data Reading Program - send data over serial");
 }
 
 void loop(){
-// Wait for computer to send character
-// Once character received, start sending data to computer
-soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
-Serial.print("Moisture reading: ");
-Serial.println(soilMoistureValue);
- 	delay(5000);
+  soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
+  Serial.print("Moisture reading: ");
+  Serial.println(soilMoistureValue);
+ 	delay(5000); // in ms
 }
 ```
