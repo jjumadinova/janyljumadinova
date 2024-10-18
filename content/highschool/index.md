@@ -23,3 +23,8 @@ author: Janyl Jumadinova
 ## Session 3
 
 [Working with Sensors](https://docs.google.com/document/d/1xhmEOlyb5ZhjXJy2qlHyxbbLeyG3f_lW_OV2ltz-Ud0/edit?usp=sharing)
+
+## Session 4
+
+- [ROV Design](https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&loop=false&delayms=3000)
+- [Building the ROV Frame](https://docs.google.com/document/d/1JO1pM3XBeRCmAP9afXCYYmD5eIm-PML3H3EooP9FBmE/edit?usp=sharing)
