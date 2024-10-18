@@ -20,3 +20,28 @@ author: Janyl Jumadinova
 ## Session 2
 
 [Coding with Arduino](https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&loop=false&delayms=3000)
+
+
+## Session 3
+
+- [ROV Design](https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&loop=false&delayms=3000)
+- [Building the ROV Frame](https://docs.google.com/document/d/1JO1pM3XBeRCmAP9afXCYYmD5eIm-PML3H3EooP9FBmE/edit?usp=sharing)
+- Sensors
+  
+```
+int soilMoistureValue = 0;
+
+void setup(){
+Serial.begin(9600); // Start up Serial Port
+Serial.println("Simple Data Reading Program - send data over serial");
+}
+
+void loop(){
+// Wait for computer to send character
+// Once character received, start sending data to computer
+soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
+Serial.print("Moisture reading: ");
+Serial.println(soilMoistureValue);
+ 	delay(5000);
+}
+```
