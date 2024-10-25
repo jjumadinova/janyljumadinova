@@ -1,7 +1,7 @@
 ---
 layout: page
 title: High School Code
-subtitle: Teaching Enrichment
+subtitle: Teaching Enrichment Coding
 date: 2024-09-20T00:00:00.000Z
 author: Janyl Jumadinova
 ---
@@ -35,6 +35,9 @@ void loop() {
   float temperatureC = sensors.getTempCByIndex(0);
   Serial.print("Temperature (°C): ");
   Serial.println(temperatureC);
+  // Wait for 1 second before the next reading
+  delay(1000);
+}
 ```
 
 ## Arduino Cloud Code
@@ -91,8 +94,5 @@ void loop() {
   delay(1000);
 }
 ```
-  // Wait for 1 second before the next reading
-  delay(1000);
-}
-```
+  
 
