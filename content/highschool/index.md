@@ -10,7 +10,7 @@ author: Janyl Jumadinova
 
 ## Schedule
 
-### Basic Electronics &#8594; Programming Boards &#8594; Sensors &#8594; Connecting to Internet &#8594; Environmental Monitoring Project
+### Basic Electronics &#8594; Programming Boards &#8594; Sensors &#8594; Connecting to the Cloud &#8594; Environmental Monitoring Project
 
 ## Session 1
 
@@ -26,4 +26,4 @@ author: Janyl Jumadinova
 
 ## Session 4
 
-
+[Connecting to the Cloud](https://docs.google.com/presentation/d/e/2PACX-1vRBpG9QPUNJ4V4oM2tGHONUrWbXCXd_cdHyH8vpACYNJKS6r34YyHDi-ka3D0u3HvN5vbl68ZEcVFQa/pub?start=false&loop=false&delayms=3000)
