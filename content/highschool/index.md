@@ -28,3 +28,4 @@ author: Janyl Jumadinova
 
 [Connecting to the Cloud](https://docs.google.com/presentation/d/e/2PACX-1vRBpG9QPUNJ4V4oM2tGHONUrWbXCXd_cdHyH8vpACYNJKS6r34YyHDi-ka3D0u3HvN5vbl68ZEcVFQa/pub?start=false&loop=false&delayms=3000)
 - [Connecting Temperature Sensor to Arduino](https://github.com/jjumadinova/janyljumadinova/blob/main/content/highschool/sensor_code.md)
+- [Connecting to Arduino Cloud](https://github.com/jjumadinova/janyljumadinova/blob/main/content/highschool/cloud_code.md)
