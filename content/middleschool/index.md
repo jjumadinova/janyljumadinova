@@ -21,7 +21,6 @@ author: Janyl Jumadinova
 
 [Coding with Arduino](https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&loop=false&delayms=3000)
 
-
 ## Session 3
 
 - [ROV Design](https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&loop=false&delayms=3000)
@@ -43,3 +42,7 @@ void loop(){
  	delay(5000); // in ms
 }
 ```
+
+## Session 4
+
+[ROV Motors](https://docs.google.com/document/d/15-LTs4MoqVKVAHchI-yq6Mcu_fjrJ6teLdiHiE-NwVc/edit?usp=sharing)
