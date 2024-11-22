@@ -29,6 +29,8 @@ author: Janyl Jumadinova
 [Connecting to the Cloud](https://docs.google.com/presentation/d/e/2PACX-1vRBpG9QPUNJ4V4oM2tGHONUrWbXCXd_cdHyH8vpACYNJKS6r34YyHDi-ka3D0u3HvN5vbl68ZEcVFQa/pub?start=false&loop=false&delayms=3000)
 - [Code](https://janyljumadinova.com/code/)
 
-## Session 5
+## Session 5-6
 
 [Projects](https://docs.arduino.cc/hardware/iot-bundle/#tutorials.)
+
+
