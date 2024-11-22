@@ -50,3 +50,5 @@ void loop(){
 ## Testing
 
 [`Chompers` Team Report](https://docs.google.com/document/d/1wVfSiA1pmXhaMisJjw1W3Mt1Pel4seuTzLIIfl4IbOc/edit?usp=sharing)
+
+[`Titans` Team Report](https://docs.google.com/document/d/183iYPhflVJEq6L_8eQEOHykzTym9XC94ZuK4BduVyso/edit?usp=sharing)
