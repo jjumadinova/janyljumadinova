@@ -54,3 +54,7 @@ void loop(){
 [`Titans` Team Report](https://docs.google.com/document/d/183iYPhflVJEq6L_8eQEOHykzTym9XC94ZuK4BduVyso/edit?usp=sharing)
 
 [`FEiN` Team Report](https://docs.google.com/document/d/165KNu1ikXd1CE4fHbGCNFP35w3fBA3OpVfbWj_f4--Q/edit?usp=sharing)
+
+[`Borot` Team Report](https://docs.google.com/document/d/1g_dFxcJqKjoA5cwVuM3UC_DarBJccDcAs48GKw8x7wY/edit?usp=sharing)
+
+[`Tide Pod` Team Report](https://docs.google.com/document/d/1M5k8Eh55LsYS9R9n208kBMknp9JY34_hnQNl71nOe4U/edit?usp=sharing)
