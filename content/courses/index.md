@@ -2,9 +2,23 @@
 layout: page
 title: Courses
 subtitle: Teaching at Allegheny College
-date: 2024-08-26T00:00:00.000Z
+date: 2025-01-12T00:00:00.000Z
 author: Janyl Jumadinova
 ---
+
+# Spring 2025
+
+## CMPSC 405: Deep Learning
+
+An interrogation of foundational capabilities, challenges and consequences of deep learning algorithms. Participating in hands-on activities that often require teamwork, students master theoretical concepts to build and train neural network architectures and learn how to improve them. Leveraging insights and tools from an industry partner, students also investigate real-world cases such as speech recognition, machine translation, computer vision, and natural language processing.
+
+### [Course Organization](https://github.com/CMPSC405-Deep-Learning-Spring2025/course_information)
+
+## CMPSC 302: Web Design
+
+An interrogation of foundational capabilities, challenges and consequences of deep learning algorithms. Participating in hands-on activities that often require teamwork, students master theoretical concepts to build and train neural network architectures and learn how to improve them. Leveraging insights and tools from an industry partner, students also investigate real-world cases such as speech recognition, machine translation, computer vision, and natural language processing.
+
+### [Course Website](https://designingtheweb.org)
 
 # Fall 2024
 
