@@ -16,7 +16,7 @@ An interrogation of foundational capabilities, challenges and consequences of de
 
 ## CMPSC 302: Web Design
 
-An interrogation of foundational capabilities, challenges and consequences of deep learning algorithms. Participating in hands-on activities that often require teamwork, students master theoretical concepts to build and train neural network architectures and learn how to improve them. Leveraging insights and tools from an industry partner, students also investigate real-world cases such as speech recognition, machine translation, computer vision, and natural language processing.
+An introduction to the principles and applications of web design with an emphasis on understanding intercultural perspectives that arise during the design, implementation, and maintenance of responsive, modern web sites. Participating in hands-on activities that often require teamwork, students learn the computational methods needed to create websites that are useful to people from different cultures and nationalities. Students also investigate approaches to developing efficient, accessible, and aesthetically pleasing web sites that adhere to the international standards set by the World Wide Web Consortium. 
 
 ### [Course Website](https://designingtheweb.org)
 
