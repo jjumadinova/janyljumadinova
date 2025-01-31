@@ -8,6 +8,8 @@ author: Janyl Jumadinova
 
 # Code, Conquer, and Escape!
 
+## [Survey](https://forms.gle/BJ1SWY3q28G1ivow7)
+
 ## GitHub Repository
 
 [Starship Repository](https://github.com/HS-Coded)
