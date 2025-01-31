@@ -8,7 +8,11 @@ author: Janyl Jumadinova
 
 # Code, Conquer, and Escape!
 
-## Session 1
+## GitHub Repository
+
+[Starship Repository](https://github.com/HS-Coded)
+
+## Assignment Link
 
 [Your Starship](https://classroom.github.com/a/j3U3EHzg)
 
