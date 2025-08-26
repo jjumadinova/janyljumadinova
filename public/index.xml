@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
+    <title>Janyl Jumadinova on </title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on </description>
+    <description>Recent content in Janyl Jumadinova on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
@@ -98,20 +98,6 @@
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/research/</guid>
       <description>&lt;h1 id=&#34;research&#34;&gt;Research&lt;/h1&gt;&#xA;&lt;h2 id=&#34;ethical-cs&#34;&gt;Ethical CS&lt;/h2&gt;&#xA;&lt;p&gt;Over the last three years I along with my colleagues in the &lt;a href=&#34;https://www.cs.allegheny.edu/&#34;&gt;Department of Computer Science at Allegheny College&lt;/a&gt;, have been working on the Responsible Computer Science effort. &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uvXBEaByh6k?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA; &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rmX7gCEkpQw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;     &lt;/div&gt;&#xA;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Teaching Expertise</title>
-      <link>http://localhost:1313/readme/</link>
-      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/readme/</guid>
-      <description>&lt;h1 id=&#34;courses-taught-at-allegheny-college&#34;&gt;Courses taught at Allegheny College:&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Introductory programming courses in Java and Python,&lt;/li&gt;&#xA;&lt;li&gt;Data Structures,&lt;/li&gt;&#xA;&lt;li&gt;Programming Languages,&lt;/li&gt;&#xA;&lt;li&gt;Analysis of Algorithms,&lt;/li&gt;&#xA;&lt;li&gt;Software Engineering,&lt;/li&gt;&#xA;&lt;li&gt;Bioinformatics,&lt;/li&gt;&#xA;&lt;li&gt;Artificial Intelligence,&lt;/li&gt;&#xA;&lt;li&gt;Robotics,&lt;/li&gt;&#xA;&lt;li&gt;Computer Security,&lt;/li&gt;&#xA;&lt;li&gt;Research Methods in Computer Science,&lt;/li&gt;&#xA;&lt;li&gt;Undergraduate Senior Thesis&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/about/me/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/me/</guid>
-      <description>&lt;p&gt;I am an Associate Professor in the &lt;a href=&#34;https://cis.allegheny.edu&#34;&gt;Department of Computer and Information Science&lt;/a&gt; at &lt;a href=&#34;https://allegheny.edu&#34;&gt;Allegheny College&lt;/a&gt;. I currently serve as the Chair of Computer Science and Integrative Informatics while also teaching a variety of courses in introductory programming, algorithms, software engineering, artificial intelligence, robotics, and security. I work with students on research project collaborations that produce publishable results, and supervise students on independent study projects, internships and senior thesis projects.&lt;/p&gt;&#xA;&lt;p&gt;My research is driven by the goal to design autonomous systems that can improve our quality of life. The focus of my research is on solving problems that occur when performing dynamic and complex tasks in unknown environments. I hold a Bachelor&amp;rsquo;s degree in Management Information Systems, a Master&amp;rsquo;s in Mathematics and a Doctorate degree in Information Technology from the University of Nebraska at Omaha.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>

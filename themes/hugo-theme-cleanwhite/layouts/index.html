@@ -1,6 +1,23 @@
 {{ define "main" }}
 <main id="main-content" role="main" aria-label="Main content">
-  {{ partial "portfolio.html" . }}
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="
+        col-lg-8 col-lg-offset-1
+        col-md-8 col-md-offset-1
+        col-sm-12
+        col-xs-12
+        post-container">
+        
+        {{ .Content }}
+        
+      </div>
+      
+      <!-- Sidebar Container -->
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
 </main>
   
 {{ end }}
