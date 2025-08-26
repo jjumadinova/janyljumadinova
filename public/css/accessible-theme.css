@@ -1,0 +1,817 @@
+/* Clean Color Scheme for janyljumadinova.com */
+/* White, Black, and Dark Red theme for accessibility and elegance */
+
+:root {
+  --primary-bg: #000000;
+  --secondary-bg: #ffffff;
+  --accent-color: #8b0000;  /* Dark red */
+  --accent-hover: #a50000;  /* Slightly lighter dark red */
+  --accent-light: #cc0000; /* Medium red for highlights */
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --text-muted: #666666;
+  --border-color: #e0e0e0;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #dc3545;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Navigation Accessibility */
+.navbar-custom {
+  background: var(--primary-bg) !important;
+  border-bottom: 2px solid var(--accent-color) !important;
+  box-shadow: none !important;
+}
+
+.navbar-custom .navbar-brand {
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  font-size: 1.4em !important;
+  transition: color 0.3s ease !important;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: var(--accent-color) !important;
+  text-decoration: none !important;
+}
+
+/* Descriptive Words in Navigation */
+.navbar-custom .navbar-descriptive {
+  color: var(--text-primary) !important;
+  font-size: 1.2em !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-family: 'Courier New', 'Monaco', 'Consolas', 'Lucida Console', monospace !important;
+  margin-left: 30px !important;
+  letter-spacing: 1px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  height: 50px !important;
+  line-height: 1 !important;
+}
+
+/* Style the JJ: initials in the navbar */
+.navbar-custom .navbar-descriptive strong {
+  color: #ff6b6b !important;
+  font-weight: 700 !important;
+  margin-right: 8px !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-custom .navbar-descriptive {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .navbar-custom .navbar-descriptive {
+    font-size: 1em !important;
+    margin-left: 20px !important;
+  }
+}
+
+/* Navigation Links - High Contrast */
+.navbar-custom .nav li a {
+  color: var(--text-primary) !important;
+  background: transparent !important;
+  padding: 15px 20px !important;
+  border-radius: 4px !important;
+  margin: 0 5px !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  border: 2px solid transparent !important;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus {
+  color: var(--text-primary) !important;
+  background: var(--accent-color) !important;
+  border-color: var(--accent-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3) !important;
+}
+
+.navbar-custom .nav li a:active {
+  background: var(--accent-hover) !important;
+  transform: translateY(0) !important;
+}
+
+/* Mobile Navigation Improvements */
+@media only screen and (max-width: 767px) {
+  .navbar-default .navbar-collapse {
+    background: var(--primary-bg) !important;
+    border: 2px solid var(--accent-color) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    margin-top: 10px !important;
+  }
+  
+  #huxblog_navbar a {
+    color: var(--text-primary) !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    padding: 12px 20px !important;
+    border-radius: 4px !important;
+    margin: 5px 10px !important;
+    background: var(--secondary-bg) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+  
+  #huxblog_navbar a:hover,
+  #huxblog_navbar a:focus {
+    color: var(--text-primary) !important;
+    background: var(--accent-color) !important;
+    border-color: var(--accent-hover) !important;
+  }
+}
+
+/* Inverted Navigation for Light Backgrounds */
+.navbar-custom.invert {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: none !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.navbar-custom.invert .navbar-brand {
+  color: var(--primary-bg) !important;
+}
+
+.navbar-custom.invert .navbar-brand:hover,
+.navbar-custom.invert .navbar-brand:focus {
+  color: var(--accent-color) !important;
+}
+
+.navbar-custom.invert .nav li a {
+  color: #333333 !important;
+  background: transparent !important;
+}
+
+.navbar-custom.invert .nav li a:hover,
+.navbar-custom.invert .nav li a:focus {
+  color: var(--text-primary) !important;
+  background: var(--accent-color) !important;
+}
+
+/* Fixed Navigation State */
+.navbar-custom.is-fixed {
+  background: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: none !important;
+}
+
+.navbar-custom.is-fixed .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+.navbar-custom.is-fixed .nav li a {
+  color: var(--text-secondary) !important;
+}
+
+/* Enhanced Focus Indicators for Accessibility */
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .nav li a:focus,
+.navbar-toggle:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Mobile Toggle Button Enhancement */
+.navbar-toggle {
+  border: 2px solid var(--accent-color) !important;
+  background: var(--secondary-bg) !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-hover) !important;
+  transform: scale(1.05) !important;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: var(--text-primary) !important;
+  height: 3px !important;
+  border-radius: 2px !important;
+}
+
+/* Inverted Toggle Button */
+.navbar-custom.invert .navbar-toggle {
+  border-color: var(--accent-color) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar-custom.invert .navbar-toggle .icon-bar {
+  background-color: #333333 !important;
+}
+
+/* Main Layout - Clean White Design */
+body {
+  background: var(--secondary-bg) !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.6 !important;
+}
+
+/* Link Styling - Accessible Red Accents */
+a {
+  color: #d32f2f !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+a:hover,
+a:focus {
+  color: #b71c1c !important;
+  text-decoration: underline !important;
+}
+
+/* Content Area - Clean White Design */
+.post-container {
+  background: var(--secondary-bg) !important;
+  color: var(--text-secondary) !important;
+  padding: 5px 15px 15px 15px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-top: 0 !important;
+}
+
+/* Sidebar Accessibility - Clean White Background */
+.sidebar-container {
+  background: var(--secondary-bg) !important;
+  color: var(--text-secondary) !important;
+  border-left: 3px solid var(--accent-color) !important;
+  padding: 20px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove unwanted vertical borders from Bootstrap grid columns */
+.col-lg-8,
+.col-lg-4,
+.col-md-8,
+.col-md-4,
+.col-sm-8,
+.col-sm-4,
+.main-content,
+.content-wrapper {
+  border-left: none !important;
+  border-right: none !important;
+  border: none !important;
+}
+
+/* Remove borders from main content area specifically */
+.post-container,
+.page-container,
+.content-container {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Target the specific grid layout that might be causing the line */
+.container .row .col-lg-8 {
+  border-right: none !important;
+}
+
+.container .row .col-lg-4 {
+  border-left: 3px solid var(--accent-color) !important;
+  border-right: none !important;
+}
+
+.sidebar-container h5 {
+  color: var(--accent-color) !important;
+  border-bottom: none !important;
+  padding-bottom: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.sidebar-container a {
+  color: var(--text-secondary) !important;
+  transition: color 0.3s ease !important;
+}
+
+.sidebar-container a:hover,
+.sidebar-container a:focus {
+  color: var(--accent-color) !important;
+}
+
+/* Tags styling in sidebar */
+.sidebar-container .tags a,
+.sidebar-container .tags .tag {
+  background: var(--secondary-bg) !important;
+  color: var(--text-secondary) !important;
+  border: 2px solid var(--border-color) !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  margin: 0 5px 5px 0 !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.85em !important;
+}
+
+.sidebar-container .tags a:hover,
+.sidebar-container .tags .tag:hover,
+.sidebar-container .tags a:focus,
+.sidebar-container .tags .tag:focus {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px var(--shadow-medium) !important;
+}
+
+/* Button Styling - Dark Red Theme */
+button,
+.btn,
+input[type="submit"] {
+  background: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--accent-color) !important;
+  border-radius: 4px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+button:focus,
+.btn:focus,
+input[type="submit"]:focus {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px var(--shadow-medium) !important;
+}
+
+/* Form Elements Accessibility */
+input,
+textarea,
+select {
+  background: #ffffff !important;
+  color: #333333 !important;
+  border: 2px solid var(--border-color) !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  transition: border-color 0.3s ease !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #d32f2f !important;
+  outline: 3px solid rgba(211, 47, 47, 0.3) !important;
+  outline-offset: 1px !important;
+}
+
+/* Enhanced Typography - Clean and Professional */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-bg) !important;
+  font-weight: 700 !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.75em !important;
+  line-height: 1.3 !important;
+}
+
+/* Reduce spacing for first headings in post containers */
+.post-container h1:first-child,
+.post-container h2:first-child,
+.post-container h3:first-child,
+.post-container .post-preview:first-child h1,
+.post-container .post-preview:first-child h2,
+.post-container .post-preview:first-child h3 {
+  margin-top: 0 !important;
+}
+
+/* Code Block Accessibility */
+pre,
+code {
+  background: var(--secondary-bg) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 4px !important;
+}
+
+/* Table Accessibility */
+table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  margin: 1em 0 !important;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color) !important;
+  padding: 12px !important;
+  text-align: left !important;
+}
+
+th {
+  background: var(--secondary-bg) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Skip Navigation Link for Screen Readers */
+.skip-navigation {
+  position: absolute !important;
+  top: -40px !important;
+  left: 6px !important;
+  background: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+  padding: 8px !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  z-index: 10000 !important;
+  font-weight: 600 !important;
+}
+
+.skip-navigation:focus {
+  top: 6px !important;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-bg: #000000;
+    --secondary-bg: #1a1a1a;
+    --accent-color: #66b3ff;
+    --accent-hover: #4da6ff;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --border-color: #666666;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .navbar-custom,
+  #huxblog_navbar {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--primary-bg) !important;
+    color: var(--text-secondary) !important;
+  }
+  
+  .post-container {
+    background: var(--secondary-bg) !important;
+    color: var(--text-secondary) !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+  }
+}
+
+/* Header Image Compatibility and Accessibility */
+/* Ensure header images work properly with accessibility improvements */
+
+/* Header Design - Clean Text-Only with Dark Red Accents */
+.intro-header {
+  background: var(--secondary-bg) !important;
+  border-bottom: none !important;
+  min-height: 80px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove overlay for text-only design */
+.intro-header::before {
+  display: none !important;
+}
+
+/* Header text styling */
+.intro-header .site-heading,
+.intro-header .post-heading,
+.intro-header .page-heading {
+  color: var(--text-secondary) !important;
+  text-shadow: none !important;
+  padding: 10px 0 !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.intro-header .site-heading h1,
+.intro-header .post-heading h1,
+.intro-header .page-heading h1 {
+  color: var(--primary-bg) !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+  font-size: 3.5em !important;
+  margin-bottom: 0.3em !important;
+  letter-spacing: -1px !important;
+}
+
+/* Stylish slogan/subheading with dark red accent - HIDDEN */
+.intro-header .site-heading .subheading,
+.intro-header .post-heading .subheading,
+.intro-header .page-heading .subheading {
+  display: none !important;
+}
+
+/* Style-text variant (no background image) accessibility */
+.intro-header.style-text {
+  background: var(--secondary-bg) !important;
+  border-bottom: none !important;
+  min-height: 120px !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.intro-header.style-text::before {
+  display: none !important;
+}
+
+.intro-header.style-text .site-heading,
+.intro-header.style-text .post-heading,
+.intro-header.style-text .page-heading {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+  padding: 20px 0 !important;
+}
+
+.intro-header.style-text .site-heading h1,
+.intro-header.style-text .post-heading h1,
+.intro-header.style-text .page-heading h1 {
+  color: var(--text-primary) !important;
+  text-shadow: none !important;
+}
+
+.intro-header.style-text .site-heading .subheading,
+.intro-header.style-text .post-heading .subheading,
+.intro-header.style-text .page-heading .subheading {
+  color: var(--text-secondary) !important;
+  text-shadow: none !important;
+}
+
+/* Header tags and metadata accessibility */
+.intro-header .tags a,
+.intro-header .tags .tag {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  margin: 0 5px 5px 0 !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+.intro-header .tags a:hover,
+.intro-header .tags .tag:hover,
+.intro-header .tags a:focus,
+.intro-header .tags .tag:focus {
+  background: var(--accent-color) !important;
+  border-color: var(--accent-hover) !important;
+  color: var(--text-primary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Style-text variant tags */
+.intro-header.style-text .tags a,
+.intro-header.style-text .tags .tag {
+  background: var(--accent-color) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--accent-color) !important;
+  text-shadow: none !important;
+}
+
+.intro-header.style-text .tags a:hover,
+.intro-header.style-text .tags .tag:hover,
+.intro-header.style-text .tags a:focus,
+.intro-header.style-text .tags .tag:focus {
+  background: var(--accent-hover) !important;
+  border-color: var(--accent-hover) !important;
+}
+
+/* Header metadata links */
+.intro-header .post-heading .meta a,
+.intro-header .page-heading .meta a {
+  color: var(--text-secondary) !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.intro-header .post-heading .meta a:hover,
+.intro-header .post-heading .meta a:focus,
+.intro-header .page-heading .meta a:hover,
+.intro-header .page-heading .meta a:focus {
+  color: var(--accent-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Style-text variant metadata */
+.intro-header.style-text .post-heading .meta a,
+.intro-header.style-text .page-heading .meta a {
+  color: var(--accent-color) !important;
+  text-shadow: none !important;
+}
+
+/* Mobile responsiveness for headers */
+@media only screen and (max-width: 767px) {
+  .intro-header {
+    min-height: 150px !important;
+  }
+  
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    padding: 30px 0 !important;
+  }
+  
+  .intro-header .site-heading h1,
+  .intro-header .post-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 2.5em !important;
+  }
+  
+  .intro-header .site-heading .subheading,
+  .intro-header .post-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 1em !important;
+    padding: 0 20px !important;
+  }
+}
+
+/* High contrast mode adjustments for headers */
+@media (prefers-contrast: high) {
+  .intro-header::before {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  .intro-header .site-heading,
+  .intro-header .post-heading,
+  .intro-header .page-heading {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .intro-header .tags a,
+  .intro-header .tags .tag {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-color: var(--text-primary) !important;
+  }
+}
+
+/* Dark mode header adjustments */
+@media (prefers-color-scheme: dark) {
+  .intro-header.style-text {
+    background: var(--primary-bg) !important;
+  }
+}
+
+/* Remove unwanted vertical lines at end of pages */
+.post-preview::after,
+.post-preview::before,
+.content::after,
+.content::before,
+article::after,
+article::before,
+.main-content::after,
+.main-content::before {
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Ensure no residual borders on content elements */
+.post-content,
+.page-content,
+main,
+article,
+section {
+  border: none !important;
+}
+
+/* Remove any pseudo-element borders */
+*::after,
+*::before {
+  border-color: transparent !important;
+}
+
+.post-preview {
+  border: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Footer - Clean Black Design */
+footer[role="contentinfo"] {
+  background: var(--primary-bg) !important;
+  color: var(--text-primary) !important;
+  border-top: none !important;
+  padding: 50px 0 !important;
+  margin-top: 60px !important;
+}
+
+footer[role="contentinfo"] .fa-stack {
+  transition: all 0.3s ease !important;
+}
+
+footer[role="contentinfo"] .fa-stack:hover,
+footer[role="contentinfo"] .fa-stack:focus {
+  transform: translateY(-3px) scale(1.1) !important;
+}
+
+footer[role="contentinfo"] .fa-circle {
+  color: var(--text-primary) !important;
+}
+
+footer[role="contentinfo"] .fa-inverse {
+  color: var(--primary-bg) !important;
+}
+
+footer[role="contentinfo"] a:hover .fa-circle,
+footer[role="contentinfo"] a:focus .fa-circle {
+  color: var(--accent-color) !important;
+}
+
+footer[role="contentinfo"] a:hover .fa-inverse,
+footer[role="contentinfo"] a:focus .fa-inverse {
+  color: var(--text-primary) !important;
+}
+
+footer[role="contentinfo"] .copyright {
+  color: var(--text-muted) !important;
+  font-size: 0.9em !important;
+  margin-top: 30px !important;
+}
+
+footer[role="contentinfo"] .copyright a {
+  color: var(--accent-color) !important;
+  transition: color 0.3s ease !important;
+}
+
+footer[role="contentinfo"] .copyright a:hover,
+footer[role="contentinfo"] .copyright a:focus {
+  color: var(--accent-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* Social media icons accessibility */
+footer[role="contentinfo"] ul[role="list"] li {
+  margin: 0 10px !important;
+}
+
+footer[role="contentinfo"] a {
+  display: inline-block !important;
+  padding: 5px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+footer[role="contentinfo"] a:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 3px !important;
+}

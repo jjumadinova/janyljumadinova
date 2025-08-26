@@ -1,12 +1,12 @@
 <!-- Footer -->
-<footer>
+<footer role="contentinfo" aria-label="Site footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
                     {{ with .Site.Params.social.email }}
-                    <li>
-                        <a href="mailto:{{ . }}">
+                    <li role="listitem">
+                        <a href="mailto:{{ . }}" aria-label="Email">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
@@ -310,8 +310,15 @@
 </script>
 {{ end }}
 
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
+{{ if .Site.Params.googleAnalytics }}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAnalytics }}');
+</script>
 {{ end }}
 
 

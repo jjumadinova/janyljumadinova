@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on </title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Courses</title>
+      <link>http://localhost:1313/post/courses/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/courses/</guid>
+      <description>&lt;h1 id=&#34;fall-2024&#34;&gt;Fall 2024&lt;/h1&gt;&#xA;&lt;h2 id=&#34;cmpsc-350-computational-narrative&#34;&gt;CMPSC 350: Computational Narrative&lt;/h2&gt;&#xA;&lt;p&gt;A study of the craft and deployment of procedurally-generated digital narratives, placing an emphasis on using data sources and computational methods as storytelling media. Students focus on critical, close reading of professional and student works while completing a single long-form work of their own. Topics include natural language processing (NLP), procedural illustration, computational constraint, and the development of conceptual documentary works.&lt;/p&gt;&#xA;&lt;h3 id=&#34;course-organization&#34;&gt;&lt;a href=&#34;https://github.com/CMPSC350-Computational-Narrative-F2024&#34;&gt;Course Organization&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h1 id=&#34;spring-2024&#34;&gt;Spring 2024&lt;/h1&gt;&#xA;&lt;h2 id=&#34;cmpsc-304-robotic-agents&#34;&gt;CMPSC 304: Robotic Agents&lt;/h2&gt;&#xA;&lt;p&gt;A study of the design and implementation of autonomous robotic systems that individually and cooperatively complete complex tasks. In addition to examining techniques for robot navigation, coordination, and manipulation, students learn how to apply the field&amp;rsquo;s technologies to address the challenges facing local and global communities. Participating in hands-on activities that often require teamwork, students develop and evaluate several autonomous robot systems, while also reflecting on the civic issues surrounding the use of these systems. During a weekly laboratory session students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Office Hours</title>
+      <link>http://localhost:1313/post/schedule/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/schedule/</guid>
+      <description>&lt;h1 id=&#34;scheduling-office-hours&#34;&gt;Scheduling Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;To schedule a meeting with me during my office hours, please &lt;a href=&#34;https://calendar.app.google/UtjHRPb71RKeraYk7&#34;&gt;book an appointment&lt;/a&gt;. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.&lt;/p&gt;&#xA;&lt;h1 id=&#34;office-hour-location&#34;&gt;Office Hour Location&lt;/h1&gt;&#xA;&lt;p&gt;Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.&lt;/p&gt;&#xA;&lt;h1 id=&#34;online-office-hours&#34;&gt;Online Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;If you prefer or need to meet over Google Meet, please send me a Discord message so I can set up a video link in advance of our scheduled appointment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/post/research/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/research/</guid>
+      <description>&lt;h1 id=&#34;research&#34;&gt;Research&lt;/h1&gt;&#xA;&lt;h2 id=&#34;ethical-cs&#34;&gt;Ethical CS&lt;/h2&gt;&#xA;&lt;p&gt;Over the last three years I along with my colleagues in the &lt;a href=&#34;https://www.cs.allegheny.edu/&#34;&gt;Department of Computer Science at Allegheny College&lt;/a&gt;, have been working on the Responsible Computer Science effort. &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uvXBEaByh6k?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA; &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rmX7gCEkpQw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;     &lt;/div&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

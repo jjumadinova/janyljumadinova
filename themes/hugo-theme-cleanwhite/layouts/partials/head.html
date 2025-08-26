@@ -43,7 +43,12 @@
     <!-- end ogp -->
 
     <meta name="keyword"  content="{{ .Site.Params.keyword }}">
+    
+    <!-- Favicon - Multiple formats for best browser support -->
+    <link rel="icon" type="image/svg+xml" href="{{ "img/favicon.svg" | relURL }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "img/favicon.png" | relURL }}">
     <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "img/favicon.png" | relURL }}">
 
     <title>{{ if .Title }}{{ .Title }} | {{ .Site.Params.SEOTitle }}{{ else }}{{ .Site.Params.SEOTitle }}{{ end }}</title>
 

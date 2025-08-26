@@ -2,9 +2,19 @@
 layout: page
 title: Courses
 subtitle: Teaching at Allegheny College
-date: 2025-01-12T00:00:00.000Z
+date: 2025-08-12T00:00:00.000Z
 author: Janyl Jumadinova
 ---
+
+# Fall 2025
+
+## CMPSC 100: Computational Expression
+
+An introduction to the principles of computer science with an emphasis on creative expression through the medium of a programming language. Participating in hands-on activities that often require teamwork, students learn the computational structures needed to solve problems and produce computational artifacts which address these problems in real-world contexts. Students also learn how to organize and document a program's source code so that it effectively communicates with the intended users and maintainers. Additionally, the introduction includes an overview of the discipline of computer science and computational thinking.
+
+### [CMPSC 100-01 Course Organization](https://github.com/alleghenycollege-cmpsc100-01-fall2025)
+
+### [CMPSC 100-02 Course Organization](https://github.com/alleghenycollege-cmpsc100-02-fall2025)
 
 # Spring 2025
 
@@ -93,4 +103,3 @@ A human-centric study of the principles used during the engineering of high-qual
 A study of the design and implementation of autonomous software agents and robotic systems that cooperatively complete complex tasks. In addition to examining techniques for large-scale coordination and group-based decision-making, students learn how to apply the field's technologies to address the challenges facing local and global communities. Participating in hands-on activities that often require teamwork, students develop and evaluate several multi-agent or multi-robot systems, while also reflecting on the civic issues surrounding the use of these systems. During a weekly laboratory session students use state-of-the-art technology to complete projects, reporting on their results through both written documents and oral presentations. Students are invited to use their own departmentally approved laptop in this course; a limited number of laptops are available for use during class and lab sessions.
 
 ### [Course Organization](https://github.com/CMPSC-311-Allegheny-College-Fall-2022)
-
