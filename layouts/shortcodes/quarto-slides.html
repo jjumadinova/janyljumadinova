@@ -1,0 +1,10 @@
+{{ $quartoFile := .Get 0 }}
+{{ $quartoPath := printf "/slides/%s.qmd" $quartoFile }}
+<div class="quarto-embed">
+    <p><strong>View Slides:</strong> 
+        <a href="{{ $quartoPath | relURL }}" target="_blank" class="btn btn-primary">
+            Open Presentation →
+        </a>
+    </p>
+    <p><em>Slides open in a new window with full navigation controls.</em></p>
+</div>

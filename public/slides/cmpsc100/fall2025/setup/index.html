@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1314&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1314//">
+    <meta property="twitter:image" content="http://localhost:1314//" />
+    
+
+    
+    <meta name="title" content="Course Setup Guide" />
+    <meta property="og:title" content="Course Setup Guide" />
+    <meta property="twitter:title" content="Course Setup Guide" />
+    
+
+    
+    <meta name="description" content="Janyl Jumadinova。Teacher. Researcher. Mother.">
+    <meta property="og:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    <meta property="twitter:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
+
+    <title>Course Setup Guide | Janyl Jumadinova</title>
+
+    <link rel="canonical" href="/slides/cmpsc100/fall2025/setup/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="http://localhost:1314/css/accessible-theme.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<a href="#main-content" class="skip-navigation">Skip to main content</a>
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation" aria-label="Main navigation">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="huxblog_navbar" aria-label="Toggle navigation menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" aria-label="Home - "></a>
+            <span class="navbar-descriptive"><strong>JJ:</strong> Teacher. Researcher. Engineer.</span>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" role="menubar">
+                    <li role="none">
+                        <a href="/" role="menuitem">Home</a>
+                    </li>
+                    
+
+		    
+                        <li role="none"><a href="/courses/" role="menuitem">COURSES</a></li>
+                    
+                        <li role="none"><a href="/highschool/" role="menuitem">HighSchool</a></li>
+                    
+                        <li role="none"><a href="/middleschool/" role="menuitem">MiddleSchool</a></li>
+                    
+                        <li role="none"><a href="/research/" role="menuitem">RESEARCH</a></li>
+                    
+                        <li role="none"><a href="/schedule/" role="menuitem">OFFICE HOURS</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main id="main-content" role="main" aria-label="Main content">
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 class="center" id="course-setup-guide">Course Setup Guide</h1>
+<p><strong>CMPSC 100 - Computational Expression</strong></p>
+<p>Dr. Janyl Jumadinova</p>
+<h2 id="overview">Overview</h2>
+<p>Today we&rsquo;ll set up all essential tools for the course:</p>
+<p>::: {.incremental}</p>
+<ol>
+<li><strong>Discord</strong> - Communication</li>
+<li><strong>GitHub</strong> - Version Control</li>
+<li><strong>Python</strong> - Programming Language</li>
+<li><strong>VS Code</strong> - Code Editor</li>
+<li><strong>Terminal</strong> - Command Line</li>
+<li><strong>Raspberry Pi Pico Extension</strong> - Hardware</li>
+<li><strong>AI Tools</strong> - Development Assistance
+:::</li>
+</ol>
+<h1 id="1-discord-setup">1. Discord Setup</h1>
+<h2 id="download-and-create-account">Download and Create Account</h2>
+<ul>
+<li>Download Discord: <a href="https://discord.com/">discord.com</a></li>
+<li>Create your account for <strong>free</strong></li>
+<li>Use personal or school email
+<ul>
+<li><strong>Note</strong>: You&rsquo;ll lose Allegheny email access after graduation</li>
+</ul>
+</li>
+</ul>
+<h2 id="join-discord-servers">Join Discord Servers</h2>
+<p><strong>ACM Discord Server:</strong></p>
+<ul>
+<li>Join here: <a href="https://discord.gg/4gm2jumuEd">discord.gg/4gm2jumuEd</a></li>
+<li>Get notified of events</li>
+<li><strong>Tip</strong>: Attend 3 ACM events → eligible for membership!</li>
+</ul>
+<h2 id="cis-department-discord">CIS Department Discord</h2>
+<p><strong>CIS Department Discord:</strong></p>
+<ul>
+<li>Join here: <a href="https://discord.gg/tWa2BwXqSp">discord.gg/tWa2BwXqSp</a></li>
+<li><strong>Primary course communication channel</strong></li>
+</ul>
+<h1 id="2-github-setup">2. GitHub Setup</h1>
+<h2 id="create-your-free-account">Create Your Free Account</h2>
+<ul>
+<li>Sign up: <a href="https://github.com/signup">github.com/signup</a></li>
+<li><strong>Essential for:</strong>
+<ul>
+<li>Accessing class repositories</li>
+<li>Submitting your work for grading</li>
+<li>Version control</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-happens-next">What Happens Next?</h2>
+<ul>
+<li>Professors will invite you to course repositories</li>
+<li>You&rsquo;ll receive access as courses begin</li>
+</ul>
+<h1 id="3-python-installation">3. Python Installation</h1>
+<h2 id="installation-requirements">Installation Requirements</h2>
+<p>Different methods for different operating systems!</p>
+<p><strong>Helpful Resource:</strong><br>
+<a href="https://realpython.com/installing-python/">Real Python Installation Guide</a></p>
+<p><strong>Choose your OS:</strong></p>
+<ul>
+<li>Windows, macOS, or Linux guides available</li>
+<li><strong>Use the Official Installer method</strong></li>
+</ul>
+<h2 id="installation-tips">Installation Tips</h2>
+<p><strong>Unsure about your OS?</strong></p>
+<ul>
+<li>Don&rsquo;t hesitate to ask!</li>
+<li>Department laptops generally use <strong>Linux</strong></li>
+</ul>
+<p><strong>Installation Options:</strong></p>
+<ul>
+<li>Default options are usually fine</li>
+<li>Ask questions if you&rsquo;re unsure!</li>
+</ul>
+<h1 id="4-vs-code-setup">4. VS Code Setup</h1>
+<h2 id="download-vs-code">Download VS Code</h2>
+<p><strong>All Platforms:</strong> <a href="https://code.visualstudio.com/download">code.visualstudio.com/download</a></p>
+<p><strong>Beginner Setup Guide:</strong><br>
+<a href="https://www.youtube.com/watch?v=B-s71n0dHUk">VS Code Team Tutorial</a></p>
+<ul>
+<li>Official tutorial from VS Code team</li>
+<li>Beginner-friendly</li>
+<li>Highly efficient for learning</li>
+</ul>
+<h1 id="5-terminal-basics">5. Terminal Basics</h1>
+<h2 id="learn-terminal-commands">Learn Terminal Commands</h2>
+<p>Essential for development workflow!</p>
+<p><strong>Windows:</strong><br>
+<a href="https://www.youtube.com/watch?v=MBBWVgE0ewk&amp;list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu">Command Line Tutorial</a></p>
+<ul>
+<li>Good series on basics</li>
+<li>Commands work on Windows 10/11</li>
+</ul>
+<h2 id="terminal-resources-continued">Terminal Resources (continued)</h2>
+<p><strong>macOS:</strong><br>
+<a href="https://www.youtube.com/watch?v=aKRYQsKR46I">macOS Terminal Guide</a></p>
+<ul>
+<li>In-depth terminal review</li>
+<li>macOS-specific features</li>
+</ul>
+<p><strong>Linux:</strong><br>
+<a href="https://www.youtube.com/watch?v=jgcXclSXnVo">Linux Terminal Tutorial</a></p>
+<ul>
+<li>Great starting point</li>
+<li>Essential Linux commands</li>
+</ul>
+<h1 id="6-raspberry-pi-pico-extension">6. Raspberry Pi Pico Extension</h1>
+<h2 id="installing-the-extension">Installing the Extension</h2>
+<p>::: {.incremental}</p>
+<ol>
+<li><strong>Open VS Code</strong></li>
+<li><strong>Go to Extensions Marketplace</strong></li>
+<li><strong>Search:</strong> &ldquo;Raspberry Pi Pico&rdquo;</li>
+<li><strong>Install</strong> with a simple click!
+:::</li>
+</ol>
+<h2 id="important-note">Important Note</h2>
+<p><strong>Ensure</strong> the extension is published by <strong>Raspberry Pi</strong></p>
+<ul>
+<li>Look for the official publisher name</li>
+<li>Avoid unofficial extensions</li>
+</ul>
+<h1 id="7-ai-tools-setup">7. AI Tools Setup</h1>
+<h2 id="overview-1">Overview</h2>
+<p>Essential AI tools for enhanced coding experience:</p>
+<p>::: {.incremental}</p>
+<ul>
+<li>GitHub Copilot</li>
+<li>GPT-4.1 &amp; Premium Models</li>
+<li>Gemini CLI</li>
+<li>OpenCode CLI</li>
+<li>VS Code Integration
+:::</li>
+</ul>
+<h2 id="7a-github-copilot">7a. GitHub Copilot</h2>
+<p><strong>Enable GitHub Copilot:</strong></p>
+<ul>
+<li>Go to <a href="https://github.com/features/copilot">github.com/features/copilot</a></li>
+<li>Sign up with your GitHub account</li>
+<li><strong>Students</strong>: Eligible for GitHub Student Developer Pack (includes free Copilot!)</li>
+</ul>
+<h2 id="install-copilot-extension">Install Copilot Extension</h2>
+<p>::: {.incremental}</p>
+<ol>
+<li>Open <strong>VS Code</strong></li>
+<li>Go to <strong>Extensions</strong></li>
+<li>Search <strong>&ldquo;GitHub Copilot&rdquo;</strong></li>
+<li>Click <strong>Install</strong></li>
+<li>Sign into GitHub when prompted
+:::</li>
+</ol>
+<h2 id="7b-gpt-41--premium-models">7b. GPT-4.1 &amp; Premium Models</h2>
+<p><strong>Access Requirements:</strong></p>
+<ul>
+<li>Log into ChatGPT with GitHub or personal account</li>
+<li><strong>GPT-4.1</strong>: Unlimited usage under student plan</li>
+<li><strong>Premium Models</strong>: 300 requests/month
+<ul>
+<li>Claude Sonnet 3.5</li>
+<li>GPT-5</li>
+</ul>
+</li>
+</ul>
+<p><strong>💡 Pro Tip:</strong> CLI uses fewer premium requests than VS Code extension!</p>
+<h2 id="7c-gemini-cli">7c. Gemini CLI</h2>
+<p><strong>Google&rsquo;s AI CLI Tool</strong></p>
+<p>Install using npx:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx https://github.com/google-gemini/gemini-cli
+</span></span></code></pre></div><p>Perfect for AI-powered coding tasks directly from terminal!</p>
+<h2 id="7d-opencode-cli">7d. OpenCode CLI</h2>
+<p><strong>AI Coding Agent Tool</strong></p>
+<p>Install and launch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx opencode-ai@latest
+</span></span></code></pre></div><p>Another powerful tool for our coding workflow.</p>
+<h2 id="7e-vs-code-ai-integration">7e. VS Code AI Integration</h2>
+<p><strong>Optional but Recommended</strong></p>
+<p>Install VS Code extensions for better integration:</p>
+<p>::: {.incremental}</p>
+<ol>
+<li><strong>Gemini CLI</strong></li>
+<li><strong>OpenCode AI</strong>
+:::</li>
+</ol>
+<p><strong>VS Code → Extensions → Search for each tool</strong></p>
+<h1 id="setup-complete-">Setup Complete! ✅</h1>
+<h2 id="you-now-have">You now have:</h2>
+<p>::: {.incremental}</p>
+<ul>
+<li>✅ Discord for communication</li>
+<li>✅ GitHub account ready</li>
+<li>✅ Python installed</li>
+<li>✅ VS Code configured</li>
+<li>✅ Terminal knowledge</li>
+<li>✅ Raspberry Pi Pico extension</li>
+<li>✅ AI tools ready<br>
+:::</li>
+</ul>
+<h2 id="questions">Questions?</h2>
+<p>Ready to start coding with our complete development environment!</p>
+<h3 id="lets-begin-our-coding-journey-">Let&rsquo;s begin our coding journey! 🚀</h3>
+
+
+                
+
+                <hr>
+                
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+
+
+
+
+<footer role="contentinfo" aria-label="Site footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
+                    
+                    <li role="listitem">
+                        <a href="mailto:jjumadinova@allegheny.edu" aria-label="Email">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jjumadinova/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://linkedin.com/in/janyl-jumadinova">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy;  2025
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18WYHLKCBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18WYHLKCBH');
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

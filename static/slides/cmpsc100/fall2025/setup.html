@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Course Setup Guide - CMPSC 100</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/monokai.css">
+    
+    <style>
+        .reveal {
+            font-family: "Arial", "Helvetica", sans-serif;
+        }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            color: #000;
+            font-weight: 700;
+            text-transform: none;
+        }
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal .slides section.center h1,
+        .reveal .slides section.center h2,
+        .reveal .slides section h1 {
+            text-align: center;
+        }
+        .reveal .progress {
+            color: #8b0000;
+        }
+        .reveal .controls {
+            color: #8b0000;
+        }
+        .reveal a {
+            color: #8b0000;
+        }
+        .reveal a:hover {
+            color: #a50000;
+        }
+        .reveal pre code {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="center">
+                <h1>Course Setup Guide</h1>
+                <h3>CMPSC 100 - Computational Expression</h3>
+                <p>Dr. Janyl Jumadinova</p>
+            </section>
+
+            <section>
+                <h2>Overview</h2>
+                <p>Today we'll set up all essential tools for the course:</p>
+                <ol>
+                    <li class="fragment"><strong>Discord</strong> - Communication</li>
+                    <li class="fragment"><strong>GitHub</strong> - Version Control</li>
+                    <li class="fragment"><strong>Python</strong> - Programming Language</li>
+                    <li class="fragment"><strong>VS Code</strong> - Code Editor</li>
+                    <li class="fragment"><strong>Terminal</strong> - Command Line</li>
+                    <li class="fragment"><strong>Raspberry Pi Pico Extension</strong> - Hardware</li>
+                    <li class="fragment"><strong>AI Tools</strong> - Development Assistance</li>
+                </ol>
+            </section>
+
+            <section>
+                <section>
+                    <h1>1. Discord Setup</h1>
+                </section>
+                
+                <section>
+                    <h2>Download and Create Account</h2>
+                    <ul>
+                        <li>Download Discord: <a href="https://discord.com/">discord.com</a></li>
+                        <li>Create your account for <strong>free</strong></li>
+                        <li>Use personal or school email</li>
+                        <li><strong>Note</strong>: You'll lose Allegheny email access after graduation</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Join Discord Servers</h2>
+                    <div class="fragment">
+                        <h3>ACM Discord Server:</h3>
+                        <ul>
+                            <li>Join here: <a href="https://discord.gg/4gm2jumuEd">discord.gg/4gm2jumuEd</a></li>
+                            <li>Get notified of events</li>
+                            <li><strong>Tip</strong>: Attend 3 ACM events → eligible for membership!</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fragment">
+                        <h3>CIS Department Discord:</h3>
+                        <ul>
+                            <li>Join here: <a href="https://discord.gg/tWa2BwXqSp">discord.gg/tWa2BwXqSp</a></li>
+                            <li><strong>Primary course communication channel</strong></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>2. GitHub Setup</h1>
+                </section>
+                
+                <section>
+                    <h2>Create Your Free Account</h2>
+                    <ul>
+                        <li>Sign up: <a href="https://github.com/signup">github.com/signup</a></li>
+                        <li><strong>Essential for:</strong>
+                            <ul>
+                                <li>Accessing class repositories</li>
+                                <li>Submitting your work for grading</li>
+                                <li>Version control</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What Happens Next?</h2>
+                    <ul>
+                        <li>Professors will invite you to course repositories</li>
+                        <li>You'll receive access as courses begin</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>3. Python Installation</h1>
+                </section>
+                
+                <section>
+                    <h2>Installation Requirements</h2>
+                    <p>Different methods for different operating systems!</p>
+                    
+                    <p><strong>Helpful Resource:</strong><br>
+                    <a href="https://realpython.com/installing-python/">Real Python Installation Guide</a></p>
+                    
+                    <p><strong>Choose your OS:</strong></p>
+                    <ul>
+                        <li>Windows, macOS, or Linux guides available</li>
+                        <li><strong>Use the Official Installer method</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Installation Tips</h2>
+                    <div class="fragment">
+                        <h3>Unsure about your OS?</h3>
+                        <ul>
+                            <li>Don't hesitate to ask!</li>
+                            <li>Department laptops generally use <strong>Linux</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="fragment">
+                        <h3>Installation Options:</h3>
+                        <ul>
+                            <li>Default options are usually fine</li>
+                            <li>Ask questions if you're unsure!</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>4. VS Code Setup</h1>
+                </section>
+                
+                <section>
+                    <h2>Download VS Code</h2>
+                    <p><strong>All Platforms:</strong> <a href="https://code.visualstudio.com/download">code.visualstudio.com/download</a></p>
+                    
+                    <div class="fragment">
+                        <p><strong>Beginner Setup Guide:</strong><br>
+                        <a href="https://www.youtube.com/watch?v=B-s71n0dHUk">VS Code Team Tutorial</a></p>
+                        <ul>
+                            <li>Official tutorial from VS Code team</li>
+                            <li>Beginner-friendly</li>
+                            <li>Highly efficient for learning</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>5. Terminal Basics</h1>
+                </section>
+                
+                <section>
+                    <h2>Learn Terminal Commands</h2>
+                    <p>Essential for development workflow!</p>
+                    
+                    <h3>Windows:</h3>
+                    <p><a href="https://www.youtube.com/watch?v=MBBWVgE0ewk&list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu">Command Line Tutorial</a></p>
+                    <ul>
+                        <li>Good series on basics</li>
+                        <li>Commands work on Windows 10/11</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Terminal Resources (continued)</h2>
+                    <h3>macOS:</h3>
+                    <p><a href="https://www.youtube.com/watch?v=aKRYQsKR46I">macOS Terminal Guide</a></p>
+                    <ul>
+                        <li>In-depth terminal review</li>
+                        <li>macOS-specific features</li>
+                    </ul>
+                    
+                    <h3>Linux:</h3>
+                    <p><a href="https://www.youtube.com/watch?v=jgcXclSXnVo">Linux Terminal Tutorial</a></p>
+                    <ul>
+                        <li>Great starting point</li>
+                        <li>Essential Linux commands</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>6. Raspberry Pi Pico Extension</h1>
+                </section>
+                
+                <section>
+                    <h2>Installing the Extension</h2>
+                    <ol>
+                        <li class="fragment"><strong>Open VS Code</strong></li>
+                        <li class="fragment"><strong>Go to Extensions Marketplace</strong></li>
+                        <li class="fragment"><strong>Search:</strong> "Raspberry Pi Pico"</li>
+                        <li class="fragment"><strong>Install</strong> with a simple click!</li>
+                    </ol>
+                    
+                    <div class="fragment">
+                        <h3>Important Note</h3>
+                        <p><strong>Ensure</strong> the extension is published by <strong>Raspberry Pi</strong></p>
+                        <ul>
+                            <li>Look for the official publisher name</li>
+                            <li>Avoid unofficial extensions</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>7. AI Tools Setup</h1>
+                </section>
+                
+                <section>
+                    <h2>Overview</h2>
+                    <p>Essential AI tools for enhanced coding experience:</p>
+                    <ul>
+                        <li class="fragment">GitHub Copilot</li>
+                        <li class="fragment">GPT-4.1 & Premium Models</li>
+                        <li class="fragment">Gemini CLI</li>
+                        <li class="fragment">OpenCode CLI</li>
+                        <li class="fragment">VS Code Integration</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>7a. GitHub Copilot</h2>
+                    <p><strong>Enable GitHub Copilot:</strong></p>
+                    <ul>
+                        <li>Go to <a href="https://github.com/features/copilot">github.com/features/copilot</a></li>
+                        <li>Sign up with your GitHub account</li>
+                        <li><strong>Students</strong>: Eligible for GitHub Student Developer Pack (includes free Copilot!)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Install Copilot Extension</h2>
+                    <ol>
+                        <li class="fragment">Open <strong>VS Code</strong></li>
+                        <li class="fragment">Go to <strong>Extensions</strong></li>
+                        <li class="fragment">Search <strong>"GitHub Copilot"</strong></li>
+                        <li class="fragment">Click <strong>Install</strong></li>
+                        <li class="fragment">Sign into GitHub when prompted</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>7b. GPT-4.1 & Premium Models</h2>
+                    <p><strong>Access Requirements:</strong></p>
+                    <ul>
+                        <li>Log into ChatGPT with GitHub or personal account</li>
+                        <li><strong>GPT-4.1</strong>: Unlimited usage under student plan</li>
+                        <li><strong>Premium Models</strong>: 300 requests/month
+                            <ul>
+                                <li>Claude Sonnet 3.5</li>
+                                <li>GPT-5</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>💡 Pro Tip:</strong> CLI uses fewer premium requests than VS Code extension!</p>
+                </section>
+
+                <section>
+                    <h2>7c. Gemini CLI</h2>
+                    <p><strong>Google's AI CLI Tool</strong></p>
+                    
+                    <p>Install using npx:</p>
+                    <pre><code class="bash">npx https://github.com/google-gemini/gemini-cli</code></pre>
+                    
+                    <p>Perfect for AI-powered coding tasks directly from terminal!</p>
+                </section>
+
+                <section>
+                    <h2>7d. OpenCode CLI</h2>
+                    <p><strong>AI Coding Agent Tool</strong></p>
+                    
+                    <p>Install and launch:</p>
+                    <pre><code class="bash">npx opencode-ai@latest</code></pre>
+                    
+                    <p>Another powerful tool for our coding workflow.</p>
+                </section>
+
+                <section>
+                    <h2>7e. VS Code AI Integration</h2>
+                    <p><strong>Optional but Recommended</strong></p>
+                    
+                    <p>Install VS Code extensions for better integration:</p>
+                    <ol>
+                        <li class="fragment"><strong>Gemini CLI</strong></li>
+                        <li class="fragment"><strong>OpenCode AI</strong></li>
+                    </ol>
+                    
+                    <p><strong>VS Code → Extensions → Search for each tool</strong></p>
+                </section>
+            </section>
+
+            <section>
+                <section class="center">
+                    <h1>Setup Complete! ✅</h1>
+                </section>
+                
+                <section>
+                    <h2>You now have:</h2>
+                    <ul>
+                        <li class="fragment">✅ Discord for communication</li>
+                        <li class="fragment">✅ GitHub account ready</li>
+                        <li class="fragment">✅ Python installed</li>
+                        <li class="fragment">✅ VS Code configured</li>
+                        <li class="fragment">✅ Terminal knowledge</li>
+                        <li class="fragment">✅ Raspberry Pi Pico extension</li>
+                        <li class="fragment">✅ AI tools ready</li>
+                    </ul>
+                </section>
+
+                <section class="center">
+                    <h2>Questions?</h2>
+                    <p>Ready to start coding with our complete development environment!</p>
+                    <h3>Let's begin our coding journey! 🚀</h3>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            
+            // Navigation
+            controls: true,
+            progress: true,
+            center: true,
+            touch: true,
+            loop: false,
+            
+            // Keyboard navigation
+            keyboard: true,
+            overview: true,
+            
+            // Fragments
+            fragments: true,
+            fragmentInURL: false,
+            
+            // Auto-animate
+            autoAnimate: true,
+            autoAnimateEasing: 'ease',
+            autoAnimateDuration: 1.0,
+            
+            plugins: [ RevealHighlight, RevealNotes ]
+        });
+    </script>
+</body>
+</html>
