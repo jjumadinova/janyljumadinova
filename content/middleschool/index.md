@@ -2,7 +2,7 @@
 layout: page
 title: Middle School
 subtitle: Teaching Enrichment
-date: 2025-09-09T00:00:00.000Z
+date: 2024-09-04T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 

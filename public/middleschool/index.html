@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <script src="/js/jquery.min.js"></script>
@@ -197,42 +197,34 @@
 
                 
                 <h1 id="robotics-enrichment-program">Robotics Enrichment Program</h1>
-<h2 id="middle-school-robotics-majors-schedule">Middle School Robotics Majors Schedule</h2>
-<h3 id="basic-electronics-and-introduction-to-robotics-8594-programming-boards-and-sensors-8594-rov-design-and-frame-building-8594-motor-control">Basic Electronics and Introduction to Robotics → Programming Boards and Sensors → ROV Design and Frame Building → Motor Control</h3>
+<h2 id="middle-school-robot--game---majors-schedule">Middle School &ldquo;Robot + Game = ?&rdquo; Majors Schedule</h2>
+<p>What happens when robots and games collide? In Robot + Game = ?, you&rsquo;ll step into the role of a robotics engineer and game developer, using a game engine to bring intelligent machines to life in virtual worlds. Design and simulate autonomous robots - like drones that navigate through dynamic environments, avoiding obstacles in real time. Through hands-on projects, you&rsquo;ll integrate LiDAR-based sensing and learning algorithms to develop robotic behavior.</p>
+<p>Learning Outcomes:</p>
+<ul>
+<li>Ability to use a game engine-based simulation to create and test robotic systems.</li>
+<li>Problem-solving and teamwork through iterative development and testing.</li>
+</ul>
 <h2 id="session-1">Session 1</h2>
 <ul>
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vSIf-hAkVJPeIaZQ55RsNgHOpG_j9PXzTGGk-lf6O7JvD37aLrZRXpSz2hlpAFX9zToqCl23SUX_yfq/pub?start=false&amp;loop=false&amp;delayms=3000">Getting Started with Arduino</a></li>
 <li><a href="https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&amp;loop=false&amp;delayms=3000">Introduction to Robotics</a></li>
+<li><a href="https://vr.vex.com/">Virtual Robot Movements</a>
+<ol>
+<li>File -&gt; Open Examples, select <code>Drivetrain Moves and Turns</code></li>
+<li>Study the code blocks, run the example</li>
+<li>SELECT PLAYGROUND -&gt; Wall Maze</li>
+<li>Modify the code to make it to the finish</li>
+<li>Save (Ctrl + S) your program</li>
+</ol>
+</li>
+<li>Object Sensing
+<ol>
+<li>Open a new project</li>
+<li>File -&gt; Open Examples -&gt; Coral Reef Cleanup 3</li>
+<li>Test the example code</li>
+<li>Improve it</li>
+</ol>
+</li>
 </ul>
-<h2 id="session-2">Session 2</h2>
-<p><a href="https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&amp;loop=false&amp;delayms=3000">Coding with Arduino</a></p>
-<h2 id="session-3">Session 3</h2>
-<ul>
-<li><a href="https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&amp;loop=false&amp;delayms=3000">ROV Design</a></li>
-<li><a href="https://docs.google.com/document/d/1JO1pM3XBeRCmAP9afXCYYmD5eIm-PML3H3EooP9FBmE/edit?usp=sharing">Building the ROV Frame</a></li>
-<li>Sensors</li>
-</ul>
-<pre tabindex="0"><code>int soilMoistureValue = 0;
-
-void setup(){
-  Serial.begin(9600); // Start up Serial Port
-  Serial.println(&#34;Simple Data Reading Program - send data over serial&#34;);
-}
-
-void loop(){
-  soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
-  Serial.print(&#34;Moisture reading: &#34;);
-  Serial.println(soilMoistureValue);
- 	delay(5000); // in ms
-}
-</code></pre><h2 id="session-4---5">Session 4 - 5</h2>
-<p><a href="https://docs.google.com/document/d/15-LTs4MoqVKVAHchI-yq6Mcu_fjrJ6teLdiHiE-NwVc/edit?usp=sharing">ROV Motors</a></p>
-<h2 id="testing">Testing</h2>
-<p><a href="https://docs.google.com/document/d/1wVfSiA1pmXhaMisJjw1W3Mt1Pel4seuTzLIIfl4IbOc/edit?usp=sharing"><code>Chompers</code> Team Report</a></p>
-<p><a href="https://docs.google.com/document/d/183iYPhflVJEq6L_8eQEOHykzTym9XC94ZuK4BduVyso/edit?usp=sharing"><code>Titans</code> Team Report</a></p>
-<p><a href="https://docs.google.com/document/d/165KNu1ikXd1CE4fHbGCNFP35w3fBA3OpVfbWj_f4--Q/edit?usp=sharing"><code>FEiN</code> Team Report</a></p>
-<p><a href="https://docs.google.com/document/d/1g_dFxcJqKjoA5cwVuM3UC_DarBJccDcAs48GKw8x7wY/edit?usp=sharing"><code>Borot</code> Team Report</a></p>
-<p><a href="https://docs.google.com/document/d/1M5k8Eh55LsYS9R9n208kBMknp9JY34_hnQNl71nOe4U/edit?usp=sharing"><code>Tide Pod</code> Team Report</a></p>
 
 
                 

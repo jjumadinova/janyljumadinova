@@ -8,53 +8,26 @@ author: Janyl Jumadinova
 
 # Robotics Enrichment Program
 
-## Middle School Robotics Majors Schedule
+## Middle School "Robot + Game = ?" Majors Schedule
 
-### Basic Electronics and Introduction to Robotics &#8594; Programming Boards and Sensors &#8594; ROV Design and Frame Building &#8594; Motor Control
+What happens when robots and games collide? In Robot + Game = ?, you'll step into the role of a robotics engineer and game developer, using a game engine to bring intelligent machines to life in virtual worlds. Design and simulate autonomous robots - like drones that navigate through dynamic environments, avoiding obstacles in real time. Through hands-on projects, you'll integrate LiDAR-based sensing and learning algorithms to develop robotic behavior. 
+
+Learning Outcomes:
+
+- Ability to use a game engine-based simulation to create and test robotic systems.
+- Problem-solving and teamwork through iterative development and testing.
 
 ## Session 1
 
-- [Getting Started with Arduino](https://docs.google.com/presentation/d/e/2PACX-1vSIf-hAkVJPeIaZQ55RsNgHOpG_j9PXzTGGk-lf6O7JvD37aLrZRXpSz2hlpAFX9zToqCl23SUX_yfq/pub?start=false&loop=false&delayms=3000)
 - [Introduction to Robotics](https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&loop=false&delayms=3000)
-
-## Session 2
-
-[Coding with Arduino](https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&loop=false&delayms=3000)
-
-## Session 3
-
-- [ROV Design](https://docs.google.com/presentation/d/e/2PACX-1vQWSJ-LTjKax765M4Tb8IaaCMy6xUJXwrjwBrQnm7xYQpuh90R1BHoic0XvRE8fM0jtP_GcmbqahbTz/pub?start=false&loop=false&delayms=3000)
-- [Building the ROV Frame](https://docs.google.com/document/d/1JO1pM3XBeRCmAP9afXCYYmD5eIm-PML3H3EooP9FBmE/edit?usp=sharing)
-- Sensors
-  
-```
-int soilMoistureValue = 0;
-
-void setup(){
-  Serial.begin(9600); // Start up Serial Port
-  Serial.println("Simple Data Reading Program - send data over serial");
-}
-
-void loop(){
-  soilMoistureValue = analogRead(A0);  //put Sensor insert into soil
-  Serial.print("Moisture reading: ");
-  Serial.println(soilMoistureValue);
- 	delay(5000); // in ms
-}
-```
-
-## Session 4 - 5
-
-[ROV Motors](https://docs.google.com/document/d/15-LTs4MoqVKVAHchI-yq6Mcu_fjrJ6teLdiHiE-NwVc/edit?usp=sharing)
-
-## Testing
-
-[`Chompers` Team Report](https://docs.google.com/document/d/1wVfSiA1pmXhaMisJjw1W3Mt1Pel4seuTzLIIfl4IbOc/edit?usp=sharing)
-
-[`Titans` Team Report](https://docs.google.com/document/d/183iYPhflVJEq6L_8eQEOHykzTym9XC94ZuK4BduVyso/edit?usp=sharing)
-
-[`FEiN` Team Report](https://docs.google.com/document/d/165KNu1ikXd1CE4fHbGCNFP35w3fBA3OpVfbWj_f4--Q/edit?usp=sharing)
-
-[`Borot` Team Report](https://docs.google.com/document/d/1g_dFxcJqKjoA5cwVuM3UC_DarBJccDcAs48GKw8x7wY/edit?usp=sharing)
-
-[`Tide Pod` Team Report](https://docs.google.com/document/d/1M5k8Eh55LsYS9R9n208kBMknp9JY34_hnQNl71nOe4U/edit?usp=sharing)
+- [Virtual Robot Movements](https://vr.vex.com/)
+  1. File -> Open Examples, select `Drivetrain Moves and Turns`
+  2. Study the code blocks, run the example
+  3. SELECT PLAYGROUND -> Wall Maze
+  4. Modify the code to make it to the finish
+  5. Save (Ctrl + S) your program
+- Object Sensing
+  1. Open a new project
+  2. File -> Open Examples -> Coral Reef Cleanup 3
+  3. Test the example code
+  4. Improve it
