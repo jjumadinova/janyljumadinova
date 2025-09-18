@@ -17,7 +17,52 @@ Learning Outcomes:
 - Ability to use a game engine-based simulation to create and test robotic systems.
 - Problem-solving and teamwork through iterative development and testing.
 
-## Session 1
+
+### Session 2
+
+**Goal:** Create a simple robot game where a robot character navigates a world, senses obstacles, collects goals, and has sound + music.
+
+---
+
+#### 1. Create Your Robot Character
+1. Go to [MakeCode Arcade](https://arcade.makecode.com/).
+2. Click **New Project**, name it.
+3. From the **Sprites** category, drag out `set mySprite to sprite of kind Player`.
+4. Click on the sprite image to draw your own robot character.
+5. Run the game to see your robot appear.
+
+#### 2. Build a Scene
+1. From **Scene**, drag out a `set tilemap to` block.
+2. Create a map with walls (e.g., maze or obstacle area).
+3. Add a starting area and some open space for the robot to move.
+
+#### 3. Add Autonomous Movement
+1. From **Sprites**, drag `set mySprite vx to` and `set mySprite vy to`.
+2. Give your robot an automatic velocity (e.g., vx = 50, vy = 0).
+3. Run the game — your robot should move on its own.
+
+#### 4. Simulate Sensing (Bumpers)
+1. From **Sprites**, use `on sprite of kind Player hits wall`.
+2. Inside, change the velocity so the robot turns (e.g., vx = 0, vy = 50).
+3. Test it — your robot should bounce or turn when it “senses” a wall.
+
+#### 5. Add a Goal
+1. Create another sprite (goal, treasure, or object).
+2. Place it on a random tile: use **Scene → place sprite on top of random tile**.
+3. Add an overlap event: `on sprite of kind Player overlaps Goal`.
+4. Inside, increase score by 1 and move the goal to a new random spot.
+
+#### 6. Add Music and Sound
+1. From **Music**, add `play melody` at the start of the game for background music.
+2. Add a `play sound effect` inside the overlap event (when robot gets a goal).
+3. Test - you should hear music and effects.
+
+#### 7. Make It a Game
+1. From **Info**, add a timer (e.g., 30 seconds).
+2. Challenge: How many goals can your robot collect before time runs out?
+3. Optional: Add hazards (enemies) that reduce score when touched.
+
+### Session 1
 
 - [Introduction to Robotics](https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&loop=false&delayms=3000)
 - [Virtual Robot Movements](https://vr.vex.com/)
