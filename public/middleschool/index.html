@@ -204,7 +204,55 @@
 <li>Ability to use a game engine-based simulation to create and test robotic systems.</li>
 <li>Problem-solving and teamwork through iterative development and testing.</li>
 </ul>
-<h2 id="session-1">Session 1</h2>
+<h3 id="session-2">Session 2</h3>
+<p><strong>Goal:</strong> Create a simple robot game where a robot character navigates a world, senses obstacles, collects goals, and has sound + music.</p>
+<hr>
+<h4 id="1-create-your-robot-character">1. Create Your Robot Character</h4>
+<ol>
+<li>Go to <a href="https://arcade.makecode.com/">MakeCode Arcade</a>.</li>
+<li>Click <strong>New Project</strong>, name it.</li>
+<li>From the <strong>Sprites</strong> category, drag out <code>set mySprite to sprite of kind Player</code>.</li>
+<li>Click on the sprite image to draw your own robot character.</li>
+<li>Run the game to see your robot appear.</li>
+</ol>
+<h4 id="2-build-a-scene">2. Build a Scene</h4>
+<ol>
+<li>From <strong>Scene</strong>, drag out a <code>set tilemap to</code> block.</li>
+<li>Create a map with walls (e.g., maze or obstacle area).</li>
+<li>Add a starting area and some open space for the robot to move.</li>
+</ol>
+<h4 id="3-add-autonomous-movement">3. Add Autonomous Movement</h4>
+<ol>
+<li>From <strong>Sprites</strong>, drag <code>set mySprite vx to</code> and <code>set mySprite vy to</code>.</li>
+<li>Give your robot an automatic velocity (e.g., vx = 50, vy = 0).</li>
+<li>Run the game — your robot should move on its own.</li>
+</ol>
+<h4 id="4-simulate-sensing-bumpers">4. Simulate Sensing (Bumpers)</h4>
+<ol>
+<li>From <strong>Sprites</strong>, use <code>on sprite of kind Player hits wall</code>.</li>
+<li>Inside, change the velocity so the robot turns (e.g., vx = 0, vy = 50).</li>
+<li>Test it — your robot should bounce or turn when it “senses” a wall.</li>
+</ol>
+<h4 id="5-add-a-goal">5. Add a Goal</h4>
+<ol>
+<li>Create another sprite (goal, treasure, or object).</li>
+<li>Place it on a random tile: use <strong>Scene → place sprite on top of random tile</strong>.</li>
+<li>Add an overlap event: <code>on sprite of kind Player overlaps Goal</code>.</li>
+<li>Inside, increase score by 1 and move the goal to a new random spot.</li>
+</ol>
+<h4 id="6-add-music-and-sound">6. Add Music and Sound</h4>
+<ol>
+<li>From <strong>Music</strong>, add <code>play melody</code> at the start of the game for background music.</li>
+<li>Add a <code>play sound effect</code> inside the overlap event (when robot gets a goal).</li>
+<li>Test - you should hear music and effects.</li>
+</ol>
+<h4 id="7-make-it-a-game">7. Make It a Game</h4>
+<ol>
+<li>From <strong>Info</strong>, add a timer (e.g., 30 seconds).</li>
+<li>Challenge: How many goals can your robot collect before time runs out?</li>
+<li>Optional: Add hazards (enemies) that reduce score when touched.</li>
+</ol>
+<h3 id="session-1">Session 1</h3>
 <ul>
 <li><a href="https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&amp;loop=false&amp;delayms=3000">Introduction to Robotics</a></li>
 <li><a href="https://vr.vex.com/">Virtual Robot Movements</a>

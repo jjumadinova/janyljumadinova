@@ -103,30 +103,71 @@
 
 /* Mobile Navigation Improvements */
 @media only screen and (max-width: 767px) {
-  .navbar-default .navbar-collapse {
-    background: var(--primary-bg) !important;
+  /* Mobile menu dropdown container */
+  .navbar-collapse,
+  .navbar-default .navbar-collapse,
+  .collapse.navbar-collapse {
+    background-color: #000000 !important;
+    background: #000000 !important;
     border: 2px solid var(--accent-color) !important;
     border-radius: 8px !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
     margin-top: 10px !important;
+    padding: 10px !important;
   }
   
-  #huxblog_navbar a {
-    color: var(--text-primary) !important;
+  /* Mobile menu links */
+  .navbar-nav li a,
+  .navbar-collapse a,
+  #huxblog_navbar a,
+  .nav li a {
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    background: #000000 !important;
     font-size: 16px !important;
     line-height: 1.6 !important;
     padding: 12px 20px !important;
     border-radius: 4px !important;
     margin: 5px 10px !important;
-    background: var(--secondary-bg) !important;
-    border: 1px solid var(--border-color) !important;
+    border: 2px solid #333333 !important;
+    display: block !important;
+    text-decoration: none !important;
   }
   
+  /* Mobile menu links hover state */
+  .navbar-nav li a:hover,
+  .navbar-nav li a:focus,
+  .navbar-collapse a:hover,
+  .navbar-collapse a:focus,
   #huxblog_navbar a:hover,
-  #huxblog_navbar a:focus {
-    color: var(--text-primary) !important;
+  #huxblog_navbar a:focus,
+  .nav li a:hover,
+  .nav li a:focus {
+    color: #ffffff !important;
+    background-color: var(--accent-color) !important;
     background: var(--accent-color) !important;
     border-color: var(--accent-hover) !important;
+  }
+
+  /* Ensure mobile toggle button is visible */
+  .navbar-toggle {
+    background-color: #000000 !important;
+    border: 2px solid var(--accent-color) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+  }
+  
+  .navbar-toggle .icon-bar {
+    background-color: #ffffff !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+  }
+
+  /* Force mobile menu text to be white */
+  .navbar-collapse *,
+  .navbar-nav *,
+  #huxblog_navbar * {
+    color: #ffffff !important;
   }
 }
 
@@ -200,6 +241,33 @@
   background-color: var(--text-primary) !important;
   height: 3px !important;
   border-radius: 2px !important;
+}
+
+/* Additional Mobile Menu Fixes for all screen sizes */
+@media only screen and (max-width: 991px) {
+  /* Ensure proper contrast on all mobile navigation elements */
+  .navbar-nav,
+  .navbar-collapse.in,
+  .navbar-collapse.collapsing {
+    background: #000000 !important;
+  }
+  
+  /* Fix any white-on-white text issues */
+  .navbar-nav > li > a,
+  .navbar-collapse > ul > li > a,
+  .collapse.in a,
+  .collapsing a {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+  
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus,
+  .navbar-collapse > ul > li > a:hover,
+  .navbar-collapse > ul > li > a:focus {
+    color: #ffffff !important;
+    background: var(--accent-color) !important;
+  }
 }
 
 /* Inverted Toggle Button */
