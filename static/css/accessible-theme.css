@@ -152,15 +152,30 @@
   /* Ensure mobile toggle button is visible */
   .navbar-toggle {
     background-color: #000000 !important;
+    background: #000000 !important;
     border: 2px solid var(--accent-color) !important;
     border-radius: 6px !important;
     padding: 8px 12px !important;
+    position: relative !important;
+    z-index: 999 !important;
+  }
+  
+  .navbar-toggle:hover,
+  .navbar-toggle:focus,
+  .navbar-toggle:active {
+    background-color: var(--accent-color) !important;
+    background: var(--accent-color) !important;
+    border-color: var(--accent-hover) !important;
   }
   
   .navbar-toggle .icon-bar {
     background-color: #ffffff !important;
+    background: #ffffff !important;
     height: 3px !important;
+    width: 22px !important;
     border-radius: 2px !important;
+    display: block !important;
+    margin: 3px 0 !important;
   }
 
   /* Force mobile menu text to be white */
@@ -221,26 +236,53 @@
   outline-offset: 2px !important;
 }
 
-/* Mobile Toggle Button Enhancement */
-.navbar-toggle {
-  border: 2px solid var(--accent-color) !important;
-  background: var(--secondary-bg) !important;
+/* Mobile Toggle Button Enhancement - Desktop and larger screens */
+@media only screen and (min-width: 768px) {
+  .navbar-toggle {
+    border: 2px solid var(--accent-color) !important;
+    background: var(--secondary-bg) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
+    background: var(--accent-color) !important;
+    border-color: var(--accent-hover) !important;
+    transform: scale(1.05) !important;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: var(--text-primary) !important;
+    height: 3px !important;
+    border-radius: 2px !important;
+  }
+}
+
+/* Override any conflicting button styles globally */
+button.navbar-toggle,
+.navbar-header .navbar-toggle,
+.navbar-toggle[type="button"] {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  border: 2px solid #8b0000 !important;
   border-radius: 6px !important;
   padding: 8px 12px !important;
-  transition: all 0.3s ease !important;
+  position: relative !important;
+  z-index: 1000 !important;
 }
 
-.navbar-toggle:hover,
-.navbar-toggle:focus {
-  background: var(--accent-color) !important;
-  border-color: var(--accent-hover) !important;
-  transform: scale(1.05) !important;
-}
-
-.navbar-toggle .icon-bar {
-  background-color: var(--text-primary) !important;
+button.navbar-toggle .icon-bar,
+.navbar-header .navbar-toggle .icon-bar,
+.navbar-toggle[type="button"] .icon-bar {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
   height: 3px !important;
-  border-radius: 2px !important;
+  width: 22px !important;
+  display: block !important;
+  margin: 3px 0 !important;
+  border-radius: 1px !important;
 }
 
 /* Additional Mobile Menu Fixes for all screen sizes */

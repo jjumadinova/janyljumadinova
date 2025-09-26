@@ -8,6 +8,22 @@ author: Janyl Jumadinova
 
 # Code, Conquer, and Escape!
 
+## 🔥 Session 2: Next Level Coding!
+
+Ready for more coding adventures? In Session 2, we'll dive deeper into programming concepts and build something awesome!
+
+**[🎯 Join Session 2](https://classroom.github.com/a/mTO6p50I)**
+
+### What's Coming Up in Session 2:
+- More advanced programming concepts
+- Building interactive projects
+- Working with real coding tools
+- Collaborative coding challenges
+
+**Click the link above to get started with Session 2!** 🚀
+
+---
+
 ## Getting Started with GitHub
 
 GitHub is a platform where programmers store, share, and collaborate on code. It's like Google Drive for programmers!
@@ -45,7 +61,7 @@ As a student, you can get free access to premium developer tools through the Git
 
 *Note: It may take a few days to get approved for the Student Pack, but it's worth the wait!*
 
-## 🚀 Your First Assignment: Markdown Practice
+## 🚀 Session 1: Markdown Practice
 
 Ready to start your coding journey? Your first mission is to learn **Markdown** - the formatting language that programmers use everywhere!
 
