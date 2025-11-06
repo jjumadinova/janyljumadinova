@@ -30,7 +30,7 @@ Reference this tutorial if you fall behind:
 - [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
 
 **Resources:**
-- **[Download Unity Assets](https://github.com/jjumadinova/janyljumadinova/tree/main/content/middleschool/Unity_assets)** - Collection of images and assets for your first Unity project
+- **[Download Unity Assets (ZIP)](https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip)** - Collection of sprite images for your Unity robot project
 
 Follow along with the video to:
 1. Navigate the Unity interface
