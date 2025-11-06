@@ -17,9 +17,27 @@ Learning Outcomes:
 - Ability to use a game engine-based simulation to create and test robotic systems.
 - Problem-solving and teamwork through iterative development and testing.
 
-### Resources
+### Session 5
 
+**Goal:** Learn Unity game engine basics and create your first robot simulation.
+
+---
+
+#### Unity Tutorial
+
+Watch this tutorial to get started with Unity:
+
+- [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
+
+**Resources:**
 - **[Download Unity Assets](https://github.com/jjumadinova/Unity_assets)** - Collection of images and assets for your robot projects
+
+Follow along with the video to:
+1. Install Unity Hub and Unity Editor
+2. Create a new project
+3. Navigate the Unity interface
+4. Add and manipulate 3D objects
+5. Create basic robot movements
 
 ### Session 4
 
