@@ -26,7 +26,7 @@ Learning Outcomes:
 #### Getting Started with Delightex
 
 1. **Access Delightex**
-   - Go to [delightex.com](https://www.delightex.com/)
+   - Go to [delightex.com](https://www.delightex.com/edu)
    - Click on **"Try it live"** button
    - No account needed - start coding immediately!
 
