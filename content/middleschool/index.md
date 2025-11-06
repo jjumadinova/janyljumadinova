@@ -31,62 +31,15 @@ Learning Outcomes:
    - No account needed - start coding immediately!
 
 2. **Explore the Interface**
-   - **Left side:** Block palette with coding commands
-   - **Center:** Canvas where your elements appear
-   - **Right side:** Block coding workspace
-   - **Bottom:** Preview of your creation
+   - **Left side:** Click on the list icon and explore various elements (click on three dots -> Code -> Check `Use in CoBlocks`)
+   - **Center:** Canvas where your game appears
+   - **Right side:** Click on Code on top right -> `CoBlocks`
+   - **Bottom:** Add elements from the library
 
-3. **Create Your First Animation**
-   - Drag a **Text** block from the palette to the canvas
-   - In the block coding area, use **"when page loads"** event
-   - Add an **"animate"** block to make your text move
+3. **Create Animations**
+   - Drag a code block from the command palette to the canvas
+   - Try various code blocks
    - Click **Run** to see your animation!
-
-4. **Simple Projects to Try**
-
-   **Project 1: Moving Robot Text** 🤖
-   - Add text that says "🤖 ROBOT"
-   - Use "move to" blocks to make it travel across screen
-   - Add "rotate" blocks to spin it
-   - Change colors with "set color" blocks
-
-   **Project 2: Bouncing Elements** 🎾
-   - Add multiple shapes (circles, squares)
-   - Use "move by" blocks in a loop
-   - Make them bounce with position changes
-   - Add "wait" blocks to control speed
-
-   **Project 3: Interactive Button** 🎯
-   - Create a button element
-   - Use "when clicked" event block
-   - Make something happen when clicked (show text, change color, play sound)
-   - Chain multiple animations together
-
-   **Project 4: Dancing Emoji** 💃
-   - Add emoji as text (use any emoji you like!)
-   - Use "scale" blocks to make it grow/shrink
-   - Add "rotate" animation
-   - Use "repeat" loops to make it dance continuously
-
-5. **Block Coding Concepts**
-   - **Events:** "when page loads", "when clicked", "when key pressed"
-   - **Actions:** "move to", "move by", "rotate", "scale", "change color"
-   - **Timing:** "wait", "duration", "repeat"
-   - **Loops:** "repeat X times", "forever"
-   - **Conditions:** "if/else" for interactive behaviors
-
-6. **Tips for Success**
-   - Start simple - add one element and one animation first
-   - Test frequently by clicking Run
-   - Experiment with timing values to make smooth animations
-   - Combine multiple animations for complex effects
-   - Use comments to remember what your code does
-
-7. **Challenge Ideas**
-   - Create a simple robot character that moves when you press arrow keys
-   - Make a traffic light that changes colors automatically
-   - Build an animated greeting card
-   - Design a mini game with clickable elements
 
 <!--
 ### Session 5 - UNITY VERSION (SAVED FOR NEXT TIME)
