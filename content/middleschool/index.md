@@ -17,6 +17,9 @@ Learning Outcomes:
 - Ability to use a game engine-based simulation to create and test robotic systems.
 - Problem-solving and teamwork through iterative development and testing.
 
+### Resources
+
+- **[Download Unity Assets](https://github.com/jjumadinova/Unity_assets)** - Collection of images and assets for your robot projects
 
 ### Session 4
 
