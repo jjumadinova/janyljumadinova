@@ -25,19 +25,18 @@ Learning Outcomes:
 
 #### Unity Tutorial
 
-Watch this tutorial to get started with Unity:
+Reference this tutorial if you fall behind:
 
 - [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
 
 **Resources:**
-- **[Download Unity Assets](https://github.com/jjumadinova/Unity_assets)** - Collection of images and assets for your robot projects
+- **[Download Unity Assets](https://github.com/jjumadinova/janyljumadinova/tree/main/content/middleschool/Unity_assets)** - Collection of images and assets for your first Unity project
 
 Follow along with the video to:
-1. Install Unity Hub and Unity Editor
-2. Create a new project
-3. Navigate the Unity interface
-4. Add and manipulate 3D objects
-5. Create basic robot movements
+1. Navigate the Unity interface
+2. Add and manipulate 3D objects
+3. Create basic movements
+4. Build an executable game
 
 ### Session 4
 
