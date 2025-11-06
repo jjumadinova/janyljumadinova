@@ -18,6 +18,77 @@ Learning Outcomes:
 - Problem-solving and teamwork through iterative development and testing.
 
 
+### Session 4
+
+**Goal:** Experiment with underwater robots using manual control and understand robot movements in aquatic environments.
+
+---
+
+#### Underwater Robot Exploration
+
+1. **Introduction to Underwater Robotics**
+   - Learn about ROVs (Remotely Operated Vehicles)
+   - Understand how underwater robots differ from land robots
+   - Discuss buoyancy, water resistance, and thruster systems
+
+2. **Manual Control Practice**
+   - Connect to the underwater robot system
+   - Practice basic movements: forward, backward, up, down, rotate
+   - Experiment with thruster control and navigation
+
+3. **Movement Challenges**
+   - Navigate through underwater obstacles
+   - Practice maintaining depth and orientation
+   - Test different movement patterns and speeds
+   - Figure out optimal control strategies
+
+4. **Observations and Discussion**
+   - Compare underwater robot control to land robots
+   - Discuss challenges faced during manual control
+   - Share strategies that worked well
+
+### Session 3
+
+**Goal:** Program and control physical GoPiGo robots to perform autonomous movements.
+
+---
+
+#### Getting Started with GoPiGo
+
+1. **Connect to Your Robot**
+   - Turn on the GoPiGo robot
+   - On your computer, connect to the robot's WiFi network
+   - Open a web browser and navigate to **10.10.10.10**
+   - You should see the Bloxter programming interface
+
+2. **Explore the Bloxter Interface**
+   - Familiarize yourself with the block categories
+   - Look at Movement, Sensors, and Control blocks
+   - Try the example programs provided
+
+3. **Basic Movement Programming**
+   - Make your robot drive forward for 2 seconds
+   - Add a turn (left or right)
+   - Create a simple path (square or triangle)
+   - Test and debug your code
+
+4. **Add Sensor Input**
+   - Use the distance sensor to detect obstacles
+   - Program the robot to stop when it senses a wall
+   - Make it turn and continue exploring
+
+5. **Challenge: Maze Navigation**
+   - Set up a simple maze with obstacles
+   - Program your robot to navigate through it
+   - Use sensors to avoid collisions
+   - Test and improve your solution
+
+**Tips:**
+- Save your programs frequently
+- Start simple and add complexity gradually
+- If something doesn't work, check your block connections
+- Test small sections of code before combining them
+
 ### Session 2
 
 **Goal:** Create a simple robot game where a robot character navigates a world, senses obstacles, collects goals, and has sound + music.
