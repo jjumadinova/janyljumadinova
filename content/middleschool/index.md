@@ -17,6 +17,7 @@ Learning Outcomes:
 - Ability to use a game engine-based simulation to create and test robotic systems.
 - Problem-solving and teamwork through iterative development and testing.
 
+[Assessment form](https://forms.gle/r4KBwPLqnJ79C6bDA)
 
 ### Session 5
 
@@ -39,9 +40,44 @@ Follow along:
 3. Create basic movements
 4. Build an executable game
 
-#### Scripts
+#### BirdScript
 
-[Needed code for the game](https://pastebin.com/QiLkpeJe)
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+ 
+public class BirdScript : MonoBehaviour
+{
+    public Rigidbody2D myRigidbody;
+    public float flapStrength;
+    //public LogicScript logic;
+    //public bool birdIsAlive = true;
+ 
+    // Start is called before the first frame update
+    void Start()
+    {
+        //logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+    }
+ 
+    // Update is called once per frame
+    void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.Space)) // && birdIsAlive)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            myRigidbody.linearVelocity = Vector2.up * flapStrength;
+        }
+    }
+ 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    logic.gameOver();
+    //    birdIsAlive = false;
+    //}
+}
+```
 
 ### Session 5
 
