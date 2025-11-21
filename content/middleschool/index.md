@@ -17,6 +17,32 @@ Learning Outcomes:
 - Ability to use a game engine-based simulation to create and test robotic systems.
 - Problem-solving and teamwork through iterative development and testing.
 
+
+### Session 5
+
+**Goal:** Learn Unity game engine basics and create your first game simulation.
+
+---
+
+#### Unity Tutorial
+
+Reference this tutorial if you fall behind:
+
+- [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
+
+**Resources:**
+- **[Download Unity Assets (ZIP)](https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip)** - Collection of sprite images for your Unity robot project
+
+Follow along:
+1. Navigate the Unity interface
+2. Add and manipulate 3D objects
+3. Create basic movements
+4. Build an executable game
+
+#### Scripts
+
+[Needed code for the game](https://pastebin.com/QiLkpeJe)
+
 ### Session 5
 
 **Goal:** Create animated web experiences using block-based coding with Delightex.
@@ -40,29 +66,6 @@ Learning Outcomes:
    - Drag a code block from the command palette to the canvas
    - Try various code blocks
    - Click **Run** to see your animation!
-
-<!--
-### Session 5 - UNITY VERSION (SAVED FOR NEXT TIME)
-
-**Goal:** Learn Unity game engine basics and create your first robot simulation.
-
----
-
-#### Unity Tutorial
-
-Reference this tutorial if you fall behind:
-
-- [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
-
-**Resources:**
-- **[Download Unity Assets (ZIP)](https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip)** - Collection of sprite images for your Unity robot project
-
-Follow along with the video to:
-1. Navigate the Unity interface
-2. Add and manipulate 3D objects
-3. Create basic movements
-4. Build an executable game
--->
 
 ### Session 4
 
