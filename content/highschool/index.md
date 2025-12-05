@@ -8,7 +8,11 @@ author: Janyl Jumadinova
 
 # Code, Conquer, and Escape!
 
-## 🔥 Session 2: Begin Starship Adventures!
+## Feedback
+
+**[Your responses](https://forms.gle/asLDMjRLKHp2rHK26)**
+
+## 🔥 Sessions 2-4: Begin Starship Adventures!
 
 **[🎯 Your Starship](https://classroom.github.com/a/mTO6p50I)**
 
