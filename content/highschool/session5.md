@@ -618,4 +618,4 @@ Keep coding, keep learning, and most importantly - **keep having fun creating!**
 
 ---
 
-**[← Session 4](/highschool/gamecraft/session4/) | [Back to GameCraft Home](/highschool/gamecraft/)**
+**[← Session 4](/highschool/session4/) | [Back to GameCraft Home](/highschool/)**

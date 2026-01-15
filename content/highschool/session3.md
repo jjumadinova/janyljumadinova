@@ -551,4 +551,4 @@ score += gem.points;
 
 ---
 
-**[← Session 2](/highschool/gamecraft/session2/) | [Back to GameCraft Home](/highschool/gamecraft/) | [Next: Session 4 →](/highschool/gamecraft/session4/)**
+**[← Session 2](/highschool/session2/) | [Back to GameCraft Home](/highschool/) | [Next: Session 4 →](/highschool/session4/)**

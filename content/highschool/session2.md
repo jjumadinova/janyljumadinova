@@ -462,4 +462,4 @@ localStorage.setItem('clickGameHighScore', highScore);
 
 ---
 
-**[← Session 1](/highschool/gamecraft/session1/) | [Back to GameCraft Home](/highschool/gamecraft/) | [Next: Session 3 →](/highschool/gamecraft/session3/)**
+**[← Session 1](/highschool/session1/) | [Back to GameCraft Home](/highschool/) | [Next: Session 3 →](/highschool/session3/)**

@@ -271,4 +271,4 @@ Click your button! It should:
 
 ---
 
-**[← Back to GameCraft Home](/highschool/gamecraft/) | [Next: Session 2 →](/highschool/gamecraft/session2/)**
+**[← Back to GameCraft Home](/highschool/) | [Next: Session 2 →](/highschool/session2/)**

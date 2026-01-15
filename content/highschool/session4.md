@@ -487,4 +487,4 @@ if (winner) {
 
 ---
 
-**[← Session 3](/highschool/gamecraft/session3/) | [Back to GameCraft Home](/highschool/gamecraft/) | [Next: Session 5 →](/highschool/gamecraft/session5/)**
+**[← Session 3](/highschool/session3/) | [Back to GameCraft Home](/highschool/) | [Next: Session 5 →](/highschool/session5/)**
