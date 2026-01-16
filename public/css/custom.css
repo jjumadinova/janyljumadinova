@@ -2763,3 +2763,30 @@ li.pingback:first-child {
 .highlight .mo { /* Number octal */
   color: #bd93f9 !important; /* Purple instead of yellow */
 }
+
+/* Fix light colored attribute values in HTML */
+.highlight .s1[style*="color:#e6db74"],
+.highlight .s2[style*="color:#e6db74"],
+.highlight .s[style*="color:#e6db74"] {
+  color: #d4a400 !important; /* Much darker yellow for attribute values */
+}
+
+/* Ensure all string-like content is visible */
+.highlight span[style*="color:#e6db74"] {
+  color: #d4a400 !important; /* Darker gold for any yellow text */
+}
+
+/* Make attribute values more visible */
+.highlight .o,   /* Operators */
+.highlight .ow { /* Operator word */
+  color: #ff79c6 !important; /* Pink for operators */
+}
+
+/* Comments should be darker gray, not light */
+.highlight .c,   /* Comment */
+.highlight .cm,  /* Comment multiline */
+.highlight .cp,  /* Comment preproc */
+.highlight .c1,  /* Comment single */
+.highlight .cs { /* Comment special */
+  color: #6272a4 !important; /* Darker blue-gray for comments */
+}
