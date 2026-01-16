@@ -8,12 +8,6 @@ author: Janyl Jumadinova
 
 # Session 4: Tic-Tac-Toe with React ⭕❌
 
-**Time:** 1 hour  
-**Goal:** Learn React by building a classic Tic-Tac-Toe game with components  
-**Prerequisites:** Sessions 1-3 (HTML, CSS, JavaScript)
-
----
-
 ## 🎯 What You'll Build Today
 
 A fully functional Tic-Tac-Toe game built with **React** - a modern framework used by Facebook, Netflix, and thousands of professional developers!

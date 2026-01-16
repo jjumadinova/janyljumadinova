@@ -8,12 +8,6 @@ author: Janyl Jumadinova
 
 # Session 3: Catch the Falling Gems! 💎
 
-**Time:** 1 hour  
-**Goal:** Build a game with moving objects, collision detection, and smooth animation  
-**Prerequisites:** Sessions 1-2 (HTML, CSS, JavaScript, game loops)
-
----
-
 ## 🎯 What You'll Build Today
 
 A "Gem Catcher" game where colorful gems fall from the sky and you move a basket to catch them!

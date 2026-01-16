@@ -8,12 +8,6 @@ author: Janyl Jumadinova
 
 # Session 1: Your First Interactive Web Page 🎨
 
-**Time:** 1 hour  
-**Goal:** Build a colorful button that responds to clicks - your first interactive web page!  
-**No prerequisites needed** - we'll start from the very beginning.
-
----
-
 ## 🎯 What You'll Build Today
 
 A web page with a button that changes color and text when you click it. Simple, but it introduces the **three core technologies** of web development!

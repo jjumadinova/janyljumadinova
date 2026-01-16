@@ -8,12 +8,6 @@ author: Janyl Jumadinova
 
 # Session 5: Deploy Your Games to the World! 🚀
 
-**Time:** 1 hour  
-**Goal:** Polish your games, deploy to GitHub Pages, and create your portfolio  
-**Prerequisites:** Sessions 1-4 (all games built)
-
----
-
 ## 🎯 What You'll Accomplish Today
 
 1. **Polish** - Add sound effects, animations, and final touches

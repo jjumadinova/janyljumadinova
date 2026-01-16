@@ -8,12 +8,6 @@ author: Janyl Jumadinova
 
 # Session 2: Build a Click Speed Game ⚡
 
-**Time:** 1 hour  
-**Goal:** Build a real game with a timer, score tracking, and restart functionality  
-**Prerequisites:** Session 1 (HTML, CSS, JavaScript basics)
-
----
-
 ## 🎯 What You'll Build Today
 
 A "Click Speed Challenge" game where players race against a 10-second timer to click as many times as possible!
