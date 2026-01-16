@@ -2710,3 +2710,56 @@ li.pingback:first-child {
   }
 }
 
+
+/* Custom syntax highlighting overrides for better visibility */
+/* Override yellow and light green colors in code blocks */
+.highlight .s1,  /* Single-quoted strings */
+.highlight .s2,  /* Double-quoted strings */
+.highlight .s,   /* Strings */
+.highlight .se,  /* String escapes */
+.highlight .sb,  /* String backtick */
+.highlight .sc,  /* String char */
+.highlight .sd,  /* String doc */
+.highlight .sh { /* String heredoc */
+  color: #e6db74 !important; /* Darker yellow */
+}
+
+.highlight .k,   /* Keywords */
+.highlight .kc,  /* Keyword constant */
+.highlight .kd,  /* Keyword declaration */
+.highlight .kn,  /* Keyword namespace */
+.highlight .kp,  /* Keyword pseudo */
+.highlight .kr,  /* Keyword reserved */
+.highlight .kt { /* Keyword type */
+  color: #66d9ef !important; /* Darker cyan instead of light green */
+}
+
+.highlight .nf,  /* Function names */
+.highlight .fm { /* Function magic */
+  color: #50fa7b !important; /* Darker green */
+}
+
+.highlight .na,  /* Name attribute */
+.highlight .nb,  /* Name builtin */
+.highlight .nc,  /* Name class */
+.highlight .no,  /* Name constant */
+.highlight .nd,  /* Name decorator */
+.highlight .ni,  /* Name entity */
+.highlight .ne,  /* Name exception */
+.highlight .nl,  /* Name label */
+.highlight .nn,  /* Name namespace */
+.highlight .nt,  /* Name tag */
+.highlight .nv,  /* Name variable */
+.highlight .nx { /* Name other */
+  color: #8be9fd !important; /* Darker cyan */
+}
+
+.highlight .m,   /* Number */
+.highlight .mb,  /* Number binary */
+.highlight .mf,  /* Number float */
+.highlight .mh,  /* Number hex */
+.highlight .mi,  /* Number integer */
+.highlight .il,  /* Number integer long */
+.highlight .mo { /* Number octal */
+  color: #bd93f9 !important; /* Purple instead of yellow */
+}
