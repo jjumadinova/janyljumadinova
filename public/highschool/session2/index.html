@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
+    
+
+    
+    <meta name="title" content="Session 2" />
+    <meta property="og:title" content="Session 2" />
+    <meta property="twitter:title" content="Session 2" />
+    
+
+    
+    <meta name="description" content="Janyl Jumadinova。Teacher. Researcher. Mother.">
+    <meta property="og:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    <meta property="twitter:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
+
+    <title>Session 2 | Janyl Jumadinova</title>
+
+    <link rel="canonical" href="/highschool/session2/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<a href="#main-content" class="skip-navigation">Skip to main content</a>
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation" aria-label="Main navigation">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="huxblog_navbar" aria-label="Toggle navigation menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" aria-label="Home - "></a>
+            <span class="navbar-descriptive"><strong>JJ:</strong> Teacher. Researcher. Engineer.</span>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" role="menubar">
+                    <li role="none">
+                        <a href="/" role="menuitem">Home</a>
+                    </li>
+                    
+
+		    
+                        <li role="none"><a href="/courses/" role="menuitem">COURSES</a></li>
+                    
+                        <li role="none"><a href="/highschool/" role="menuitem">HighSchool</a></li>
+                    
+                        <li role="none"><a href="/middleschool/" role="menuitem">MiddleSchool</a></li>
+                    
+                        <li role="none"><a href="/research/" role="menuitem">RESEARCH</a></li>
+                    
+                        <li role="none"><a href="/schedule/" role="menuitem">OFFICE HOURS</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main id="main-content" role="main" aria-label="Main content">
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="session-2-build-a-click-speed-game-">Session 2: Build a Click Speed Game ⚡</h1>
+<p><strong>Time:</strong> 1 hour<br>
+<strong>Goal:</strong> Build a real game with a timer, score tracking, and restart functionality<br>
+<strong>Prerequisites:</strong> Session 1 (HTML, CSS, JavaScript basics)</p>
+<hr>
+<h2 id="-what-youll-build-today">🎯 What You&rsquo;ll Build Today</h2>
+<p>A &ldquo;Click Speed Challenge&rdquo; game where players race against a 10-second timer to click as many times as possible!</p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>10-second countdown timer</li>
+<li>Click counter</li>
+<li>Start/Restart button</li>
+<li>High score tracking</li>
+<li>Victory message</li>
+</ul>
+<p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
+<hr>
+<h2 id="-setup-5-minutes">🚀 Setup (5 minutes)</h2>
+<h3 id="create-a-new-project">Create a New Project</h3>
+<p><strong>In Replit:</strong></p>
+<ol>
+<li>Click <strong>+ Create Repl</strong></li>
+<li>Choose <strong>HTML, CSS, JS</strong></li>
+<li>Name it: <code>gamecraft-session2</code></li>
+</ol>
+<p><strong>Or continue in VS Code:</strong> Create a new file <code>click-game.html</code></p>
+<hr>
+<h2 id="-part-1-build-the-game-structure-10-minutes">📖 Part 1: Build the Game Structure (10 minutes)</h2>
+<h3 id="step-1-html-structure">Step 1: HTML Structure</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">title</span>&gt;Click Speed Challenge&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;⚡ Click Speed Challenge ⚡&lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game-info&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;Time Left:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;timer&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;10.0&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;Clicks:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;score&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;High Score:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;highScore&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;clickButton&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;click-button&#34;</span> <span style="color:#50fa7b">disabled</span>&gt;
+</span></span><span style="display:flex;"><span>            Click START to Begin!
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;startButton&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;start-button&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            START GAME
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><h3 id="-new-concepts">🔍 New Concepts:</h3>
+<ul>
+<li><strong><code>&lt;div class=&quot;container&quot;&gt;</code></strong> - Groups related elements together</li>
+<li><strong><code>disabled</code></strong> - Makes a button unclickable until we&rsquo;re ready</li>
+<li><strong>Multiple elements with <code>id</code>s</strong> - So we can control each one separately</li>
+</ul>
+<hr>
+<h2 id="-part-2-style-your-game-10-minutes">🎨 Part 2: Style Your Game (10 minutes)</h2>
+<h3 id="step-2-add-css-inside-head">Step 2: Add CSS Inside <code>&lt;head&gt;</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">body</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#39;Segoe UI&#39;</span>, Tahoma, Geneva, Verdana, <span style="color:#ff79c6">sans-serif</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#667eea</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#764ba2</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">vh</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">container</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>        backdrop-filter: <span style="color:#8be9fd;font-style:italic">blur</span>(<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">h1</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">42</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">game-info</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space-around</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">gap</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">stat</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.2</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">25</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-width</span>: <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">label</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">14</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.9</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">value</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">32</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">click-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#ff6b6b</span>, <span style="color:#bd93f9">#ee5a52</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">%</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.4</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.1</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">click-button</span>:hover:not<span style="color:#ff79c6">(</span>:disabled<span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">scale</span>(<span style="color:#bd93f9">1.05</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">click-button</span>:active:not<span style="color:#ff79c6">(</span>:disabled<span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">scale</span>(<span style="color:#bd93f9">0.95</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">click-button</span>:disabled {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">gray</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">not-allowed</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.5</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">start-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#4ecdc4</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">start-button</span>:hover {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#3dbdb3</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-2</span><span style="color:#8be9fd">px</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">message</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">24</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">animation</span>: fadeIn <span style="color:#bd93f9">0.5</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    @<span style="color:#ff79c6">keyframes</span> <span style="color:#ff79c6">fadeIn</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">from</span> { <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">to</span> { <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">1</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="-test-it">✅ Test It!</h3>
+<p>You should see a beautiful game interface with a big round button!</p>
+<hr>
+<h2 id="-part-3-add-game-logic-25-minutes">⚡ Part 3: Add Game Logic (25 minutes)</h2>
+<h3 id="step-3-javascript---the-game-brain">Step 3: JavaScript - The Game Brain</h3>
+<p>Add this right before <code>&lt;/body&gt;</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 1. GET ALL THE ELEMENTS WE NEED
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> clickButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;clickButton&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> startButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;startButton&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> timerDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;timer&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> scoreDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;score&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> highScoreDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;highScore&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> messageDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;message&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 2. GAME STATE VARIABLES
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;              <span style="color:#6272a4">// Current clicks
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> timeLeft <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;          <span style="color:#6272a4">// Seconds remaining
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> highScore <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;          <span style="color:#6272a4">// Best score ever
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;    <span style="color:#6272a4">// Is the game active?
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> timerInterval <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span>;   <span style="color:#6272a4">// Stores the timer so we can stop it
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 3. HANDLE CLICK BUTTON
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    clickButton.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (gameRunning) {
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Add 1 to the score
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            score<span style="color:#ff79c6">++</span>;
+</span></span><span style="display:flex;"><span>            scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Fun feedback: briefly change color
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            clickButton.style.transform <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;scale(0.95)&#39;</span>;
+</span></span><span style="display:flex;"><span>            setTimeout(() =&gt; {
+</span></span><span style="display:flex;"><span>                clickButton.style.transform <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;scale(1)&#39;</span>;
+</span></span><span style="display:flex;"><span>            }, <span style="color:#bd93f9">100</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 4. HANDLE START BUTTON
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    startButton.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex;"><span>        startGame();
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 5. START GAME FUNCTION
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> startGame() {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Reset everything
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>        timeLeft <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
+</span></span><span style="display:flex;"><span>        gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Update displays
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
+</span></span><span style="display:flex;"><span>        timerDisplay.textContent <span style="color:#ff79c6">=</span> timeLeft.toFixed(<span style="color:#bd93f9">1</span>);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Enable click button
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clickButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
+</span></span><span style="display:flex;"><span>        clickButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;CLICK ME!&#39;</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Change start button to show game is running
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Running...&#39;</span>;
+</span></span><span style="display:flex;"><span>        startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Start the countdown timer
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        timerInterval <span style="color:#ff79c6">=</span> setInterval(updateTimer, <span style="color:#bd93f9">100</span>); <span style="color:#6272a4">// Update every 0.1 seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 6. UPDATE TIMER FUNCTION
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> updateTimer() {
+</span></span><span style="display:flex;"><span>        timeLeft <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">0.1</span>; <span style="color:#6272a4">// Subtract 0.1 seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (timeLeft <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Time&#39;s up!
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            endGame();
+</span></span><span style="display:flex;"><span>        } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Update the display
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            timerDisplay.textContent <span style="color:#ff79c6">=</span> timeLeft.toFixed(<span style="color:#bd93f9">1</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 7. END GAME FUNCTION
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> endGame() {
+</span></span><span style="display:flex;"><span>        gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Stop the timer
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clearInterval(timerInterval);
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Disable click button
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clickButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>        clickButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Time\&#39;s Up!&#39;</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Re-enable start button
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
+</span></span><span style="display:flex;"><span>        startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;PLAY AGAIN&#39;</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Check if this is a high score
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">if</span> (score <span style="color:#ff79c6">&gt;</span> highScore) {
+</span></span><span style="display:flex;"><span>            highScore <span style="color:#ff79c6">=</span> score;
+</span></span><span style="display:flex;"><span>            highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
+</span></span><span style="display:flex;"><span>            messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;🎉 NEW HIGH SCORE! 🎉&#39;</span>;
+</span></span><span style="display:flex;"><span>        } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>            messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Over! Your score: &#39;</span> <span style="color:#ff79c6">+</span> score;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Reset timer display to 0
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        timerDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;0.0&#39;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><h3 id="-lets-understand-the-magic">🔍 Let&rsquo;s Understand the Magic!</h3>
+<p><strong>Key Concepts:</strong></p>
+<ol>
+<li>
+<p><strong>Variables store game state:</strong></p>
+<ul>
+<li><code>let score = 0</code> - Tracks current clicks</li>
+<li><code>let gameRunning = false</code> - Tells us if the game is active</li>
+</ul>
+</li>
+<li>
+<p><strong><code>setInterval(function, time)</code></strong> - Runs a function repeatedly</p>
+<ul>
+<li>We use it to countdown the timer every 0.1 seconds</li>
+<li><code>setInterval(updateTimer, 100)</code> means &ldquo;run updateTimer every 100 milliseconds&rdquo;</li>
+</ul>
+</li>
+<li>
+<p><strong><code>clearInterval(timerInterval)</code></strong> - Stops the repeating function</p>
+<ul>
+<li>Called when time runs out</li>
+</ul>
+</li>
+<li>
+<p><strong><code>.toFixed(1)</code></strong> - Rounds numbers to 1 decimal place</p>
+<ul>
+<li>Turns <code>9.9999</code> into <code>&quot;10.0&quot;</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Enabling/Disabling buttons:</strong></p>
+<ul>
+<li><code>button.disabled = true</code> - Makes button gray and unclickable</li>
+<li><code>button.disabled = false</code> - Makes button active again</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-part-4-test-and-customize-10-minutes">🎮 Part 4: Test and Customize (10 minutes)</h2>
+<h3 id="-full-testing-checklist">✅ Full Testing Checklist:</h3>
+<ol>
+<li>Click START - does the timer count down?</li>
+<li>Click the big button - does the score increase?</li>
+<li>Wait for time to run out - does it show &ldquo;Time&rsquo;s Up!&rdquo;?</li>
+<li>Play again and beat your score - does it say &ldquo;NEW HIGH SCORE&rdquo;?</li>
+</ol>
+<h3 id="-customization-challenges">🎨 Customization Challenges:</h3>
+<p><strong>Easy:</strong></p>
+<ol>
+<li>Change the game duration (change <code>timeLeft = 10</code> to a different number)</li>
+<li>Change the button colors in CSS</li>
+</ol>
+<p><strong>Medium:</strong>
+3. Make the button change color as you click it (hint: use an array of colors!)
+4. Add a clicks-per-second calculator</p>
+<p><strong>Hard:</strong>
+5. Add difficulty levels: Easy (15 seconds), Medium (10 seconds), Hard (5 seconds)
+6. Save high score in <code>localStorage</code> so it persists even after refreshing</p>
+<hr>
+<h2 id="-challenge-solutions">💡 Challenge Solutions</h2>
+<h3 id="challenge-4-clicks-per-second">Challenge #4: Clicks Per Second</h3>
+<p>Add this to the <code>endGame()</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> clicksPerSecond <span style="color:#ff79c6">=</span> (score <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">10</span>).toFixed(<span style="color:#bd93f9">1</span>);
+</span></span><span style="display:flex;"><span>messageDisplay.textContent <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#39; (&#39;</span> <span style="color:#ff79c6">+</span> clicksPerSecond <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39; clicks/sec)&#39;</span>;
+</span></span></code></pre></div><h3 id="challenge-6-persistent-high-score">Challenge #6: Persistent High Score</h3>
+<p>Add this at the TOP of your script (after getting elements):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// Load high score from browser storage
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>highScore <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(localStorage.getItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>)) <span style="color:#ff79c6">||</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
+</span></span></code></pre></div><p>And in <code>endGame()</code>, after updating high score:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// Save to browser storage
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>localStorage.setItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>, highScore);
+</span></span></code></pre></div><hr>
+<h2 id="-what-you-learned-today">📚 What You Learned Today</h2>
+<p>✅ <strong>Intervals and Timers</strong> - <code>setInterval()</code>, <code>clearInterval()</code><br>
+✅ <strong>Game State Management</strong> - Tracking multiple variables<br>
+✅ <strong>Conditional Logic</strong> - <code>if</code> statements to control game flow<br>
+✅ <strong>Enable/Disable UI</strong> - Controlling when buttons work<br>
+✅ <strong>Number Formatting</strong> - <code>.toFixed()</code> for decimals<br>
+✅ <strong>Game Loop Concept</strong> - Repeating functions that update the game</p>
+<hr>
+<h2 id="-next-session-preview">🚀 Next Session Preview</h2>
+<p><strong>Session 3:</strong> We&rsquo;ll add <strong>animation and movement</strong> - build a &ldquo;Catch the Falling Objects&rdquo; game with moving elements!</p>
+<hr>
+<h2 id="-homework-optional">📦 Homework (Optional)</h2>
+<ol>
+<li>Add a &ldquo;Best Time&rdquo; feature - track the fastest time to reach 50 clicks</li>
+<li>Create sound effects (hint: use the Web Audio API or <code>&lt;audio&gt;</code> tag)</li>
+<li>Add a lives system where missing clicks costs a life</li>
+<li>Make the button move around the screen randomly!</li>
+</ol>
+<hr>
+<h2 id="-common-issues">🆘 Common Issues</h2>
+<p><strong>Problem:</strong> &ldquo;Timer doesn&rsquo;t count down&rdquo;<br>
+<strong>Solution:</strong> Check that <code>setInterval(updateTimer, 100)</code> is called in <code>startGame()</code></p>
+<p><strong>Problem:</strong> &ldquo;Can&rsquo;t click button after starting&rdquo;<br>
+<strong>Solution:</strong> Make sure <code>clickButton.disabled = false;</code> is in <code>startGame()</code></p>
+<p><strong>Problem:</strong> &ldquo;High score doesn&rsquo;t update&rdquo;<br>
+<strong>Solution:</strong> Check the <code>if (score &gt; highScore)</code> condition in <code>endGame()</code></p>
+<hr>
+<h2 id="-resources">📖 Resources</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval">setInterval() - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Event Listeners - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
+</ul>
+<hr>
+<p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 →</a></strong></p>
+
+
+                
+
+                <hr>
+                
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+
+
+
+
+<footer role="contentinfo" aria-label="Site footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
+                    
+                    <li role="listitem">
+                        <a href="mailto:jjumadinova@allegheny.edu" aria-label="Email">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jjumadinova/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://linkedin.com/in/janyl-jumadinova">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy;  2026
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18WYHLKCBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18WYHLKCBH');
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

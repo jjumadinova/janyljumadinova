@@ -204,26 +204,141 @@
 <li>Ability to use a game engine-based simulation to create and test robotic systems.</li>
 <li>Problem-solving and teamwork through iterative development and testing.</li>
 </ul>
+<p><a href="https://forms.gle/r4KBwPLqnJ79C6bDA">Assessment form</a></p>
+<h3 id="session-5">Session 5</h3>
+<p><strong>Goal:</strong> Learn Unity game engine basics and create your first game simulation.</p>
+<hr>
+<h4 id="unity-tutorial">Unity Tutorial</h4>
+<p>Reference this tutorial if you fall behind:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=XtQMytORBmM">Unity Basics Tutorial</a></li>
+</ul>
+<p><strong>Resources:</strong></p>
+<ul>
+<li><strong><a href="https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip">Download Unity Assets (ZIP)</a></strong> - Collection of sprite images for your Unity robot project</li>
+</ul>
+<p>Follow along:</p>
+<ol>
+<li>Navigate the Unity interface</li>
+<li>Add and manipulate 3D objects</li>
+<li>Create basic movements</li>
+<li>Build an executable game</li>
+</ol>
+<h4 id="birdscript">BirdScript</h4>
+<pre tabindex="0"><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+ 
+public class BirdScript : MonoBehaviour
+{
+    public Rigidbody2D myRigidbody;
+    public float flapStrength;
+    //public LogicScript logic;
+    //public bool birdIsAlive = true;
+ 
+    // Start is called before the first frame update
+    void Start()
+    {
+        //logic = GameObject.FindGameObjectWithTag(&#34;Logic&#34;).GetComponent&lt;LogicScript&gt;();
+    }
+ 
+    // Update is called once per frame
+    void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.Space)) // &amp;&amp; birdIsAlive)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            myRigidbody.linearVelocity = Vector2.up * flapStrength;
+        }
+    }
+ 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    logic.gameOver();
+    //    birdIsAlive = false;
+    //}
+}
+</code></pre><h4 id="pipemovescript">PipeMoveScript</h4>
+<pre tabindex="0"><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+ 
+public class PipeMoveScript : MonoBehaviour
+{
+    public float moveSpeed = 5;
+    //public float deadZone = -45;
+ 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+ 
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        //if (transform.position.x &gt; deadZone)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
+}
+</code></pre><h3 id="session-5-1">Session 5</h3>
+<p><strong>Goal:</strong> Create animated web experiences using block-based coding with Delightex.</p>
+<hr>
+<h4 id="getting-started-with-delightex">Getting Started with Delightex</h4>
+<ol>
+<li>
+<p><strong>Access Delightex</strong></p>
+<ul>
+<li>Go to <a href="https://www.delightex.com/edu">delightex.com/edu</a></li>
+<li>Click on <strong>&ldquo;Try it live&rdquo;</strong> button</li>
+<li>No account needed - start coding immediately!</li>
+</ul>
+</li>
+<li>
+<p><strong>Explore the Interface</strong></p>
+<ul>
+<li><strong>Left side:</strong> Click on the list icon and explore various elements (click on three dots -&gt; Code -&gt; Check <code>Use in CoBlocks</code>)</li>
+<li><strong>Center:</strong> Canvas where your game appears</li>
+<li><strong>Right side:</strong> Click on Code on top right -&gt; <code>CoBlocks</code></li>
+<li><strong>Bottom:</strong> Add elements from the library</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Animations</strong></p>
+<ul>
+<li>Drag a code block from the command palette to the canvas</li>
+<li>Try various code blocks</li>
+<li>Click <strong>Run</strong> to see your animation!</li>
+</ul>
+</li>
+</ol>
 <h3 id="session-4">Session 4</h3>
 <p><strong>Goal:</strong> Experiment with underwater robots using manual control and understand robot movements in aquatic environments.</p>
 <hr>
 <h4 id="underwater-robot-exploration">Underwater Robot Exploration</h4>
 <ol>
-<li><strong>Introduction to Underwater Robotics</strong>
+<li>
+<p><strong>Introduction to Underwater Robotics</strong></p>
 <ul>
 <li>Learn about ROVs (Remotely Operated Vehicles)</li>
 <li>Understand how underwater robots differ from land robots</li>
 <li>Discuss buoyancy, water resistance, and thruster systems</li>
 </ul>
 </li>
-<li><strong>Manual Control Practice</strong>
+<li>
+<p><strong>Manual Control Practice</strong></p>
 <ul>
 <li>Connect to the underwater robot system</li>
 <li>Practice basic movements: forward, backward, up, down, rotate</li>
 <li>Experiment with thruster control and navigation</li>
 </ul>
 </li>
-<li><strong>Movement Challenges</strong>
+<li>
+<p><strong>Movement Challenges</strong></p>
 <ul>
 <li>Navigate through underwater obstacles</li>
 <li>Practice maintaining depth and orientation</li>
@@ -231,7 +346,8 @@
 <li>Figure out optimal control strategies</li>
 </ul>
 </li>
-<li><strong>Observations and Discussion</strong>
+<li>
+<p><strong>Observations and Discussion</strong></p>
 <ul>
 <li>Compare underwater robot control to land robots</li>
 <li>Discuss challenges faced during manual control</li>
@@ -244,22 +360,25 @@
 <hr>
 <h4 id="getting-started-with-gopigo">Getting Started with GoPiGo</h4>
 <ol>
-<li><strong>Connect to Your Robot</strong>
+<li>
+<p><strong>Connect to Your Robot</strong></p>
 <ul>
 <li>Turn on the GoPiGo robot</li>
-<li>On your computer, connect to the robot's WiFi network</li>
+<li>On your computer, connect to the robot&rsquo;s WiFi network</li>
 <li>Open a web browser and navigate to <strong>10.10.10.10</strong></li>
 <li>You should see the Bloxter programming interface</li>
 </ul>
 </li>
-<li><strong>Explore the Bloxter Interface</strong>
+<li>
+<p><strong>Explore the Bloxter Interface</strong></p>
 <ul>
 <li>Familiarize yourself with the block categories</li>
 <li>Look at Movement, Sensors, and Control blocks</li>
 <li>Try the example programs provided</li>
 </ul>
 </li>
-<li><strong>Basic Movement Programming</strong>
+<li>
+<p><strong>Basic Movement Programming</strong></p>
 <ul>
 <li>Make your robot drive forward for 2 seconds</li>
 <li>Add a turn (left or right)</li>
@@ -267,14 +386,16 @@
 <li>Test and debug your code</li>
 </ul>
 </li>
-<li><strong>Add Sensor Input</strong>
+<li>
+<p><strong>Add Sensor Input</strong></p>
 <ul>
 <li>Use the distance sensor to detect obstacles</li>
 <li>Program the robot to stop when it senses a wall</li>
 <li>Make it turn and continue exploring</li>
 </ul>
 </li>
-<li><strong>Challenge: Maze Navigation</strong>
+<li>
+<p><strong>Challenge: Maze Navigation</strong></p>
 <ul>
 <li>Set up a simple maze with obstacles</li>
 <li>Program your robot to navigate through it</li>
@@ -287,7 +408,7 @@
 <ul>
 <li>Save your programs frequently</li>
 <li>Start simple and add complexity gradually</li>
-<li>If something doesn't work, check your block connections</li>
+<li>If something doesn&rsquo;t work, check your block connections</li>
 <li>Test small sections of code before combining them</li>
 </ul>
 <h3 id="session-2">Session 2</h3>
@@ -460,7 +581,7 @@
            
              </ul>
 		<p class="copyright text-muted">
-                    Copyright &copy;  2025
+                    Copyright &copy;  2026
                     <br>
                     
                 </p>

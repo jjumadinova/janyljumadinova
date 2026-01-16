@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Office Hours" />
-    <meta property="og:title" content="Office Hours" />
-    <meta property="twitter:title" content="Office Hours" />
+    <meta name="title" content="" />
+    <meta property="og:title" content="" />
+    <meta property="twitter:title" content="" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Office Hours | Janyl Jumadinova</title>
+    <title>Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/schedule/">
+    <link rel="canonical" href="/highschool/sensor_code/">
 
     
     
@@ -196,15 +196,38 @@
                 post-container">
 
                 
-                <h1 id="scheduling-office-hours">Scheduling Office Hours</h1>
-<p>To schedule a meeting with me during my office hours, please <a href="https://calendar.app.google/UtjHRPb71RKeraYk7">book an appointment</a>. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.</p>
-<h1 id="office-hour-location">Office Hour Location</h1>
-<p>Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.</p>
-<h1 id="online-office-hours">Online Office Hours</h1>
-<p>After you schedule office hour via Google calendar but you prefer to meet over Google Meet, please send me a Discord message so I can set up a video link in advance.</p>
-<h1 id="meeting-outside-office-hours">Meeting outside Office Hours</h1>
-<p>To schedule an appointment outside of office hours, please send me an email or a Discord message.</p>
+                <h2 id="connecting-temperature-sensor-to-arduino">Connecting temperature sensor to Arduino</h2>
+<pre tabindex="0"><code>#include &lt;OneWire.h&gt;
+#include &lt;DallasTemperature.h&gt;
 
+// Data wire is connected to digital pin 2
+#define ONE_WIRE_BUS 2
+
+// Setup a oneWire instance to communicate with any OneWire devices
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass our oneWire reference to Dallas Temperature sensor
+DallasTemperature sensors(&amp;oneWire);
+
+void setup() {
+  // Start serial communication for debugging
+  Serial.begin(9600);
+  // Start the DS18B20 sensor
+  sensors.begin();
+}
+
+void loop() {
+  // Request temperature readings from the sensor
+  sensors.requestTemperatures();
+  // Fetch and print the temperature in Celsius
+  float temperatureC = sensors.getTempCByIndex(0);
+  Serial.print(&#34;Temperature (°C): &#34;);
+  Serial.println(temperatureC);
+
+  // Wait for 1 second before the next reading
+  delay(1000);
+}
+</code></pre>
 
                 
 

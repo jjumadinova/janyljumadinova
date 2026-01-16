@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Office Hours" />
-    <meta property="og:title" content="Office Hours" />
-    <meta property="twitter:title" content="Office Hours" />
+    <meta name="title" content="Meadville Area Senior High School" />
+    <meta property="og:title" content="Meadville Area Senior High School" />
+    <meta property="twitter:title" content="Meadville Area Senior High School" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Office Hours | Janyl Jumadinova</title>
+    <title>Meadville Area Senior High School | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/schedule/">
+    <link rel="canonical" href="/highschool/index_s2023/">
 
     
     
@@ -196,14 +196,66 @@
                 post-container">
 
                 
-                <h1 id="scheduling-office-hours">Scheduling Office Hours</h1>
-<p>To schedule a meeting with me during my office hours, please <a href="https://calendar.app.google/UtjHRPb71RKeraYk7">book an appointment</a>. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.</p>
-<h1 id="office-hour-location">Office Hour Location</h1>
-<p>Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.</p>
-<h1 id="online-office-hours">Online Office Hours</h1>
-<p>After you schedule office hour via Google calendar but you prefer to meet over Google Meet, please send me a Discord message so I can set up a video link in advance.</p>
-<h1 id="meeting-outside-office-hours">Meeting outside Office Hours</h1>
-<p>To schedule an appointment outside of office hours, please send me an email or a Discord message.</p>
+                <h1 id="crawford-central-mash">Crawford Central MASH</h1>
+<h2 id="high-school-game-development">High School Game Development</h2>
+<h3 id="tasks">Tasks</h3>
+<ul>
+<li>
+<p>Have a playable 2D game based on the <a href="https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html">First 2D Game tutorial</a>.</p>
+</li>
+<li>
+<p>Enhance the 2D game you have developed. How can you make the game your own to some degree?</p>
+</li>
+</ul>
+<h2 id="high-school-robotics">High School Robotics</h2>
+<p>Develop a dancing <code>gopigo</code> robot.</p>
+<h3 id="tasks-1">Tasks</h3>
+<ul>
+<li>Your robot must use a speaker and play music.</li>
+<li>Your code must use an <code>if</code> statement. Ask a teaching assistant for help with this task!</li>
+<li>Your code must use a loop (such as <code>for</code> or <code>while</code> loop). Ask a teaching assistant for help with this task!</li>
+</ul>
+<p>Below is the sample code using a distance sensor and a speaker:</p>
+<pre tabindex="0"><code>import easygopigo3 as easy
+import time
+import pygame
+
+gpg = easy.EasyGoPiGo3()
+my_distance_sensor = gpg.init_distance_sensor() # init the distance sensor, the distance will be measure in millimeter
+max_dis_t = 25 # maximum steps the robot can go
+min_distance = 250 # the min distance to a curtain object is 250mm
+t = 0  # init the number of steps
+
+# Play music
+pygame.mixer.init()    
+pygame.mixer.music.load(&#34;music.mp3&#34;)
+pygame.mixer.music.set_volume(1)
+pygame.mixer.music.play()
+
+while t &lt;= max_dis_t:
+    # Directly print the values of the sensor.
+    print(&#34;Distance Sensor Reading (mm): &#34; + str(my_distance_sensor.read_mm()))
+
+    t = t + 1
+    print(&#34;time = &#34;, t)
+
+    # if not encounter an object
+    if my_distance_sensor.read_mm() &gt; min_distance:
+        gpg.drive_inches(5)       # go straight 5 inches
+    else:
+        gpg.turn_degrees(90)    # turn right if encounter a object
+
+
+# Stop playing music
+pygame.mixer.music.stop()
+</code></pre><h3 id="reminder-working-with-robots">Reminder: Working with Robots</h3>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=aKPE6Sn8EKI&amp;t=40s">Turn on battery and turn on the robot</a></li>
+<li>Connect to robot&rsquo;s wifi</li>
+<li>Go to mygopigo.com and click on <code>Code</code> -&gt; <code>Python</code></li>
+<li>Complete the activity</li>
+<li><a href="https://www.youtube.com/watch?time_continue=39&amp;v=Co2i673mCQ4&amp;embeds_euri=https%3A%2F%2Fwww.google.com%2F&amp;source_ve_path=MzY4NDIsMzY4NDIsMzY4NDI&amp;feature=emb_logo">Shut down the robot</a></li>
+</ol>
 
 
                 

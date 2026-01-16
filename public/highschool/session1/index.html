@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
+    
+
+    
+    <meta name="title" content="Session 1" />
+    <meta property="og:title" content="Session 1" />
+    <meta property="twitter:title" content="Session 1" />
+    
+
+    
+    <meta name="description" content="Janyl Jumadinova。Teacher. Researcher. Mother.">
+    <meta property="og:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    <meta property="twitter:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
+
+    <title>Session 1 | Janyl Jumadinova</title>
+
+    <link rel="canonical" href="/highschool/session1/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<a href="#main-content" class="skip-navigation">Skip to main content</a>
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation" aria-label="Main navigation">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="huxblog_navbar" aria-label="Toggle navigation menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" aria-label="Home - "></a>
+            <span class="navbar-descriptive"><strong>JJ:</strong> Teacher. Researcher. Engineer.</span>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" role="menubar">
+                    <li role="none">
+                        <a href="/" role="menuitem">Home</a>
+                    </li>
+                    
+
+		    
+                        <li role="none"><a href="/courses/" role="menuitem">COURSES</a></li>
+                    
+                        <li role="none"><a href="/highschool/" role="menuitem">HighSchool</a></li>
+                    
+                        <li role="none"><a href="/middleschool/" role="menuitem">MiddleSchool</a></li>
+                    
+                        <li role="none"><a href="/research/" role="menuitem">RESEARCH</a></li>
+                    
+                        <li role="none"><a href="/schedule/" role="menuitem">OFFICE HOURS</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main id="main-content" role="main" aria-label="Main content">
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="session-1-your-first-interactive-web-page-">Session 1: Your First Interactive Web Page 🎨</h1>
+<p><strong>Time:</strong> 1 hour<br>
+<strong>Goal:</strong> Build a colorful button that responds to clicks - your first interactive web page!<br>
+<strong>No prerequisites needed</strong> - we&rsquo;ll start from the very beginning.</p>
+<hr>
+<h2 id="-what-youll-build-today">🎯 What You&rsquo;ll Build Today</h2>
+<p>A web page with a button that changes color and text when you click it. Simple, but it introduces the <strong>three core technologies</strong> of web development!</p>
+<p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
+<hr>
+<h2 id="-setup-5-minutes">🧰 Setup (5 minutes)</h2>
+<h3 id="option-a-replit-easiest---works-in-browser">Option A: Replit (Easiest - Works in Browser!)</h3>
+<ol>
+<li>Go to <a href="https://replit.com/">replit.com</a></li>
+<li>Sign up/log in (use your GitHub account!)</li>
+<li>Click <strong>+ Create Repl</strong></li>
+<li>Choose <strong>HTML, CSS, JS</strong> template</li>
+<li>Name it: <code>gamecraft-session1</code></li>
+</ol>
+<h3 id="option-b-vs-code-local-installation">Option B: VS Code (Local Installation)</h3>
+<ol>
+<li>Download <a href="https://code.visualstudio.com/">VS Code</a></li>
+<li>Create a new folder: <code>gamecraft-session1</code></li>
+<li>Create a file: <code>index.html</code></li>
+</ol>
+<p><strong>We&rsquo;ll use Option A in class for simplicity!</strong></p>
+<hr>
+<h2 id="-part-1-html---the-structure-15-minutes">📖 Part 1: HTML - The Structure (15 minutes)</h2>
+<p>HTML is like the <strong>skeleton</strong> of a web page. It defines what elements exist.</p>
+<h3 id="step-1-create-the-basic-structure">Step 1: Create the Basic Structure</h3>
+<p>In your <code>index.html</code> file, type this (or paste it):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">title</span>&gt;My First Web Game&lt;/<span style="color:#ff79c6">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h1</span>&gt;Welcome to GameCraft!&lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">p</span>&gt;Click the button below:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;magicButton&#34;</span>&gt;Click Me!&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><h3 id="-what-does-this-mean">🔍 What Does This Mean?</h3>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> - Tells the browser &ldquo;this is a web page&rdquo;</li>
+<li><code>&lt;html&gt;</code> - The container for everything</li>
+<li><code>&lt;head&gt;</code> - Information ABOUT the page (title, settings)</li>
+<li><code>&lt;body&gt;</code> - What you SEE on the page</li>
+<li><code>&lt;h1&gt;</code> - A big heading</li>
+<li><code>&lt;p&gt;</code> - A paragraph of text</li>
+<li><code>&lt;button&gt;</code> - A clickable button!</li>
+<li><code>id=&quot;magicButton&quot;</code> - A name we&rsquo;ll use later to control this button</li>
+</ul>
+<h3 id="-test-it">✅ Test It!</h3>
+<ul>
+<li><strong>Replit:</strong> Click the green &ldquo;Run&rdquo; button at the top</li>
+<li><strong>VS Code:</strong> Right-click <code>index.html</code> → &ldquo;Open with Live Server&rdquo; (or just double-click to open in browser)</li>
+</ul>
+<p><strong>You should see:</strong> A plain page with a heading, text, and a button!</p>
+<hr>
+<h2 id="-part-2-css---the-style-15-minutes">🎨 Part 2: CSS - The Style (15 minutes)</h2>
+<p>CSS is like <strong>clothes and makeup</strong> for your web page. It makes things look good!</p>
+<h3 id="step-2-add-style">Step 2: Add Style</h3>
+<p>Inside your <code>&lt;head&gt;</code> section (between <code>&lt;title&gt;</code> and <code>&lt;/head&gt;</code>), add this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">body</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-family</span>: Arial, <span style="color:#ff79c6">sans-serif</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#667eea</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#764ba2</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">vh</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">flex-direction</span>: <span style="color:#ff79c6">column</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">h1</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">48</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">p</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">24</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#ff6b6b</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">button</span>:hover {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#ee5a52</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-3</span><span style="color:#8be9fd">px</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0.4</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
+</span></span></code></pre></div><h3 id="-what-does-this-do">🔍 What Does This Do?</h3>
+<ul>
+<li><code>body { ... }</code> - Styles the entire page (gradient background, centered content)</li>
+<li><code>h1 { ... }</code> - Makes the heading bigger and adds a shadow</li>
+<li><code>button { ... }</code> - Makes the button colorful, rounded, and adds a shadow</li>
+<li><code>button:hover</code> - Changes how the button looks when you move your mouse over it</li>
+<li><code>transition</code> - Makes changes smooth and animated</li>
+</ul>
+<h3 id="-test-it-1">✅ Test It!</h3>
+<p>Refresh your page. <strong>WOW!</strong> 🎨 Much better looking!</p>
+<hr>
+<h2 id="-part-3-javascript---the-interaction-20-minutes">⚡ Part 3: JavaScript - The Interaction (20 minutes)</h2>
+<p>JavaScript is the <strong>brain</strong> of your web page. It makes things DO stuff!</p>
+<h3 id="step-3-add-interactivity">Step 3: Add Interactivity</h3>
+<p>Right before the closing <code>&lt;/body&gt;</code> tag, add this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Step 1: Find the button on the page
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> button <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;magicButton&#39;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Step 2: Create a variable to count clicks
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> clickCount <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Step 3: Define what happens when button is clicked
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> handleClick() {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Increase the count
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clickCount <span style="color:#ff79c6">=</span> clickCount <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Change the button text
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        button.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Clicked &#39;</span> <span style="color:#ff79c6">+</span> clickCount <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39; times!&#39;</span>;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Change the button color randomly
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">const</span> randomColor <span style="color:#ff79c6">=</span> getRandomColor();
+</span></span><span style="display:flex;"><span>        button.style.backgroundColor <span style="color:#ff79c6">=</span> randomColor;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Step 4: Create a function to generate random colors
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> getRandomColor() {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> colors <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;#ff6b6b&#39;</span>, <span style="color:#f1fa8c">&#39;#4ecdc4&#39;</span>, <span style="color:#f1fa8c">&#39;#45b7d1&#39;</span>, <span style="color:#f1fa8c">&#39;#f7b731&#39;</span>, <span style="color:#f1fa8c">&#39;#5f27cd&#39;</span>, <span style="color:#f1fa8c">&#39;#00d2d3&#39;</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> randomIndex <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.floor(<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> colors.length);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> colors[randomIndex];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Step 5: Tell the button to run handleClick when clicked
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    button.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, handleClick);
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><h3 id="-lets-break-this-down">🔍 Let&rsquo;s Break This Down!</h3>
+<ol>
+<li><strong><code>const button = ...</code></strong> - Finds your button by its <code>id</code> and saves it in a variable</li>
+<li><strong><code>let clickCount = 0</code></strong> - Creates a counter starting at 0</li>
+<li><strong><code>function handleClick() { ... }</code></strong> - A recipe for what to do when clicked</li>
+<li><strong><code>clickCount = clickCount + 1</code></strong> - Adds 1 to the counter (like tallying scores!)</li>
+<li><strong><code>button.textContent = ...</code></strong> - Changes what the button says</li>
+<li><strong><code>button.style.backgroundColor = ...</code></strong> - Changes the button&rsquo;s color</li>
+<li><strong><code>addEventListener('click', ...)</code></strong> - Says &ldquo;when someone clicks, run this function&rdquo;</li>
+</ol>
+<h3 id="-test-it-2">✅ Test It!</h3>
+<p>Click your button! It should:</p>
+<ul>
+<li>Count your clicks</li>
+<li>Change colors randomly</li>
+<li>Update the text</li>
+</ul>
+<p><strong>Congratulations! You just made something interactive!</strong> 🎉</p>
+<hr>
+<h2 id="-part-4-make-it-your-own-5-minutes">🎮 Part 4: Make It Your Own (5 minutes)</h2>
+<h3 id="challenges">Challenges:</h3>
+<ol>
+<li><strong>Easy:</strong> Change the starting button text to something fun</li>
+<li><strong>Medium:</strong> Add more colors to the <code>colors</code> array</li>
+<li><strong>Hard:</strong> Make the heading also change when you click the button</li>
+</ol>
+<p><strong>Hint for #3:</strong> You&rsquo;ll need to get the heading with <code>document.querySelector('h1')</code> and change its text!</p>
+<hr>
+<h2 id="-what-you-learned-today">📚 What You Learned Today</h2>
+<p>✅ <strong>HTML</strong> - Structure (headings, paragraphs, buttons)<br>
+✅ <strong>CSS</strong> - Styling (colors, sizes, effects)<br>
+✅ <strong>JavaScript</strong> - Interactivity (variables, functions, events)<br>
+✅ <strong>The Browser</strong> - How to run and test web pages<br>
+✅ <strong>Three-part pattern</strong> - Structure → Style → Behavior</p>
+<hr>
+<h2 id="-next-session-preview">🚀 Next Session Preview</h2>
+<p><strong>Session 2:</strong> We&rsquo;ll build a <strong>real click game</strong> with a timer, score, and restart button. Get ready to level up!</p>
+<hr>
+<h2 id="-homework-optional">📦 Homework (Optional)</h2>
+<ol>
+<li>Change the gradient background colors (find &ldquo;135deg, #667eea&rdquo; in the CSS)</li>
+<li>Add another button that does something different</li>
+<li>Share your page with a friend! (In Replit, just share the URL at the top)</li>
+</ol>
+<hr>
+<h2 id="-common-issues">🆘 Common Issues</h2>
+<p><strong>Problem:</strong> &ldquo;I don&rsquo;t see anything&rdquo;<br>
+<strong>Solution:</strong> Make sure you clicked Run (Replit) or opened the HTML file in a browser</p>
+<p><strong>Problem:</strong> &ldquo;The button doesn&rsquo;t do anything&rdquo;<br>
+<strong>Solution:</strong> Check that the <code>&lt;script&gt;</code> is before the closing <code>&lt;/body&gt;</code> tag</p>
+<p><strong>Problem:</strong> &ldquo;I got an error in the console&rdquo;<br>
+<strong>Solution:</strong> Make sure the button&rsquo;s <code>id=&quot;magicButton&quot;</code> matches what&rsquo;s in the JavaScript</p>
+<hr>
+<h2 id="-resources">📖 Resources</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN HTML Basics</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">MDN CSS Basics</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">MDN JavaScript Basics</a></li>
+</ul>
+<hr>
+<p><strong><a href="/highschool/">← Back to GameCraft Home</a> | <a href="/highschool/session2/">Next: Session 2 →</a></strong></p>
+
+
+                
+
+                <hr>
+                
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+
+
+
+
+<footer role="contentinfo" aria-label="Site footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
+                    
+                    <li role="listitem">
+                        <a href="mailto:jjumadinova@allegheny.edu" aria-label="Email">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jjumadinova/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://linkedin.com/in/janyl-jumadinova">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy;  2026
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18WYHLKCBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18WYHLKCBH');
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

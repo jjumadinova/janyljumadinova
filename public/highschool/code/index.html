@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Office Hours" />
-    <meta property="og:title" content="Office Hours" />
-    <meta property="twitter:title" content="Office Hours" />
+    <meta name="title" content="High School Code" />
+    <meta property="og:title" content="High School Code" />
+    <meta property="twitter:title" content="High School Code" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Office Hours | Janyl Jumadinova</title>
+    <title>High School Code | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/schedule/">
+    <link rel="canonical" href="/highschool/code/">
 
     
     
@@ -196,15 +196,88 @@
                 post-container">
 
                 
-                <h1 id="scheduling-office-hours">Scheduling Office Hours</h1>
-<p>To schedule a meeting with me during my office hours, please <a href="https://calendar.app.google/UtjHRPb71RKeraYk7">book an appointment</a>. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.</p>
-<h1 id="office-hour-location">Office Hour Location</h1>
-<p>Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.</p>
-<h1 id="online-office-hours">Online Office Hours</h1>
-<p>After you schedule office hour via Google calendar but you prefer to meet over Google Meet, please send me a Discord message so I can set up a video link in advance.</p>
-<h1 id="meeting-outside-office-hours">Meeting outside Office Hours</h1>
-<p>To schedule an appointment outside of office hours, please send me an email or a Discord message.</p>
+                <h2 id="temperature-sensor-code">Temperature Sensor Code</h2>
+<pre tabindex="0"><code>#include &lt;OneWire.h&gt;
+#include &lt;DallasTemperature.h&gt;
 
+// Data wire is connected to digital pin 2
+#define ONE_WIRE_BUS 2
+
+// Setup a oneWire instance to communicate with any OneWire devices
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass our oneWire reference to Dallas Temperature sensor
+DallasTemperature sensors(&amp;oneWire);
+
+void setup() {
+  // Start serial communication for debugging
+  Serial.begin(9600);
+  // Start the DS18B20 sensor
+  sensors.begin();
+}
+
+void loop() {
+  // Request temperature readings from the sensor
+  sensors.requestTemperatures();
+  // Fetch and print the temperature in Celsius
+  float temperatureC = sensors.getTempCByIndex(0);
+  Serial.print(&#34;Temperature (°C): &#34;);
+  Serial.println(temperatureC);
+  // Wait for 1 second before the next reading
+  delay(1000);
+}
+</code></pre><h2 id="arduino-cloud-code">Arduino Cloud Code</h2>
+<pre tabindex="0"><code>#include &lt;ArduinoIoTCloud.h&gt;
+#include &lt;Arduino_ConnectionHandler.h&gt;
+#include &lt;OneWire.h&gt;
+#include &lt;DallasTemperature.h&gt;
+
+// Wi-Fi credentials
+const char SSID[]     = &#34;your_wifi_ssid&#34;;    // Replace with your Wi-Fi SSID
+const char PASS[]     = &#34;your_wifi_password&#34;; // Replace with your Wi-Fi password
+
+// DS18B20 sensor setup
+const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2
+OneWire oneWire(ONE_WIRE_BUS);
+DallasTemperature sensors(&amp;oneWire);
+
+// Cloud variable
+float temperature;
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(9600);
+
+  // Setup cloud properties
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);
+
+  // Connect to IoT Cloud
+  ArduinoIoTPreferredConnection.begin();
+
+  // Start the DS18B20 temperature sensor
+  sensors.begin();
+
+  // Print a message
+  Serial.println(&#34;Setup complete. Connecting to Arduino IoT Cloud...&#34;);
+}
+
+void loop() {
+  // Update the IoT Cloud
+  ArduinoCloud.update();
+
+  // Read temperature from the DS18B20 sensor
+  sensors.requestTemperatures();
+  temperature = sensors.getTempCByIndex(0);
+
+  // Print temperature to Serial Monitor
+  Serial.print(&#34;Temperature: &#34;);
+  Serial.println(temperature);
+
+  // Delay for a second before the next reading
+  delay(1000);
+}
+</code></pre>
 
                 
 
