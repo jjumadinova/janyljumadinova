@@ -2790,3 +2790,15 @@ li.pingback:first-child {
 .highlight .cs { /* Comment special */
   color: #6272a4 !important; /* Darker blue-gray for comments */
 }
+
+/* Force all string content (including id values like "magicButton") to be much darker */
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+  color: #b8860b !important; /* Dark goldenrod - much more visible than light yellow */
+}
+
+/* Override any inline styles that might make text light */
+.highlight span {
+  font-weight: 500; /* Slightly bolder for better visibility */
+}
