@@ -19,8 +19,6 @@ Get ready to build your own robots from the ground up! In **Engineering Robots: 
 - Problem-solving and teamwork through design challenges
 - Creative thinking and perseverance while engineering your own designs
 
-[Assessment form](https://forms.gle/r4KBwPLqnJ79C6bDA)
-
 ---
 
 ### Session 1: Introduction to micro:bit
@@ -344,7 +342,7 @@ The BBC micro:bit is a small, programmable computer with:
 
 - [micro:bit Official Website](https://microbit.org/)
 - [MakeCode micro:bit Editor](https://makecode.microbit.org/)
-- [micro:bit GPIO Pin Guide](https://microbit.org/get-started/user-guide/pins/)
+- [micro:bit Pins Guide](https://tech.microbit.org/hardware/edgeconnector/)
 - [DC Motors Tutorial](https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one)
 
 ---
