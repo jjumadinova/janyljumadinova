@@ -1,0 +1,268 @@
+---
+layout: page
+title: Middle School
+subtitle: Teaching Enrichment
+date: 2025-01-22T00:00:00.000Z
+author: Janyl Jumadinova
+---
+
+# Robotics Enrichment Program
+
+## Engineering Robots: Build, Wire, Code!
+
+Get ready to build your own robots from the ground up! In **Engineering Robots: Build, Wire, Code!** you'll design, assemble, and program robots that move, sense, and respond to the world around them. You will learn how different parts, including motors, sensors, and circuits, work together and bring your robot ideas to life through hands-on building and coding. No experience needed—just curiosity and creativity!
+
+### Skills You'll Develop
+
+- Building and wiring real robots using motors, sensors, and controllers
+- Programming robots to move and react to their surroundings
+- Problem-solving and teamwork through design challenges
+- Creative thinking and perseverance while engineering your own designs
+
+[Assessment form](https://forms.gle/r4KBwPLqnJ79C6bDA)
+
+---
+
+### Session 1: Introduction to micro:bit
+
+**Goal:** Learn Unity game engine basics and create your first game simulation.
+
+---
+
+#### Unity Tutorial
+
+Reference this tutorial if you fall behind:
+
+- [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
+
+**Resources:**
+- **[Download Unity Assets (ZIP)](https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip)** - Collection of sprite images for your Unity robot project
+
+Follow along:
+1. Navigate the Unity interface
+2. Add and manipulate 3D objects
+3. Create basic movements
+4. Build an executable game
+
+#### BirdScript
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+ 
+public class BirdScript : MonoBehaviour
+{
+    public Rigidbody2D myRigidbody;
+    public float flapStrength;
+    //public LogicScript logic;
+    //public bool birdIsAlive = true;
+ 
+    // Start is called before the first frame update
+    void Start()
+    {
+        //logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+    }
+ 
+    // Update is called once per frame
+    void Update()
+    {
+        //if (Input.GetKeyDown(KeyCode.Space)) // && birdIsAlive)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            myRigidbody.linearVelocity = Vector2.up * flapStrength;
+        }
+    }
+ 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    logic.gameOver();
+    //    birdIsAlive = false;
+    //}
+}
+```
+
+#### PipeMoveScript
+
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+ 
+public class PipeMoveScript : MonoBehaviour
+{
+    public float moveSpeed = 5;
+    //public float deadZone = -45;
+ 
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+ 
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        //if (transform.position.x > deadZone)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
+}
+```
+
+### Session 5
+
+**Goal:** Create animated web experiences using block-based coding with Delightex.
+
+---
+
+#### Getting Started with Delightex
+
+1. **Access Delightex**
+   - Go to [delightex.com/edu](https://www.delightex.com/edu)
+   - Click on **"Try it live"** button
+   - No account needed - start coding immediately!
+
+2. **Explore the Interface**
+   - **Left side:** Click on the list icon and explore various elements (click on three dots -> Code -> Check `Use in CoBlocks`)
+   - **Center:** Canvas where your game appears
+   - **Right side:** Click on Code on top right -> `CoBlocks`
+   - **Bottom:** Add elements from the library
+
+3. **Create Animations**
+   - Drag a code block from the command palette to the canvas
+   - Try various code blocks
+   - Click **Run** to see your animation!
+
+### Session 4
+
+**Goal:** Experiment with underwater robots using manual control and understand robot movements in aquatic environments.
+
+---
+
+#### Underwater Robot Exploration
+
+1. **Introduction to Underwater Robotics**
+   - Learn about ROVs (Remotely Operated Vehicles)
+   - Understand how underwater robots differ from land robots
+   - Discuss buoyancy, water resistance, and thruster systems
+
+2. **Manual Control Practice**
+   - Connect to the underwater robot system
+   - Practice basic movements: forward, backward, up, down, rotate
+   - Experiment with thruster control and navigation
+
+3. **Movement Challenges**
+   - Navigate through underwater obstacles
+   - Practice maintaining depth and orientation
+   - Test different movement patterns and speeds
+   - Figure out optimal control strategies
+
+4. **Observations and Discussion**
+   - Compare underwater robot control to land robots
+   - Discuss challenges faced during manual control
+   - Share strategies that worked well
+
+### Session 3
+
+**Goal:** Program and control physical GoPiGo robots to perform autonomous movements.
+
+---
+
+#### Getting Started with GoPiGo
+
+1. **Connect to Your Robot**
+   - Turn on the GoPiGo robot
+   - On your computer, connect to the robot's WiFi network
+   - Open a web browser and navigate to **10.10.10.10**
+   - You should see the Bloxter programming interface
+
+2. **Explore the Bloxter Interface**
+   - Familiarize yourself with the block categories
+   - Look at Movement, Sensors, and Control blocks
+   - Try the example programs provided
+
+3. **Basic Movement Programming**
+   - Make your robot drive forward for 2 seconds
+   - Add a turn (left or right)
+   - Create a simple path (square or triangle)
+   - Test and debug your code
+
+4. **Add Sensor Input**
+   - Use the distance sensor to detect obstacles
+   - Program the robot to stop when it senses a wall
+   - Make it turn and continue exploring
+
+5. **Challenge: Maze Navigation**
+   - Set up a simple maze with obstacles
+   - Program your robot to navigate through it
+   - Use sensors to avoid collisions
+   - Test and improve your solution
+
+**Tips:**
+- Save your programs frequently
+- Start simple and add complexity gradually
+- If something doesn't work, check your block connections
+- Test small sections of code before combining them
+
+### Session 2
+
+**Goal:** Create a simple robot game where a robot character navigates a world, senses obstacles, collects goals, and has sound + music.
+
+---
+
+#### 1. Create Your Robot Character
+1. Go to [MakeCode Arcade](https://arcade.makecode.com/).
+2. Click **New Project**, name it.
+3. From the **Sprites** category, drag out `set mySprite to sprite of kind Player`.
+4. Click on the sprite image to draw your own robot character.
+5. Run the game to see your robot appear.
+
+#### 2. Build a Scene
+1. From **Scene**, drag out a `set tilemap to` block.
+2. Create a map with walls (e.g., maze or obstacle area).
+3. Add a starting area and some open space for the robot to move.
+
+#### 3. Add Autonomous Movement
+1. From **Sprites**, drag `set mySprite vx to` and `set mySprite vy to`.
+2. Give your robot an automatic velocity (e.g., vx = 50, vy = 0).
+3. Run the game — your robot should move on its own.
+
+#### 4. Simulate Sensing (Bumpers)
+1. From **Sprites**, use `on sprite of kind Player hits wall`.
+2. Inside, change the velocity so the robot turns (e.g., vx = 0, vy = 50).
+3. Test it — your robot should bounce or turn when it “senses” a wall.
+
+#### 5. Add a Goal
+1. Create another sprite (goal, treasure, or object).
+2. Place it on a random tile: use **Scene → place sprite on top of random tile**.
+3. Add an overlap event: `on sprite of kind Player overlaps Goal`.
+4. Inside, increase score by 1 and move the goal to a new random spot.
+
+#### 6. Add Music and Sound
+1. From **Music**, add `play melody` at the start of the game for background music.
+2. Add a `play sound effect` inside the overlap event (when robot gets a goal).
+3. Test - you should hear music and effects.
+
+#### 7. Make It a Game
+1. From **Info**, add a timer (e.g., 30 seconds).
+2. Challenge: How many goals can your robot collect before time runs out?
+3. Optional: Add hazards (enemies) that reduce score when touched.
+
+### Session 1
+
+- [Introduction to Robotics](https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&loop=false&delayms=3000)
+- [Virtual Robot Movements](https://vr.vex.com/)
+  1. File -> Open Examples, select `Drivetrain Moves and Turns`
+  2. Study the code blocks, run the example
+  3. SELECT PLAYGROUND -> Wall Maze
+  4. Modify the code to make it to the finish
+  5. Save (Ctrl + S) your program
+- Object Sensing
+  1. Open a new project
+  2. File -> Open Examples -> Coral Reef Cleanup 3
+  3. Test the example code
+  4. Improve it

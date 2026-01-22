@@ -2,263 +2,357 @@
 layout: page
 title: Middle School
 subtitle: Teaching Enrichment
-date: 2024-09-04T00:00:00.000Z
+date: 2025-01-22T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
 # Robotics Enrichment Program
 
-## Middle School "Robot + Game = ?" Majors Schedule
+## Engineering Robots: Build, Wire, Code!
 
-What happens when robots and games collide? In Robot + Game = ?, you'll step into the role of a robotics engineer and game developer, using a game engine to bring intelligent machines to life in virtual worlds. Design and simulate autonomous robots - like drones that navigate through dynamic environments, avoiding obstacles in real time. Through hands-on projects, you'll integrate LiDAR-based sensing and learning algorithms to develop robotic behavior. 
+Get ready to build your own robots from the ground up! In **Engineering Robots: Build, Wire, Code!** you'll design, assemble, and program robots that move, sense, and respond to the world around them. You will learn how different parts, including motors, sensors, and circuits, work together and bring your robot ideas to life through hands-on building and coding. No experience needed—just curiosity and creativity!
 
-Learning Outcomes:
+### Skills You'll Develop
 
-- Ability to use a game engine-based simulation to create and test robotic systems.
-- Problem-solving and teamwork through iterative development and testing.
+- Building and wiring real robots using motors, sensors, and controllers
+- Programming robots to move and react to their surroundings
+- Problem-solving and teamwork through design challenges
+- Creative thinking and perseverance while engineering your own designs
 
 [Assessment form](https://forms.gle/r4KBwPLqnJ79C6bDA)
 
-### Session 5
+---
 
-**Goal:** Learn Unity game engine basics and create your first game simulation.
+### Session 1: Introduction to micro:bit
+
+**Goal:** Get familiar with the micro:bit, learn basic programming, and create your first interactive programs.
 
 ---
 
-#### Unity Tutorial
+#### What is a micro:bit?
 
-Reference this tutorial if you fall behind:
+The BBC micro:bit is a small, programmable computer with:
+- LED display (5×5 grid)
+- Two buttons (A and B)
+- Built-in sensors (accelerometer, compass, temperature)
+- GPIO pins for connecting external components
 
-- [Unity Basics Tutorial](https://www.youtube.com/watch?v=XtQMytORBmM)
+#### Getting Started
 
-**Resources:**
-- **[Download Unity Assets (ZIP)](https://github.com/jjumadinova/janyljumadinova/releases/download/unity-assets-v1.0/Unity_assets.zip)** - Collection of sprite images for your Unity robot project
+1. **Access the Editor**
+   - Go to [makecode.microbit.org](https://makecode.microbit.org/)
+   - Click **New Project** and give it a name
 
-Follow along:
-1. Navigate the Unity interface
-2. Add and manipulate 3D objects
-3. Create basic movements
-4. Build an executable game
+2. **Interface Overview**
+   - **Left:** Simulator showing your micro:bit
+   - **Middle:** Block categories
+   - **Right:** Programming workspace
 
-#### BirdScript
+3. **First Program: Hello World**
+   - From **Basic**, drag `show string` into the `on start` block
+   - Type "Hello!" in the text field
+   - Click the simulator to see it run
+   - Download to a real micro:bit (connect via USB)
 
-```
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.InputSystem;
- 
-public class BirdScript : MonoBehaviour
-{
-    public Rigidbody2D myRigidbody;
-    public float flapStrength;
-    //public LogicScript logic;
-    //public bool birdIsAlive = true;
- 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
-    }
- 
-    // Update is called once per frame
-    void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space)) // && birdIsAlive)
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            myRigidbody.linearVelocity = Vector2.up * flapStrength;
-        }
-    }
- 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    logic.gameOver();
-    //    birdIsAlive = false;
-    //}
-}
-```
+4. **Interactive Program: Button Counter**
+   - From **Input**, drag `on button A pressed`
+   - Inside it, add `show number` with a variable
+   - Use **Variables** to create a counter that increases each press
+   - Add button B to decrease the counter
 
-#### PipeMoveScript
+5. **Sensor Exploration**
+   - Use the accelerometer to detect shaking
+   - Display different images when tilted left/right
+   - Show temperature readings on the LED display
 
-```
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
- 
-public class PipeMoveScript : MonoBehaviour
-{
-    public float moveSpeed = 5;
-    //public float deadZone = -45;
- 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
- 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
-        //if (transform.position.x > deadZone)
-        //{
-        //    Destroy(gameObject);
-        //}
-    }
-}
-```
-
-### Session 5
-
-**Goal:** Create animated web experiences using block-based coding with Delightex.
+**Challenge:** Create a game where you shake the micro:bit to "roll a dice" and display a random number from 1 to 6.
 
 ---
 
-#### Getting Started with Delightex
+### Session 2: micro:bit Circuits and External Components
 
-1. **Access Delightex**
-   - Go to [delightex.com/edu](https://www.delightex.com/edu)
-   - Click on **"Try it live"** button
-   - No account needed - start coding immediately!
-
-2. **Explore the Interface**
-   - **Left side:** Click on the list icon and explore various elements (click on three dots -> Code -> Check `Use in CoBlocks`)
-   - **Center:** Canvas where your game appears
-   - **Right side:** Click on Code on top right -> `CoBlocks`
-   - **Bottom:** Add elements from the library
-
-3. **Create Animations**
-   - Drag a code block from the command palette to the canvas
-   - Try various code blocks
-   - Click **Run** to see your animation!
-
-### Session 4
-
-**Goal:** Experiment with underwater robots using manual control and understand robot movements in aquatic environments.
+**Goal:** Learn about GPIO pins, circuits, and connect external LEDs to your micro:bit.
 
 ---
 
-#### Underwater Robot Exploration
+#### Understanding GPIO Pins
 
-1. **Introduction to Underwater Robotics**
-   - Learn about ROVs (Remotely Operated Vehicles)
-   - Understand how underwater robots differ from land robots
-   - Discuss buoyancy, water resistance, and thruster systems
+- **GPIO** = General Purpose Input/Output
+- micro:bit has pins numbered 0, 1, 2, 3V, and GND
+- These pins can send signals to or receive signals from external components
 
-2. **Manual Control Practice**
-   - Connect to the underwater robot system
-   - Practice basic movements: forward, backward, up, down, rotate
-   - Experiment with thruster control and navigation
+#### Circuit Basics
 
-3. **Movement Challenges**
-   - Navigate through underwater obstacles
-   - Practice maintaining depth and orientation
-   - Test different movement patterns and speeds
-   - Figure out optimal control strategies
+1. **Safety First**
+   - Always disconnect power when wiring
+   - Check connections before powering on
+   - Use correct resistor values to protect LEDs
 
-4. **Observations and Discussion**
-   - Compare underwater robot control to land robots
-   - Discuss challenges faced during manual control
-   - Share strategies that worked well
+2. **Components You'll Use**
+   - LEDs (Light Emitting Diodes)
+   - Resistors (typically 100-220 ohms)
+   - Jumper wires
+   - Breadboard
 
-### Session 3
+#### Building Your First Circuit
 
-**Goal:** Program and control physical GoPiGo robots to perform autonomous movements.
+1. **Simple LED Circuit**
+   - Connect GND pin to the negative rail on breadboard
+   - Connect Pin 0 to a resistor
+   - Connect resistor to the long leg (positive) of an LED
+   - Connect short leg (negative) of LED to GND rail
 
----
+2. **Programming the LED**
+   - Use `digital write pin P0 to 1` to turn LED on
+   - Use `digital write pin P0 to 0` to turn LED off
+   - Create a blinking pattern with `pause` blocks
 
-#### Getting Started with GoPiGo
+3. **Multiple LEDs**
+   - Add LEDs to pins 1 and 2
+   - Create a traffic light sequence (red → yellow → green)
+   - Add button controls to change the pattern
 
-1. **Connect to Your Robot**
-   - Turn on the GoPiGo robot
-   - On your computer, connect to the robot's WiFi network
-   - Open a web browser and navigate to **10.10.10.10**
-   - You should see the Bloxter programming interface
-
-2. **Explore the Bloxter Interface**
-   - Familiarize yourself with the block categories
-   - Look at Movement, Sensors, and Control blocks
-   - Try the example programs provided
-
-3. **Basic Movement Programming**
-   - Make your robot drive forward for 2 seconds
-   - Add a turn (left or right)
-   - Create a simple path (square or triangle)
-   - Test and debug your code
-
-4. **Add Sensor Input**
-   - Use the distance sensor to detect obstacles
-   - Program the robot to stop when it senses a wall
-   - Make it turn and continue exploring
-
-5. **Challenge: Maze Navigation**
-   - Set up a simple maze with obstacles
-   - Program your robot to navigate through it
-   - Use sensors to avoid collisions
-   - Test and improve your solution
-
-**Tips:**
-- Save your programs frequently
-- Start simple and add complexity gradually
-- If something doesn't work, check your block connections
-- Test small sections of code before combining them
-
-### Session 2
-
-**Goal:** Create a simple robot game where a robot character navigates a world, senses obstacles, collects goals, and has sound + music.
+**Challenge:** Create a "robot status indicator" with 3 LEDs showing different colors for different modes (standby, moving, stopped).
 
 ---
 
-#### 1. Create Your Robot Character
-1. Go to [MakeCode Arcade](https://arcade.makecode.com/).
-2. Click **New Project**, name it.
-3. From the **Sprites** category, drag out `set mySprite to sprite of kind Player`.
-4. Click on the sprite image to draw your own robot character.
-5. Run the game to see your robot appear.
+### Session 3: Motors and Movement Basics
 
-#### 2. Build a Scene
-1. From **Scene**, drag out a `set tilemap to` block.
-2. Create a map with walls (e.g., maze or obstacle area).
-3. Add a starting area and some open space for the robot to move.
+**Goal:** Understand how DC motors work and control them with the micro:bit.
 
-#### 3. Add Autonomous Movement
-1. From **Sprites**, drag `set mySprite vx to` and `set mySprite vy to`.
-2. Give your robot an automatic velocity (e.g., vx = 50, vy = 0).
-3. Run the game — your robot should move on its own.
+---
 
-#### 4. Simulate Sensing (Bumpers)
-1. From **Sprites**, use `on sprite of kind Player hits wall`.
-2. Inside, change the velocity so the robot turns (e.g., vx = 0, vy = 50).
-3. Test it — your robot should bounce or turn when it “senses” a wall.
+#### Introduction to DC Motors
 
-#### 5. Add a Goal
-1. Create another sprite (goal, treasure, or object).
-2. Place it on a random tile: use **Scene → place sprite on top of random tile**.
-3. Add an overlap event: `on sprite of kind Player overlaps Goal`.
-4. Inside, increase score by 1 and move the goal to a new random spot.
+- **DC Motor:** Converts electrical energy into rotational motion
+- Used for wheels, propellers, and other moving parts
+- Requires more current than micro:bit pins can provide directly
+- Need a motor driver to control them safely
 
-#### 6. Add Music and Sound
-1. From **Music**, add `play melody` at the start of the game for background music.
-2. Add a `play sound effect` inside the overlap event (when robot gets a goal).
-3. Test - you should hear music and effects.
+#### Motor Control Concepts
 
-#### 7. Make It a Game
-1. From **Info**, add a timer (e.g., 30 seconds).
-2. Challenge: How many goals can your robot collect before time runs out?
-3. Optional: Add hazards (enemies) that reduce score when touched.
+1. **Speed Control**
+   - PWM (Pulse Width Modulation) controls motor speed
+   - Values from 0 (stopped) to 1023 (full speed)
 
-### Session 1
+2. **Direction Control**
+   - Reversing polarity changes direction
+   - Motor drivers handle this electronically
 
-- [Introduction to Robotics](https://docs.google.com/presentation/d/1lBvxaRCd3KU_Ci5lfe21iA764TSjV_uB2NCJ-5d7bz0/pub?start=false&loop=false&delayms=3000)
-- [Virtual Robot Movements](https://vr.vex.com/)
-  1. File -> Open Examples, select `Drivetrain Moves and Turns`
-  2. Study the code blocks, run the example
-  3. SELECT PLAYGROUND -> Wall Maze
-  4. Modify the code to make it to the finish
-  5. Save (Ctrl + S) your program
-- Object Sensing
-  1. Open a new project
-  2. File -> Open Examples -> Coral Reef Cleanup 3
-  3. Test the example code
-  4. Improve it
+#### Hands-On with a Single Motor
+
+1. **Connect Motor to Motor Driver**
+   - Teacher will demonstrate safe wiring
+   - Connect power supply (batteries)
+   - Connect control wires to micro:bit pins
+
+2. **Basic Motor Control**
+   - Use `analog write` to control speed
+   - Start with low speed values (300-500)
+   - Gradually increase speed with button presses
+   - Test motor response at different speeds
+
+3. **Direction Control**
+   - Program forward and reverse directions
+   - Use buttons A and B for forward/backward
+   - Add a stop function
+
+**Challenge:** Create a motor control program that:
+- Speeds up gradually when button A is pressed
+- Slows down gradually when button B is pressed
+- Displays current speed level on the LED display
+
+---
+
+### Session 4: Building the Robot Chassis
+
+**Goal:** Assemble the physical robot with motors, wheels, and micro:bit controller.
+
+---
+
+#### Robot Components
+
+- Chassis (robot body/frame)
+- Two DC motors
+- Two wheels
+- Battery pack
+- micro:bit
+- Motor driver (L298N if compatible, or alternative)
+- Wires and mounting hardware
+
+#### Assembly Steps
+
+1. **Mount the Motors**
+   - Attach motors to the chassis on left and right sides
+   - Ensure motors are aligned and secure
+   - Connect wheels to motor shafts
+
+2. **Install the Motor Driver**
+   - Mount motor driver on chassis
+   - Connect motors to driver outputs
+   - Keep wires organized and secured
+
+3. **Connect Power**
+   - Attach battery pack to chassis
+   - Wire power to motor driver
+   - Test power connections (motors should NOT run yet)
+
+4. **Mount the micro:bit**
+   - Secure micro:bit in accessible location
+   - Connect control wires from micro:bit to motor driver
+   - Keep USB port accessible for programming
+
+5. **Wire Organization**
+   - Use zip ties or tape to secure loose wires
+   - Keep wires away from wheels and moving parts
+   - Label connections if helpful
+
+**Testing:**
+- DO NOT connect power yet
+- Verify all connections with teacher
+- Check for loose wires or components
+- Prepare for programming in next session
+
+---
+
+### Session 5: Programming the Robot
+
+**Goal:** Write code to make your robot move, turn, and respond to commands.
+
+---
+
+#### Basic Movement Functions
+
+1. **Forward Movement**
+   ```blocks
+   function move_forward() {
+       pins.analogWritePin(AnalogPin.P0, 700)
+       pins.analogWritePin(AnalogPin.P1, 700)
+   }
+   ```
+
+2. **Backward Movement**
+   - Reverse motor polarity through motor driver
+   - Use different pin combinations or values
+
+3. **Turning**
+   - **Left turn:** Right motor faster than left
+   - **Right turn:** Left motor faster than right
+   - **Spin turn:** One motor forward, one backward
+
+4. **Stop Function**
+   - Set both motor speeds to 0
+   - Important for safety!
+
+#### Creating Movement Patterns
+
+1. **Drive Forward and Stop**
+   - Move forward for 2 seconds
+   - Stop for 1 second
+   - Test and adjust timing
+
+2. **Square Path**
+   - Forward for a set time
+   - Turn 90 degrees
+   - Repeat 4 times
+
+3. **Button Control**
+   - Button A: Move forward
+   - Button B: Move backward
+   - A+B together: Stop
+   - Tilt left/right: Turn
+
+#### Calibration
+
+- Motors may not be exactly the same speed
+- Adjust PWM values to make robot drive straight
+- Test and tune turn durations for accurate angles
+
+**Challenge:** Program your robot to:
+1. Drive in a figure-8 pattern
+2. Return to approximately the starting position
+3. Stop and display a smiley face when complete
+
+---
+
+### Session 6: Final Challenge and Showcase
+
+**Goal:** Complete a design challenge and demonstrate your robot's capabilities.
+
+---
+
+#### Robot Challenge: Obstacle Course
+
+**Mission:** Navigate your robot through a course with:
+- Straight sections
+- Turns (left and right)
+- A finish zone
+
+**Challenge Options (Choose Your Level):**
+
+**Level 1: Remote Control**
+- Use buttons to manually drive through the course
+- Focus on precise control and timing
+
+**Level 2: Pre-Programmed Path**
+- Program a sequence of moves to complete the course
+- Run the program and see if robot reaches the finish
+
+**Level 3: Sensor Enhancement (Advanced)**
+- If time allows, add a distance sensor
+- Make robot stop when it detects obstacles
+- Attempt autonomous navigation
+
+#### Development Process
+
+1. **Plan Your Approach**
+   - Study the course layout
+   - Sketch out movement sequence
+   - Estimate timing for each section
+
+2. **Write and Test Code**
+   - Break problem into small sections
+   - Test each movement separately
+   - Combine movements into full program
+
+3. **Debug and Improve**
+   - Adjust speed and timing values
+   - Calibrate turns for accuracy
+   - Iterate until successful
+
+4. **Document Your Design**
+   - What worked well?
+   - What challenges did you face?
+   - How did you solve problems?
+
+#### Showcase
+
+- Demonstrate your robot to the class
+- Explain your programming approach
+- Share what you learned
+- Discuss ideas for future improvements
+
+**Reflection Questions:**
+- What was the most challenging part of building your robot?
+- How did you solve problems when things didn't work?
+- What would you add to your robot if you had more time?
+- How could robots like this be useful in the real world?
+
+---
+
+## Resources
+
+- [micro:bit Official Website](https://microbit.org/)
+- [MakeCode micro:bit Editor](https://makecode.microbit.org/)
+- [micro:bit GPIO Pin Guide](https://microbit.org/get-started/user-guide/pins/)
+- [DC Motors Tutorial](https://learn.sparkfun.com/tutorials/motors-and-selecting-the-right-one)
+
+---
+
+## Safety Reminders
+
+- Always disconnect power before making circuit changes
+- Check all connections with teacher before powering on
+- Keep wires away from moving parts
+- Use appropriate resistors to protect components
+- Work carefully and ask questions if unsure
