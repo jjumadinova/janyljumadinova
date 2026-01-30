@@ -1,6 +1,6 @@
 /* Fix hard-to-see syntax highlighting colors in code blocks */
 
-/* String values like "UTF-8", "viewport" - golden yellow for better readability */
+/* String values like "UTF-8", "viewport" - dark brown for better readability */
 .highlight .s,
 .highlight .s1,
 .highlight .s2,
@@ -15,7 +15,7 @@
 .highlight .sx,
 .highlight .sr,
 .highlight .ss {
-    color: #bf9000 !important; /* Golden yellow */
+    color: #4f3307 !important; /* Dark brown */
 }
 
 /* Attribute names in HTML */
@@ -25,12 +25,12 @@
 
 /* Attribute values */
 .highlight .nv {
-    color: #bf9000 !important; /* Golden yellow */
+    color: #4f3307 !important; /* Dark brown */
 }
 
 /* Additional overrides for better readability */
 .highlight .f1fa8c {
-    color: #bf9000 !important; /* Override the theme's yellow */
+    color: #4f3307 !important; /* Override the theme's yellow */
 }
 
 /* Comments - ensure they're readable */
