@@ -44,19 +44,18 @@ Think of it like LEGO blocks:
 
 ### Use Vite (Modern React Setup)
 
-**In Replit:**
-1. Create a new Repl
-2. Choose **"React + Vite"** template
-3. Name it: `gamecraft-session4-tictactoe`
-4. Replit will auto-install everything!
+**In VS Code:**
+1. Open terminal (View > Terminal)
+2. Run the following commands:
 
-**Or in your terminal:**
 ```bash
 npm create vite@latest tictactoe -- --template react
 cd tictactoe
 npm install
 npm run dev
 ```
+
+3. Open your browser to `http://localhost:5173`
 
 ### 🔍 What Just Happened?
 
@@ -378,7 +377,7 @@ h1 {
 
 ## ✅ Test Your Game!
 
-Click Run (Replit) or check the local server. You should have a fully working Tic-Tac-Toe game!
+Check your browser at `http://localhost:5173`. You should have a fully working Tic-Tac-Toe game!
 
 **Test these scenarios:**
 1. X and O alternate turns

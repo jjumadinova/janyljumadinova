@@ -240,7 +240,7 @@ Click your button! It should:
 
 1. Change the gradient background colors (find "135deg, #667eea" in the CSS)
 2. Add another button that does something different
-3. Share your page with a friend! (In Replit, just share the URL at the top)
+3. Share your page with a friend (In CodePen, you can save and share the URL)
 
 ---
 
