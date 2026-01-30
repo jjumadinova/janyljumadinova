@@ -1,0 +1,63 @@
+/* Fix hard-to-see syntax highlighting colors in code blocks */
+
+/* String values like "UTF-8", "viewport" - change from yellow to a brighter color */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss {
+    color: #a8ff60 !important; /* Bright green-yellow for better visibility */
+}
+
+/* Attribute names in HTML */
+.highlight .na {
+    color: #ffd480 !important; /* Brighter orange */
+}
+
+/* Attribute values */
+.highlight .nv {
+    color: #a8ff60 !important; /* Bright green-yellow */
+}
+
+/* Additional overrides for better readability */
+.highlight .f1fa8c {
+    color: #a8ff60 !important; /* Override the theme's yellow */
+}
+
+/* Comments - ensure they're readable */
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs {
+    color: #9ca3af !important; /* Medium gray for comments */
+}
+
+/* Numbers */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #ff79c6 !important; /* Bright pink */
+}
+
+/* Keywords */
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #8be9fd !important; /* Bright cyan */
+}
