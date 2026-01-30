@@ -423,4 +423,12 @@ Now your high score saves automatically!
 
 ---
 
+## Need Help?
+
+**[View Complete Solution Code →](/highschool/session2-solution/)**
+
+If you are stuck or need to catch up, check out the complete working code with all the missing parts filled in.
+
+---
+
 **[← Session 1](/highschool/session1/) | [Back to GameCraft Home](/highschool/) | [Next: Session 3 →](/highschool/session3/)**
