@@ -338,17 +338,20 @@ function endGame() {
 Once your game works, try adding these features:
 
 **Polish and Effects:**
+
 1. Make the button change colors randomly with each click
 2. Add a pulsing animation to the button during the game
 3. Display different messages based on score (0-15: "Keep trying!", 16-25: "Good!", 26+: "Amazing!")
 
 **New Features:**
+
 4. Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)
 5. Show clicks-per-second at the end: `const cps = (score / 10).toFixed(1);`
-6. Save high score in `localStorage` so it persists after closing the browser
+6. Add sound effects when clicking (hint: look up HTML `<audio>` tag)
 
-**Advanced:
-7. Save high score in `localStorage` so it persists even after refreshing
+**Advanced:**
+
+7. Save high score in `localStorage` so it persists even after refreshing (see solution below)
 8. Make the button shrink slightly with each click, then reset when time is up
 
 ---
