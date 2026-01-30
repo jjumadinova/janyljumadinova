@@ -6,11 +6,11 @@ date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 4: Tic-Tac-Toe with React ⭕❌
+# Session 4: Tic-Tac-Toe with React
 
-## 🎯 What You'll Build Today
+## What You Will Build Today
 
-A fully functional Tic-Tac-Toe game built with **React** - a modern framework used by Facebook, Netflix, and thousands of professional developers!
+A fully functional Tic-Tac-Toe game built with **React** - a modern framework used by Facebook, Netflix, and thousands of professional developers.
 
 **Features:**
 - Interactive game board
@@ -23,7 +23,7 @@ A fully functional Tic-Tac-Toe game built with **React** - a modern framework us
 
 ---
 
-## 🤔 What is React?
+## What is React?
 
 **React** is a JavaScript library for building user interfaces with **reusable components**.
 
@@ -33,14 +33,14 @@ Think of it like LEGO blocks:
 - You combine pieces to make complete applications
 
 **Why React?**
-- ✅ Reusable components (write once, use everywhere)
-- ✅ Automatic UI updates when data changes
-- ✅ Industry-standard (used by top companies)
-- ✅ Makes complex UIs easier to manage
+- Reusable components (write once, use everywhere)
+- Automatic UI updates when data changes
+- Industry-standard (used by top companies)
+- Makes complex UIs easier to manage
 
 ---
 
-## 🚀 Setup (10 minutes)
+## Setup
 
 ### Use Vite (Modern React Setup)
 
@@ -57,17 +57,17 @@ npm run dev
 
 3. Open your browser to `http://localhost:5173`
 
-### 🔍 What Just Happened?
+### What Just Happened?
 
 Vite created a React project with:
-- `src/App.jsx` - Main React component (we'll edit this!)
+- `src/App.jsx` - Main React component (we will edit this)
 - `src/main.jsx` - Entry point
 - `package.json` - Dependencies list
 - `.jsx` files - JavaScript + XML (JSX) = React syntax
 
 ---
 
-## 📖 Part 1: Understanding Components (10 minutes)
+## Understanding Components
 
 ### React Concepts
 
@@ -101,7 +101,7 @@ setCount(5); // Updates count to 5 and re-renders
 
 ---
 
-## 🎮 Part 2: Build the Game (35 minutes)
+## Build the Game
 
 ### Step 1: Clear the Template
 
@@ -137,7 +137,7 @@ function Square({ value, onSquareClick }) {
 }
 ```
 
-**🔍 What's happening?**
+**What is happening?**
 - `{ value, onSquareClick }` - Props (data passed from parent)
 - `{value}` - Shows X, O, or nothing
 - `onClick={onSquareClick}` - Calls function when clicked
@@ -150,7 +150,7 @@ The board is 9 squares arranged in a grid.
 function Board({ xIsNext, squares, onPlay }) {
   // Handle when a square is clicked
   function handleClick(i) {
-    // Don't allow clicks if:
+    // Do not allow clicks if:
     // 1. Square is already filled
     // 2. Someone already won
     if (squares[i] || calculateWinner(squares)) {
@@ -201,9 +201,9 @@ function Board({ xIsNext, squares, onPlay }) {
 }
 ```
 
-**🔍 Key Concepts:**
+**Key Concepts:**
 - `squares` array holds the board state: `['X', null, 'O', ...]`
-- `.slice()` creates a copy (React best practice - don't mutate state)
+- `.slice()` creates a copy (React best practice - do not mutate state)
 - `.every()` checks if all squares are filled (draw condition)
 - We pass `handleClick(i)` to each square with the index
 
@@ -244,9 +244,9 @@ function App() {
 }
 ```
 
-**🔍 State Management:**
-- `history` - Array of board states (allows time travel!)
-- `currentMove` - Which move we're viewing
+**State Management:**
+- `history` - Array of board states (allows time travel)
+- `currentMove` - Which move we are viewing
 - `xIsNext` - Calculated from current move (even = X's turn)
 
 ### Step 5: Add the Win Detection Function
@@ -279,7 +279,7 @@ function calculateWinner(squares) {
 
 ---
 
-## 🎨 Part 3: Styling (5 minutes)
+## Styling
 
 ### Replace `src/App.css` with:
 
@@ -375,20 +375,20 @@ h1 {
 
 ---
 
-## ✅ Test Your Game!
+## Test Your Game
 
-Check your browser at `http://localhost:5173`. You should have a fully working Tic-Tac-Toe game!
+Check your browser at `http://localhost:5173`. You should have a fully working Tic-Tac-Toe game.
 
 **Test these scenarios:**
 1. X and O alternate turns
 2. Winning shows the winner
 3. Filled board shows draw
 4. Reset button clears the board
-5. Can't click filled squares
+5. Cannot click filled squares
 
 ---
 
-## 🎨 Customization Challenges
+## Customization Challenges
 
 **Easy:**
 1. Change colors in CSS
@@ -407,7 +407,7 @@ Check your browser at `http://localhost:5173`. You should have a fully working T
 
 ---
 
-## 💡 Challenge: Score Tracker
+## Challenge: Score Tracker
 
 Add this to `App` component:
 

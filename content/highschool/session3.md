@@ -6,11 +6,11 @@ date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 3: Catch the Falling Gems! 💎
+# Session 3: Catch the Falling Gems
 
-## 🎯 What You'll Build Today
+## What You Will Build Today
 
-A "Gem Catcher" game where colorful gems fall from the sky and you move a basket to catch them!
+A "Gem Catcher" game where colorful gems fall from the sky and you move a basket to catch them.
 
 **Features:**
 - Moving gems that fall down the screen
@@ -23,13 +23,13 @@ A "Gem Catcher" game where colorful gems fall from the sky and you move a basket
 
 ---
 
-## 🚀 Setup (5 minutes)
+## Setup
 
-Create a new Repl or file: `gem-catcher.html`
+Create a new file in VS Code: `gem-catcher.html`
 
 ---
 
-## 📖 Part 1: HTML Canvas Setup (10 minutes)
+## HTML Canvas Setup
 
 ### Step 1: The HTML Structure
 
@@ -43,7 +43,7 @@ Create a new Repl or file: `gem-catcher.html`
 </head>
 <body>
     <div class="container">
-        <h1>💎 Gem Catcher 💎</h1>
+        <h1>Gem Catcher</h1>
         
         <div class="game-stats">
             <div class="stat">Score: <span id="score">0</span></div>
@@ -64,18 +64,18 @@ Create a new Repl or file: `gem-catcher.html`
 </html>
 ```
 
-### 🔍 What's New?
+### What is New?
 
-**`<canvas>`** - An HTML element where we can draw graphics with JavaScript!
+**`<canvas>`** - An HTML element where we can draw graphics with JavaScript
 - Think of it like a blank piece of paper
-- We'll draw our gems and basket on it
+- We will draw our gems and basket on it
 - `width="600" height="500"` sets the size in pixels
 
 ---
 
-## 🎨 Part 2: Styling (5 minutes)
+## Styling
 
-### Step 2: Add CSS
+### Add CSS
 
 ```html
 <style>
@@ -169,9 +169,9 @@ Create a new Repl or file: `gem-catcher.html`
 
 ---
 
-## ⚡ Part 3: Game Logic with Canvas Animation (35 minutes)
+## Game Logic with Canvas Animation
 
-### Step 3: JavaScript - The Animation Engine
+### JavaScript - The Animation Engine
 
 ```html
 <script>
@@ -394,7 +394,7 @@ Create a new Repl or file: `gem-catcher.html`
         gameRunning = false;
         cancelAnimationFrame(animationId);
         
-        messageDisplay.textContent = '🎮 Game Over! Final Score: ' + score;
+        messageDisplay.textContent = 'Game Over! Final Score: ' + score;
         startButton.textContent = 'PLAY AGAIN';
         startButton.disabled = false;
     }
@@ -411,7 +411,7 @@ Create a new Repl or file: `gem-catcher.html`
 </script>
 ```
 
-### 🔍 Key Concepts Explained
+### Key Concepts Explained
 
 **1. Canvas Context (`ctx`)**
 - Like a paintbrush that draws on the canvas
@@ -420,7 +420,7 @@ Create a new Repl or file: `gem-catcher.html`
 - `ctx.arc()` - Draw curves/circles
 
 **2. Game Loop with `requestAnimationFrame()`**
-- Runs at ~60 frames per second
+- Runs at approximately 60 frames per second
 - Smoother than `setInterval`
 - Browser optimizes it automatically
 
@@ -439,16 +439,16 @@ Create a new Repl or file: `gem-catcher.html`
 
 ---
 
-## 🎮 Part 4: Test and Customize (5 minutes)
+## Test and Customize
 
-### ✅ Testing:
+### Testing:
 
 1. Move your mouse - does the basket follow?
 2. Try arrow keys - does it move?
 3. Catch gems - does score increase?
 4. Miss 3 gems - does game end?
 
-### 🎨 Customization Ideas:
+### Customization Ideas:
 
 **Easy:**
 1. Change gem colors in the `colors` array
@@ -467,7 +467,7 @@ Create a new Repl or file: `gem-catcher.html`
 
 ---
 
-## 💡 Challenge: Power-Up System
+## Challenge: Power-Up System
 
 Add a golden gem worth 5 points:
 
@@ -494,25 +494,25 @@ score += gem.points;
 
 ---
 
-## 📚 What You Learned Today
+## What You Learned Today
 
-✅ **HTML Canvas** - Drawing graphics with JavaScript  
-✅ **Animation Loop** - `requestAnimationFrame()` for smooth movement  
-✅ **Coordinate Systems** - X/Y positioning in 2D space  
-✅ **Collision Detection** - Checking if objects overlap  
-✅ **Array Manipulation** - Adding/removing items during gameplay  
-✅ **Mouse Events** - `mousemove` to track cursor position  
-✅ **Keyboard Input** - Tracking multiple keys simultaneously
-
----
-
-## 🚀 Next Session Preview
-
-**Session 4:** We'll learn **React** and build Tic-Tac-Toe with components, making our code more organized and reusable!
+- **HTML Canvas** - Drawing graphics with JavaScript  
+- **Animation Loop** - `requestAnimationFrame()` for smooth movement  
+- **Coordinate Systems** - X/Y positioning in 2D space  
+- **Collision Detection** - Checking if objects overlap  
+- **Array Manipulation** - Adding/removing items during gameplay  
+- **Mouse Events** - `mousemove` to track cursor position  
+- **Keyboard Input** - Tracking multiple keys simultaneously
 
 ---
 
-## 📦 Homework (Optional)
+## Next Session Preview
+
+**Session 4:** We will learn **React** and build Tic-Tac-Toe with components, making our code more organized and reusable.
+
+---
+
+## Homework (Optional)
 
 1. Add background clouds or stars that move
 2. Create a difficulty selector (Easy/Medium/Hard)
