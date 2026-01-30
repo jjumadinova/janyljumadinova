@@ -2721,7 +2721,7 @@ li.pingback:first-child {
 .highlight .sc,  /* String char */
 .highlight .sd,  /* String doc */
 .highlight .sh { /* String heredoc */
-  color: #e6db74 !important; /* Darker yellow */
+  color: #4f3307 !important; /* Dark brown */
 }
 
 .highlight .k,   /* Keywords */
@@ -2768,12 +2768,12 @@ li.pingback:first-child {
 .highlight .s1[style*="color:#e6db74"],
 .highlight .s2[style*="color:#e6db74"],
 .highlight .s[style*="color:#e6db74"] {
-  color: #d4a400 !important; /* Much darker yellow for attribute values */
+  color: #4f3307 !important; /* Dark brown for attribute values */
 }
 
 /* Ensure all string-like content is visible */
 .highlight span[style*="color:#e6db74"] {
-  color: #d4a400 !important; /* Darker gold for any yellow text */
+  color: #4f3307 !important; /* Dark brown for any yellow text */
 }
 
 /* Make attribute values more visible */
