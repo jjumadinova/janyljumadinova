@@ -505,17 +505,13 @@
 <li>Add a pulsing animation to the button during the game</li>
 <li>Display different messages based on score (0-15: &ldquo;Keep trying!&rdquo;, 16-25: &ldquo;Good!&rdquo;, 26+: &ldquo;Amazing!&rdquo;)</li>
 </ol>
-<p><strong>New Features:</strong></p>
-<ol start="4">
-<li>Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)</li>
-<li>Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code></li>
-<li>Add sound effects when clicking (hint: look up HTML <code>&lt;audio&gt;</code> tag)</li>
-</ol>
-<p><strong>Advanced:</strong></p>
-<ol start="7">
-<li>Save high score in <code>localStorage</code> so it persists even after refreshing (see solution below)</li>
-<li>Make the button shrink slightly with each click, then reset when time is up</li>
-</ol>
+<p><strong>New Features:</strong>
+4. Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)
+5. Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code>
+6. Save high score in <code>localStorage</code> so it persists after closing the browser</p>
+<p>**Advanced:
+7. Save high score in <code>localStorage</code> so it persists even after refreshing
+8. Make the button shrink slightly with each click, then reset when time is up</p>
 <hr>
 <h2 id="advanced-save-high-score-forever">Advanced: Save High Score Forever</h2>
 <p>Want your high score to persist even after closing the browser? Use <code>localStorage</code>:</p>
@@ -562,10 +558,6 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Event Listeners - MDN</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
 </ul>
-<hr>
-<h2 id="need-help">Need Help?</h2>
-<p><strong><a href="/highschool/session2-solution/">View Complete Solution Code →</a></strong></p>
-<p>If you are stuck or need to catch up, check out the complete working code with all the missing parts filled in.</p>
 <hr>
 <p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 →</a></strong></p>
 

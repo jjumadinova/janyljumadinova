@@ -40,7 +40,7 @@ Your IR sensor has **3 pins**:
 - **GND** - Ground (connects to GND)
 - **OUT** - Signal output (connects to Pin 0, 1, or 2)
 
-#### Connecting the IR Sensor (15 minutes)
+#### Connecting the IR Sensor
 
 **Components You'll Need:**
 - micro:bit
@@ -61,7 +61,7 @@ Your IR sensor has **3 pins**:
 
 **Safety Check:** Before powering on, verify all connections with your teacher!
 
-#### Understanding Digital vs Analog Readings (20 minutes)
+#### Understanding Digital vs Analog Readings
 
 Sensors can send data in two ways:
 
@@ -78,7 +78,7 @@ Sensors can send data in two ways:
 - Lower numbers = object is closer
 - More precise than digital!
 
-#### Programming the IR Sensor (40 minutes)
+#### Programming the IR Sensor
 
 **Activity 1: Digital Reading (Simple Detection)**
 
@@ -121,17 +121,19 @@ Sensors can send data in two ways:
 - Try adjusting the 300 value - what happens if you use 500? Or 200?
 - Can you find the best threshold value for detecting objects?
 
-#### Challenge: Build an Obstacle Alert System (30 minutes)
+---
 
-**Your Task:** Create a system that warns when an obstacle is getting too close!
+## 🎯 Challenge: Build an Obstacle Alert System
+
+> **Your Task:** Create a system that warns when an obstacle is getting too close!
 
 **Requirements:**
 1. Use analog reading to measure distance
 2. When object is **FAR** (>700): Show a checkmark, no sound
 3. When object is **MEDIUM** (400-700): Show a small square, play a slow beep
 4. When object is **CLOSE** (<400): Show a large square, play a fast beep
-5. Add button A to pause/resume the system
-6. *Bonus:* Add button B to display the current sensor reading as a number
+5. Add button A to display the current sensor reading as a number
+6. Add button B to pause/resume the system
 
 **Hints:**
 - You'll need multiple `if...then...else if...else` statements
@@ -143,6 +145,8 @@ Sensors can send data in two ways:
 - Test with different objects (hand, book, wall)
 - Find the maximum detection distance
 - See if different colored objects give different readings
+
+---
 
 #### Key Concepts You Learned
 
@@ -200,7 +204,13 @@ The BBC micro:bit is a small, programmable computer with:
    - Display different images when tilted left/right
    - Show temperature readings on the LED display
 
-**Challenge:** Create a game where you shake the micro:bit to "roll a dice" and display a random number from 1 to 6.
+---
+
+## 🎯 Challenge: Dice Rolling Game
+
+> Create a game where you shake the micro:bit to "roll a dice" and display a random number from 1 to 6.
+
+---
 
 <!--
 ---
