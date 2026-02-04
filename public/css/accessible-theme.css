@@ -957,4 +957,19 @@ main {
     background: var(--secondary-bg) !important;
     z-index: -1;
   }
+  
+  /* Ensure content appears above the background */
+  .container,
+  .post-container,
+  .page-container,
+  .content-wrapper {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+  
+  /* Ensure headings are visible */
+  h1, h2, h3, h4, h5, h6 {
+    position: relative !important;
+    z-index: 2 !important;
+  }
 }
