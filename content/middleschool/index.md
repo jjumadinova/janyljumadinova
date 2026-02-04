@@ -103,18 +103,16 @@ Sensors can send data in two ways:
 
 **Setup:**
 1. Create a new project or delete the previous code
-2. From **Variables**, create a variable called `distance`
 
 **In the forever block:**
-1. Set `distance` to `analog read pin P0` (from **Pins** → **Advanced**)
-2. Add an `if...then...else` statement
-3. Set the condition to: if `distance` < **300**
-4. **Then** (object is close):
+1. Add an `if...then...else` statement
+2. Set the condition to: if `analog read pin P0` < **300**
+3. **Then** (object is close):
    - Show icon "X"
    - Play a sound (from **Music**)
-5. **Else** (object is far):
+4. **Else** (object is far):
    - Show icon "✓" (checkmark)
-6. Add a `pause 100 ms` block at the end
+5. Add a `pause 100 ms` block at the end
 
 **Experiment:**
 - What happens when you move your hand closer or farther?
