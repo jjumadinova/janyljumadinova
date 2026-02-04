@@ -24,6 +24,7 @@
     </item>
     <item>
       <title>High School</title>
+<<<<<<< HEAD
       <link>http://localhost:1313/highschool/index_f2025/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/highschool/index_f2025/</guid>
@@ -70,6 +71,12 @@
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/highschool/index_f24/</guid>
       <description>&lt;h1 id=&#34;internet-of-things-enrichment-program&#34;&gt;Internet of Things Enrichment Program&lt;/h1&gt;&#xA;&lt;h2 id=&#34;schedule&#34;&gt;Schedule&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-electronics-8594-programming-boards-8594-sensors-8594-connecting-to-the-cloud-8594-environmental-monitoring-project&#34;&gt;Basic Electronics → Programming Boards → Sensors → Connecting to the Cloud → Environmental Monitoring Project&lt;/h3&gt;&#xA;&lt;h2 id=&#34;session-1&#34;&gt;Session 1&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1Uzj6hXgbsv0XJcUhdJ__9KNt1Tii-QKJaGz4chCLlt8/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Introduction to Arduino&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-2&#34;&gt;Session 2&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Coding with Arduino&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-3&#34;&gt;Session 3&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/1xhmEOlyb5ZhjXJy2qlHyxbbLeyG3f_lW_OV2ltz-Ud0/edit?usp=sharing&#34;&gt;Working with Sensors&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-4&#34;&gt;Session 4&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRBpG9QPUNJ4V4oM2tGHONUrWbXCXd_cdHyH8vpACYNJKS6r34YyHDi-ka3D0u3HvN5vbl68ZEcVFQa/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Connecting to the Cloud&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://janyljumadinova.com/code/&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;session-5-6&#34;&gt;Session 5-6&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.arduino.cc/hardware/iot-bundle/#tutorials.&#34;&gt;Projects&lt;/a&gt;&lt;/p&gt;</description>
+=======
+      <link>https://janyljumadinova.com/highschool/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://janyljumadinova.com/highschool/</guid>
+      <description>&lt;h1 id=&#34;gamecraft-build-your-own-web-game&#34;&gt;GameCraft: Build Your Own Web Game&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to GameCraft! Over five one-hour sessions, you will learn to create your own interactive web games from scratch - &lt;strong&gt;no programming experience required!&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-you-will-build&#34;&gt;What You Will Build&lt;/h2&gt;&#xA;&lt;p&gt;By the end of this course, you will have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;A working web game that runs in any browser&lt;/li&gt;&#xA;&lt;li&gt;Your own GitHub portfolio with published games&lt;/li&gt;&#xA;&lt;li&gt;Skills in HTML, CSS, JavaScript, and React&lt;/li&gt;&#xA;&lt;li&gt;The ability to turn your game ideas into reality&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;course-sessions&#34;&gt;Course Sessions&lt;/h2&gt;&#xA;&lt;h3 id=&#34;session-1-your-first-interactive-web-page&#34;&gt;&lt;a href=&#34;https://janyljumadinova.com/highschool/session1/&#34;&gt;Session 1: Your First Interactive Web Page&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Build:&lt;/strong&gt; A colorful button that responds to clicks&lt;br&gt;&#xA;&lt;strong&gt;Learn:&lt;/strong&gt; HTML structure, CSS styling, opening your first web page&lt;br&gt;&#xA;&lt;strong&gt;No prerequisites&lt;/strong&gt; - we start from zero!&lt;/p&gt;</description>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
     </item>
     <item>
       <title>High School Code</title>
@@ -79,6 +86,7 @@
       <description>&lt;h2 id=&#34;temperature-sensor-code&#34;&gt;Temperature Sensor Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Data wire is connected to digital pin 2&#xA;#define ONE_WIRE_BUS 2&#xA;&#xA;// Setup a oneWire instance to communicate with any OneWire devices&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;&#xA;// Pass our oneWire reference to Dallas Temperature sensor&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;void setup() {&#xA;  // Start serial communication for debugging&#xA;  Serial.begin(9600);&#xA;  // Start the DS18B20 sensor&#xA;  sensors.begin();&#xA;}&#xA;&#xA;void loop() {&#xA;  // Request temperature readings from the sensor&#xA;  sensors.requestTemperatures();&#xA;  // Fetch and print the temperature in Celsius&#xA;  float temperatureC = sensors.getTempCByIndex(0);&#xA;  Serial.print(&amp;#34;Temperature (°C): &amp;#34;);&#xA;  Serial.println(temperatureC);&#xA;  // Wait for 1 second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;arduino-cloud-code&#34;&gt;Arduino Cloud Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ArduinoIoTCloud.h&amp;gt;&#xA;#include &amp;lt;Arduino_ConnectionHandler.h&amp;gt;&#xA;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Wi-Fi credentials&#xA;const char SSID[]     = &amp;#34;your_wifi_ssid&amp;#34;;    // Replace with your Wi-Fi SSID&#xA;const char PASS[]     = &amp;#34;your_wifi_password&amp;#34;; // Replace with your Wi-Fi password&#xA;&#xA;// DS18B20 sensor setup&#xA;const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;// Cloud variable&#xA;float temperature;&#xA;&#xA;void setup() {&#xA;  // Initialize serial communication&#xA;  Serial.begin(9600);&#xA;&#xA;  // Setup cloud properties&#xA;  ArduinoCloud.begin(ArduinoIoTPreferredConnection);&#xA;  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);&#xA;&#xA;  // Connect to IoT Cloud&#xA;  ArduinoIoTPreferredConnection.begin();&#xA;&#xA;  // Start the DS18B20 temperature sensor&#xA;  sensors.begin();&#xA;&#xA;  // Print a message&#xA;  Serial.println(&amp;#34;Setup complete. Connecting to Arduino IoT Cloud...&amp;#34;);&#xA;}&#xA;&#xA;void loop() {&#xA;  // Update the IoT Cloud&#xA;  ArduinoCloud.update();&#xA;&#xA;  // Read temperature from the DS18B20 sensor&#xA;  sensors.requestTemperatures();&#xA;  temperature = sensors.getTempCByIndex(0);&#xA;&#xA;  // Print temperature to Serial Monitor&#xA;  Serial.print(&amp;#34;Temperature: &amp;#34;);&#xA;  Serial.println(temperature);&#xA;&#xA;  // Delay for a second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
+<<<<<<< HEAD
       <title>High School Code</title>
       <link>http://localhost:1313/highschool/code/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
@@ -86,6 +94,8 @@
       <description>&lt;h2 id=&#34;temperature-sensor-code&#34;&gt;Temperature Sensor Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Data wire is connected to digital pin 2&#xA;#define ONE_WIRE_BUS 2&#xA;&#xA;// Setup a oneWire instance to communicate with any OneWire devices&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;&#xA;// Pass our oneWire reference to Dallas Temperature sensor&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;void setup() {&#xA;  // Start serial communication for debugging&#xA;  Serial.begin(9600);&#xA;  // Start the DS18B20 sensor&#xA;  sensors.begin();&#xA;}&#xA;&#xA;void loop() {&#xA;  // Request temperature readings from the sensor&#xA;  sensors.requestTemperatures();&#xA;  // Fetch and print the temperature in Celsius&#xA;  float temperatureC = sensors.getTempCByIndex(0);&#xA;  Serial.print(&amp;#34;Temperature (°C): &amp;#34;);&#xA;  Serial.println(temperatureC);&#xA;  // Wait for 1 second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;arduino-cloud-code&#34;&gt;Arduino Cloud Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ArduinoIoTCloud.h&amp;gt;&#xA;#include &amp;lt;Arduino_ConnectionHandler.h&amp;gt;&#xA;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Wi-Fi credentials&#xA;const char SSID[]     = &amp;#34;your_wifi_ssid&amp;#34;;    // Replace with your Wi-Fi SSID&#xA;const char PASS[]     = &amp;#34;your_wifi_password&amp;#34;; // Replace with your Wi-Fi password&#xA;&#xA;// DS18B20 sensor setup&#xA;const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;// Cloud variable&#xA;float temperature;&#xA;&#xA;void setup() {&#xA;  // Initialize serial communication&#xA;  Serial.begin(9600);&#xA;&#xA;  // Setup cloud properties&#xA;  ArduinoCloud.begin(ArduinoIoTPreferredConnection);&#xA;  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);&#xA;&#xA;  // Connect to IoT Cloud&#xA;  ArduinoIoTPreferredConnection.begin();&#xA;&#xA;  // Start the DS18B20 temperature sensor&#xA;  sensors.begin();&#xA;&#xA;  // Print a message&#xA;  Serial.println(&amp;#34;Setup complete. Connecting to Arduino IoT Cloud...&amp;#34;);&#xA;}&#xA;&#xA;void loop() {&#xA;  // Update the IoT Cloud&#xA;  ArduinoCloud.update();&#xA;&#xA;  // Read temperature from the DS18B20 sensor&#xA;  sensors.requestTemperatures();&#xA;  temperature = sensors.getTempCByIndex(0);&#xA;&#xA;  // Print temperature to Serial Monitor&#xA;  Serial.print(&amp;#34;Temperature: &amp;#34;);&#xA;  Serial.println(temperature);&#xA;&#xA;  // Delay for a second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
+=======
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
       <title>Middle School</title>
       <link>http://localhost:1313/middleschool2024/</link>
       <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
@@ -108,6 +118,7 @@
     </item>
     <item>
       <title>Meadville Area Senior High School</title>
+<<<<<<< HEAD
       <link>http://localhost:1313/highschool/index-copy/</link>
       <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/highschool/index-copy/</guid>
@@ -123,6 +134,9 @@
     <item>
       <title>Meadville Area Senior High School</title>
       <link>http://localhost:1313/highschool_s2023/</link>
+=======
+      <link>https://janyljumadinova.com/highschool_s2023/</link>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
       <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/highschool_s2023/</guid>
       <description>&lt;h1 id=&#34;crawford-central-mash&#34;&gt;Crawford Central MASH&lt;/h1&gt;&#xA;&lt;h2 id=&#34;high-school-game-development&#34;&gt;High School Game Development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tasks&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Have a playable 2D game based on the &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html&#34;&gt;First 2D Game tutorial&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Enhance the 2D game you have developed. How can you make the game your own to some degree?&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;high-school-robotics&#34;&gt;High School Robotics&lt;/h2&gt;&#xA;&lt;p&gt;Develop a dancing &lt;code&gt;gopigo&lt;/code&gt; robot.&lt;/p&gt;&#xA;&lt;h3 id=&#34;tasks-1&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Your robot must use a speaker and play music.&lt;/li&gt;&#xA;&lt;li&gt;Your code must use an &lt;code&gt;if&lt;/code&gt; statement. Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;li&gt;Your code must use a loop (such as &lt;code&gt;for&lt;/code&gt; or &lt;code&gt;while&lt;/code&gt; loop). Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Below is the sample code using a distance sensor and a speaker:&lt;/p&gt;</description>
@@ -171,6 +185,7 @@
     </item>
     <item>
       <title></title>
+<<<<<<< HEAD
       <link>http://localhost:1313/highschool/cloud_code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/highschool/cloud_code/</guid>
@@ -186,6 +201,9 @@
     <item>
       <title></title>
       <link>http://localhost:1313/search/placeholder/</link>
+=======
+      <link>https://janyljumadinova.com/search/placeholder/</link>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/search/placeholder/</guid>
       <description></description>

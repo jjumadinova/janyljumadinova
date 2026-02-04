@@ -6,24 +6,24 @@ date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 5: Deploy Your Games to the World! 🚀
+# Session 5: Deploy Your Games to the World
 
-## 🎯 What You'll Accomplish Today
+## What You Will Accomplish Today
 
 1. **Polish** - Add sound effects, animations, and final touches
 2. **Deploy** - Put your games online with GitHub Pages
 3. **Portfolio** - Create a showcase page with all your games
-4. **Share** - Get a real URL to share with friends and family!
+4. **Share** - Get a real URL to share with friends and family
 
 **[Example Portfolio →](your-demo-link-here)**
 
 ---
 
-## 🎨 Part 1: Polish Your Games (20 minutes)
+## Polish Your Games
 
-Let's add professional touches to make your games shine!
+Let us add professional touches to make your games shine.
 
-### 🔊 Add Sound Effects
+### Add Sound Effects
 
 **Step 1: Find Free Sounds**
 
@@ -114,7 +114,7 @@ function endGame() {
 }
 ```
 
-### 🎯 Add localStorage High Scores
+### Add localStorage High Scores
 
 Track scores across sessions:
 
@@ -136,7 +136,7 @@ function updateHighScore(newScore) {
 
 ---
 
-## 📦 Part 2: Prepare for Deployment (10 minutes)
+## Prepare for Deployment
 
 ### Step 1: Organize Your Projects
 
@@ -292,19 +292,19 @@ Create `index.html` in the root:
 <body>
     <div class="container">
         <header>
-            <h1>🎮 My GameCraft Portfolio 🎮</h1>
+            <h1>My GameCraft Portfolio</h1>
             <p class="subtitle">Built with HTML, CSS, JavaScript, and React</p>
         </header>
 
         <div class="games-grid">
             <div class="game-card">
-                <h2>⚡ Session 1: Interactive Button</h2>
+                <h2>Session 1: Interactive Button</h2>
                 <p>My first web page with interactive elements! Click the button to see it change colors and count clicks.</p>
                 <a href="session1/index.html" class="play-button">Play Now →</a>
             </div>
 
             <div class="game-card">
-                <h2>⏱️ Session 2: Click Speed Challenge</h2>
+                <h2>Session 2: Click Speed Challenge</h2>
                 <p>A fast-paced clicking game with a timer! See how many clicks you can get in 10 seconds.</p>
                 <a href="session2/index.html" class="play-button">Play Now →</a>
             </div>
@@ -323,7 +323,7 @@ Create `index.html` in the root:
         </div>
 
         <div class="skills">
-            <h2>💡 Skills I Learned</h2>
+            <h2>Skills I Learned</h2>
             <div class="skills-list">
                 <span class="skill-tag">HTML5</span>
                 <span class="skill-tag">CSS3</span>
@@ -360,7 +360,7 @@ This creates a `dist/` folder with optimized files ready for deployment.
 
 ---
 
-## 🚀 Part 3: Deploy to GitHub Pages (20 minutes)
+## Deploy to GitHub Pages
 
 ### Option A: Using GitHub Desktop (Easiest)
 
@@ -431,7 +431,7 @@ git push -u origin main
 
 ## 🎉 Part 4: Test and Share (10 minutes)
 
-### ✅ Testing Checklist:
+### Testing Checklist:
 
 Visit your deployed site and test:
 1. Portfolio homepage loads
@@ -452,7 +452,7 @@ Visit your deployed site and test:
 - College applications
 - Future employers!
 
-### 🎨 Customize Your Portfolio
+### Customize Your Portfolio
 
 **Add personal touches:**
 1. Change colors and gradients
@@ -514,33 +514,33 @@ If you have a domain name:
 
 ---
 
-## 📚 What You Accomplished
+## What You Accomplished
 
-✅ **Polished games** with sounds, animations, and high scores  
-✅ **Created portfolio** showcasing all your work  
-✅ **Deployed to web** with GitHub Pages  
-✅ **Learned Git** version control basics  
-✅ **Built real portfolio** to share with the world!
+- **Polished games** with sounds, animations, and high scores  
+- **Created portfolio** showcasing all your work  
+- **Deployed to web** with GitHub Pages  
+- **Learned Git** version control basics  
+- **Built real portfolio** to share with the world
 
 ---
 
-## 🎓 Certificate of Completion
+## Certificate of Completion
 
-**Congratulations!** You've completed GameCraft and built:
+**Congratulations!** You have completed GameCraft and built:
 - 4 interactive web games
 - A professional portfolio
 - Real-world web development skills
 
 **Next Steps:**
-1. Keep building - try new game ideas!
+1. Keep building - try new game ideas
 2. Learn more React - build complex apps
 3. Explore game engines - Phaser.js, PixiJS
 4. Join coding communities - share and learn
-5. Consider web development as a career path!
+5. Consider web development as a career path
 
 ---
 
-## 🚀 Where to Go From Here
+## Where to Go From Here
 
 ### Continue Learning:
 
@@ -569,33 +569,33 @@ If you have a domain name:
 
 ---
 
-## 📦 Final Homework
+## Final Homework
 
-1. **Add one more game** - Build something original!
+1. **Add one more game** - Build something original
 2. **Improve existing games** - Add features you always wanted
 3. **Share your portfolio** - Get feedback from friends
 4. **Write a blog post** - Document your learning journey
-5. **Help others** - Teach someone else what you learned!
+5. **Help others** - Teach someone else what you learned
 
 ---
 
-## 🆘 Deployment Troubleshooting
+## Deployment Troubleshooting
 
-**Problem:** "GitHub Pages shows 404"  
+**Problem:** \"GitHub Pages shows 404\"  
 **Solution:** Check Settings → Pages is enabled, wait 1-2 minutes, refresh
 
-**Problem:** "Games don't work online but work locally"  
+**Problem:** \"Games do not work online but work locally\"  
 **Solution:** Check file paths - use relative paths (`./game.html` not `/game.html`)
 
-**Problem:** "React app shows blank page"  
+**Problem:** \"React app shows blank page\"  
 **Solution:** Build with `npm run build`, deploy the `dist/` folder contents
 
-**Problem:** "CSS not loading"  
+**Problem:** \"CSS not loading\"  
 **Solution:** Check that CSS files are in the repo and paths are correct
 
 ---
 
-## 📖 Resources
+## Resources
 
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
 - [Git Basics](https://git-scm.com/book/en/v2)

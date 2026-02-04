@@ -8,6 +8,7 @@
     <loc>http://localhost:1313/middleschool/</loc>
     <lastmod>2025-01-22T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/highschool/index_f2025/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
@@ -39,6 +40,15 @@
     <lastmod>2024-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/middleschool2024/</loc>
+=======
+    <loc>https://janyljumadinova.com/highschool/</loc>
+    <lastmod>2025-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://janyljumadinova.com/code/</loc>
+    <lastmod>2024-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://janyljumadinova.com/middleschool2024/</loc>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
     <lastmod>2024-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/post/courses/</loc>
@@ -53,6 +63,7 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/highschool/index-copy/</loc>
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -60,6 +71,9 @@
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/highschool_s2023/</loc>
+=======
+    <loc>https://janyljumadinova.com/highschool_s2023/</loc>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
     <lastmod>2023-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/middleschool_s2023/</loc>
@@ -80,11 +94,15 @@
     <loc>http://localhost:1313/research/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
+<<<<<<< HEAD
     <loc>http://localhost:1313/highschool/cloud_code/</loc>
   </url><url>
     <loc>http://localhost:1313/highschool/sensor_code/</loc>
   </url><url>
     <loc>http://localhost:1313/search/placeholder/</loc>
+=======
+    <loc>https://janyljumadinova.com/search/placeholder/</loc>
+>>>>>>> e1cb120c8345882bd509528c87850ed94977b08b
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>

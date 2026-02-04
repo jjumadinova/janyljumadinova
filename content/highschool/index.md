@@ -8,19 +8,19 @@ author: Janyl Jumadinova
 
 # GameCraft: Build Your Own Web Game
 
-Welcome to GameCraft! Over five one-hour sessions, you'll learn to create your own interactive web games from scratch - **no programming experience required!**
+Welcome to GameCraft! Over five one-hour sessions, you will learn to create your own interactive web games from scratch - **no programming experience required!**
 
-## 🎮 What You'll Build
+## What You Will Build
 
-By the end of this course, you'll have:
+By the end of this course, you will have:
 - A working web game that runs in any browser
 - Your own GitHub portfolio with published games
 - Skills in HTML, CSS, JavaScript, and React
-- The ability to turn your game ideas into reality!
+- The ability to turn your game ideas into reality
 
 ---
 
-## 📚 Course Sessions
+## Course Sessions
 
 ### [Session 1: Your First Interactive Web Page](/highschool/session1/)
 **Build:** A colorful button that responds to clicks  
@@ -57,45 +57,45 @@ By the end of this course, you'll have:
 
 ---
 
-## 🛠️ Tools You'll Need
+## Tools You Will Need
 
 1. **Computer with internet access**
 2. **Web browser** (Chrome, Firefox, Safari, or Edge)
-3. **Text editor** - We recommend:
-   - [VS Code](https://code.visualstudio.com/) (most popular)
-   - [Replit](https://replit.com/) (works in browser, no installation!)
+3. **Text editor:**
+   - **Sessions 1-2:** [CodePen](https://codepen.io/) (works in browser, no installation needed)
+   - **Sessions 3-5:** [VS Code](https://code.visualstudio.com/) (professional code editor)
 4. **GitHub account** (free) - [Sign up here](https://github.com/signup)
 
 ---
 
-## 💡 Course Philosophy
+## Course Philosophy
 
-**Learn by Building:** Every session, you'll create something that works!  
-**Progress Together:** Each lesson builds on the previous one  
-**Real Tools:** You'll use the same tools professional developers use  
-**Your Creativity:** The examples are starting points - make them your own!
-
----
-
-## 🎯 Skills You'll Develop
-
-By the end of GameCraft, you'll be able to:
-
-✅ Build interactive web pages using HTML, CSS, and JavaScript  
-✅ Develop web-based games using React  
-✅ Apply design and logic to create fun, playable experiences  
-✅ Strengthen problem-solving, collaboration, and creative thinking  
-✅ Deploy and share your projects online
+**Learn by Building:** Every session, you will create something that works.  
+**Progress Together:** Each lesson builds on the previous one.  
+**Real Tools:** You will use the same tools professional developers use.  
+**Your Creativity:** The examples are starting points - make them your own.
 
 ---
 
-## 🚀 Ready to Start?
+## Skills You Will Develop
 
-Head to **[Session 1](/highschool/gamecraft/session1/)** to build your first interactive web page!
+By the end of GameCraft, you will be able to:
+
+- Build interactive web pages using HTML, CSS, and JavaScript  
+- Develop web-based games using React  
+- Apply design and logic to create fun, playable experiences  
+- Strengthen problem-solving, collaboration, and creative thinking  
+- Deploy and share your projects online
 
 ---
 
-## 📬 Questions or Feedback?
+## Ready to Start?
+
+Head to **[Session 1](/highschool/session1/)** to build your first interactive web page.
+
+---
+
+## Questions or Feedback?
 
 Reach out anytime - we're here to help you succeed!
 

@@ -6,39 +6,36 @@ date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 1: Your First Interactive Web Page 🎨
+# Session 1: Your First Interactive Web Page
 
-## 🎯 What You'll Build Today
+## What You Will Build Today
 
-A web page with a button that changes color and text when you click it. Simple, but it introduces the **three core technologies** of web development!
+A web page with a button that changes color and text when you click it. Simple, but it introduces the **three core technologies** of web development.
 
 **[See the finished example →](your-demo-link-here)**
 
 ---
 
-## 🧰 Setup (5 minutes)
+## Setup
 
-### Option A: Replit (Easiest - Works in Browser!)
-1. Go to [replit.com](https://replit.com/)
-2. Sign up/log in (use your GitHub account!)
-3. Click **+ Create Repl**
-4. Choose **HTML, CSS, JS** template
-5. Name it: `gamecraft-session1`
+### Option A: CodePen (Recommended - Works in Browser)
+1. Go to [codepen.io](https://codepen.io/)
+2. Click \"Start Coding\" (no account needed to try it out)
+3. You will see three panels: HTML, CSS, and JS
+4. We will use all three panels today
 
 ### Option B: VS Code (Local Installation)
 1. Download [VS Code](https://code.visualstudio.com/)
 2. Create a new folder: `gamecraft-session1`
 3. Create a file: `index.html`
 
-**We'll use Option A in class for simplicity!**
-
 ---
 
-## 📖 Part 1: HTML - The Structure (15 minutes)
+## HTML - The Structure
 
 HTML is like the **skeleton** of a web page. It defines what elements exist.
 
-### Step 1: Create the Basic Structure
+### Create the Basic Structure
 
 In your `index.html` file, type this (or paste it):
 
@@ -58,7 +55,7 @@ In your `index.html` file, type this (or paste it):
 </html>
 ```
 
-### 🔍 What Does This Mean?
+### What Does This Mean?
 
 - `<!DOCTYPE html>` - Tells the browser "this is a web page"
 - `<html>` - The container for everything
@@ -66,10 +63,10 @@ In your `index.html` file, type this (or paste it):
 - `<body>` - What you SEE on the page
 - `<h1>` - A big heading
 - `<p>` - A paragraph of text
-- `<button>` - A clickable button!
-- `id="magicButton"` - A name we'll use later to control this button
+- `<button>` - A clickable button
+- `id="magicButton"` - A name we will use later to control this button
 
-### ✅ Test It!
+### Test It
 
 - **Replit:** Click the green "Run" button at the top
 - **VS Code:** Right-click `index.html` → "Open with Live Server" (or just double-click to open in browser)
@@ -80,9 +77,9 @@ In your `index.html` file, type this (or paste it):
 
 ## 🎨 Part 2: CSS - The Style (15 minutes)
 
-CSS is like **clothes and makeup** for your web page. It makes things look good!
+CSS is like **clothes and makeup** for your web page. It makes things look good.
 
-### Step 2: Add Style
+### Add Style
 
 Inside your `<head>` section (between `<title>` and `</head>`), add this:
 
@@ -132,7 +129,7 @@ Inside your `<head>` section (between `<title>` and `</head>`), add this:
 </style>
 ```
 
-### 🔍 What Does This Do?
+### What Does This Do?
 
 - `body { ... }` - Styles the entire page (gradient background, centered content)
 - `h1 { ... }` - Makes the heading bigger and adds a shadow
@@ -140,17 +137,17 @@ Inside your `<head>` section (between `<title>` and `</head>`), add this:
 - `button:hover` - Changes how the button looks when you move your mouse over it
 - `transition` - Makes changes smooth and animated
 
-### ✅ Test It!
+### Test It
 
-Refresh your page. **WOW!** 🎨 Much better looking!
+Refresh your page. Much better looking!
 
 ---
 
-## ⚡ Part 3: JavaScript - The Interaction (20 minutes)
+## JavaScript - The Interaction
 
-JavaScript is the **brain** of your web page. It makes things DO stuff!
+JavaScript is the **brain** of your web page. It makes things DO stuff.
 
-### Step 3: Add Interactivity
+### Add Interactivity
 
 Right before the closing `</body>` tag, add this:
 
@@ -187,28 +184,28 @@ Right before the closing `</body>` tag, add this:
 </script>
 ```
 
-### 🔍 Let's Break This Down!
+### Understanding the Code
 
 1. **`const button = ...`** - Finds your button by its `id` and saves it in a variable
 2. **`let clickCount = 0`** - Creates a counter starting at 0
 3. **`function handleClick() { ... }`** - A recipe for what to do when clicked
-4. **`clickCount = clickCount + 1`** - Adds 1 to the counter (like tallying scores!)
+4. **`clickCount = clickCount + 1`** - Adds 1 to the counter (like tallying scores)
 5. **`button.textContent = ...`** - Changes what the button says
 6. **`button.style.backgroundColor = ...`** - Changes the button's color
 7. **`addEventListener('click', ...)`** - Says "when someone clicks, run this function"
 
-### ✅ Test It!
+### Test It
 
 Click your button! It should:
 - Count your clicks
 - Change colors randomly
 - Update the text
 
-**Congratulations! You just made something interactive!** 🎉
+Congratulations! You just made something interactive.
 
 ---
 
-## 🎮 Part 4: Make It Your Own (5 minutes)
+## Make It Your Own
 
 ### Challenges:
 
@@ -216,21 +213,21 @@ Click your button! It should:
 2. **Medium:** Add more colors to the `colors` array
 3. **Hard:** Make the heading also change when you click the button
 
-**Hint for #3:** You'll need to get the heading with `document.querySelector('h1')` and change its text!
+**Hint for #3:** You will need to get the heading with `document.querySelector('h1')` and change its text.
 
 ---
 
-## 📚 What You Learned Today
+## What You Learned Today
 
-✅ **HTML** - Structure (headings, paragraphs, buttons)  
-✅ **CSS** - Styling (colors, sizes, effects)  
-✅ **JavaScript** - Interactivity (variables, functions, events)  
-✅ **The Browser** - How to run and test web pages  
-✅ **Three-part pattern** - Structure → Style → Behavior
+- **HTML** - Structure (headings, paragraphs, buttons)  
+- **CSS** - Styling (colors, sizes, effects)  
+- **JavaScript** - Interactivity (variables, functions, events)  
+- **The Browser** - How to run and test web pages  
+- **Three-part pattern** - Structure → Style → Behavior
 
 ---
 
-## 🚀 Next Session Preview
+## Next Session Preview
 
 **Session 2:** We'll build a **real click game** with a timer, score, and restart button. Get ready to level up!
 
@@ -240,7 +237,7 @@ Click your button! It should:
 
 1. Change the gradient background colors (find "135deg, #667eea" in the CSS)
 2. Add another button that does something different
-3. Share your page with a friend! (In Replit, just share the URL at the top)
+3. Share your page with a friend (In CodePen, you can save and share the URL)
 
 ---
 

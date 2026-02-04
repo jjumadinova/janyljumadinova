@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Session 2" />
-    <meta property="og:title" content="Session 2" />
-    <meta property="twitter:title" content="Session 2" />
+    <meta name="title" content="Session 2 Solution" />
+    <meta property="og:title" content="Session 2 Solution" />
+    <meta property="twitter:title" content="Session 2 Solution" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Session 2 | Janyl Jumadinova</title>
+    <title>Session 2 Solution | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/highschool/session2/">
+    <link rel="canonical" href="/highschool/session2-solution/">
 
     
     
@@ -199,31 +199,11 @@
                 post-container">
 
                 
-                <h1 id="session-2-build-a-click-speed-game">Session 2: Build a Click Speed Game</h1>
-<h2 id="what-you-will-build-today">What You Will Build Today</h2>
-<p>A &ldquo;Click Speed Challenge&rdquo; game where players race against a 10-second timer to click as many times as possible.</p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>10-second countdown timer</li>
-<li>Click counter</li>
-<li>Start/Restart button</li>
-<li>High score tracking</li>
-<li>Victory message</li>
-</ul>
+                <h1 id="session-2-complete-solution-code">Session 2: Complete Solution Code</h1>
+<p>This page contains the complete, working code for the Click Speed Challenge game. Use this if you need help or want to check your work.</p>
 <hr>
-<h2 id="setup">Setup</h2>
-<h3 id="create-a-new-project">Create a New Project</h3>
-<p><strong>In CodePen:</strong></p>
-<ol>
-<li>Go to <a href="https://codepen.io/">codepen.io</a></li>
-<li>Click <strong>Start Coding</strong></li>
-<li>Name it: <code>click-speed-challenge</code></li>
-<li>You will use all three panels: HTML, CSS, and JS</li>
-</ol>
-<hr>
-<h2 id="build-the-game-structure">Build the Game Structure</h2>
-<h3 id="html-structure">HTML Structure</h3>
-<p>Start by creating the basic structure. In CodePen&rsquo;s HTML panel, type:</p>
+<h2 id="complete-html">Complete HTML</h2>
+<p>In CodePen&rsquo;s HTML panel:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
@@ -235,45 +215,36 @@
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;Click Speed Challenge&lt;/<span style="color:#ff79c6">h1</span>&gt;
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Stats display --&gt;</span>
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game-info&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;Time Left:&lt;/<span style="color:#ff79c6">p</span>&gt;
 </span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;timer&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;10.0&lt;/<span style="color:#ff79c6">p</span>&gt;
 </span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">&lt;!-- Add two more stat boxes for Clicks and High Score --&gt;</span>
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;Clicks:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;score&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;High Score:&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;highScore&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">p</span>&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Main click button --&gt;</span>
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;clickButton&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;click-button&#34;</span> <span style="color:#50fa7b">disabled</span>&gt;
 </span></span><span style="display:flex;"><span>            Click START to Begin!
 </span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">button</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Add a start button with id=&#34;startButton&#34; --&gt;</span>
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;startButton&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;start-button&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>            START GAME
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">button</span>&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Message display --&gt;</span>
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
-</span></span></code></pre></div><h3 id="new-concepts">New Concepts:</h3>
-<ul>
-<li><strong><code>&lt;div class=&quot;container&quot;&gt;</code></strong> - Groups related elements together</li>
-<li><strong><code>disabled</code></strong> - Makes a button unclickable until we are ready</li>
-<li><strong>Multiple elements with <code>id</code>s</strong> - So we can control each one separately</li>
-</ul>
-<h3 id="your-turn---complete-the-html">Your Turn - Complete the HTML:</h3>
-<ol>
-<li><strong>Add the Clicks stat:</strong> Copy the &ldquo;Time Left&rdquo; stat box and modify it to show &ldquo;Clicks&rdquo; with <code>id=&quot;score&quot;</code></li>
-<li><strong>Add the High Score stat:</strong> Create another one for &ldquo;High Score&rdquo; with <code>id=&quot;highScore&quot;</code></li>
-<li><strong>Add the start button:</strong> Create a button with <code>id=&quot;startButton&quot;</code> and text &ldquo;START GAME&rdquo;</li>
-<li><strong>Customize:</strong> Change the title to something creative (&ldquo;Speed Clicker Pro&rdquo;? &ldquo;Finger Fury&rdquo;?)</li>
-<li><strong>Preview:</strong> Check CodePen&rsquo;s preview - you should see your structure (plain for now)</li>
-</ol>
-<hr>
-<h2 id="style-your-game">Style Your Game</h2>
-<h3 id="add-css-styling">Add CSS Styling</h3>
-<p>In CodePen&rsquo;s CSS panel, add these styles. Notice we are using a dark background so colors show up clearly:</p>
+</span></span></code></pre></div><hr>
+<h2 id="complete-css">Complete CSS</h2>
+<p>In CodePen&rsquo;s CSS panel:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">*</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0</span>;
@@ -331,32 +302,57 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* You will style the click button - make it big and round! */</span>
 </span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">click-button</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* Add your button colors here */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#e74c3c</span>, <span style="color:#bd93f9">#c0392b</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">%</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.4</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.1</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* Add hover and active effects for your button */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">click-button</span>:hover:not<span style="color:#ff79c6">(</span>:disabled<span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">scale</span>(<span style="color:#bd93f9">1.05</span>);
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* Style the start button */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">click-button</span>:active:not<span style="color:#ff79c6">(</span>:disabled<span style="color:#ff79c6">)</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">scale</span>(<span style="color:#bd93f9">0.95</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">click-button</span>:disabled {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#ff79c6">gray</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">not-allowed</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.5</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">start-button</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* Add your button color here */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#27ae60</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">start-button</span>:hover {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#229954</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-2</span><span style="color:#8be9fd">px</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">start-button</span>:disabled {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">gray</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">not-allowed</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.5</span>;
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">message</span> {
@@ -365,18 +361,9 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="your-turn---complete-the-styling">Your Turn - Complete the Styling:</h3>
-<ol>
-<li><strong>Style the click button:</strong> Add a background color or gradient (try <code>background: #e74c3c;</code> or <code>background: linear-gradient(135deg, #ff6b6b, #ee5252);</code>)</li>
-<li><strong>Add button effects:</strong> Make it scale on hover: <code>.click-button:hover { transform: scale(1.05); }</code></li>
-<li><strong>Style the start button:</strong> Pick a color (try <code>background-color: #27ae60;</code> for green)</li>
-<li><strong>Experiment:</strong> Try different colors, sizes, or border-radius values</li>
-<li><strong>Preview:</strong> Your game should look colorful and inviting now</li>
-</ol>
-<hr>
-<h2 id="add-game-logic">Add Game Logic</h2>
-<h3 id="javascript---the-game-brain">JavaScript - The Game Brain</h3>
-<p>In CodePen&rsquo;s JS panel, let us build the game logic step by step:</p>
+</span></span></code></pre></div><hr>
+<h2 id="complete-javascript">Complete JavaScript</h2>
+<p>In CodePen&rsquo;s JS panel:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// 1. GET ALL THE ELEMENTS
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> clickButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;clickButton&#39;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> startButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;startButton&#39;</span>);
@@ -431,19 +418,18 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    timerInterval <span style="color:#ff79c6">=</span> setInterval(updateTimer, <span style="color:#bd93f9">100</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 6. UPDATE TIMER - YOU COMPLETE THIS
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 6. UPDATE TIMER FUNCTION
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> updateTimer() {
 </span></span><span style="display:flex;"><span>    timeLeft <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">0.1</span>;
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (timeLeft <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>) {
 </span></span><span style="display:flex;"><span>        endGame();
 </span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Update the timer display (use .toFixed(1) to show one decimal)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#6272a4">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    }
+</span></span><span style="display:flex;"><span>        timerDisplay.textContent <span style="color:#ff79c6">=</span> timeLeft.toFixed(<span style="color:#bd93f9">1</span>);
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 7. END GAME - YOU COMPLETE THIS
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 7. END GAME FUNCTION
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> endGame() {
 </span></span><span style="display:flex;"><span>    gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
 </span></span><span style="display:flex;"><span>    clearInterval(timerInterval);
@@ -455,119 +441,34 @@
 </span></span><span style="display:flex;"><span>    startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;PLAY AGAIN&#39;</span>;
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Check if this is a new high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// If score &gt; highScore:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Update highScore
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Display high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Show &#34;NEW HIGH SCORE!&#34; message
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// Otherwise:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Show regular game over message
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (score <span style="color:#ff79c6">&gt;</span> highScore) {
+</span></span><span style="display:flex;"><span>        highScore <span style="color:#ff79c6">=</span> score;
+</span></span><span style="display:flex;"><span>        highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
+</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;NEW HIGH SCORE!&#39;</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Over! Your score: &#39;</span> <span style="color:#ff79c6">+</span> score;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    timerDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;0.0&#39;</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="understanding-the-key-concepts">Understanding the Key Concepts</h3>
-<p><strong>Important concepts:</strong></p>
+</span></span></code></pre></div><hr>
+<h2 id="how-to-use-this-code">How to Use This Code</h2>
+<h3 id="in-codepen">In CodePen:</h3>
 <ol>
-<li><strong>Variables store game state:</strong> <code>score</code>, <code>timeLeft</code>, <code>gameRunning</code></li>
-<li><strong><code>setInterval(updateTimer, 100)</code></strong> - Runs <code>updateTimer</code> every 100 milliseconds (0.1 seconds)</li>
-<li><strong><code>clearInterval()</code></strong> - Stops the repeating timer</li>
-<li><strong><code>.toFixed(1)</code></strong> - Rounds numbers to 1 decimal place (9.9999 becomes &ldquo;10.0&rdquo;)</li>
+<li>Copy the HTML code into the HTML panel</li>
+<li>Copy the CSS code into the CSS panel</li>
+<li>Copy the JavaScript code into the JS panel</li>
+<li>The game should work immediately!</li>
 </ol>
-<h3 id="your-turn---complete-the-javascript">Your Turn - Complete the JavaScript:</h3>
+<h3 id="in-vs-code">In VS Code:</h3>
 <ol>
-<li><strong>Fix <code>updateTimer()</code>:</strong> Make it update the timer display using <code>timerDisplay.textContent = timeLeft.toFixed(1);</code></li>
-<li><strong>Fix <code>endGame()</code>:</strong> Add the high score logic:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (score <span style="color:#ff79c6">&gt;</span> highScore) {
-</span></span><span style="display:flex;"><span>    highScore <span style="color:#ff79c6">=</span> score;
-</span></span><span style="display:flex;"><span>    highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
-</span></span><span style="display:flex;"><span>    messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;NEW HIGH SCORE!&#39;</span>;
-</span></span><span style="display:flex;"><span>} <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>    messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Over! Your score: &#39;</span> <span style="color:#ff79c6">+</span> score;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div></li>
-<li><strong>Test it:</strong> Click START and play the game - does everything work?</li>
-<li><strong>Customize:</strong> Change the button text, game duration, or add your own message</li>
+<li>Create a new file called <code>click-game.html</code></li>
+<li>Paste the HTML code</li>
+<li>Add the CSS inside <code>&lt;style&gt;</code> tags in the <code>&lt;head&gt;</code></li>
+<li>Add the JavaScript inside <code>&lt;script&gt;</code> tags before <code>&lt;/body&gt;</code></li>
 </ol>
 <hr>
-<h2 id="test-and-extend-your-game">Test and Extend Your Game</h2>
-<h3 id="full-testing-checklist">Full Testing Checklist:</h3>
-<ol>
-<li>Click START - does the timer count down?</li>
-<li>Click the big button - does the score increase?</li>
-<li>Wait for time to run out - does it show the correct message?</li>
-<li>Play again and beat your score - does it say &ldquo;NEW HIGH SCORE&rdquo;?</li>
-</ol>
-<h3 id="extra-challenges">Extra Challenges:</h3>
-<p>Once your game works, try adding these features:</p>
-<p><strong>Polish and Effects:</strong></p>
-<ol>
-<li>Make the button change colors randomly with each click</li>
-<li>Add a pulsing animation to the button during the game</li>
-<li>Display different messages based on score (0-15: &ldquo;Keep trying!&rdquo;, 16-25: &ldquo;Good!&rdquo;, 26+: &ldquo;Amazing!&rdquo;)</li>
-</ol>
-<p><strong>New Features:</strong></p>
-<ol start="4">
-<li>Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)</li>
-<li>Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code></li>
-<li>Add sound effects when clicking (hint: look up HTML <code>&lt;audio&gt;</code> tag)</li>
-</ol>
-<p><strong>Advanced:</strong></p>
-<ol start="7">
-<li>Save high score in <code>localStorage</code> so it persists even after refreshing (see solution below)</li>
-<li>Make the button shrink slightly with each click, then reset when time is up</li>
-</ol>
-<hr>
-<h2 id="advanced-save-high-score-forever">Advanced: Save High Score Forever</h2>
-<p>Want your high score to persist even after closing the browser? Use <code>localStorage</code>:</p>
-<p><strong>At the top of your JavaScript (after getting elements):</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// Load saved high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>highScore <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(localStorage.getItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>)) <span style="color:#ff79c6">||</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
-</span></span></code></pre></div><p><strong>In <code>endGame()</code>, after updating the high score:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>localStorage.setItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>, highScore);
-</span></span></code></pre></div><p>Now your high score saves automatically!</p>
-<hr>
-<h2 id="what-you-learned-today">What You Learned Today</h2>
-<ul>
-<li><strong>Intervals and Timers</strong> - <code>setInterval()</code>, <code>clearInterval()</code></li>
-<li><strong>Game State Management</strong> - Tracking multiple variables</li>
-<li><strong>Conditional Logic</strong> - <code>if</code> statements to control game flow</li>
-<li><strong>Enable/Disable UI</strong> - Controlling when buttons work</li>
-<li><strong>Number Formatting</strong> - <code>.toFixed()</code> for decimals</li>
-<li><strong>Game Loop Concept</strong> - Repeating functions that update the game</li>
-</ul>
-<hr>
-<h2 id="next-session-preview">Next Session Preview</h2>
-<p><strong>Session 3:</strong> We will add <strong>animation and movement</strong> - build a &ldquo;Catch the Falling Objects&rdquo; game with moving elements.</p>
-<hr>
-<h2 id="homework-optional">Homework (Optional)</h2>
-<ol>
-<li>Add a &ldquo;Best Time&rdquo; feature - track the fastest time to reach 50 clicks</li>
-<li>Create sound effects (hint: use the Web Audio API or <code>&lt;audio&gt;</code> tag)</li>
-<li>Add a lives system where missing clicks costs a life</li>
-<li>Make the button move around the screen randomly!</li>
-</ol>
-<hr>
-<h2 id="common-issues">Common Issues</h2>
-<p><strong>Problem:</strong> &ldquo;Timer does not count down&rdquo;<br>
-<strong>Solution:</strong> Check that <code>setInterval(updateTimer, 100)</code> is called in <code>startGame()</code></p>
-<p><strong>Problem:</strong> &ldquo;Cannot click button after starting&rdquo;<br>
-<strong>Solution:</strong> Make sure <code>clickButton.disabled = false;</code> is in <code>startGame()</code></p>
-<p><strong>Problem:</strong> &ldquo;High score does not update&rdquo;<br>
-<strong>Solution:</strong> Check the <code>if (score &gt; highScore)</code> condition in <code>endGame()</code></p>
-<hr>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval">setInterval() - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Event Listeners - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
-</ul>
-<hr>
-<h2 id="need-help">Need Help?</h2>
-<p><strong><a href="/highschool/session2-solution/">View Complete Solution Code →</a></strong></p>
-<p>If you are stuck or need to catch up, check out the complete working code with all the missing parts filled in.</p>
-<hr>
-<p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 →</a></strong></p>
+<p><strong><a href="/highschool/session2/">← Back to Session 2</a></strong></p>
 
 
                 
