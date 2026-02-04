@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -213,15 +213,6 @@
 <h3 id="session-2-sensing-the-world-with-ir-sensors">Session 2: Sensing the World with IR Sensors</h3>
 <p><strong>Goal:</strong> Connect an IR (Infrared) sensor to the micro:bit and learn the difference between analog and digital readings.</p>
 <hr>
-<h4 id="quick-review-10-minutes">Quick Review (10 minutes)</h4>
-<p>Let&rsquo;s review what we learned in Session 1:</p>
-<ul>
-<li>How to create programs in MakeCode</li>
-<li>Using variables to store data</li>
-<li>Displaying information on the LED grid</li>
-<li>Responding to button presses</li>
-</ul>
-<p><strong>Quick Activity:</strong> Can you make the micro:bit show a heart when you press button A?</p>
 <h4 id="what-is-an-ir-sensor">What is an IR Sensor?</h4>
 <p>An <strong>IR (Infrared) sensor</strong> can detect objects in front of it using infrared light. It&rsquo;s like giving your micro:bit the ability to &ldquo;see&rdquo;! IR sensors are used in:</p>
 <ul>
@@ -283,87 +274,81 @@
 <li>Lower numbers = object is closer</li>
 <li>More precise than digital!</li>
 </ul>
-<h4 id="programming-the-ir-sensor-25-minutes">Programming the IR Sensor (25 minutes)</h4>
+<h4 id="programming-the-ir-sensor-40-minutes">Programming the IR Sensor (40 minutes)</h4>
 <p><strong>Activity 1: Digital Reading (Simple Detection)</strong></p>
+<p><strong>Setup:</strong></p>
 <ol>
-<li>In MakeCode, create a <code>forever</code> loop</li>
-<li>Add a block: <code>digital read pin P0</code></li>
-<li>Use an <code>if...then...else</code> statement:
+<li>In MakeCode, go to <strong>Advanced</strong> → <strong>Pins</strong></li>
+<li>In the <code>on start</code> block, add <code>show number</code> to display which pin you&rsquo;re using</li>
+<li>Create a <code>forever</code> loop</li>
+</ol>
+<p><strong>In the forever block:</strong></p>
+<ol>
+<li>Add an <code>if...then...else</code> statement</li>
+<li>From <strong>Pins</strong>, drag <code>digital read pin P0</code> into the if condition</li>
+<li>Set the condition to: if <code>digital read pin P0</code> = <strong>0</strong></li>
+<li><strong>Then</strong> (object detected):
 <ul>
-<li>If reading is <strong>0</strong>: show &ldquo;X&rdquo; (object detected!)</li>
-<li>If reading is <strong>1</strong>: show &ldquo;→&rdquo; (path is clear)</li>
+<li>Show icon &ldquo;X&rdquo;</li>
+<li>Play a sound (from <strong>Music</strong>)</li>
+</ul>
+</li>
+<li><strong>Else</strong> (path is clear):
+<ul>
+<li>Show icon &ldquo;✓&rdquo; (checkmark)</li>
 </ul>
 </li>
 </ol>
-<pre tabindex="0"><code class="language-blocks" data-lang="blocks">basic.forever(function () {
-    if (pins.digitalReadPin(DigitalPin.P0) == 0) {
-        basic.showIcon(IconNames.No)
-    } else {
-        basic.showIcon(IconNames.Yes)
-    }
-})
-</code></pre><p><strong>Test it:</strong> Wave your hand in front of the sensor!</p>
-<p><strong>Activity 2: Analog Reading (Distance Detection)</strong></p>
+<p><strong>Test it:</strong> Wave your hand in front of the sensor! You should see an X and hear a sound when an object is detected, and a checkmark when the path is clear.</p>
+<p><strong>Activity 2: Analog Reading with Sound Alert</strong></p>
+<p><strong>Setup:</strong></p>
 <ol>
-<li>Create a new <code>forever</code> loop</li>
-<li>Use <code>analog read pin P0</code> block</li>
-<li>Store the value in a variable called <code>distance</code></li>
-<li>Display the value on the LED screen</li>
+<li>Create a new project or delete the previous code</li>
+<li>From <strong>Variables</strong>, create a variable called <code>distance</code></li>
 </ol>
-<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
-basic.forever(function () {
-    distance = pins.analogReadPin(AnalogPin.P0)
-    basic.showNumber(distance)
-})
-</code></pre><p><strong>Experiment:</strong></p>
+<p><strong>In the forever block:</strong></p>
+<ol>
+<li>Set <code>distance</code> to <code>analog read pin P0</code> (from <strong>Pins</strong> → <strong>Advanced</strong>)</li>
+<li>Add an <code>if...then...else</code> statement</li>
+<li>Set the condition to: if <code>distance</code> &lt; <strong>300</strong></li>
+<li><strong>Then</strong> (object is close):
 <ul>
-<li>What number do you see when your hand is far away?</li>
-<li>What number when your hand is close?</li>
-<li>What&rsquo;s the range of values you observe?</li>
+<li>Show icon &ldquo;X&rdquo;</li>
+<li>Play a sound (from <strong>Music</strong>)</li>
 </ul>
-<p><strong>Activity 3: Creating Distance Zones</strong></p>
-<p>Let&rsquo;s make the micro:bit show different images based on how close an object is:</p>
-<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
-basic.forever(function () {
-    distance = pins.analogReadPin(AnalogPin.P0)
-    if (distance &lt; 300) {
-        basic.showIcon(IconNames.Surprised)  // Very close!
-    } else if (distance &lt; 600) {
-        basic.showIcon(IconNames.Happy)      // Medium distance
-    } else {
-        basic.showIcon(IconNames.Asleep)     // Far away
-    }
-    basic.pause(100)
-})
-</code></pre><p><strong>Tune the values:</strong> Adjust 300 and 600 based on your sensor&rsquo;s readings!</p>
+</li>
+<li><strong>Else</strong> (object is far):
+<ul>
+<li>Show icon &ldquo;✓&rdquo; (checkmark)</li>
+</ul>
+</li>
+<li>Add a <code>pause 100 ms</code> block at the end</li>
+</ol>
+<p><strong>Experiment:</strong></p>
+<ul>
+<li>What happens when you move your hand closer or farther?</li>
+<li>Try adjusting the 300 value - what happens if you use 500? Or 200?</li>
+<li>Can you find the best threshold value for detecting objects?</li>
+</ul>
 <h4 id="challenge-build-an-obstacle-alert-system-30-minutes">Challenge: Build an Obstacle Alert System (30 minutes)</h4>
-<p><strong>Mission:</strong> Create a system that warns when an obstacle is getting too close!</p>
+<p><strong>Your Task:</strong> Create a system that warns when an obstacle is getting too close!</p>
 <p><strong>Requirements:</strong></p>
 <ol>
 <li>Use analog reading to measure distance</li>
-<li>When object is FAR (&gt;700): Show a checkmark, no sound</li>
-<li>When object is MEDIUM (400-700): Show a small square, play a slow beep</li>
-<li>When object is CLOSE (&lt;400): Show a large square, play a fast beep</li>
+<li>When object is <strong>FAR</strong> (&gt;700): Show a checkmark, no sound</li>
+<li>When object is <strong>MEDIUM</strong> (400-700): Show a small square, play a slow beep</li>
+<li>When object is <strong>CLOSE</strong> (&lt;400): Show a large square, play a fast beep</li>
 <li>Add button A to pause/resume the system</li>
-<li><em>Bonus:</em> Add button B to display the current sensor reading</li>
+<li><em>Bonus:</em> Add button B to display the current sensor reading as a number</li>
 </ol>
-<p><strong>Example starter code:</strong></p>
-<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
-let systemActive = true
-
-input.onButtonPressed(Button.A, function () {
-    systemActive = !(systemActive)
-})
-
-basic.forever(function () {
-    if (systemActive) {
-        distance = pins.analogReadPin(AnalogPin.P0)
-        // Add your detection zones here!
-    } else {
-        basic.showString(&#34;OFF&#34;)
-    }
-})
-</code></pre><p><strong>Testing Ideas:</strong></p>
+<p><strong>Hints:</strong></p>
+<ul>
+<li>You&rsquo;ll need multiple <code>if...then...else if...else</code> statements</li>
+<li>Use the <strong>Music</strong> blocks for different beep speeds</li>
+<li>Use <strong>Input</strong> blocks for button presses</li>
+<li>Create a variable called <code>systemActive</code> to track if the system is on or off</li>
+</ul>
+<p><strong>Testing Ideas:</strong></p>
 <ul>
 <li>Test with different objects (hand, book, wall)</li>
 <li>Find the maximum detection distance</li>

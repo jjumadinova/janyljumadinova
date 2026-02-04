@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -199,9 +199,13 @@
                 post-container">
 
                 
-                <h1 id="session-3-catch-the-falling-gems">Session 3: Catch the Falling Gems</h1>
-<h2 id="what-you-will-build-today">What You Will Build Today</h2>
-<p>A &ldquo;Gem Catcher&rdquo; game where colorful gems fall from the sky and you move a basket to catch them.</p>
+                <h1 id="session-3-catch-the-falling-gems-">Session 3: Catch the Falling Gems! 💎</h1>
+<p><strong>Time:</strong> 1 hour<br>
+<strong>Goal:</strong> Build a game with moving objects, collision detection, and smooth animation<br>
+<strong>Prerequisites:</strong> Sessions 1-2 (HTML, CSS, JavaScript, game loops)</p>
+<hr>
+<h2 id="-what-youll-build-today">🎯 What You&rsquo;ll Build Today</h2>
+<p>A &ldquo;Gem Catcher&rdquo; game where colorful gems fall from the sky and you move a basket to catch them!</p>
 <p><strong>Features:</strong></p>
 <ul>
 <li>Moving gems that fall down the screen</li>
@@ -212,10 +216,10 @@
 </ul>
 <p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
 <hr>
-<h2 id="setup">Setup</h2>
-<p>Create a new file in VS Code: <code>gem-catcher.html</code></p>
+<h2 id="-setup-5-minutes">🚀 Setup (5 minutes)</h2>
+<p>Create a new Repl or file: <code>gem-catcher.html</code></p>
 <hr>
-<h2 id="html-canvas-setup">HTML Canvas Setup</h2>
+<h2 id="-part-1-html-canvas-setup-10-minutes">📖 Part 1: HTML Canvas Setup (10 minutes)</h2>
 <h3 id="step-1-the-html-structure">Step 1: The HTML Structure</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
@@ -226,7 +230,7 @@
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;Gem Catcher&lt;/<span style="color:#ff79c6">h1</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;💎 Gem Catcher 💎&lt;/<span style="color:#ff79c6">h1</span>&gt;
 </span></span><span style="display:flex;"><span>        
 </span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game-stats&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;Score: &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;score&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">span</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
@@ -245,16 +249,16 @@
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
-</span></span></code></pre></div><h3 id="what-is-new">What is New?</h3>
-<p><strong><code>&lt;canvas&gt;</code></strong> - An HTML element where we can draw graphics with JavaScript</p>
+</span></span></code></pre></div><h3 id="-whats-new">🔍 What&rsquo;s New?</h3>
+<p><strong><code>&lt;canvas&gt;</code></strong> - An HTML element where we can draw graphics with JavaScript!</p>
 <ul>
 <li>Think of it like a blank piece of paper</li>
-<li>We will draw our gems and basket on it</li>
+<li>We&rsquo;ll draw our gems and basket on it</li>
 <li><code>width=&quot;600&quot; height=&quot;500&quot;</code> sets the size in pixels</li>
 </ul>
 <hr>
-<h2 id="styling">Styling</h2>
-<h3 id="add-css">Add CSS</h3>
+<h2 id="-part-2-styling-5-minutes">🎨 Part 2: Styling (5 minutes)</h2>
+<h3 id="step-2-add-css">Step 2: Add CSS</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
@@ -343,8 +347,8 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
 </span></span></code></pre></div><hr>
-<h2 id="game-logic-with-canvas-animation">Game Logic with Canvas Animation</h2>
-<h3 id="javascript---the-animation-engine">JavaScript - The Animation Engine</h3>
+<h2 id="-part-3-game-logic-with-canvas-animation-35-minutes">⚡ Part 3: Game Logic with Canvas Animation (35 minutes)</h2>
+<h3 id="step-3-javascript---the-animation-engine">Step 3: JavaScript - The Animation Engine</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
 </span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 1. SETUP - Get elements and canvas context
@@ -565,7 +569,7 @@
 </span></span><span style="display:flex;"><span>        gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
 </span></span><span style="display:flex;"><span>        cancelAnimationFrame(animationId);
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Over! Final Score: &#39;</span> <span style="color:#ff79c6">+</span> score;
+</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;🎮 Game Over! Final Score: &#39;</span> <span style="color:#ff79c6">+</span> score;
 </span></span><span style="display:flex;"><span>        startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;PLAY AGAIN&#39;</span>;
 </span></span><span style="display:flex;"><span>        startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
 </span></span><span style="display:flex;"><span>    }
@@ -580,7 +584,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    clearCanvas();
 </span></span><span style="display:flex;"><span>    drawBasket();
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
-</span></span></code></pre></div><h3 id="key-concepts-explained">Key Concepts Explained</h3>
+</span></span></code></pre></div><h3 id="-key-concepts-explained">🔍 Key Concepts Explained</h3>
 <p><strong>1. Canvas Context (<code>ctx</code>)</strong></p>
 <ul>
 <li>Like a paintbrush that draws on the canvas</li>
@@ -590,7 +594,7 @@
 </ul>
 <p><strong>2. Game Loop with <code>requestAnimationFrame()</code></strong></p>
 <ul>
-<li>Runs at approximately 60 frames per second</li>
+<li>Runs at ~60 frames per second</li>
 <li>Smoother than <code>setInterval</code></li>
 <li>Browser optimizes it automatically</li>
 </ul>
@@ -611,15 +615,15 @@
 <li>Check state each frame for smooth movement</li>
 </ul>
 <hr>
-<h2 id="test-and-customize">Test and Customize</h2>
-<h3 id="testing">Testing:</h3>
+<h2 id="-part-4-test-and-customize-5-minutes">🎮 Part 4: Test and Customize (5 minutes)</h2>
+<h3 id="-testing">✅ Testing:</h3>
 <ol>
 <li>Move your mouse - does the basket follow?</li>
 <li>Try arrow keys - does it move?</li>
 <li>Catch gems - does score increase?</li>
 <li>Miss 3 gems - does game end?</li>
 </ol>
-<h3 id="customization-ideas">Customization Ideas:</h3>
+<h3 id="-customization-ideas">🎨 Customization Ideas:</h3>
 <p><strong>Easy:</strong></p>
 <ol>
 <li>Change gem colors in the <code>colors</code> array</li>
@@ -635,7 +639,7 @@
 8. Create &ldquo;bomb&rdquo; objects that subtract points
 9. Add particle effects when catching gems</p>
 <hr>
-<h2 id="challenge-power-up-system">Challenge: Power-Up System</h2>
+<h2 id="-challenge-power-up-system">💡 Challenge: Power-Up System</h2>
 <p>Add a golden gem worth 5 points:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> createGem() {
 </span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> colors <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;#ff6b6b&#39;</span>, <span style="color:#f1fa8c">&#39;#4ecdc4&#39;</span>, <span style="color:#f1fa8c">&#39;#45b7d1&#39;</span>, <span style="color:#f1fa8c">&#39;#f7b731&#39;</span>, <span style="color:#f1fa8c">&#39;#5f27cd&#39;</span>, <span style="color:#f1fa8c">&#39;#00d2d3&#39;</span>];
@@ -656,21 +660,19 @@
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// In gameLoop, when caught:
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>score <span style="color:#ff79c6">+=</span> gem.points;
 </span></span></code></pre></div><hr>
-<h2 id="what-you-learned-today">What You Learned Today</h2>
-<ul>
-<li><strong>HTML Canvas</strong> - Drawing graphics with JavaScript</li>
-<li><strong>Animation Loop</strong> - <code>requestAnimationFrame()</code> for smooth movement</li>
-<li><strong>Coordinate Systems</strong> - X/Y positioning in 2D space</li>
-<li><strong>Collision Detection</strong> - Checking if objects overlap</li>
-<li><strong>Array Manipulation</strong> - Adding/removing items during gameplay</li>
-<li><strong>Mouse Events</strong> - <code>mousemove</code> to track cursor position</li>
-<li><strong>Keyboard Input</strong> - Tracking multiple keys simultaneously</li>
-</ul>
+<h2 id="-what-you-learned-today">📚 What You Learned Today</h2>
+<p>✅ <strong>HTML Canvas</strong> - Drawing graphics with JavaScript<br>
+✅ <strong>Animation Loop</strong> - <code>requestAnimationFrame()</code> for smooth movement<br>
+✅ <strong>Coordinate Systems</strong> - X/Y positioning in 2D space<br>
+✅ <strong>Collision Detection</strong> - Checking if objects overlap<br>
+✅ <strong>Array Manipulation</strong> - Adding/removing items during gameplay<br>
+✅ <strong>Mouse Events</strong> - <code>mousemove</code> to track cursor position<br>
+✅ <strong>Keyboard Input</strong> - Tracking multiple keys simultaneously</p>
 <hr>
-<h2 id="next-session-preview">Next Session Preview</h2>
-<p><strong>Session 4:</strong> We will learn <strong>React</strong> and build Tic-Tac-Toe with components, making our code more organized and reusable.</p>
+<h2 id="-next-session-preview">🚀 Next Session Preview</h2>
+<p><strong>Session 4:</strong> We&rsquo;ll learn <strong>React</strong> and build Tic-Tac-Toe with components, making our code more organized and reusable!</p>
 <hr>
-<h2 id="homework-optional">Homework (Optional)</h2>
+<h2 id="-homework-optional">📦 Homework (Optional)</h2>
 <ol>
 <li>Add background clouds or stars that move</li>
 <li>Create a difficulty selector (Easy/Medium/Hard)</li>

@@ -27,16 +27,6 @@ Get ready to build your own robots from the ground up! In **Engineering Robots: 
 
 ---
 
-#### Quick Review (10 minutes)
-
-Let's review what we learned in Session 1:
-- How to create programs in MakeCode
-- Using variables to store data
-- Displaying information on the LED grid
-- Responding to button presses
-
-**Quick Activity:** Can you make the micro:bit show a heart when you press button A?
-
 #### What is an IR Sensor?
 
 An **IR (Infrared) sensor** can detect objects in front of it using infrared light. It's like giving your micro:bit the ability to "see"! IR sensors are used in:
@@ -88,100 +78,66 @@ Sensors can send data in two ways:
 - Lower numbers = object is closer
 - More precise than digital!
 
-#### Programming the IR Sensor (25 minutes)
+#### Programming the IR Sensor (40 minutes)
 
 **Activity 1: Digital Reading (Simple Detection)**
 
-1. In MakeCode, create a `forever` loop
-2. Add a block: `digital read pin P0`
-3. Use an `if...then...else` statement:
-   - If reading is **0**: show "X" (object detected!)
-   - If reading is **1**: show "→" (path is clear)
+**Setup:**
+1. In MakeCode, go to **Advanced** → **Pins**
+2. In the `on start` block, add `show number` to display which pin you're using
+3. Create a `forever` loop
 
-```blocks
-basic.forever(function () {
-    if (pins.digitalReadPin(DigitalPin.P0) == 0) {
-        basic.showIcon(IconNames.No)
-    } else {
-        basic.showIcon(IconNames.Yes)
-    }
-})
-```
+**In the forever block:**
+1. Add an `if...then...else` statement
+2. From **Pins**, drag `digital read pin P0` into the if condition
+3. Set the condition to: if `digital read pin P0` = **0**
+4. **Then** (object detected):
+   - Show icon "X"
+   - Play a sound (from **Music**)
+5. **Else** (path is clear):
+   - Show icon "✓" (checkmark)
 
-**Test it:** Wave your hand in front of the sensor!
+**Test it:** Wave your hand in front of the sensor! You should see an X and hear a sound when an object is detected, and a checkmark when the path is clear.
 
-**Activity 2: Analog Reading (Distance Detection)**
+**Activity 2: Analog Reading with Sound Alert**
 
-1. Create a new `forever` loop
-2. Use `analog read pin P0` block
-3. Store the value in a variable called `distance`
-4. Display the value on the LED screen
+**Setup:**
+1. Create a new project or delete the previous code
+2. From **Variables**, create a variable called `distance`
 
-```blocks
-let distance = 0
-basic.forever(function () {
-    distance = pins.analogReadPin(AnalogPin.P0)
-    basic.showNumber(distance)
-})
-```
+**In the forever block:**
+1. Set `distance` to `analog read pin P0` (from **Pins** → **Advanced**)
+2. Add an `if...then...else` statement
+3. Set the condition to: if `distance` < **300**
+4. **Then** (object is close):
+   - Show icon "X"
+   - Play a sound (from **Music**)
+5. **Else** (object is far):
+   - Show icon "✓" (checkmark)
+6. Add a `pause 100 ms` block at the end
 
 **Experiment:**
-- What number do you see when your hand is far away?
-- What number when your hand is close?
-- What's the range of values you observe?
-
-**Activity 3: Creating Distance Zones**
-
-Let's make the micro:bit show different images based on how close an object is:
-
-```blocks
-let distance = 0
-basic.forever(function () {
-    distance = pins.analogReadPin(AnalogPin.P0)
-    if (distance < 300) {
-        basic.showIcon(IconNames.Surprised)  // Very close!
-    } else if (distance < 600) {
-        basic.showIcon(IconNames.Happy)      // Medium distance
-    } else {
-        basic.showIcon(IconNames.Asleep)     // Far away
-    }
-    basic.pause(100)
-})
-```
-
-**Tune the values:** Adjust 300 and 600 based on your sensor's readings!
+- What happens when you move your hand closer or farther?
+- Try adjusting the 300 value - what happens if you use 500? Or 200?
+- Can you find the best threshold value for detecting objects?
 
 #### Challenge: Build an Obstacle Alert System (30 minutes)
 
-**Mission:** Create a system that warns when an obstacle is getting too close!
+**Your Task:** Create a system that warns when an obstacle is getting too close!
 
 **Requirements:**
 1. Use analog reading to measure distance
-2. When object is FAR (>700): Show a checkmark, no sound
-3. When object is MEDIUM (400-700): Show a small square, play a slow beep
-4. When object is CLOSE (<400): Show a large square, play a fast beep
+2. When object is **FAR** (>700): Show a checkmark, no sound
+3. When object is **MEDIUM** (400-700): Show a small square, play a slow beep
+4. When object is **CLOSE** (<400): Show a large square, play a fast beep
 5. Add button A to pause/resume the system
-6. *Bonus:* Add button B to display the current sensor reading
+6. *Bonus:* Add button B to display the current sensor reading as a number
 
-**Example starter code:**
-
-```blocks
-let distance = 0
-let systemActive = true
-
-input.onButtonPressed(Button.A, function () {
-    systemActive = !(systemActive)
-})
-
-basic.forever(function () {
-    if (systemActive) {
-        distance = pins.analogReadPin(AnalogPin.P0)
-        // Add your detection zones here!
-    } else {
-        basic.showString("OFF")
-    }
-})
-```
+**Hints:**
+- You'll need multiple `if...then...else if...else` statements
+- Use the **Music** blocks for different beep speeds
+- Use **Input** blocks for button presses
+- Create a variable called `systemActive` to track if the system is on or off
 
 **Testing Ideas:**
 - Test with different objects (hand, book, wall)
