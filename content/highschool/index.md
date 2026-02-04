@@ -22,18 +22,19 @@ By the end of this course, you will have:
 
 ## Course Sessions
 
-### [Session 1: Your First Interactive Web Page](/highschool/session1/)
-**Build:** A colorful button that responds to clicks  
-**Learn:** HTML structure, CSS styling, opening your first web page  
+### [Session 2: JavaScript Magic - Make It Count!](/highschool/session2/)
+**Build:** A click counter game with score tracking  
+**Learn:** Variables, functions, event listeners, JavaScript basics  
 **No prerequisites** - we start from zero!
 
 ---
 
-### [Session 2: JavaScript Magic - Make It Count!](/highschool/session2/)
-**Build:** A click counter game with score tracking  
-**Learn:** Variables, functions, event listeners, JavaScript basics  
-**Prerequisites:** Session 1
+### [Session 1: Your First Interactive Web Page](/highschool/session1/)
+**Build:** A colorful button that responds to clicks  
+**Learn:** HTML structure, CSS styling, opening your first web page  
+**Prerequisites:** Session 2
 
+<!--
 ---
 
 ### [Session 3: Animation and Movement](/highschool/session3/)
@@ -54,49 +55,21 @@ By the end of this course, you will have:
 **Build:** A polished, published game with your own URL  
 **Learn:** GitHub Pages deployment, sound effects, high scores, sharing your work  
 **Prerequisites:** Sessions 1-4
-
----
+-->
 
 ## Tools You Will Need
 
 1. **Computer with internet access**
 2. **Web browser** (Chrome, Firefox, Safari, or Edge)
-3. **Text editor:**
-   - **Sessions 1-2:** [CodePen](https://codepen.io/) (works in browser, no installation needed)
-   - **Sessions 3-5:** [VS Code](https://code.visualstudio.com/) (professional code editor)
+3. **Text editor:** [CodePen](https://codepen.io/) (works in browser, no installation needed)
 4. **GitHub account** (free) - [Sign up here](https://github.com/signup)
-
----
-
-## Course Philosophy
-
-**Learn by Building:** Every session, you will create something that works.  
-**Progress Together:** Each lesson builds on the previous one.  
-**Real Tools:** You will use the same tools professional developers use.  
-**Your Creativity:** The examples are starting points - make them your own.
-
----
 
 ## Skills You Will Develop
 
-By the end of GameCraft, you will be able to:
-
-- Build interactive web pages using HTML, CSS, and JavaScript  
-- Develop web-based games using React  
-- Apply design and logic to create fun, playable experiences  
-- Strengthen problem-solving, collaboration, and creative thinking  
-- Deploy and share your projects online
-
----
+- Build interactive web pages using HTML, CSS, and JavaScript
+- Apply design and logic to create fun, playable experiences
+- Strengthen problem-solving, collaboration, and creative thinking
 
 ## Ready to Start?
 
 Head to **[Session 1](/highschool/session1/)** to build your first interactive web page.
-
----
-
-## Questions or Feedback?
-
-Reach out anytime - we're here to help you succeed!
-
-**[Submit Feedback](https://forms.gle/your-form-link-here)**

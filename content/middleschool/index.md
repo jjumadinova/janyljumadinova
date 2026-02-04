@@ -21,6 +21,187 @@ Get ready to build your own robots from the ground up! In **Engineering Robots: 
 
 ---
 
+### Session 2: Sensing the World with IR Sensors
+
+**Goal:** Connect an IR (Infrared) sensor to the micro:bit and learn the difference between analog and digital readings.
+
+---
+
+#### Quick Review (10 minutes)
+
+Let's review what we learned in Session 1:
+- How to create programs in MakeCode
+- Using variables to store data
+- Displaying information on the LED grid
+- Responding to button presses
+
+**Quick Activity:** Can you make the micro:bit show a heart when you press button A?
+
+#### What is an IR Sensor?
+
+An **IR (Infrared) sensor** can detect objects in front of it using infrared light. It's like giving your micro:bit the ability to "see"! IR sensors are used in:
+- Robots to avoid obstacles
+- Automatic doors
+- Line-following robots
+- Proximity detection
+
+Your IR sensor has **3 pins**:
+- **VCC** - Power (connects to 3V)
+- **GND** - Ground (connects to GND)
+- **OUT** - Signal output (connects to Pin 0, 1, or 2)
+
+#### Connecting the IR Sensor (15 minutes)
+
+**Components You'll Need:**
+- micro:bit
+- IR sensor module
+- 3 alligator clips or jumper wires
+- Battery pack (optional, for portability)
+
+**Wiring Steps:**
+
+1. **Connect Power**
+   - Connect IR sensor **VCC** pin to micro:bit **3V** pin (using red wire/clip)
+
+2. **Connect Ground**
+   - Connect IR sensor **GND** pin to micro:bit **GND** pin (using black wire/clip)
+
+3. **Connect Signal**
+   - Connect IR sensor **OUT** pin to micro:bit **Pin 0** (using yellow/white wire/clip)
+
+**Safety Check:** Before powering on, verify all connections with your teacher!
+
+#### Understanding Digital vs Analog Readings (20 minutes)
+
+Sensors can send data in two ways:
+
+**Digital Reading:**
+- Only two values: **0** (LOW/False) or **1** (HIGH/True)
+- Like an on/off switch
+- **0** = Object detected
+- **1** = No object detected
+
+**Analog Reading:**
+- Range of values: **0 to 1023**
+- Like a dimmer switch
+- Higher numbers = object is farther away
+- Lower numbers = object is closer
+- More precise than digital!
+
+#### Programming the IR Sensor (25 minutes)
+
+**Activity 1: Digital Reading (Simple Detection)**
+
+1. In MakeCode, create a `forever` loop
+2. Add a block: `digital read pin P0`
+3. Use an `if...then...else` statement:
+   - If reading is **0**: show "X" (object detected!)
+   - If reading is **1**: show "→" (path is clear)
+
+```blocks
+basic.forever(function () {
+    if (pins.digitalReadPin(DigitalPin.P0) == 0) {
+        basic.showIcon(IconNames.No)
+    } else {
+        basic.showIcon(IconNames.Yes)
+    }
+})
+```
+
+**Test it:** Wave your hand in front of the sensor!
+
+**Activity 2: Analog Reading (Distance Detection)**
+
+1. Create a new `forever` loop
+2. Use `analog read pin P0` block
+3. Store the value in a variable called `distance`
+4. Display the value on the LED screen
+
+```blocks
+let distance = 0
+basic.forever(function () {
+    distance = pins.analogReadPin(AnalogPin.P0)
+    basic.showNumber(distance)
+})
+```
+
+**Experiment:**
+- What number do you see when your hand is far away?
+- What number when your hand is close?
+- What's the range of values you observe?
+
+**Activity 3: Creating Distance Zones**
+
+Let's make the micro:bit show different images based on how close an object is:
+
+```blocks
+let distance = 0
+basic.forever(function () {
+    distance = pins.analogReadPin(AnalogPin.P0)
+    if (distance < 300) {
+        basic.showIcon(IconNames.Surprised)  // Very close!
+    } else if (distance < 600) {
+        basic.showIcon(IconNames.Happy)      // Medium distance
+    } else {
+        basic.showIcon(IconNames.Asleep)     // Far away
+    }
+    basic.pause(100)
+})
+```
+
+**Tune the values:** Adjust 300 and 600 based on your sensor's readings!
+
+#### Challenge: Build an Obstacle Alert System (30 minutes)
+
+**Mission:** Create a system that warns when an obstacle is getting too close!
+
+**Requirements:**
+1. Use analog reading to measure distance
+2. When object is FAR (>700): Show a checkmark, no sound
+3. When object is MEDIUM (400-700): Show a small square, play a slow beep
+4. When object is CLOSE (<400): Show a large square, play a fast beep
+5. Add button A to pause/resume the system
+6. *Bonus:* Add button B to display the current sensor reading
+
+**Example starter code:**
+
+```blocks
+let distance = 0
+let systemActive = true
+
+input.onButtonPressed(Button.A, function () {
+    systemActive = !(systemActive)
+})
+
+basic.forever(function () {
+    if (systemActive) {
+        distance = pins.analogReadPin(AnalogPin.P0)
+        // Add your detection zones here!
+    } else {
+        basic.showString("OFF")
+    }
+})
+```
+
+**Testing Ideas:**
+- Test with different objects (hand, book, wall)
+- Find the maximum detection distance
+- See if different colored objects give different readings
+
+#### Key Concepts You Learned
+
+- How to connect a 3-pin sensor to micro:bit
+- Difference between **digital (0 or 1)** and **analog (0-1023)** readings
+- Using conditional statements to create detection zones
+- Building a practical sensing system
+
+**Think About It:**
+- Where could you use an obstacle detector in real life?
+- What other sensors could you add to make it better?
+- How could this help a robot navigate?
+
+---
+
 ### Session 1: Introduction to micro:bit
 
 **Goal:** Get familiar with the micro:bit, learn basic programming, and create your first interactive programs.
@@ -65,53 +246,7 @@ The BBC micro:bit is a small, programmable computer with:
 
 **Challenge:** Create a game where you shake the micro:bit to "roll a dice" and display a random number from 1 to 6.
 
----
-
-### Session 2: micro:bit Circuits and External Components
-
-**Goal:** Learn about GPIO pins, circuits, and connect external LEDs to your micro:bit.
-
----
-
-#### Understanding GPIO Pins
-
-- **GPIO** = General Purpose Input/Output
-- micro:bit has pins numbered 0, 1, 2, 3V, and GND
-- These pins can send signals to or receive signals from external components
-
-#### Circuit Basics
-
-1. **Safety First**
-   - Always disconnect power when wiring
-   - Check connections before powering on
-   - Use correct resistor values to protect LEDs
-
-2. **Components You'll Use**
-   - LEDs (Light Emitting Diodes)
-   - Resistors (typically 100-220 ohms)
-   - Jumper wires
-   - Breadboard
-
-#### Building Your First Circuit
-
-1. **Simple LED Circuit**
-   - Connect GND pin to the negative rail on breadboard
-   - Connect Pin 0 to a resistor
-   - Connect resistor to the long leg (positive) of an LED
-   - Connect short leg (negative) of LED to GND rail
-
-2. **Programming the LED**
-   - Use `digital write pin P0 to 1` to turn LED on
-   - Use `digital write pin P0 to 0` to turn LED off
-   - Create a blinking pattern with `pause` blocks
-
-3. **Multiple LEDs**
-   - Add LEDs to pins 1 and 2
-   - Create a traffic light sequence (red → yellow → green)
-   - Add button controls to change the pattern
-
-**Challenge:** Create a "robot status indicator" with 3 LEDs showing different colors for different modes (standby, moving, stopped).
-
+<!--
 ---
 
 ### Session 3: Motors and Movement Basics
@@ -335,8 +470,7 @@ The BBC micro:bit is a small, programmable computer with:
 - How did you solve problems when things didn't work?
 - What would you add to your robot if you had more time?
 - How could robots like this be useful in the real world?
-
----
+-->
 
 ## Resources
 

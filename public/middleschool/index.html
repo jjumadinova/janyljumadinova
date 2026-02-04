@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -210,6 +210,179 @@
 <li>Creative thinking and perseverance while engineering your own designs</li>
 </ul>
 <hr>
+<h3 id="session-2-sensing-the-world-with-ir-sensors">Session 2: Sensing the World with IR Sensors</h3>
+<p><strong>Goal:</strong> Connect an IR (Infrared) sensor to the micro:bit and learn the difference between analog and digital readings.</p>
+<hr>
+<h4 id="quick-review-10-minutes">Quick Review (10 minutes)</h4>
+<p>Let&rsquo;s review what we learned in Session 1:</p>
+<ul>
+<li>How to create programs in MakeCode</li>
+<li>Using variables to store data</li>
+<li>Displaying information on the LED grid</li>
+<li>Responding to button presses</li>
+</ul>
+<p><strong>Quick Activity:</strong> Can you make the micro:bit show a heart when you press button A?</p>
+<h4 id="what-is-an-ir-sensor">What is an IR Sensor?</h4>
+<p>An <strong>IR (Infrared) sensor</strong> can detect objects in front of it using infrared light. It&rsquo;s like giving your micro:bit the ability to &ldquo;see&rdquo;! IR sensors are used in:</p>
+<ul>
+<li>Robots to avoid obstacles</li>
+<li>Automatic doors</li>
+<li>Line-following robots</li>
+<li>Proximity detection</li>
+</ul>
+<p>Your IR sensor has <strong>3 pins</strong>:</p>
+<ul>
+<li><strong>VCC</strong> - Power (connects to 3V)</li>
+<li><strong>GND</strong> - Ground (connects to GND)</li>
+<li><strong>OUT</strong> - Signal output (connects to Pin 0, 1, or 2)</li>
+</ul>
+<h4 id="connecting-the-ir-sensor-15-minutes">Connecting the IR Sensor (15 minutes)</h4>
+<p><strong>Components You&rsquo;ll Need:</strong></p>
+<ul>
+<li>micro:bit</li>
+<li>IR sensor module</li>
+<li>3 alligator clips or jumper wires</li>
+<li>Battery pack (optional, for portability)</li>
+</ul>
+<p><strong>Wiring Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Connect Power</strong></p>
+<ul>
+<li>Connect IR sensor <strong>VCC</strong> pin to micro:bit <strong>3V</strong> pin (using red wire/clip)</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect Ground</strong></p>
+<ul>
+<li>Connect IR sensor <strong>GND</strong> pin to micro:bit <strong>GND</strong> pin (using black wire/clip)</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect Signal</strong></p>
+<ul>
+<li>Connect IR sensor <strong>OUT</strong> pin to micro:bit <strong>Pin 0</strong> (using yellow/white wire/clip)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Safety Check:</strong> Before powering on, verify all connections with your teacher!</p>
+<h4 id="understanding-digital-vs-analog-readings-20-minutes">Understanding Digital vs Analog Readings (20 minutes)</h4>
+<p>Sensors can send data in two ways:</p>
+<p><strong>Digital Reading:</strong></p>
+<ul>
+<li>Only two values: <strong>0</strong> (LOW/False) or <strong>1</strong> (HIGH/True)</li>
+<li>Like an on/off switch</li>
+<li><strong>0</strong> = Object detected</li>
+<li><strong>1</strong> = No object detected</li>
+</ul>
+<p><strong>Analog Reading:</strong></p>
+<ul>
+<li>Range of values: <strong>0 to 1023</strong></li>
+<li>Like a dimmer switch</li>
+<li>Higher numbers = object is farther away</li>
+<li>Lower numbers = object is closer</li>
+<li>More precise than digital!</li>
+</ul>
+<h4 id="programming-the-ir-sensor-25-minutes">Programming the IR Sensor (25 minutes)</h4>
+<p><strong>Activity 1: Digital Reading (Simple Detection)</strong></p>
+<ol>
+<li>In MakeCode, create a <code>forever</code> loop</li>
+<li>Add a block: <code>digital read pin P0</code></li>
+<li>Use an <code>if...then...else</code> statement:
+<ul>
+<li>If reading is <strong>0</strong>: show &ldquo;X&rdquo; (object detected!)</li>
+<li>If reading is <strong>1</strong>: show &ldquo;→&rdquo; (path is clear)</li>
+</ul>
+</li>
+</ol>
+<pre tabindex="0"><code class="language-blocks" data-lang="blocks">basic.forever(function () {
+    if (pins.digitalReadPin(DigitalPin.P0) == 0) {
+        basic.showIcon(IconNames.No)
+    } else {
+        basic.showIcon(IconNames.Yes)
+    }
+})
+</code></pre><p><strong>Test it:</strong> Wave your hand in front of the sensor!</p>
+<p><strong>Activity 2: Analog Reading (Distance Detection)</strong></p>
+<ol>
+<li>Create a new <code>forever</code> loop</li>
+<li>Use <code>analog read pin P0</code> block</li>
+<li>Store the value in a variable called <code>distance</code></li>
+<li>Display the value on the LED screen</li>
+</ol>
+<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
+basic.forever(function () {
+    distance = pins.analogReadPin(AnalogPin.P0)
+    basic.showNumber(distance)
+})
+</code></pre><p><strong>Experiment:</strong></p>
+<ul>
+<li>What number do you see when your hand is far away?</li>
+<li>What number when your hand is close?</li>
+<li>What&rsquo;s the range of values you observe?</li>
+</ul>
+<p><strong>Activity 3: Creating Distance Zones</strong></p>
+<p>Let&rsquo;s make the micro:bit show different images based on how close an object is:</p>
+<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
+basic.forever(function () {
+    distance = pins.analogReadPin(AnalogPin.P0)
+    if (distance &lt; 300) {
+        basic.showIcon(IconNames.Surprised)  // Very close!
+    } else if (distance &lt; 600) {
+        basic.showIcon(IconNames.Happy)      // Medium distance
+    } else {
+        basic.showIcon(IconNames.Asleep)     // Far away
+    }
+    basic.pause(100)
+})
+</code></pre><p><strong>Tune the values:</strong> Adjust 300 and 600 based on your sensor&rsquo;s readings!</p>
+<h4 id="challenge-build-an-obstacle-alert-system-30-minutes">Challenge: Build an Obstacle Alert System (30 minutes)</h4>
+<p><strong>Mission:</strong> Create a system that warns when an obstacle is getting too close!</p>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Use analog reading to measure distance</li>
+<li>When object is FAR (&gt;700): Show a checkmark, no sound</li>
+<li>When object is MEDIUM (400-700): Show a small square, play a slow beep</li>
+<li>When object is CLOSE (&lt;400): Show a large square, play a fast beep</li>
+<li>Add button A to pause/resume the system</li>
+<li><em>Bonus:</em> Add button B to display the current sensor reading</li>
+</ol>
+<p><strong>Example starter code:</strong></p>
+<pre tabindex="0"><code class="language-blocks" data-lang="blocks">let distance = 0
+let systemActive = true
+
+input.onButtonPressed(Button.A, function () {
+    systemActive = !(systemActive)
+})
+
+basic.forever(function () {
+    if (systemActive) {
+        distance = pins.analogReadPin(AnalogPin.P0)
+        // Add your detection zones here!
+    } else {
+        basic.showString(&#34;OFF&#34;)
+    }
+})
+</code></pre><p><strong>Testing Ideas:</strong></p>
+<ul>
+<li>Test with different objects (hand, book, wall)</li>
+<li>Find the maximum detection distance</li>
+<li>See if different colored objects give different readings</li>
+</ul>
+<h4 id="key-concepts-you-learned">Key Concepts You Learned</h4>
+<ul>
+<li>How to connect a 3-pin sensor to micro:bit</li>
+<li>Difference between <strong>digital (0 or 1)</strong> and <strong>analog (0-1023)</strong> readings</li>
+<li>Using conditional statements to create detection zones</li>
+<li>Building a practical sensing system</li>
+</ul>
+<p><strong>Think About It:</strong></p>
+<ul>
+<li>Where could you use an obstacle detector in real life?</li>
+<li>What other sensors could you add to make it better?</li>
+<li>How could this help a robot navigate?</li>
+</ul>
+<hr>
 <h3 id="session-1-introduction-to-microbit">Session 1: Introduction to micro:bit</h3>
 <p><strong>Goal:</strong> Get familiar with the micro:bit, learn basic programming, and create your first interactive programs.</p>
 <hr>
@@ -266,345 +439,6 @@
 </li>
 </ol>
 <p><strong>Challenge:</strong> Create a game where you shake the micro:bit to &ldquo;roll a dice&rdquo; and display a random number from 1 to 6.</p>
-<hr>
-<h3 id="session-2-microbit-circuits-and-external-components">Session 2: micro:bit Circuits and External Components</h3>
-<p><strong>Goal:</strong> Learn about GPIO pins, circuits, and connect external LEDs to your micro:bit.</p>
-<hr>
-<h4 id="understanding-gpio-pins">Understanding GPIO Pins</h4>
-<ul>
-<li><strong>GPIO</strong> = General Purpose Input/Output</li>
-<li>micro:bit has pins numbered 0, 1, 2, 3V, and GND</li>
-<li>These pins can send signals to or receive signals from external components</li>
-</ul>
-<h4 id="circuit-basics">Circuit Basics</h4>
-<ol>
-<li>
-<p><strong>Safety First</strong></p>
-<ul>
-<li>Always disconnect power when wiring</li>
-<li>Check connections before powering on</li>
-<li>Use correct resistor values to protect LEDs</li>
-</ul>
-</li>
-<li>
-<p><strong>Components You&rsquo;ll Use</strong></p>
-<ul>
-<li>LEDs (Light Emitting Diodes)</li>
-<li>Resistors (typically 100-220 ohms)</li>
-<li>Jumper wires</li>
-<li>Breadboard</li>
-</ul>
-</li>
-</ol>
-<h4 id="building-your-first-circuit">Building Your First Circuit</h4>
-<ol>
-<li>
-<p><strong>Simple LED Circuit</strong></p>
-<ul>
-<li>Connect GND pin to the negative rail on breadboard</li>
-<li>Connect Pin 0 to a resistor</li>
-<li>Connect resistor to the long leg (positive) of an LED</li>
-<li>Connect short leg (negative) of LED to GND rail</li>
-</ul>
-</li>
-<li>
-<p><strong>Programming the LED</strong></p>
-<ul>
-<li>Use <code>digital write pin P0 to 1</code> to turn LED on</li>
-<li>Use <code>digital write pin P0 to 0</code> to turn LED off</li>
-<li>Create a blinking pattern with <code>pause</code> blocks</li>
-</ul>
-</li>
-<li>
-<p><strong>Multiple LEDs</strong></p>
-<ul>
-<li>Add LEDs to pins 1 and 2</li>
-<li>Create a traffic light sequence (red → yellow → green)</li>
-<li>Add button controls to change the pattern</li>
-</ul>
-</li>
-</ol>
-<p><strong>Challenge:</strong> Create a &ldquo;robot status indicator&rdquo; with 3 LEDs showing different colors for different modes (standby, moving, stopped).</p>
-<hr>
-<h3 id="session-3-motors-and-movement-basics">Session 3: Motors and Movement Basics</h3>
-<p><strong>Goal:</strong> Understand how DC motors work and control them with the micro:bit.</p>
-<hr>
-<h4 id="introduction-to-dc-motors">Introduction to DC Motors</h4>
-<ul>
-<li><strong>DC Motor:</strong> Converts electrical energy into rotational motion</li>
-<li>Used for wheels, propellers, and other moving parts</li>
-<li>Requires more current than micro:bit pins can provide directly</li>
-<li>Need a motor driver to control them safely</li>
-</ul>
-<h4 id="motor-control-concepts">Motor Control Concepts</h4>
-<ol>
-<li>
-<p><strong>Speed Control</strong></p>
-<ul>
-<li>PWM (Pulse Width Modulation) controls motor speed</li>
-<li>Values from 0 (stopped) to 1023 (full speed)</li>
-</ul>
-</li>
-<li>
-<p><strong>Direction Control</strong></p>
-<ul>
-<li>Reversing polarity changes direction</li>
-<li>Motor drivers handle this electronically</li>
-</ul>
-</li>
-</ol>
-<h4 id="hands-on-with-a-single-motor">Hands-On with a Single Motor</h4>
-<ol>
-<li>
-<p><strong>Connect Motor to Motor Driver</strong></p>
-<ul>
-<li>Teacher will demonstrate safe wiring</li>
-<li>Connect power supply (batteries)</li>
-<li>Connect control wires to micro:bit pins</li>
-</ul>
-</li>
-<li>
-<p><strong>Basic Motor Control</strong></p>
-<ul>
-<li>Use <code>analog write</code> to control speed</li>
-<li>Start with low speed values (300-500)</li>
-<li>Gradually increase speed with button presses</li>
-<li>Test motor response at different speeds</li>
-</ul>
-</li>
-<li>
-<p><strong>Direction Control</strong></p>
-<ul>
-<li>Program forward and reverse directions</li>
-<li>Use buttons A and B for forward/backward</li>
-<li>Add a stop function</li>
-</ul>
-</li>
-</ol>
-<p><strong>Challenge:</strong> Create a motor control program that:</p>
-<ul>
-<li>Speeds up gradually when button A is pressed</li>
-<li>Slows down gradually when button B is pressed</li>
-<li>Displays current speed level on the LED display</li>
-</ul>
-<hr>
-<h3 id="session-4-building-the-robot-chassis">Session 4: Building the Robot Chassis</h3>
-<p><strong>Goal:</strong> Assemble the physical robot with motors, wheels, and micro:bit controller.</p>
-<hr>
-<h4 id="robot-components">Robot Components</h4>
-<ul>
-<li>Chassis (robot body/frame)</li>
-<li>Two DC motors</li>
-<li>Two wheels</li>
-<li>Battery pack</li>
-<li>micro:bit</li>
-<li>Motor driver (L298N if compatible, or alternative)</li>
-<li>Wires and mounting hardware</li>
-</ul>
-<h4 id="assembly-steps">Assembly Steps</h4>
-<ol>
-<li>
-<p><strong>Mount the Motors</strong></p>
-<ul>
-<li>Attach motors to the chassis on left and right sides</li>
-<li>Ensure motors are aligned and secure</li>
-<li>Connect wheels to motor shafts</li>
-</ul>
-</li>
-<li>
-<p><strong>Install the Motor Driver</strong></p>
-<ul>
-<li>Mount motor driver on chassis</li>
-<li>Connect motors to driver outputs</li>
-<li>Keep wires organized and secured</li>
-</ul>
-</li>
-<li>
-<p><strong>Connect Power</strong></p>
-<ul>
-<li>Attach battery pack to chassis</li>
-<li>Wire power to motor driver</li>
-<li>Test power connections (motors should NOT run yet)</li>
-</ul>
-</li>
-<li>
-<p><strong>Mount the micro:bit</strong></p>
-<ul>
-<li>Secure micro:bit in accessible location</li>
-<li>Connect control wires from micro:bit to motor driver</li>
-<li>Keep USB port accessible for programming</li>
-</ul>
-</li>
-<li>
-<p><strong>Wire Organization</strong></p>
-<ul>
-<li>Use zip ties or tape to secure loose wires</li>
-<li>Keep wires away from wheels and moving parts</li>
-<li>Label connections if helpful</li>
-</ul>
-</li>
-</ol>
-<p><strong>Testing:</strong></p>
-<ul>
-<li>DO NOT connect power yet</li>
-<li>Verify all connections with teacher</li>
-<li>Check for loose wires or components</li>
-<li>Prepare for programming in next session</li>
-</ul>
-<hr>
-<h3 id="session-5-programming-the-robot">Session 5: Programming the Robot</h3>
-<p><strong>Goal:</strong> Write code to make your robot move, turn, and respond to commands.</p>
-<hr>
-<h4 id="basic-movement-functions">Basic Movement Functions</h4>
-<ol>
-<li>
-<p><strong>Forward Movement</strong></p>
-<pre tabindex="0"><code class="language-blocks" data-lang="blocks">function move_forward() {
-    pins.analogWritePin(AnalogPin.P0, 700)
-    pins.analogWritePin(AnalogPin.P1, 700)
-}
-</code></pre></li>
-<li>
-<p><strong>Backward Movement</strong></p>
-<ul>
-<li>Reverse motor polarity through motor driver</li>
-<li>Use different pin combinations or values</li>
-</ul>
-</li>
-<li>
-<p><strong>Turning</strong></p>
-<ul>
-<li><strong>Left turn:</strong> Right motor faster than left</li>
-<li><strong>Right turn:</strong> Left motor faster than right</li>
-<li><strong>Spin turn:</strong> One motor forward, one backward</li>
-</ul>
-</li>
-<li>
-<p><strong>Stop Function</strong></p>
-<ul>
-<li>Set both motor speeds to 0</li>
-<li>Important for safety!</li>
-</ul>
-</li>
-</ol>
-<h4 id="creating-movement-patterns">Creating Movement Patterns</h4>
-<ol>
-<li>
-<p><strong>Drive Forward and Stop</strong></p>
-<ul>
-<li>Move forward for 2 seconds</li>
-<li>Stop for 1 second</li>
-<li>Test and adjust timing</li>
-</ul>
-</li>
-<li>
-<p><strong>Square Path</strong></p>
-<ul>
-<li>Forward for a set time</li>
-<li>Turn 90 degrees</li>
-<li>Repeat 4 times</li>
-</ul>
-</li>
-<li>
-<p><strong>Button Control</strong></p>
-<ul>
-<li>Button A: Move forward</li>
-<li>Button B: Move backward</li>
-<li>A+B together: Stop</li>
-<li>Tilt left/right: Turn</li>
-</ul>
-</li>
-</ol>
-<h4 id="calibration">Calibration</h4>
-<ul>
-<li>Motors may not be exactly the same speed</li>
-<li>Adjust PWM values to make robot drive straight</li>
-<li>Test and tune turn durations for accurate angles</li>
-</ul>
-<p><strong>Challenge:</strong> Program your robot to:</p>
-<ol>
-<li>Drive in a figure-8 pattern</li>
-<li>Return to approximately the starting position</li>
-<li>Stop and display a smiley face when complete</li>
-</ol>
-<hr>
-<h3 id="session-6-final-challenge-and-showcase">Session 6: Final Challenge and Showcase</h3>
-<p><strong>Goal:</strong> Complete a design challenge and demonstrate your robot&rsquo;s capabilities.</p>
-<hr>
-<h4 id="robot-challenge-obstacle-course">Robot Challenge: Obstacle Course</h4>
-<p><strong>Mission:</strong> Navigate your robot through a course with:</p>
-<ul>
-<li>Straight sections</li>
-<li>Turns (left and right)</li>
-<li>A finish zone</li>
-</ul>
-<p><strong>Challenge Options (Choose Your Level):</strong></p>
-<p><strong>Level 1: Remote Control</strong></p>
-<ul>
-<li>Use buttons to manually drive through the course</li>
-<li>Focus on precise control and timing</li>
-</ul>
-<p><strong>Level 2: Pre-Programmed Path</strong></p>
-<ul>
-<li>Program a sequence of moves to complete the course</li>
-<li>Run the program and see if robot reaches the finish</li>
-</ul>
-<p><strong>Level 3: Sensor Enhancement (Advanced)</strong></p>
-<ul>
-<li>If time allows, add a distance sensor</li>
-<li>Make robot stop when it detects obstacles</li>
-<li>Attempt autonomous navigation</li>
-</ul>
-<h4 id="development-process">Development Process</h4>
-<ol>
-<li>
-<p><strong>Plan Your Approach</strong></p>
-<ul>
-<li>Study the course layout</li>
-<li>Sketch out movement sequence</li>
-<li>Estimate timing for each section</li>
-</ul>
-</li>
-<li>
-<p><strong>Write and Test Code</strong></p>
-<ul>
-<li>Break problem into small sections</li>
-<li>Test each movement separately</li>
-<li>Combine movements into full program</li>
-</ul>
-</li>
-<li>
-<p><strong>Debug and Improve</strong></p>
-<ul>
-<li>Adjust speed and timing values</li>
-<li>Calibrate turns for accuracy</li>
-<li>Iterate until successful</li>
-</ul>
-</li>
-<li>
-<p><strong>Document Your Design</strong></p>
-<ul>
-<li>What worked well?</li>
-<li>What challenges did you face?</li>
-<li>How did you solve problems?</li>
-</ul>
-</li>
-</ol>
-<h4 id="showcase">Showcase</h4>
-<ul>
-<li>Demonstrate your robot to the class</li>
-<li>Explain your programming approach</li>
-<li>Share what you learned</li>
-<li>Discuss ideas for future improvements</li>
-</ul>
-<p><strong>Reflection Questions:</strong></p>
-<ul>
-<li>What was the most challenging part of building your robot?</li>
-<li>How did you solve problems when things didn&rsquo;t work?</li>
-<li>What would you add to your robot if you had more time?</li>
-<li>How could robots like this be useful in the real world?</li>
-</ul>
-<hr>
 <h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://microbit.org/">micro:bit Official Website</a></li>
