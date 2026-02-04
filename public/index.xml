@@ -2,192 +2,192 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Janyl Jumadinova on </title>
-    <link>https://janyljumadinova.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Janyl Jumadinova on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://janyljumadinova.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Courses</title>
-      <link>https://janyljumadinova.com/courses/</link>
+      <link>http://localhost:1313/courses/</link>
       <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/courses/</guid>
+      <guid>http://localhost:1313/courses/</guid>
       <description>&lt;h1 id=&#34;fall-2025&#34;&gt;Fall 2025&lt;/h1&gt;&#xA;&lt;h2 id=&#34;cmpsc-100-computational-expression&#34;&gt;CMPSC 100: Computational Expression&lt;/h2&gt;&#xA;&lt;p&gt;An introduction to the principles of computer science with an emphasis on creative expression through the medium of a programming language. Participating in hands-on activities that often require teamwork, students learn the computational structures needed to solve problems and produce computational artifacts which address these problems in real-world contexts. Students also learn how to organize and document a program&amp;rsquo;s source code so that it effectively communicates with the intended users and maintainers. Additionally, the introduction includes an overview of the discipline of computer science and computational thinking.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Middle School</title>
-      <link>https://janyljumadinova.com/middleschool/</link>
+      <link>http://localhost:1313/middleschool/</link>
       <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/middleschool/</guid>
+      <guid>http://localhost:1313/middleschool/</guid>
       <description>&lt;h1 id=&#34;robotics-enrichment-program&#34;&gt;Robotics Enrichment Program&lt;/h1&gt;&#xA;&lt;h2 id=&#34;engineering-robots-build-wire-code&#34;&gt;Engineering Robots: Build, Wire, Code!&lt;/h2&gt;&#xA;&lt;p&gt;Get ready to build your own robots from the ground up! In &lt;strong&gt;Engineering Robots: Build, Wire, Code!&lt;/strong&gt; you&amp;rsquo;ll design, assemble, and program robots that move, sense, and respond to the world around them. You will learn how different parts, including motors, sensors, and circuits, work together and bring your robot ideas to life through hands-on building and coding. No experience needed—just curiosity and creativity!&lt;/p&gt;</description>
     </item>
     <item>
       <title>High School</title>
-      <link>https://janyljumadinova.com/highschool/index_f2025/</link>
+      <link>http://localhost:1313/highschool/index_f2025/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/index_f2025/</guid>
+      <guid>http://localhost:1313/highschool/index_f2025/</guid>
       <description>&lt;h1 id=&#34;code-conquer-and-escape&#34;&gt;Code, Conquer, and Escape!&lt;/h1&gt;&#xA;&lt;h2 id=&#34;feedback&#34;&gt;Feedback&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://forms.gle/asLDMjRLKHp2rHK26&#34;&gt;Your responses&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;-sessions-2-4-begin-starship-adventures&#34;&gt;🔥 Sessions 2-4: Begin Starship Adventures!&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://classroom.github.com/a/mTO6p50I&#34;&gt;🎯 Your Starship&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-session-1-markdown-practice&#34;&gt;🚀 Session 1: Markdown Practice&lt;/h2&gt;&#xA;&lt;p&gt;Ready to start your coding journey? Your first mission is to learn &lt;strong&gt;Markdown&lt;/strong&gt; - the formatting language that programmers use everywhere!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://classroom.github.com/a/MOmIEyTc&#34;&gt;Practice with Markdown&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 1</title>
-      <link>https://janyljumadinova.com/highschool/session1/</link>
+      <link>http://localhost:1313/highschool/session1/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/session1/</guid>
-      <description>&lt;h1 id=&#34;session-1-your-first-interactive-web-page-&#34;&gt;Session 1: Your First Interactive Web Page 🎨&lt;/h1&gt;&#xA;&lt;h2 id=&#34;-what-youll-build-today&#34;&gt;🎯 What You&amp;rsquo;ll Build Today&lt;/h2&gt;&#xA;&lt;p&gt;A web page with a button that changes color and text when you click it. Simple, but it introduces the &lt;strong&gt;three core technologies&lt;/strong&gt; of web development!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;your-demo-link-here&#34;&gt;See the finished example →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-setup-5-minutes&#34;&gt;🧰 Setup (5 minutes)&lt;/h2&gt;&#xA;&lt;h3 id=&#34;option-a-replit-easiest---works-in-browser&#34;&gt;Option A: Replit (Easiest - Works in Browser!)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Go to &lt;a href=&#34;https://replit.com/&#34;&gt;replit.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Sign up/log in (use your GitHub account!)&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;+ Create Repl&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Choose &lt;strong&gt;HTML, CSS, JS&lt;/strong&gt; template&lt;/li&gt;&#xA;&lt;li&gt;Name it: &lt;code&gt;gamecraft-session1&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;option-b-vs-code-local-installation&#34;&gt;Option B: VS Code (Local Installation)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Download &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VS Code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Create a new folder: &lt;code&gt;gamecraft-session1&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Create a file: &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;We&amp;rsquo;ll use Option A in class for simplicity!&lt;/strong&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/highschool/session1/</guid>
+      <description>&lt;h1 id=&#34;session-1-your-first-interactive-web-page-&#34;&gt;Session 1: Your First Interactive Web Page 🎨&lt;/h1&gt;&#xA;&lt;h2 id=&#34;what-you-will-build-today&#34;&gt;What You Will Build Today&lt;/h2&gt;&#xA;&lt;p&gt;A web page with a button that changes color and text when you click it. Simple, but it introduces the &lt;strong&gt;three core technologies&lt;/strong&gt; of web development!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-setup&#34;&gt;🧰 Setup&lt;/h2&gt;&#xA;&lt;h3 id=&#34;option-a-codepen-easiest---works-in-browser&#34;&gt;Option A: CodePen (Easiest - Works in Browser!)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Go to &lt;a href=&#34;https://codepen.io/&#34;&gt;codepen.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;Start Coding&lt;/strong&gt; (no sign-up required!)&lt;/li&gt;&#xA;&lt;li&gt;You&amp;rsquo;ll see 3 panels: HTML, CSS, and JS&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;option-b-vs-code-local-installation&#34;&gt;Option B: VS Code (Local Installation)&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Download &lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;VS Code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Create a new folder: &lt;code&gt;gamecraft-session1&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Create a file: &lt;code&gt;index.html&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;We&amp;rsquo;ll use Option A in class for simplicity!&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 2</title>
-      <link>https://janyljumadinova.com/highschool/session2/</link>
+      <link>http://localhost:1313/highschool/session2/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/session2/</guid>
+      <guid>http://localhost:1313/highschool/session2/</guid>
       <description>&lt;h1 id=&#34;session-2-build-a-click-speed-game-&#34;&gt;Session 2: Build a Click Speed Game ⚡&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; 1 hour&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Build a real game with a timer, score tracking, and restart functionality&lt;br&gt;&#xA;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Session 1 (HTML, CSS, JavaScript basics)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-what-youll-build-today&#34;&gt;🎯 What You&amp;rsquo;ll Build Today&lt;/h2&gt;&#xA;&lt;p&gt;A &amp;ldquo;Click Speed Challenge&amp;rdquo; game where players race against a 10-second timer to click as many times as possible!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;10-second countdown timer&lt;/li&gt;&#xA;&lt;li&gt;Click counter&lt;/li&gt;&#xA;&lt;li&gt;Start/Restart button&lt;/li&gt;&#xA;&lt;li&gt;High score tracking&lt;/li&gt;&#xA;&lt;li&gt;Victory message&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;your-demo-link-here&#34;&gt;See the finished example →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 3</title>
-      <link>https://janyljumadinova.com/highschool/session3/</link>
+      <link>http://localhost:1313/highschool/session3/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/session3/</guid>
+      <guid>http://localhost:1313/highschool/session3/</guid>
       <description>&lt;h1 id=&#34;session-3-catch-the-falling-gems-&#34;&gt;Session 3: Catch the Falling Gems! 💎&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; 1 hour&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Build a game with moving objects, collision detection, and smooth animation&lt;br&gt;&#xA;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Sessions 1-2 (HTML, CSS, JavaScript, game loops)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-what-youll-build-today&#34;&gt;🎯 What You&amp;rsquo;ll Build Today&lt;/h2&gt;&#xA;&lt;p&gt;A &amp;ldquo;Gem Catcher&amp;rdquo; game where colorful gems fall from the sky and you move a basket to catch them!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Moving gems that fall down the screen&lt;/li&gt;&#xA;&lt;li&gt;Player basket controlled by keyboard or mouse&lt;/li&gt;&#xA;&lt;li&gt;Collision detection (did we catch it?)&lt;/li&gt;&#xA;&lt;li&gt;Score tracking&lt;/li&gt;&#xA;&lt;li&gt;Game over when you miss 3 gems&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;your-demo-link-here&#34;&gt;See the finished example →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 4</title>
-      <link>https://janyljumadinova.com/highschool/session4/</link>
+      <link>http://localhost:1313/highschool/session4/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/session4/</guid>
+      <guid>http://localhost:1313/highschool/session4/</guid>
       <description>&lt;h1 id=&#34;session-4-tic-tac-toe-with-react-&#34;&gt;Session 4: Tic-Tac-Toe with React ⭕❌&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; 1 hour&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Learn React by building a classic Tic-Tac-Toe game with components&lt;br&gt;&#xA;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Sessions 1-3 (HTML, CSS, JavaScript)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-what-youll-build-today&#34;&gt;🎯 What You&amp;rsquo;ll Build Today&lt;/h2&gt;&#xA;&lt;p&gt;A fully functional Tic-Tac-Toe game built with &lt;strong&gt;React&lt;/strong&gt; - a modern framework used by Facebook, Netflix, and thousands of professional developers!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Features:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Interactive game board&lt;/li&gt;&#xA;&lt;li&gt;Win detection&lt;/li&gt;&#xA;&lt;li&gt;Reset button&lt;/li&gt;&#xA;&lt;li&gt;Turn indicator&lt;/li&gt;&#xA;&lt;li&gt;Component-based architecture&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;your-demo-link-here&#34;&gt;See the finished example →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-what-is-react&#34;&gt;🤔 What is React?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;React&lt;/strong&gt; is a JavaScript library for building user interfaces with &lt;strong&gt;reusable components&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 5</title>
-      <link>https://janyljumadinova.com/highschool/session5/</link>
+      <link>http://localhost:1313/highschool/session5/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/session5/</guid>
+      <guid>http://localhost:1313/highschool/session5/</guid>
       <description>&lt;h1 id=&#34;session-5-deploy-your-games-to-the-world-&#34;&gt;Session 5: Deploy Your Games to the World! 🚀&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; 1 hour&lt;br&gt;&#xA;&lt;strong&gt;Goal:&lt;/strong&gt; Polish your games, deploy to GitHub Pages, and create your portfolio&lt;br&gt;&#xA;&lt;strong&gt;Prerequisites:&lt;/strong&gt; Sessions 1-4 (all games built)&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-what-youll-accomplish-today&#34;&gt;🎯 What You&amp;rsquo;ll Accomplish Today&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Polish&lt;/strong&gt; - Add sound effects, animations, and final touches&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Deploy&lt;/strong&gt; - Put your games online with GitHub Pages&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Portfolio&lt;/strong&gt; - Create a showcase page with all your games&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Share&lt;/strong&gt; - Get a real URL to share with friends and family!&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;your-demo-link-here&#34;&gt;Example Portfolio →&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>High School</title>
-      <link>https://janyljumadinova.com/highschool/index_f24/</link>
+      <link>http://localhost:1313/highschool/index_f24/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/index_f24/</guid>
+      <guid>http://localhost:1313/highschool/index_f24/</guid>
       <description>&lt;h1 id=&#34;internet-of-things-enrichment-program&#34;&gt;Internet of Things Enrichment Program&lt;/h1&gt;&#xA;&lt;h2 id=&#34;schedule&#34;&gt;Schedule&lt;/h2&gt;&#xA;&lt;h3 id=&#34;basic-electronics-8594-programming-boards-8594-sensors-8594-connecting-to-the-cloud-8594-environmental-monitoring-project&#34;&gt;Basic Electronics → Programming Boards → Sensors → Connecting to the Cloud → Environmental Monitoring Project&lt;/h3&gt;&#xA;&lt;h2 id=&#34;session-1&#34;&gt;Session 1&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1Uzj6hXgbsv0XJcUhdJ__9KNt1Tii-QKJaGz4chCLlt8/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Introduction to Arduino&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-2&#34;&gt;Session 2&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/1glz2kz48QZUh9vxGn77U0fta346_-CcPX2OKMbvTHKU/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Coding with Arduino&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-3&#34;&gt;Session 3&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/1xhmEOlyb5ZhjXJy2qlHyxbbLeyG3f_lW_OV2ltz-Ud0/edit?usp=sharing&#34;&gt;Working with Sensors&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;session-4&#34;&gt;Session 4&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRBpG9QPUNJ4V4oM2tGHONUrWbXCXd_cdHyH8vpACYNJKS6r34YyHDi-ka3D0u3HvN5vbl68ZEcVFQa/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Connecting to the Cloud&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://janyljumadinova.com/code/&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;session-5-6&#34;&gt;Session 5-6&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.arduino.cc/hardware/iot-bundle/#tutorials.&#34;&gt;Projects&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>High School Code</title>
-      <link>https://janyljumadinova.com/code/</link>
+      <link>http://localhost:1313/code/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/code/</guid>
+      <guid>http://localhost:1313/code/</guid>
       <description>&lt;h2 id=&#34;temperature-sensor-code&#34;&gt;Temperature Sensor Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Data wire is connected to digital pin 2&#xA;#define ONE_WIRE_BUS 2&#xA;&#xA;// Setup a oneWire instance to communicate with any OneWire devices&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;&#xA;// Pass our oneWire reference to Dallas Temperature sensor&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;void setup() {&#xA;  // Start serial communication for debugging&#xA;  Serial.begin(9600);&#xA;  // Start the DS18B20 sensor&#xA;  sensors.begin();&#xA;}&#xA;&#xA;void loop() {&#xA;  // Request temperature readings from the sensor&#xA;  sensors.requestTemperatures();&#xA;  // Fetch and print the temperature in Celsius&#xA;  float temperatureC = sensors.getTempCByIndex(0);&#xA;  Serial.print(&amp;#34;Temperature (°C): &amp;#34;);&#xA;  Serial.println(temperatureC);&#xA;  // Wait for 1 second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;arduino-cloud-code&#34;&gt;Arduino Cloud Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ArduinoIoTCloud.h&amp;gt;&#xA;#include &amp;lt;Arduino_ConnectionHandler.h&amp;gt;&#xA;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Wi-Fi credentials&#xA;const char SSID[]     = &amp;#34;your_wifi_ssid&amp;#34;;    // Replace with your Wi-Fi SSID&#xA;const char PASS[]     = &amp;#34;your_wifi_password&amp;#34;; // Replace with your Wi-Fi password&#xA;&#xA;// DS18B20 sensor setup&#xA;const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;// Cloud variable&#xA;float temperature;&#xA;&#xA;void setup() {&#xA;  // Initialize serial communication&#xA;  Serial.begin(9600);&#xA;&#xA;  // Setup cloud properties&#xA;  ArduinoCloud.begin(ArduinoIoTPreferredConnection);&#xA;  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);&#xA;&#xA;  // Connect to IoT Cloud&#xA;  ArduinoIoTPreferredConnection.begin();&#xA;&#xA;  // Start the DS18B20 temperature sensor&#xA;  sensors.begin();&#xA;&#xA;  // Print a message&#xA;  Serial.println(&amp;#34;Setup complete. Connecting to Arduino IoT Cloud...&amp;#34;);&#xA;}&#xA;&#xA;void loop() {&#xA;  // Update the IoT Cloud&#xA;  ArduinoCloud.update();&#xA;&#xA;  // Read temperature from the DS18B20 sensor&#xA;  sensors.requestTemperatures();&#xA;  temperature = sensors.getTempCByIndex(0);&#xA;&#xA;  // Print temperature to Serial Monitor&#xA;  Serial.print(&amp;#34;Temperature: &amp;#34;);&#xA;  Serial.println(temperature);&#xA;&#xA;  // Delay for a second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>High School Code</title>
-      <link>https://janyljumadinova.com/highschool/code/</link>
+      <link>http://localhost:1313/highschool/code/</link>
       <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/code/</guid>
+      <guid>http://localhost:1313/highschool/code/</guid>
       <description>&lt;h2 id=&#34;temperature-sensor-code&#34;&gt;Temperature Sensor Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Data wire is connected to digital pin 2&#xA;#define ONE_WIRE_BUS 2&#xA;&#xA;// Setup a oneWire instance to communicate with any OneWire devices&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;&#xA;// Pass our oneWire reference to Dallas Temperature sensor&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;void setup() {&#xA;  // Start serial communication for debugging&#xA;  Serial.begin(9600);&#xA;  // Start the DS18B20 sensor&#xA;  sensors.begin();&#xA;}&#xA;&#xA;void loop() {&#xA;  // Request temperature readings from the sensor&#xA;  sensors.requestTemperatures();&#xA;  // Fetch and print the temperature in Celsius&#xA;  float temperatureC = sensors.getTempCByIndex(0);&#xA;  Serial.print(&amp;#34;Temperature (°C): &amp;#34;);&#xA;  Serial.println(temperatureC);&#xA;  // Wait for 1 second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;arduino-cloud-code&#34;&gt;Arduino Cloud Code&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ArduinoIoTCloud.h&amp;gt;&#xA;#include &amp;lt;Arduino_ConnectionHandler.h&amp;gt;&#xA;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Wi-Fi credentials&#xA;const char SSID[]     = &amp;#34;your_wifi_ssid&amp;#34;;    // Replace with your Wi-Fi SSID&#xA;const char PASS[]     = &amp;#34;your_wifi_password&amp;#34;; // Replace with your Wi-Fi password&#xA;&#xA;// DS18B20 sensor setup&#xA;const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;// Cloud variable&#xA;float temperature;&#xA;&#xA;void setup() {&#xA;  // Initialize serial communication&#xA;  Serial.begin(9600);&#xA;&#xA;  // Setup cloud properties&#xA;  ArduinoCloud.begin(ArduinoIoTPreferredConnection);&#xA;  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);&#xA;&#xA;  // Connect to IoT Cloud&#xA;  ArduinoIoTPreferredConnection.begin();&#xA;&#xA;  // Start the DS18B20 temperature sensor&#xA;  sensors.begin();&#xA;&#xA;  // Print a message&#xA;  Serial.println(&amp;#34;Setup complete. Connecting to Arduino IoT Cloud...&amp;#34;);&#xA;}&#xA;&#xA;void loop() {&#xA;  // Update the IoT Cloud&#xA;  ArduinoCloud.update();&#xA;&#xA;  // Read temperature from the DS18B20 sensor&#xA;  sensors.requestTemperatures();&#xA;  temperature = sensors.getTempCByIndex(0);&#xA;&#xA;  // Print temperature to Serial Monitor&#xA;  Serial.print(&amp;#34;Temperature: &amp;#34;);&#xA;  Serial.println(temperature);&#xA;&#xA;  // Delay for a second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>Middle School</title>
-      <link>https://janyljumadinova.com/middleschool2024/</link>
+      <link>http://localhost:1313/middleschool2024/</link>
       <pubDate>Mon, 09 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/middleschool2024/</guid>
+      <guid>http://localhost:1313/middleschool2024/</guid>
       <description>&lt;h1 id=&#34;robotics-enrichment-program&#34;&gt;Robotics Enrichment Program&lt;/h1&gt;&#xA;&lt;h2 id=&#34;middle-school-robot--game---majors-schedule&#34;&gt;Middle School &amp;ldquo;Robot + Game = ?&amp;rdquo; Majors Schedule&lt;/h2&gt;&#xA;&lt;p&gt;What happens when robots and games collide? In Robot + Game = ?, you&amp;rsquo;ll step into the role of a robotics engineer and game developer, using a game engine to bring intelligent machines to life in virtual worlds. Design and simulate autonomous robots - like drones that navigate through dynamic environments, avoiding obstacles in real time. Through hands-on projects, you&amp;rsquo;ll integrate LiDAR-based sensing and learning algorithms to develop robotic behavior.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Courses</title>
-      <link>https://janyljumadinova.com/post/courses/</link>
+      <link>http://localhost:1313/post/courses/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/post/courses/</guid>
+      <guid>http://localhost:1313/post/courses/</guid>
       <description>&lt;h1 id=&#34;fall-2024&#34;&gt;Fall 2024&lt;/h1&gt;&#xA;&lt;h2 id=&#34;cmpsc-350-computational-narrative&#34;&gt;CMPSC 350: Computational Narrative&lt;/h2&gt;&#xA;&lt;p&gt;A study of the craft and deployment of procedurally-generated digital narratives, placing an emphasis on using data sources and computational methods as storytelling media. Students focus on critical, close reading of professional and student works while completing a single long-form work of their own. Topics include natural language processing (NLP), procedural illustration, computational constraint, and the development of conceptual documentary works.&lt;/p&gt;&#xA;&lt;h3 id=&#34;course-organization&#34;&gt;&lt;a href=&#34;https://github.com/CMPSC350-Computational-Narrative-F2024&#34;&gt;Course Organization&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;h1 id=&#34;spring-2024&#34;&gt;Spring 2024&lt;/h1&gt;&#xA;&lt;h2 id=&#34;cmpsc-304-robotic-agents&#34;&gt;CMPSC 304: Robotic Agents&lt;/h2&gt;&#xA;&lt;p&gt;A study of the design and implementation of autonomous robotic systems that individually and cooperatively complete complex tasks. In addition to examining techniques for robot navigation, coordination, and manipulation, students learn how to apply the field&amp;rsquo;s technologies to address the challenges facing local and global communities. Participating in hands-on activities that often require teamwork, students develop and evaluate several autonomous robot systems, while also reflecting on the civic issues surrounding the use of these systems. During a weekly laboratory session students use industry-grade technology to complete projects, reporting on their results through both written documents and oral presentations.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FSMAT 201, Spring 2024 Presentation</title>
-      <link>https://janyljumadinova.com/fsmat201/</link>
+      <link>http://localhost:1313/fsmat201/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/fsmat201/</guid>
+      <guid>http://localhost:1313/fsmat201/</guid>
       <description>&lt;h2 id=&#34;orthogonal-polynomials-in-machine-learning&#34;&gt;Orthogonal Polynomials in Machine Learning&lt;/h2&gt;&#xA;&lt;h3 id=&#34;presentation&#34;&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vTpBLBwnlAWkgDqRZAg0PK3BMj7uFYMyukEJJwVXxyHvmaz6dM6weozfA4C6dAdcH4Quto3eGnXsVXB/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Presentation&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     <item>
       <title>Meadville Area Senior High School</title>
-      <link>https://janyljumadinova.com/highschool/index-copy/</link>
+      <link>http://localhost:1313/highschool/index-copy/</link>
       <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/index-copy/</guid>
+      <guid>http://localhost:1313/highschool/index-copy/</guid>
       <description>&lt;h1 id=&#34;crawford-central-mash&#34;&gt;Crawford Central MASH&lt;/h1&gt;&#xA;&lt;h2 id=&#34;high-school-game-development&#34;&gt;High School Game Development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tasks&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Have a playable 2D game based on the &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html&#34;&gt;First 2D Game tutorial&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;%- Last time we finished &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/03.coding_the_player.html&#34;&gt;Coding the player&lt;/a&gt; %- First, please verify your player is able to move around appropriately. %- Then, move on to &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/04.creating_the_enemy.html&#34;&gt;Creating the enemy&lt;/a&gt; and the following sections. %- By the end of the session, you should aim to have a 2D game that is playable.&lt;/p&gt;&#xA;&lt;p&gt;%### Supplemental Task: Enhancing the game&lt;/p&gt;</description>
     </item>
     <item>
       <title>Meadville Area Senior High School</title>
-      <link>https://janyljumadinova.com/highschool/index_s2023/</link>
+      <link>http://localhost:1313/highschool/index_s2023/</link>
       <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/index_s2023/</guid>
+      <guid>http://localhost:1313/highschool/index_s2023/</guid>
       <description>&lt;h1 id=&#34;crawford-central-mash&#34;&gt;Crawford Central MASH&lt;/h1&gt;&#xA;&lt;h2 id=&#34;high-school-game-development&#34;&gt;High School Game Development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tasks&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Have a playable 2D game based on the &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html&#34;&gt;First 2D Game tutorial&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Enhance the 2D game you have developed. How can you make the game your own to some degree?&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;high-school-robotics&#34;&gt;High School Robotics&lt;/h2&gt;&#xA;&lt;p&gt;Develop a dancing &lt;code&gt;gopigo&lt;/code&gt; robot.&lt;/p&gt;&#xA;&lt;h3 id=&#34;tasks-1&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Your robot must use a speaker and play music.&lt;/li&gt;&#xA;&lt;li&gt;Your code must use an &lt;code&gt;if&lt;/code&gt; statement. Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;li&gt;Your code must use a loop (such as &lt;code&gt;for&lt;/code&gt; or &lt;code&gt;while&lt;/code&gt; loop). Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Below is the sample code using a distance sensor and a speaker:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Meadville Area Senior High School</title>
-      <link>https://janyljumadinova.com/highschool_s2023/</link>
+      <link>http://localhost:1313/highschool_s2023/</link>
       <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool_s2023/</guid>
+      <guid>http://localhost:1313/highschool_s2023/</guid>
       <description>&lt;h1 id=&#34;crawford-central-mash&#34;&gt;Crawford Central MASH&lt;/h1&gt;&#xA;&lt;h2 id=&#34;high-school-game-development&#34;&gt;High School Game Development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;tasks&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Have a playable 2D game based on the &lt;a href=&#34;https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html&#34;&gt;First 2D Game tutorial&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Enhance the 2D game you have developed. How can you make the game your own to some degree?&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;high-school-robotics&#34;&gt;High School Robotics&lt;/h2&gt;&#xA;&lt;p&gt;Develop a dancing &lt;code&gt;gopigo&lt;/code&gt; robot.&lt;/p&gt;&#xA;&lt;h3 id=&#34;tasks-1&#34;&gt;Tasks&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Your robot must use a speaker and play music.&lt;/li&gt;&#xA;&lt;li&gt;Your code must use an &lt;code&gt;if&lt;/code&gt; statement. Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;li&gt;Your code must use a loop (such as &lt;code&gt;for&lt;/code&gt; or &lt;code&gt;while&lt;/code&gt; loop). Ask a teaching assistant for help with this task!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Below is the sample code using a distance sensor and a speaker:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Crawford Central Middle School Courses</title>
-      <link>https://janyljumadinova.com/middleschool_s2023/</link>
+      <link>http://localhost:1313/middleschool_s2023/</link>
       <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/middleschool_s2023/</guid>
+      <guid>http://localhost:1313/middleschool_s2023/</guid>
       <description>&lt;h1 id=&#34;crawford-central&#34;&gt;Crawford Central&lt;/h1&gt;&#xA;&lt;h2 id=&#34;middle-school-robotics-minors&#34;&gt;Middle School Robotics Minors&lt;/h2&gt;&#xA;&lt;h3 id=&#34;gopigo-tasks&#34;&gt;GoPiGo Tasks&lt;/h3&gt;&#xA;&lt;p&gt;Make a dancing robot, the one that moves to music!&lt;/p&gt;&#xA;&lt;p&gt;Below is the sample code using a speaker and some sample music files:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import easygopigo3 as easy&#xA;import pygame&#xA;&#xA;gpg = easy.EasyGoPiGo3()&#xA;&#xA;&#xA;# Play music&#xA;pygame.mixer.init()    &#xA;pygame.mixer.music.load(&amp;#34;music.mp3&amp;#34;)&#xA;pygame.mixer.music.set_volume(1)&#xA;pygame.mixer.music.play()&#xA;&#xA;# Add actions&#xA;&#xA;# Stop playing music&#xA;pygame.mixer.music.stop()&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;music-files&#34;&gt;Music Files&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;Happy.mp3&#34;&gt;Happy&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;Wii_Music.mp3&#34;&gt;Wii_Music&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;No_Role_Modelz.mp3&#34;&gt;No_Role_Modelz&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;arduino-robot-tasks&#34;&gt;Arduino Robot Tasks:&lt;/h3&gt;&#xA;&lt;p&gt;Explore line following, obstacle avoidance programs using Elegoo robots&lt;/p&gt;</description>
     </item>
     <item>
       <title>Board of Trustees Presentation</title>
-      <link>https://janyljumadinova.com/board/</link>
+      <link>http://localhost:1313/board/</link>
       <pubDate>Fri, 14 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/board/</guid>
+      <guid>http://localhost:1313/board/</guid>
       <description>&lt;h1 id=&#34;transforming-computer-science-education&#34;&gt;Transforming Computer Science Education&lt;/h1&gt;&#xA;&lt;h3 id=&#34;presentation&#34;&gt;&lt;a href=&#34;https://docs.google.com/presentation/d/e/2PACX-1vRiWM737SCVtiQrW-K-jVuZQUs0ifi7DXcZ3zltohey67LGuR-YnFG0FYEP5x99_7wdUHrRnFPCBAHa/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34;&gt;Presentation&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     <item>
       <title>Office Hours</title>
-      <link>https://janyljumadinova.com/post/schedule/</link>
+      <link>http://localhost:1313/post/schedule/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/post/schedule/</guid>
+      <guid>http://localhost:1313/post/schedule/</guid>
       <description>&lt;h1 id=&#34;scheduling-office-hours&#34;&gt;Scheduling Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;To schedule a meeting with me during my office hours, please &lt;a href=&#34;https://calendar.app.google/UtjHRPb71RKeraYk7&#34;&gt;book an appointment&lt;/a&gt;. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.&lt;/p&gt;&#xA;&lt;h1 id=&#34;office-hour-location&#34;&gt;Office Hour Location&lt;/h1&gt;&#xA;&lt;p&gt;Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.&lt;/p&gt;&#xA;&lt;h1 id=&#34;online-office-hours&#34;&gt;Online Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;If you prefer or need to meet over Google Meet, please send me a Discord message so I can set up a video link in advance of our scheduled appointment.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Office Hours</title>
-      <link>https://janyljumadinova.com/schedule/</link>
+      <link>http://localhost:1313/schedule/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/schedule/</guid>
+      <guid>http://localhost:1313/schedule/</guid>
       <description>&lt;h1 id=&#34;scheduling-office-hours&#34;&gt;Scheduling Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;To schedule a meeting with me during my office hours, please &lt;a href=&#34;https://calendar.app.google/UtjHRPb71RKeraYk7&#34;&gt;book an appointment&lt;/a&gt;. You can browse my available office hours and pick a time slot that fits into our schedules. Once you have chosen your appointment, it will appear in both your Google Calendar and mine.&lt;/p&gt;&#xA;&lt;h1 id=&#34;office-hour-location&#34;&gt;Office Hour Location&lt;/h1&gt;&#xA;&lt;p&gt;Unless otherwise specified, all office hour appointments will take place in my office in Alden 110.&lt;/p&gt;&#xA;&lt;h1 id=&#34;online-office-hours&#34;&gt;Online Office Hours&lt;/h1&gt;&#xA;&lt;p&gt;After you schedule office hour via Google calendar but you prefer to meet over Google Meet, please send me a Discord message so I can set up a video link in advance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Research</title>
-      <link>https://janyljumadinova.com/post/research/</link>
+      <link>http://localhost:1313/post/research/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/post/research/</guid>
+      <guid>http://localhost:1313/post/research/</guid>
       <description>&lt;h1 id=&#34;research&#34;&gt;Research&lt;/h1&gt;&#xA;&lt;h2 id=&#34;ethical-cs&#34;&gt;Ethical CS&lt;/h2&gt;&#xA;&lt;p&gt;Over the last three years I along with my colleagues in the &lt;a href=&#34;https://www.cs.allegheny.edu/&#34;&gt;Department of Computer Science at Allegheny College&lt;/a&gt;, have been working on the Responsible Computer Science effort. &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uvXBEaByh6k?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA; &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rmX7gCEkpQw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;     &lt;/div&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Research</title>
-      <link>https://janyljumadinova.com/research/</link>
+      <link>http://localhost:1313/research/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/research/</guid>
+      <guid>http://localhost:1313/research/</guid>
       <description>&lt;h1 id=&#34;research&#34;&gt;Research&lt;/h1&gt;&#xA;&lt;h2 id=&#34;ethical-cs&#34;&gt;Ethical CS&lt;/h2&gt;&#xA;&lt;p&gt;Over the last three years I along with my colleagues in the &lt;a href=&#34;https://www.cs.allegheny.edu/&#34;&gt;Department of Computer Science at Allegheny College&lt;/a&gt;, have been working on the Responsible Computer Science effort. &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uvXBEaByh6k?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;&#xA; &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/rmX7gCEkpQw?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;     &lt;/div&gt;&#xA;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://janyljumadinova.com/highschool/cloud_code/</link>
+      <link>http://localhost:1313/highschool/cloud_code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/cloud_code/</guid>
+      <guid>http://localhost:1313/highschool/cloud_code/</guid>
       <description>&lt;h2 id=&#34;connecting-to-arduino-cloud&#34;&gt;Connecting to Arduino Cloud&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;ArduinoIoTCloud.h&amp;gt;&#xA;#include &amp;lt;Arduino_ConnectionHandler.h&amp;gt;&#xA;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Wi-Fi credentials&#xA;const char SSID[]     = &amp;#34;your_wifi_ssid&amp;#34;;    // Replace with your Wi-Fi SSID&#xA;const char PASS[]     = &amp;#34;your_wifi_password&amp;#34;; // Replace with your Wi-Fi password&#xA;&#xA;// DS18B20 sensor setup&#xA;const int ONE_WIRE_BUS = 2; // Data wire connected to pin 2&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;// Cloud variable&#xA;float temperature;&#xA;&#xA;void setup() {&#xA;  // Initialize serial communication&#xA;  Serial.begin(9600);&#xA;&#xA;  // Setup cloud properties&#xA;  ArduinoCloud.begin(ArduinoIoTPreferredConnection);&#xA;  ArduinoCloud.addProperty(temperature, READ, ON_CHANGE, NULL);&#xA;&#xA;  // Connect to IoT Cloud&#xA;  ArduinoIoTPreferredConnection.begin();&#xA;&#xA;  // Start the DS18B20 temperature sensor&#xA;  sensors.begin();&#xA;&#xA;  // Print a message&#xA;  Serial.println(&amp;#34;Setup complete. Connecting to Arduino IoT Cloud...&amp;#34;);&#xA;}&#xA;&#xA;void loop() {&#xA;  // Update the IoT Cloud&#xA;  ArduinoCloud.update();&#xA;&#xA;  // Read temperature from the DS18B20 sensor&#xA;  sensors.requestTemperatures();&#xA;  temperature = sensors.getTempCByIndex(0);&#xA;&#xA;  // Print temperature to Serial Monitor&#xA;  Serial.print(&amp;#34;Temperature: &amp;#34;);&#xA;  Serial.println(temperature);&#xA;&#xA;  // Delay for a second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://janyljumadinova.com/highschool/sensor_code/</link>
+      <link>http://localhost:1313/highschool/sensor_code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/highschool/sensor_code/</guid>
+      <guid>http://localhost:1313/highschool/sensor_code/</guid>
       <description>&lt;h2 id=&#34;connecting-temperature-sensor-to-arduino&#34;&gt;Connecting temperature sensor to Arduino&lt;/h2&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#include &amp;lt;OneWire.h&amp;gt;&#xA;#include &amp;lt;DallasTemperature.h&amp;gt;&#xA;&#xA;// Data wire is connected to digital pin 2&#xA;#define ONE_WIRE_BUS 2&#xA;&#xA;// Setup a oneWire instance to communicate with any OneWire devices&#xA;OneWire oneWire(ONE_WIRE_BUS);&#xA;&#xA;// Pass our oneWire reference to Dallas Temperature sensor&#xA;DallasTemperature sensors(&amp;amp;oneWire);&#xA;&#xA;void setup() {&#xA;  // Start serial communication for debugging&#xA;  Serial.begin(9600);&#xA;  // Start the DS18B20 sensor&#xA;  sensors.begin();&#xA;}&#xA;&#xA;void loop() {&#xA;  // Request temperature readings from the sensor&#xA;  sensors.requestTemperatures();&#xA;  // Fetch and print the temperature in Celsius&#xA;  float temperatureC = sensors.getTempCByIndex(0);&#xA;  Serial.print(&amp;#34;Temperature (°C): &amp;#34;);&#xA;  Serial.println(temperatureC);&#xA;&#xA;  // Wait for 1 second before the next reading&#xA;  delay(1000);&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>https://janyljumadinova.com/search/placeholder/</link>
+      <link>http://localhost:1313/search/placeholder/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://janyljumadinova.com/search/placeholder/</guid>
+      <guid>http://localhost:1313/search/placeholder/</guid>
       <description></description>
     </item>
   </channel>

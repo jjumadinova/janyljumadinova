@@ -925,3 +925,36 @@ footer[role="contentinfo"] a:focus {
   outline: 3px solid var(--accent-color) !important;
   outline-offset: 3px !important;
 }
+
+/* Fix for large screens - ensure white background extends full width */
+html {
+  background: var(--secondary-bg) !important;
+}
+
+body {
+  background: var(--secondary-bg) !important;
+  min-height: 100vh !important;
+}
+
+/* Ensure the main content wrapper extends full width with white background */
+#main-content,
+.main-content,
+.content-wrapper,
+main {
+  background: var(--secondary-bg) !important;
+  width: 100% !important;
+}
+
+/* Add white background to the container parent on large screens */
+@media (min-width: 1200px) {
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--secondary-bg) !important;
+    z-index: -1;
+  }
+}
