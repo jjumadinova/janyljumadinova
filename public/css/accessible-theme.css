@@ -489,12 +489,15 @@ select:focus {
 }
 
 /* Enhanced Typography - Clean and Professional */
+/* High-contrast headings for projector / big-screen readability */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--primary-bg) !important;
-  font-weight: 700 !important;
+  color: var(--primary-bg) !important;  /* #000 on white — maximum contrast */
+  font-weight: 800 !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.75em !important;
   line-height: 1.3 !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 /* Reduce spacing for first headings in post containers */
@@ -652,7 +655,7 @@ th {
 .intro-header .post-heading h1,
 .intro-header .page-heading h1 {
   color: var(--primary-bg) !important;
-  text-shadow: none !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15) !important;
   font-weight: 900 !important;
   font-size: 3.5em !important;
   margin-bottom: 0.3em !important;
@@ -682,7 +685,7 @@ th {
 .intro-header.style-text .site-heading,
 .intro-header.style-text .post-heading,
 .intro-header.style-text .page-heading {
-  color: var(--text-primary) !important;
+  color: var(--text-secondary) !important;
   text-shadow: none !important;
   padding: 20px 0 !important;
 }
@@ -690,7 +693,7 @@ th {
 .intro-header.style-text .site-heading h1,
 .intro-header.style-text .post-heading h1,
 .intro-header.style-text .page-heading h1 {
-  color: var(--text-primary) !important;
+  color: var(--primary-bg) !important;
   text-shadow: none !important;
 }
 
