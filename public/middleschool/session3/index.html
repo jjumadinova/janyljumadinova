@@ -344,53 +344,33 @@
 <li><code>analog write pin P0 to 0</code></li>
 <li><code>show icon X</code> (stop symbol on LEDs)</li>
 </ol>
-<p>Now use the functions with button inputs:</p>
-<p><strong>On button A pressed:</strong> → call <code>forward</code>
-<strong>On button B pressed:</strong> → call <code>backward</code>
-<strong>On button A+B pressed:</strong> → call <code>stop</code></p>
-<p><strong>Test it!</strong> You should be able to drive the motor forward, backward, and stop it cleanly.</p>
-<h3 id="activity-3-speed-control">Activity 3: Speed Control</h3>
-<p>Create a variable called <code>speed</code> and set it to <strong>500</strong> on start.</p>
-<p>Update your <code>forward</code> and <code>backward</code> functions to use <code>analog write pin P0 to speed</code> instead of a fixed value.</p>
-<p><strong>On shake:</strong></p>
-<ul>
-<li>Increase <code>speed</code> by 200</li>
-<li>If <code>speed</code> &gt; 1023, set <code>speed</code> to 300 (wrap back to slow)</li>
-<li>Show the <code>speed</code> value on the LED display</li>
-</ul>
-<p>Now you have a <strong>throttle</strong> — shake to cycle through speed levels!</p>
-<h3 id="activity-4-timed-movement">Activity 4: Timed Movement</h3>
-<p>Create a program that runs the motor automatically:</p>
-<p><strong>On button A pressed:</strong></p>
+<p>Now call the functions from a <strong>forever</strong> loop to make the motor run a repeating pattern automatically:</p>
+<p><strong>In the <code>forever</code> block:</strong></p>
 <ol>
 <li>Call <code>forward</code></li>
-<li><code>pause 2000 ms</code> (drive forward for 2 seconds)</li>
+<li><code>pause 2000 ms</code> (run forward for 2 seconds)</li>
 <li>Call <code>stop</code></li>
-<li><code>pause 1000 ms</code> (wait 1 second)</li>
+<li><code>pause 1000 ms</code> (pause for 1 second)</li>
 <li>Call <code>backward</code></li>
-<li><code>pause 2000 ms</code> (drive backward for 2 seconds)</li>
+<li><code>pause 2000 ms</code> (run backward for 2 seconds)</li>
 <li>Call <code>stop</code></li>
+<li><code>pause 1000 ms</code> (pause for 1 second)</li>
 </ol>
-<p>The motor drives forward for 2 seconds, pauses, then drives backward for 2 seconds. This is the foundation of programming a robot to follow a path!</p>
+<p>The motor will now repeat the sequence on its own — forward, stop, backward, stop — forever! This is exactly how a real robot would follow a programmed path.</p>
+<p><strong>Test it!</strong> Watch the LED arrows change as the motor changes direction.</p>
 <hr>
-<h2 id="-challenge-motor-control-dashboard">🎯 Challenge: Motor Control Dashboard</h2>
+<h2 id="-challenge-design-your-own-motor-program">🎯 Challenge: Design Your Own Motor Program</h2>
 <blockquote>
-<p><strong>Your Task:</strong> Build a complete motor control program!</p></blockquote>
-<p><strong>Requirements:</strong></p>
-<ol>
-<li><strong>Button A</strong> — drive the motor <strong>forward</strong></li>
-<li><strong>Button B</strong> — drive the motor <strong>backward</strong></li>
-<li><strong>Button A+B</strong> — <strong>stop</strong> the motor</li>
-<li><strong>Shake</strong> — cycle through 3 speed levels (Slow → Medium → Fast) and display the level number (1, 2, 3) on the LEDs</li>
-<li>Use <strong>functions</strong> for forward, backward, and stop</li>
-</ol>
-<p><strong>Bonus:</strong></p>
+<p><strong>Your Task:</strong> Use the <code>forward</code>, <code>backward</code>, and <code>stop</code> functions to create something interesting — you decide what it does!</p></blockquote>
+<p>Here are some ideas to get you thinking, but feel free to come up with your own:</p>
 <ul>
-<li>Add a startup animation on the LEDs when the program begins</li>
-<li>Play a beep when changing speed levels</li>
-<li>Display an arrow (↑ ↓) showing current direction on the LEDs</li>
-<li>Add a timed sequence on <strong>logo touch</strong> that runs a forward-stop-backward-stop pattern</li>
+<li><strong>Dance pattern</strong> — a timed sequence of forward/backward/stop moves set to a beat using the Music blocks</li>
+<li><strong>Morse code motor</strong> — use short and long motor bursts to &ldquo;spell out&rdquo; a letter or word</li>
+<li><strong>Countdown launcher</strong> — count down from 5 on the LEDs, then run a sequence</li>
+<li><strong>Sensor-triggered</strong> — combine what you learned in Session 2: use the IR sensor to decide when to run forward or stop</li>
+<li><strong>Something totally different</strong> — surprise us!</li>
 </ul>
+<p>There&rsquo;s no single right answer. Experiment, break things, fix them, and have fun.</p>
 <hr>
 <h2 id="key-concepts-you-learned">Key Concepts You Learned</h2>
 <ul>

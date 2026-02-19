@@ -158,60 +158,37 @@ In MakeCode, go to **Advanced** → **Functions** → **Make a Function**. We'll
 3. `analog write pin P0 to 0`
 4. `show icon X` (stop symbol on LEDs)
 
-Now use the functions with button inputs:
+Now call the functions from a **forever** loop to make the motor run a repeating pattern automatically:
 
-**On button A pressed:** → call `forward`
-**On button B pressed:** → call `backward`
-**On button A+B pressed:** → call `stop`
-
-**Test it!** You should be able to drive the motor forward, backward, and stop it cleanly.
-
-### Activity 3: Speed Control
-
-Create a variable called `speed` and set it to **500** on start.
-
-Update your `forward` and `backward` functions to use `analog write pin P0 to speed` instead of a fixed value.
-
-**On shake:**
-- Increase `speed` by 200
-- If `speed` > 1023, set `speed` to 300 (wrap back to slow)
-- Show the `speed` value on the LED display
-
-Now you have a **throttle** — shake to cycle through speed levels!
-
-### Activity 4: Timed Movement
-
-Create a program that runs the motor automatically:
-
-**On button A pressed:**
+**In the `forever` block:**
 1. Call `forward`
-2. `pause 2000 ms` (drive forward for 2 seconds)
+2. `pause 2000 ms` (run forward for 2 seconds)
 3. Call `stop`
-4. `pause 1000 ms` (wait 1 second)
+4. `pause 1000 ms` (pause for 1 second)
 5. Call `backward`
-6. `pause 2000 ms` (drive backward for 2 seconds)
+6. `pause 2000 ms` (run backward for 2 seconds)
 7. Call `stop`
+8. `pause 1000 ms` (pause for 1 second)
 
-The motor drives forward for 2 seconds, pauses, then drives backward for 2 seconds. This is the foundation of programming a robot to follow a path!
+The motor will now repeat the sequence on its own — forward, stop, backward, stop — forever! This is exactly how a real robot would follow a programmed path.
+
+**Test it!** Watch the LED arrows change as the motor changes direction.
 
 ---
 
-## 🎯 Challenge: Motor Control Dashboard
+## 🎯 Challenge: Design Your Own Motor Program
 
-> **Your Task:** Build a complete motor control program!
+> **Your Task:** Use the `forward`, `backward`, and `stop` functions to create something interesting — you decide what it does!
 
-**Requirements:**
-1. **Button A** — drive the motor **forward**
-2. **Button B** — drive the motor **backward**
-3. **Button A+B** — **stop** the motor
-4. **Shake** — cycle through 3 speed levels (Slow → Medium → Fast) and display the level number (1, 2, 3) on the LEDs
-5. Use **functions** for forward, backward, and stop
+Here are some ideas to get you thinking, but feel free to come up with your own:
 
-**Bonus:**
-- Add a startup animation on the LEDs when the program begins
-- Play a beep when changing speed levels
-- Display an arrow (↑ ↓) showing current direction on the LEDs
-- Add a timed sequence on **logo touch** that runs a forward-stop-backward-stop pattern
+- **Dance pattern** — a timed sequence of forward/backward/stop moves set to a beat using the Music blocks
+- **Morse code motor** — use short and long motor bursts to "spell out" a letter or word
+- **Countdown launcher** — count down from 5 on the LEDs, then run a sequence
+- **Sensor-triggered** — combine what you learned in Session 2: use the IR sensor to decide when to run forward or stop
+- **Something totally different** — surprise us!
+
+There's no single right answer. Experiment, break things, fix them, and have fun.
 
 ---
 
