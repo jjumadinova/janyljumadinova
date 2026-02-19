@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Session 1" />
+    <meta property="og:title" content="Session 1" />
+    <meta property="twitter:title" content="Session 1" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Categories | Janyl Jumadinova</title>
+    <title>Session 1 | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/categories/">
+    <link rel="canonical" href="/middleschool/session1/">
 
     
     
@@ -159,14 +159,25 @@
 
 
 
-<header class="intro-header" style="background-image: url('/')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1> </h1>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
                     
-		    <span class="subheading"></span>
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -176,20 +187,124 @@
 
 
 
+<main id="main-content" role="main" aria-label="Main content">
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <h1 id="session-1-introduction-to-microbit">Session 1: Introduction to micro:bit</h1>
+<p><strong>Goal:</strong> Get familiar with the micro:bit, learn basic programming, and create your first interactive programs.</p>
+<hr>
+<h2 id="what-is-a-microbit">What is a micro:bit?</h2>
+<p>The BBC micro:bit is a small, programmable computer with:</p>
+<ul>
+<li>LED display (5×5 grid)</li>
+<li>Two buttons (A and B)</li>
+<li>Built-in sensors (accelerometer, compass, temperature)</li>
+<li>GPIO pins for connecting external components</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>
+<p><strong>Access the Editor</strong></p>
+<ul>
+<li>Go to <a href="https://makecode.microbit.org/">makecode.microbit.org</a></li>
+<li>Click <strong>New Project</strong> and give it a name</li>
+</ul>
+</li>
+<li>
+<p><strong>Interface Overview</strong></p>
+<ul>
+<li><strong>Left:</strong> Simulator showing your micro:bit</li>
+<li><strong>Middle:</strong> Block categories</li>
+<li><strong>Right:</strong> Programming workspace</li>
+</ul>
+</li>
+<li>
+<p><strong>First Program: Hello World</strong></p>
+<ul>
+<li>From <strong>Basic</strong>, drag <code>show string</code> into the <code>on start</code> block</li>
+<li>Type &ldquo;Hello!&rdquo; in the text field</li>
+<li>Click the simulator to see it run</li>
+<li>Download to a real micro:bit (connect via USB)</li>
+</ul>
+</li>
+<li>
+<p><strong>Interactive Program: Button Counter</strong></p>
+<ul>
+<li>From <strong>Input</strong>, drag <code>on button A pressed</code></li>
+<li>Inside it, add <code>show number</code> with a variable</li>
+<li>Use <strong>Variables</strong> to create a counter that increases each press</li>
+<li>Add button B to decrease the counter</li>
+</ul>
+</li>
+<li>
+<p><strong>Sensor Exploration</strong></p>
+<ul>
+<li>Use the accelerometer to detect shaking</li>
+<li>Display different images when tilted left/right</li>
+<li>Show temperature readings on the LED display</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="-challenge-dice-rolling-game">🎯 Challenge: Dice Rolling Game</h2>
+<blockquote>
+<p>Create a game where you shake the micro:bit to &ldquo;roll a dice&rdquo; and display a random number from 1 to 6.</p></blockquote>
+<p><strong>Hints:</strong></p>
+<ul>
+<li>Use the <code>on shake</code> input block</li>
+<li>Use <code>pick random 1 to 6</code> from the <strong>Math</strong> category</li>
+<li>Display the result with <code>show number</code></li>
+<li>Add a short animation before showing the result for fun!</li>
+</ul>
+<hr>
+<h2 id="key-concepts-you-learned">Key Concepts You Learned</h2>
+<ul>
+<li>What a micro:bit is and what it can do</li>
+<li>How to use the MakeCode editor</li>
+<li>Programming with blocks: <code>on start</code>, <code>forever</code>, <code>on button pressed</code>, <code>on shake</code></li>
+<li>Using variables to keep track of values</li>
+<li>Displaying text, numbers, and icons on the LED grid</li>
+</ul>
+<p><strong>Think About It:</strong></p>
+<ul>
+<li>What other programs could you make with just the built-in buttons and sensors?</li>
+<li>How might you use the micro:bit to solve a real-world problem?</li>
+<li>What happens if you combine multiple inputs (buttons + sensors)?</li>
+</ul>
+
+
                 
 
-
+                <hr>
+                
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -205,6 +320,7 @@
         </div>
     </div>
 </article>
+</main>
 
 
 

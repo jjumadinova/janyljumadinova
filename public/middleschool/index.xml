@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Middle School on </title>
+    <link>http://localhost:1313/middleschool/</link>
+    <description>Recent content in Middle School on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/middleschool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Session 1</title>
+      <link>http://localhost:1313/middleschool/session1/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/middleschool/session1/</guid>
+      <description>&lt;h1 id=&#34;session-1-introduction-to-microbit&#34;&gt;Session 1: Introduction to micro:bit&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Get familiar with the micro:bit, learn basic programming, and create your first interactive programs.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-a-microbit&#34;&gt;What is a micro:bit?&lt;/h2&gt;&#xA;&lt;p&gt;The BBC micro:bit is a small, programmable computer with:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;LED display (5×5 grid)&lt;/li&gt;&#xA;&lt;li&gt;Two buttons (A and B)&lt;/li&gt;&#xA;&lt;li&gt;Built-in sensors (accelerometer, compass, temperature)&lt;/li&gt;&#xA;&lt;li&gt;GPIO pins for connecting external components&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Access the Editor&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Go to &lt;a href=&#34;https://makecode.microbit.org/&#34;&gt;makecode.microbit.org&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Click &lt;strong&gt;New Project&lt;/strong&gt; and give it a name&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Interface Overview&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Session 2</title>
+      <link>http://localhost:1313/middleschool/session2/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/middleschool/session2/</guid>
+      <description>&lt;h1 id=&#34;session-2-sensing-the-world-with-ir-sensors&#34;&gt;Session 2: Sensing the World with IR Sensors&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Connect an IR (Infrared) sensor to the micro:bit and learn the difference between analog and digital readings.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-an-ir-sensor&#34;&gt;What is an IR Sensor?&lt;/h2&gt;&#xA;&lt;p&gt;An &lt;strong&gt;IR (Infrared) sensor&lt;/strong&gt; can detect objects in front of it using infrared light. It&amp;rsquo;s like giving your micro:bit the ability to &amp;ldquo;see&amp;rdquo;! IR sensors are used in:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Robots to avoid obstacles&lt;/li&gt;&#xA;&lt;li&gt;Automatic doors&lt;/li&gt;&#xA;&lt;li&gt;Line-following robots&lt;/li&gt;&#xA;&lt;li&gt;Proximity detection&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Your IR sensor has &lt;strong&gt;3 pins&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Session 3</title>
+      <link>http://localhost:1313/middleschool/session3/</link>
+      <pubDate>Wed, 22 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/middleschool/session3/</guid>
+      <description>&lt;h1 id=&#34;session-3-motors-and-movement&#34;&gt;Session 3: Motors and Movement&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Connect two yellow DC motors to the micro:bit using an L298N motor driver and learn to control speed and direction — the foundation of a differential-drive robot!&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-are-we-building&#34;&gt;What Are We Building?&lt;/h2&gt;&#xA;&lt;p&gt;By the end of this session you will have &lt;strong&gt;two motors&lt;/strong&gt; wired up and controllable from the micro:bit. This is the same &amp;ldquo;differential drive&amp;rdquo; setup used in real warehouse robots, Mars rovers (simplified), and robot vacuum cleaners: two independently driven wheels that let the robot go forward, backward, and turn.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

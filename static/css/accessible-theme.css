@@ -601,20 +601,38 @@ th {
   }
 }
 
-/* Dark Mode Support */
+/* Dark Mode Support — DISABLED
+   The theme uses a fixed white/black/red palette and the CSS variables
+   are not redefined for dark mode, so the prefers-color-scheme query
+   was producing white-on-white headings. Force light appearance
+   regardless of OS setting so projectors and external displays work. */
 @media (prefers-color-scheme: dark) {
   body {
-    background: var(--primary-bg) !important;
-    color: var(--text-secondary) !important;
+    background: #ffffff !important;
+    color: #000000 !important;
   }
-  
+
   .post-container {
-    background: var(--secondary-bg) !important;
-    color: var(--text-secondary) !important;
+    background: #ffffff !important;
+    color: #000000 !important;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    color: var(--text-primary) !important;
+    color: #000000 !important;
+  }
+
+  .intro-header {
+    background: #ffffff !important;
+  }
+
+  .intro-header .site-heading h1,
+  .intro-header .post-heading h1,
+  .intro-header .page-heading h1 {
+    color: #000000 !important;
+  }
+
+  a {
+    color: #8b0000 !important;
   }
 }
 

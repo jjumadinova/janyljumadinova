@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="http://localhost:1313//">
+    <meta property="twitter:image" content="http://localhost:1313//" />
+    
+
+    
+    <meta name="title" content="Session 3" />
+    <meta property="og:title" content="Session 3" />
+    <meta property="twitter:title" content="Session 3" />
+    
+
+    
+    <meta name="description" content="Janyl Jumadinova。Teacher. Researcher. Mother.">
+    <meta property="og:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    <meta property="twitter:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
+
+    <title>Session 3 | Janyl Jumadinova</title>
+
+    <link rel="canonical" href="/middleschool/session3/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax-fix.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<a href="#main-content" class="skip-navigation">Skip to main content</a>
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation" aria-label="Main navigation">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="huxblog_navbar" aria-label="Toggle navigation menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" aria-label="Home - "></a>
+            <span class="navbar-descriptive"><strong>JJ:</strong> Teacher. Researcher. Engineer.</span>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" role="menubar">
+                    <li role="none">
+                        <a href="/" role="menuitem">Home</a>
+                    </li>
+                    
+
+		    
+                        <li role="none"><a href="/courses/" role="menuitem">COURSES</a></li>
+                    
+                        <li role="none"><a href="/highschool/" role="menuitem">HighSchool</a></li>
+                    
+                        <li role="none"><a href="/middleschool/" role="menuitem">MiddleSchool</a></li>
+                    
+                        <li role="none"><a href="/research/" role="menuitem">RESEARCH</a></li>
+                    
+                        <li role="none"><a href="/schedule/" role="menuitem">OFFICE HOURS</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main id="main-content" role="main" aria-label="Main content">
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="session-3-motors-and-movement">Session 3: Motors and Movement</h1>
+<p><strong>Goal:</strong> Connect two yellow DC motors to the micro:bit using an L298N motor driver and learn to control speed and direction — the foundation of a differential-drive robot!</p>
+<hr>
+<h2 id="what-are-we-building">What Are We Building?</h2>
+<p>By the end of this session you will have <strong>two motors</strong> wired up and controllable from the micro:bit. This is the same &ldquo;differential drive&rdquo; setup used in real warehouse robots, Mars rovers (simplified), and robot vacuum cleaners: two independently driven wheels that let the robot go forward, backward, and turn.</p>
+<hr>
+<h2 id="meet-your-components">Meet Your Components</h2>
+<h3 id="yellow-tt-dc-motors">Yellow TT DC Motors</h3>
+<p>The yellow &ldquo;TT&rdquo; (transparent tire) gear motors are the workhorses of hobby robotics:</p>
+<ul>
+<li><strong>Operating voltage:</strong> 3 V – 6 V (we&rsquo;ll use ~5–6 V from a battery pack)</li>
+<li><strong>Built-in gearbox</strong> that trades speed for torque — perfect for driving wheels</li>
+<li><strong>Two solder tabs</strong> for power (no polarity marking — swapping the wires just reverses the direction)</li>
+</ul>
+<h3 id="l298n-motor-driver-board">L298N Motor Driver Board</h3>
+<p>The micro:bit&rsquo;s GPIO pins can only supply a tiny amount of current (about 5 mA on the edge connector). A motor can draw <strong>100–200 mA</strong> — way too much! The <strong>L298N dual H-bridge driver</strong> sits between the micro:bit and the motors and does the heavy lifting:</p>
+<table>
+  <thead>
+      <tr>
+          <th>L298N Terminal</th>
+          <th>What It Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>OUT1 &amp; OUT2</strong></td>
+          <td>Connect to <strong>Motor A</strong> (left motor)</td>
+      </tr>
+      <tr>
+          <td><strong>OUT3 &amp; OUT4</strong></td>
+          <td>Connect to <strong>Motor B</strong> (right motor)</td>
+      </tr>
+      <tr>
+          <td><strong>+12V</strong> (or <strong>VMS</strong>)</td>
+          <td>Motor power input — connect your battery pack positive (+) here</td>
+      </tr>
+      <tr>
+          <td><strong>GND</strong></td>
+          <td>Common ground — connect battery (–) <strong>and</strong> micro:bit GND here</td>
+      </tr>
+      <tr>
+          <td><strong>+5V</strong></td>
+          <td>Regulated 5 V output (leave the onboard jumper <strong>on</strong> when supply ≤ 12 V)</td>
+      </tr>
+      <tr>
+          <td><strong>ENA</strong></td>
+          <td>Enable / speed control for Motor A (PWM)</td>
+      </tr>
+      <tr>
+          <td><strong>ENB</strong></td>
+          <td>Enable / speed control for Motor B (PWM)</td>
+      </tr>
+      <tr>
+          <td><strong>IN1, IN2</strong></td>
+          <td>Direction control for Motor A</td>
+      </tr>
+      <tr>
+          <td><strong>IN3, IN4</strong></td>
+          <td>Direction control for Motor B</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Key idea:</strong> IN1/IN2 set the <em>direction</em> of Motor A; ENA sets the <em>speed</em>. Same pattern for IN3/IN4 and ENB on Motor B.</p></blockquote>
+<hr>
+<h2 id="wiring-it-up">Wiring It Up</h2>
+<h3 id="components-youll-need">Components You&rsquo;ll Need</h3>
+<ul>
+<li>micro:bit + breakout board (edge connector)</li>
+<li>L298N motor driver module</li>
+<li>2 × yellow TT DC motors (with wheels attached)</li>
+<li>4 × AA battery holder (6 V) <strong>or</strong> a suitable USB power bank</li>
+<li>Jumper wires (male-to-female recommended)</li>
+<li>Small screwdriver for the L298N screw terminals</li>
+</ul>
+<h3 id="wiring-diagram">Wiring Diagram</h3>
+<pre tabindex="0"><code>  Battery Pack (6 V)
+      (+) ──────────► L298N  +12V (VMS)
+      (–) ──────┬───► L298N  GND
+                │
+  micro:bit GND ┘
+
+  L298N          micro:bit
+  ─────          ─────────
+  IN1  ◄──────── Pin 13 (P13)
+  IN2  ◄──────── Pin 14 (P14)
+  IN3  ◄──────── Pin 15 (P15)
+  IN4  ◄──────── Pin 16 (P16)
+  ENA  ◄──────── Pin 0  (P0)   ← PWM speed, Motor A
+  ENB  ◄──────── Pin 1  (P1)   ← PWM speed, Motor B
+
+  L298N          Motors
+  ─────          ──────
+  OUT1 / OUT2 ──► Left motor wires
+  OUT3 / OUT4 ──► Right motor wires
+</code></pre><h3 id="step-by-step-wiring">Step-by-Step Wiring</h3>
+<blockquote>
+<p>⚠️ <strong>Keep the battery pack switched OFF (or disconnected) while wiring!</strong></p></blockquote>
+<ol>
+<li>
+<p><strong>Remove the ENA and ENB jumper caps</strong> on the L298N board — we will control speed with PWM from the micro:bit instead of running at full speed.</p>
+</li>
+<li>
+<p><strong>Connect the motors</strong></p>
+<ul>
+<li>Loosen the screw terminals on OUT1/OUT2 and insert the two wires from the <strong>left motor</strong>. Tighten.</li>
+<li>Do the same for OUT3/OUT4 with the <strong>right motor</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect power</strong></p>
+<ul>
+<li>Battery pack <strong>positive (+)</strong> → L298N <strong>+12V</strong> terminal.</li>
+<li>Battery pack <strong>negative (–)</strong> → L298N <strong>GND</strong> terminal.</li>
+<li>Also run a wire from L298N <strong>GND</strong> to the micro:bit <strong>GND</strong> pin (common ground is essential!).</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect direction pins</strong> (micro:bit → L298N)</p>
+<ul>
+<li>P13 → IN1</li>
+<li>P14 → IN2</li>
+<li>P15 → IN3</li>
+<li>P16 → IN4</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect speed pins</strong> (micro:bit → L298N)</p>
+<ul>
+<li>P0 → ENA</li>
+<li>P1 → ENB</li>
+</ul>
+</li>
+<li>
+<p><strong>Double-check</strong> every connection with your partner, then have the teacher verify before powering on.</p>
+</li>
+</ol>
+<hr>
+<h2 id="how-motor-direction-works">How Motor Direction Works</h2>
+<p>The L298N uses two input pins per motor to set direction:</p>
+<table>
+  <thead>
+      <tr>
+          <th>IN1</th>
+          <th>IN2</th>
+          <th>Motor A Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>HIGH</td>
+          <td>LOW</td>
+          <td>Forward</td>
+      </tr>
+      <tr>
+          <td>LOW</td>
+          <td>HIGH</td>
+          <td>Backward</td>
+      </tr>
+      <tr>
+          <td>LOW</td>
+          <td>LOW</td>
+          <td>Stop (coast)</td>
+      </tr>
+      <tr>
+          <td>HIGH</td>
+          <td>HIGH</td>
+          <td>Stop (brake)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Same logic applies to IN3/IN4 for Motor B.</p>
+<hr>
+<h2 id="programming-the-motors">Programming the Motors</h2>
+<h3 id="activity-1-spin-a-single-motor">Activity 1: Spin a Single Motor</h3>
+<p><strong>In MakeCode</strong> — open a new project.</p>
+<p><strong>On start:</strong></p>
+<ul>
+<li>Nothing special needed (pins default to LOW = motors off)</li>
+</ul>
+<p><strong>On button A pressed:</strong></p>
+<ol>
+<li>From <strong>Pins</strong>, add <code>digital write pin P13 to 1</code></li>
+<li>Add <code>digital write pin P14 to 0</code></li>
+<li>Add <code>analog write pin P0 to 600</code></li>
+</ol>
+<p>This sets Motor A to spin forward at moderate speed.</p>
+<p><strong>On button B pressed:</strong></p>
+<ol>
+<li><code>digital write pin P13 to 0</code></li>
+<li><code>digital write pin P14 to 0</code></li>
+<li><code>analog write pin P0 to 0</code></li>
+</ol>
+<p>This stops Motor A.</p>
+<p><strong>Test it!</strong> Press A — the left motor should spin. Press B — it stops.</p>
+<blockquote>
+<p><strong>Troubleshooting:</strong> If the motor doesn&rsquo;t turn, check:</p>
+<ul>
+<li>Is the battery pack switched on?</li>
+<li>Is GND shared between battery, L298N, and micro:bit?</li>
+<li>Did you remove the ENA jumper cap?</li>
+</ul></blockquote>
+<h3 id="activity-2-forward-and-backward">Activity 2: Forward and Backward</h3>
+<p>Add two more button handlers:</p>
+<p><strong>On button A+B pressed (both together):</strong></p>
+<ol>
+<li>Set Motor A <strong>forward</strong>: P13 = 1, P14 = 0</li>
+<li>Set Motor B <strong>forward</strong>: P15 = 1, P16 = 0</li>
+<li>Set speed for both: <code>analog write P0 to 700</code>, <code>analog write P1 to 700</code></li>
+</ol>
+<p>This drives <strong>both motors forward</strong>.</p>
+<p><strong>On shake:</strong></p>
+<ol>
+<li>Set Motor A <strong>backward</strong>: P13 = 0, P14 = 1</li>
+<li>Set Motor B <strong>backward</strong>: P15 = 0, P16 = 1</li>
+<li>Set speed: <code>analog write P0 to 700</code>, <code>analog write P1 to 700</code></li>
+</ol>
+<p>Shake to go in reverse!</p>
+<p><strong>On logo down (tilt forward):</strong></p>
+<ol>
+<li>Set all direction pins to 0</li>
+<li>Set P0 and P1 to 0</li>
+</ol>
+<p>Full stop!</p>
+<h3 id="activity-3-turning-with-differential-drive">Activity 3: Turning with Differential Drive</h3>
+<p>A differential-drive robot turns by running its wheels at different speeds:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Desired Turn</th>
+          <th>Left Motor (A)</th>
+          <th>Right Motor (B)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Gentle left</strong></td>
+          <td>Slow (400)</td>
+          <td>Fast (800)</td>
+      </tr>
+      <tr>
+          <td><strong>Gentle right</strong></td>
+          <td>Fast (800)</td>
+          <td>Slow (400)</td>
+      </tr>
+      <tr>
+          <td><strong>Spin left (on the spot)</strong></td>
+          <td>Backward</td>
+          <td>Forward</td>
+      </tr>
+      <tr>
+          <td><strong>Spin right (on the spot)</strong></td>
+          <td>Forward</td>
+          <td>Backward</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>On tilt left:</strong></p>
+<ol>
+<li>Motor A backward: P13 = 0, P14 = 1</li>
+<li>Motor B forward: P15 = 1, P16 = 0</li>
+<li>Speed both at 600</li>
+</ol>
+<p><strong>On tilt right:</strong></p>
+<ol>
+<li>Motor A forward: P13 = 1, P14 = 0</li>
+<li>Motor B backward: P15 = 0, P16 = 1</li>
+<li>Speed both at 600</li>
+</ol>
+<p><strong>Try it!</strong> Tilt the micro:bit left and right — your motors should spin in opposite directions, which would make a robot spin in place.</p>
+<h3 id="activity-4-speed-control-with-a-variable">Activity 4: Speed Control with a Variable</h3>
+<p>Create a variable called <code>speed</code> and set it to <strong>500</strong> on start.</p>
+<p><strong>On button A pressed:</strong></p>
+<ul>
+<li>Increase <code>speed</code> by 100</li>
+<li>If <code>speed</code> &gt; 1023, set <code>speed</code> to 1023</li>
+<li>Show <code>speed</code> on the LED display</li>
+<li>Update: <code>analog write P0 to speed</code>, <code>analog write P1 to speed</code></li>
+</ul>
+<p><strong>On button B pressed:</strong></p>
+<ul>
+<li>Decrease <code>speed</code> by 100</li>
+<li>If <code>speed</code> &lt; 0, set <code>speed</code> to 0</li>
+<li>Show <code>speed</code> on the LED display</li>
+<li>Update: <code>analog write P0 to speed</code>, <code>analog write P1 to speed</code></li>
+</ul>
+<p>Now you have a <strong>throttle</strong> — A speeds up, B slows down!</p>
+<hr>
+<h2 id="-challenge-motor-test-drive">🎯 Challenge: Motor Test Drive</h2>
+<blockquote>
+<p><strong>Your Task:</strong> Build a complete motor control program!</p></blockquote>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li><strong>Button A</strong> — drive both motors <strong>forward</strong> at current speed</li>
+<li><strong>Button B</strong> — drive both motors <strong>backward</strong> at current speed</li>
+<li><strong>Button A+B</strong> — <strong>stop</strong> both motors</li>
+<li><strong>Tilt left</strong> — spin left (left motor backward, right motor forward)</li>
+<li><strong>Tilt right</strong> — spin right (left motor forward, right motor backward)</li>
+<li><strong>Shake</strong> — cycle through 3 speed levels (Slow → Medium → Fast) and display the level number (1, 2, 3) on the LEDs</li>
+</ol>
+<p><strong>Bonus:</strong></p>
+<ul>
+<li>Add a startup animation on the LEDs when the program begins</li>
+<li>Play a beep when changing speed levels</li>
+<li>Display an arrow (↑ ↓ ← →) showing current direction on the LEDs</li>
+</ul>
+<hr>
+<h2 id="key-concepts-you-learned">Key Concepts You Learned</h2>
+<ul>
+<li>How a <strong>DC motor</strong> converts electricity into rotation</li>
+<li>Why we need a <strong>motor driver</strong> (the micro:bit can&rsquo;t power motors directly)</li>
+<li><strong>L298N wiring</strong>: direction pins (IN1–IN4) and speed pins (ENA/ENB)</li>
+<li><strong>PWM</strong> (0–1023) to control motor speed like a dimmer switch</li>
+<li><strong>Differential drive</strong> — turning a robot by varying left vs. right motor speed</li>
+</ul>
+<p><strong>Think About It:</strong></p>
+<ul>
+<li>What would happen if one motor is slightly faster than the other? How could you fix it?</li>
+<li>How could you combine the IR sensor from Session 2 with motors to make a robot that avoids obstacles?</li>
+<li>What other sensors could help a robot navigate?</li>
+</ul>
+<hr>
+<p><strong>Next Session Preview:</strong> We&rsquo;ll mount everything onto a chassis and build a rolling robot! 🤖</p>
+
+
+                
+
+                <hr>
+                
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+
+
+
+
+<footer role="contentinfo" aria-label="Site footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
+                    
+                    <li role="listitem">
+                        <a href="mailto:jjumadinova@allegheny.edu" aria-label="Email">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jjumadinova/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://linkedin.com/in/janyl-jumadinova">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy;  2026
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18WYHLKCBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18WYHLKCBH');
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+<script src="/js/copy-code.js"></script>
+</body>
+</html>

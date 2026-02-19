@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="" />
-    <meta property="og:title" content="" />
-    <meta property="twitter:title" content="" />
+    <meta name="title" content="Session 2" />
+    <meta property="og:title" content="Session 2" />
+    <meta property="twitter:title" content="Session 2" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Categories | Janyl Jumadinova</title>
+    <title>Session 2 | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/categories/">
+    <link rel="canonical" href="/middleschool/session2/">
 
     
     
@@ -159,14 +159,25 @@
 
 
 
-<header class="intro-header" style="background-image: url('/')">
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading">
-                    <h1> </h1>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
                     
-		    <span class="subheading"></span>
+                            
+                    </span>
                 </div>
             </div>
         </div>
@@ -176,20 +187,201 @@
 
 
 
+<main id="main-content" role="main" aria-label="Main content">
 <article>
     <div class="container">
         <div class="row">
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
 
-         	
+                
+                <h1 id="session-2-sensing-the-world-with-ir-sensors">Session 2: Sensing the World with IR Sensors</h1>
+<p><strong>Goal:</strong> Connect an IR (Infrared) sensor to the micro:bit and learn the difference between analog and digital readings.</p>
+<hr>
+<h2 id="what-is-an-ir-sensor">What is an IR Sensor?</h2>
+<p>An <strong>IR (Infrared) sensor</strong> can detect objects in front of it using infrared light. It&rsquo;s like giving your micro:bit the ability to &ldquo;see&rdquo;! IR sensors are used in:</p>
+<ul>
+<li>Robots to avoid obstacles</li>
+<li>Automatic doors</li>
+<li>Line-following robots</li>
+<li>Proximity detection</li>
+</ul>
+<p>Your IR sensor has <strong>3 pins</strong>:</p>
+<ul>
+<li><strong>VCC</strong> - Power (connects to 3V)</li>
+<li><strong>GND</strong> - Ground (connects to GND)</li>
+<li><strong>OUT</strong> - Signal output (connects to Pin 0, 1, or 2)</li>
+</ul>
+<h2 id="connecting-the-ir-sensor">Connecting the IR Sensor</h2>
+<p><strong>Components You&rsquo;ll Need:</strong></p>
+<ul>
+<li>micro:bit</li>
+<li>IR sensor module</li>
+<li>3 alligator clips or jumper wires</li>
+<li>Battery pack (optional, for portability)</li>
+</ul>
+<p><strong>Wiring Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Connect Power</strong></p>
+<ul>
+<li>Connect IR sensor <strong>VCC</strong> pin to micro:bit <strong>3V</strong> pin (using red wire/clip)</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect Ground</strong></p>
+<ul>
+<li>Connect IR sensor <strong>GND</strong> pin to micro:bit <strong>GND</strong> pin (using black wire/clip)</li>
+</ul>
+</li>
+<li>
+<p><strong>Connect Signal</strong></p>
+<ul>
+<li>Connect IR sensor <strong>OUT</strong> pin to micro:bit <strong>Pin 0</strong> (using yellow/white wire/clip)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Safety Check:</strong> Before powering on, verify all connections with your teacher!</p>
+<h2 id="understanding-digital-vs-analog-readings">Understanding Digital vs Analog Readings</h2>
+<p>Sensors can send data in two ways:</p>
+<p><strong>Digital Reading:</strong></p>
+<ul>
+<li>Only two values: <strong>0</strong> (LOW/False) or <strong>1</strong> (HIGH/True)</li>
+<li>Like an on/off switch</li>
+<li><strong>0</strong> = Object detected</li>
+<li><strong>1</strong> = No object detected</li>
+</ul>
+<p><strong>Analog Reading:</strong></p>
+<ul>
+<li>Range of values: <strong>0 to 1023</strong></li>
+<li>Like a dimmer switch</li>
+<li>Higher numbers = object is farther away</li>
+<li>Lower numbers = object is closer</li>
+<li>More precise than digital!</li>
+</ul>
+<h2 id="programming-the-ir-sensor">Programming the IR Sensor</h2>
+<h3 id="activity-1-digital-reading-simple-detection">Activity 1: Digital Reading (Simple Detection)</h3>
+<p><strong>Setup:</strong></p>
+<ol>
+<li>In MakeCode, go to <strong>Advanced</strong> → <strong>Pins</strong></li>
+<li>In the <code>on start</code> block, add <code>show number</code> to display which pin you&rsquo;re using</li>
+<li>Create a <code>forever</code> loop</li>
+</ol>
+<p><strong>In the forever block:</strong></p>
+<ol>
+<li>Add an <code>if...then...else</code> statement</li>
+<li>From <strong>Pins</strong>, drag <code>digital read pin P0</code> into the if condition</li>
+<li>Set the condition to: if <code>digital read pin P0</code> = <strong>0</strong></li>
+<li><strong>Then</strong> (object detected):
+<ul>
+<li>Show icon &ldquo;X&rdquo;</li>
+<li>Play a sound (from <strong>Music</strong>)</li>
+</ul>
+</li>
+<li><strong>Else</strong> (path is clear):
+<ul>
+<li>Show icon &ldquo;✓&rdquo; (checkmark)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Test it:</strong> Wave your hand in front of the sensor! You should see an X and hear a sound when an object is detected, and a checkmark when the path is clear.</p>
+<h3 id="activity-2-analog-reading-with-sound-alert">Activity 2: Analog Reading with Sound Alert</h3>
+<p><strong>Setup:</strong></p>
+<ol>
+<li>Create a new project or delete the previous code</li>
+</ol>
+<p><strong>In the forever block:</strong></p>
+<ol>
+<li>Add an <code>if...then...else</code> statement</li>
+<li>Set the condition to: if <code>analog read pin P0</code> &lt; <strong>300</strong></li>
+<li><strong>Then</strong> (object is close):
+<ul>
+<li>Show icon &ldquo;X&rdquo;</li>
+<li>Play a sound (from <strong>Music</strong>)</li>
+</ul>
+</li>
+<li><strong>Else</strong> (object is far):
+<ul>
+<li>Show icon &ldquo;✓&rdquo; (checkmark)</li>
+</ul>
+</li>
+<li>Add a <code>pause 100 ms</code> block at the end</li>
+</ol>
+<p><strong>Experiment:</strong></p>
+<ul>
+<li>What happens when you move your hand closer or farther?</li>
+<li>Try adjusting the 300 value - what happens if you use 500? Or 200?</li>
+<li>Can you find the best threshold value for detecting objects?</li>
+</ul>
+<hr>
+<h2 id="-challenge-build-an-obstacle-alert-system">🎯 Challenge: Build an Obstacle Alert System</h2>
+<blockquote>
+<p><strong>Your Task:</strong> Create a system that warns when an obstacle is getting too close!</p></blockquote>
+<p><strong>Requirements:</strong></p>
+<ol>
+<li>Use analog reading to measure distance</li>
+<li>When object is <strong>FAR</strong> (&gt;700): Show a checkmark, no sound</li>
+<li>When object is <strong>MEDIUM</strong> (400-700): Show a small square, play a slow beep</li>
+<li>When object is <strong>CLOSE</strong> (&lt;400): Show a large square, play a fast beep</li>
+<li>Add button A to display the current sensor reading as a number</li>
+<li>Add button B to pause/resume the system</li>
+</ol>
+<p><strong>Hints:</strong></p>
+<ul>
+<li>You&rsquo;ll need multiple <code>if...then...else if...else</code> statements</li>
+<li>Use the <strong>Music</strong> blocks for different beep speeds</li>
+<li>Use <strong>Input</strong> blocks for button presses</li>
+<li>Create a variable called <code>systemActive</code> to track if the system is on or off</li>
+</ul>
+<p><strong>Testing Ideas:</strong></p>
+<ul>
+<li>Test with different objects (hand, book, wall)</li>
+<li>Find the maximum detection distance</li>
+<li>See if different colored objects give different readings</li>
+</ul>
+<hr>
+<h2 id="key-concepts-you-learned">Key Concepts You Learned</h2>
+<ul>
+<li>How to connect a 3-pin sensor to micro:bit</li>
+<li>Difference between <strong>digital (0 or 1)</strong> and <strong>analog (0-1023)</strong> readings</li>
+<li>Using conditional statements to create detection zones</li>
+<li>Building a practical sensing system</li>
+</ul>
+<p><strong>Think About It:</strong></p>
+<ul>
+<li>Where could you use an obstacle detector in real life?</li>
+<li>What other sensors could you add to make it better?</li>
+<li>How could this help a robot navigate?</li>
+</ul>
+
+
                 
 
-
+                <hr>
+                
             </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
             
             <div class="
                 col-lg-8 col-lg-offset-2
@@ -205,6 +397,7 @@
         </div>
     </div>
 </article>
+</main>
 
 
 
