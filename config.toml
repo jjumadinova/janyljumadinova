@@ -125,5 +125,7 @@ params = ["categories", "tags"]
   [markup.tableOfContents]
     endLevel = 2
     startLevel = 1
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
     style = "github"

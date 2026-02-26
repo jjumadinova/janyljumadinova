@@ -81,10 +81,14 @@ Scroll through the code and notice:
 
 Find this section in the code:
 
+<div class="no-copy">
+
 ```javascript
 clickButton.addEventListener('click', function() {
     // TODO 1: Handle the click!
 ```
+
+</div>
 
 **Your task:** When the game is running, add 1 to the score and update the display.
 
@@ -106,10 +110,14 @@ if (gameRunning) {
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 function startGame() {
     // TODO 2: Set up the game to start!
 ```
+
+</div>
 
 **Your task:** Reset everything and start the timer.
 
@@ -143,10 +151,14 @@ timerInterval = setInterval(updateTimer, 100);
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 function endGame() {
     // TODO 3: End the game!
 ```
+
+</div>
 
 **Your task:** Stop the timer, disable the button, and check for a high score.
 
@@ -229,10 +241,14 @@ The game loop already moves gems downward and draws them. But gems pass right th
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 function checkCollision(gem, basket) {
     // TODO 1: Check if a gem is touching the basket!
 ```
+
+</div>
 
 **Your task:** Two rectangles overlap when all four of these conditions are true at the same time. Return `true` when they overlap.
 
@@ -254,9 +270,13 @@ return gem.x < basket.x + basket.width &&
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 // TODO 2: Update the score when a gem is caught!
 ```
+
+</div>
 
 **Your task:** Just like in the Click Speed game — add 1 to score and update the display. Then remove the gem.
 
@@ -275,9 +295,13 @@ continue;
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 // TODO 3: Handle a missed gem!
 ```
+
+</div>
 
 **Your task:** When a gem falls off screen, lose a life. If lives hit zero, end the game.
 
@@ -301,9 +325,13 @@ continue;
 
 Find:
 
+<div class="no-copy">
+
 ```javascript
 // TODO 4: Spawn new gems randomly!
 ```
+
+</div>
 
 **Your task:** Each frame, there is a small random chance a new gem appears.
 

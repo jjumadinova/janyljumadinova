@@ -1,9 +1,14 @@
-// Add copy buttons to all code blocks
+// Add copy buttons to code blocks (skip blocks inside .no-copy wrappers)
 document.addEventListener('DOMContentLoaded', function() {
     // Find all code blocks
     const codeBlocks = document.querySelectorAll('pre');
     
     codeBlocks.forEach(function(codeBlock) {
+        // Skip code blocks inside a .no-copy wrapper
+        if (codeBlock.closest('.no-copy')) {
+            return;
+        }
+
         // Create wrapper div
         const wrapper = document.createElement('div');
         wrapper.style.position = 'relative';

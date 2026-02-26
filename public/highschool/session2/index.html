@@ -199,367 +199,424 @@
                 post-container">
 
                 
-                <h1 id="session-2-build-a-click-speed-game">Session 2: Build a Click Speed Game</h1>
+                <h1 id="session-2-game-time---click-speed-and-gem-catcher">Session 2: Game Time - Click Speed and Gem Catcher</h1>
+<p><strong>Goal:</strong> Set up VS Code and GitHub, then complete two games by adding the key logic yourself
+<strong>Prerequisites:</strong> Session 1 (HTML, CSS, JavaScript basics)</p>
+<hr>
 <h2 id="what-you-will-build-today">What You Will Build Today</h2>
-<p>A &ldquo;Click Speed Challenge&rdquo; game where players race against a 10-second timer to click as many times as possible.</p>
-<p><strong>Features:</strong></p>
+<p>You will start with <strong>starter code</strong> that has the HTML, CSS, and structure already built. Your job is to fill in the <strong>game logic</strong> — the JavaScript that makes the games actually work.</p>
+<p><strong>Game 1 - Click Speed Challenge:</strong> Race against a 10-second timer to click as many times as possible.
+You will add: the click handler, start game setup, and end game logic.</p>
+<p><strong>Game 2 - Gem Catcher:</strong> Catch colorful falling gems by moving a basket with your mouse or keyboard.
+You will add: collision detection, scoring, lives tracking, and gem spawning — building on the same patterns from Game 1.</p>
+<hr>
+<h2 id="part-1-set-up-your-developer-environment">Part 1: Set Up Your Developer Environment</h2>
+<p>In Session 1 we used CodePen to write code in the browser. Now we are switching to <strong>VS Code</strong> — a real code editor that professional developers use. This gives us files on our computer, Git version control, and the ability to build bigger projects.</p>
+<h3 id="open-vs-code-and-install-live-server">Open VS Code and Install Live Server</h3>
+<ol>
+<li>Open VS Code</li>
+<li>Install the <strong>Live Server</strong> extension:
 <ul>
-<li>10-second countdown timer</li>
-<li>Click counter</li>
-<li>Start/Restart button</li>
-<li>High score tracking</li>
-<li>Victory message</li>
+<li>Click the Extensions icon in the left sidebar (or press <code>Cmd+Shift+X</code>)</li>
+<li>Search for &ldquo;Live Server&rdquo; by Ritwick Dey (extension ID: <code>ritwickdey.LiveServer</code>)</li>
+<li>Click <strong>Install</strong></li>
 </ul>
-<hr>
-<h2 id="setup">Setup</h2>
-<h3 id="create-a-new-project">Create a New Project</h3>
-<p><strong>In CodePen:</strong></p>
-<ol>
-<li>Go to <a href="https://codepen.io/">codepen.io</a></li>
-<li>Click <strong>Start Coding</strong></li>
-<li>Name it: <code>click-speed-challenge</code></li>
-<li>You will use all three panels: HTML, CSS, and JS</li>
+</li>
 </ol>
-<hr>
-<h2 id="build-the-game-structure">Build the Game Structure</h2>
-<h3 id="html-structure">HTML Structure</h3>
-<p>Start by creating the basic structure. In CodePen&rsquo;s HTML panel, type:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#57606a">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span> <span style="color:#1f2328">lang</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;en&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">charset</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;UTF-8&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;viewport&#34;</span> <span style="color:#1f2328">content</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>Click Speed Challenge<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;container&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Click Speed Challenge<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Stats display --&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game-info&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;stat&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;label&#34;</span><span style="color:#1f2328">&gt;</span>Time Left:<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;timer&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;value&#34;</span><span style="color:#1f2328">&gt;</span>10.0<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#57606a">&lt;!-- Add two more stat boxes for Clicks and High Score --&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Main click button --&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;clickButton&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;click-button&#34;</span> <span style="color:#1f2328">disabled</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>            Click START to Begin!
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Add a start button with id=&#34;startButton&#34; --&gt;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Message display --&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;message&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;message&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
-</span></span></code></pre></div><h3 id="new-concepts">New Concepts:</h3>
+<h3 id="clone-the-starter-code">Clone the Starter Code</h3>
+<ol>
+<li>Open the VS Code terminal: <strong>Terminal &gt; New Terminal</strong> (or press <code>Ctrl+`</code>)</li>
+<li>Clone the starter code repository your teacher provided:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone &lt;REPOSITORY-URL&gt;
+</span></span><span style="display:flex;"><span><span style="color:#6639ba">cd</span> session2-starter
+</span></span></code></pre></div><ol start="3">
+<li>You should see these files in VS Code:
 <ul>
-<li><strong><code>&lt;div class=&quot;container&quot;&gt;</code></strong> - Groups related elements together</li>
-<li><strong><code>disabled</code></strong> - Makes a button unclickable until we are ready</li>
-<li><strong>Multiple elements with <code>id</code>s</strong> - So we can control each one separately</li>
+<li><code>click-game.html</code> — Click Speed Challenge (with TODOs)</li>
+<li><code>gem-catcher.html</code> — Gem Catcher (with TODOs)</li>
+<li><code>README.md</code> — Instructions</li>
 </ul>
-<h3 id="your-turn---complete-the-html">Your Turn - Complete the HTML:</h3>
+</li>
+</ol>
+<h3 id="preview-the-starter-code">Preview the Starter Code</h3>
 <ol>
-<li><strong>Add the Clicks stat:</strong> Copy the &ldquo;Time Left&rdquo; stat box and modify it to show &ldquo;Clicks&rdquo; with <code>id=&quot;score&quot;</code></li>
-<li><strong>Add the High Score stat:</strong> Create another one for &ldquo;High Score&rdquo; with <code>id=&quot;highScore&quot;</code></li>
-<li><strong>Add the start button:</strong> Create a button with <code>id=&quot;startButton&quot;</code> and text &ldquo;START GAME&rdquo;</li>
-<li><strong>Customize:</strong> Change the title to something creative (&ldquo;Speed Clicker Pro&rdquo;? &ldquo;Finger Fury&rdquo;?)</li>
-<li><strong>Preview:</strong> Check CodePen&rsquo;s preview - you should see your structure (plain for now)</li>
+<li>Right-click <code>click-game.html</code> in the file explorer</li>
+<li>Select <strong>Open with Live Server</strong></li>
+<li>You should see the game layout — but clicking does nothing yet! That is what you will fix.</li>
 </ol>
 <hr>
-<h2 id="style-your-game">Style Your Game</h2>
-<h3 id="add-css-styling">Add CSS Styling</h3>
-<p>In CodePen&rsquo;s CSS panel, add these styles. Notice we are using a dark background so colors show up clearly:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#0550ae">*</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-sizing</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">border-box</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#39;Segoe UI&#39;</span><span style="color:#1f2328">,</span> Tahoma<span style="color:#1f2328">,</span> Geneva<span style="color:#1f2328">,</span> Verdana<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#1e3c72</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">%</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#2a5298</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">align-items</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">container</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">60</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    backdrop-filter<span style="color:#1f2328">:</span> <span style="color:#6639ba">blur</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">42</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">game-info</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">space-around</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">gap</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">stat</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.2</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">25</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">label</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">14</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">opacity</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0.9</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">5</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">value</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">32</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">/* You will style the click button - make it big and round! */</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">click-button</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">300</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">300</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">/* Add your button colors here */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">%</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">/* Add hover and active effects for your button */</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">/* Style the start button */</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">start-button</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">/* Add your button color here */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">message</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">24</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><h3 id="your-turn---complete-the-styling">Your Turn - Complete the Styling:</h3>
-<ol>
-<li><strong>Style the click button:</strong> Add a background color or gradient (try <code>background: #e74c3c;</code> or <code>background: linear-gradient(135deg, #ff6b6b, #ee5252);</code>)</li>
-<li><strong>Add button effects:</strong> Make it scale on hover: <code>.click-button:hover { transform: scale(1.05); }</code></li>
-<li><strong>Style the start button:</strong> Pick a color (try <code>background-color: #27ae60;</code> for green)</li>
-<li><strong>Experiment:</strong> Try different colors, sizes, or border-radius values</li>
-<li><strong>Preview:</strong> Your game should look colorful and inviting now</li>
-</ol>
-<hr>
-<h2 id="add-game-logic">Add Game Logic</h2>
-<h3 id="javascript---the-game-brain">JavaScript - The Game Brain</h3>
-<p>In CodePen&rsquo;s JS panel, let us build the game logic step by step:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// 1. GET ALL THE ELEMENTS
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">clickButton</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickButton&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">startButton</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;startButton&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">timerDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;timer&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">scoreDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;score&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">highScoreDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;highScore&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">messageDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;message&#39;</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 2. GAME STATE VARIABLES
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">let</span> <span style="color:#1f2328">score</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">timerInterval</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">null</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 3. HANDLE CLICK BUTTON
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">gameRunning</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">score</span><span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Add animation feedback
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">transform</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;scale(0.95)&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">setTimeout</span><span style="color:#1f2328">(()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">transform</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;scale(1)&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">},</span> <span style="color:#0550ae">100</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">});</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 4. HANDLE START BUTTON
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startGame</span><span style="color:#1f2328">();</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">});</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 5. START GAME FUNCTION
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">startGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">score</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
+<h2 id="part-2-click-speed-challenge">Part 2: Click Speed Challenge</h2>
+<p>Open <code>click-game.html</code> in VS Code. The HTML structure, CSS styling, element selectors, and game state variables are already written for you. Look for the <code>// TODO</code> comments — those are the parts you need to complete.</p>
+<h3 id="understanding-what-is-already-there">Understanding What is Already There</h3>
+<p>Scroll through the code and notice:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Already Built</th>
+          <th>What It Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>HTML structure</td>
+          <td>Buttons, score display, timer display</td>
+      </tr>
+      <tr>
+          <td>CSS styling</td>
+          <td>Colors, layout, animations</td>
+      </tr>
+      <tr>
+          <td><code>document.getElementById()</code></td>
+          <td>Grabs each element so JavaScript can control it</td>
+      </tr>
+      <tr>
+          <td>Game state variables</td>
+          <td><code>score</code>, <code>timeLeft</code>, <code>highScore</code>, <code>gameRunning</code></td>
+      </tr>
+      <tr>
+          <td><code>updateTimer()</code> function</td>
+          <td>Counts down every 0.1 seconds</td>
+      </tr>
+      <tr>
+          <td>Start button event listener</td>
+          <td>Calls <code>startGame()</code> when clicked</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="todo-1-handle-the-click-button">TODO 1: Handle the Click Button</h3>
+<p>Find this section in the code:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// TODO 1: Handle the click!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> When the game is running, add 1 to the score and update the display.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">gameRunning</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">score</span><span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">timeLeft</span><span style="color:#1f2328">.</span><span style="color:#1f2328">toFixed</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;CLICK ME!&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Game Running...&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Start the countdown (calls updateTimer every 0.1 seconds)
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">timerInterval</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">setInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">updateTimer</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">100</span><span style="color:#1f2328">);</span>
 </span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p><strong>What you just learned:</strong></p>
+<ul>
+<li><code>addEventListener('click', ...)</code> runs code when a button is clicked</li>
+<li><code>score++</code> is shorthand for <code>score = score + 1</code></li>
+<li><code>.textContent</code> changes what text appears on screen</li>
+</ul>
+<h3 id="todo-2-start-the-game">TODO 2: Start the Game</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">startGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// TODO 2: Set up the game to start!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> Reset everything and start the timer.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">score</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 6. UPDATE TIMER - YOU COMPLETE THIS
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">updateTimer</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">-=</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">&lt;=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">endGame</span><span style="color:#1f2328">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span> <span style="color:#cf222e">else</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Update the timer display (use .toFixed(1) to show one decimal)
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#57606a">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">timeLeft</span><span style="color:#1f2328">.</span><span style="color:#1f2328">toFixed</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a">// 7. END GAME - YOU COMPLETE THIS
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">endGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clearInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">timerInterval</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Time&#39;s Up!&#34;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;PLAY AGAIN&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Check if this is a new high score
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// If score &gt; highScore:
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Update highScore
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Display high score
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Show &#34;NEW HIGH SCORE!&#34; message
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// Otherwise:
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Show regular game over message
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;0.0&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div><h3 id="understanding-the-key-concepts">Understanding the Key Concepts</h3>
-<p><strong>Important concepts:</strong></p>
-<ol>
-<li><strong>Variables store game state:</strong> <code>score</code>, <code>timeLeft</code>, <code>gameRunning</code></li>
-<li><strong><code>setInterval(updateTimer, 100)</code></strong> - Runs <code>updateTimer</code> every 100 milliseconds (0.1 seconds)</li>
-<li><strong><code>clearInterval()</code></strong> - Stops the repeating timer</li>
-<li><strong><code>.toFixed(1)</code></strong> - Rounds numbers to 1 decimal place (9.9999 becomes &ldquo;10.0&rdquo;)</li>
-</ol>
-<h3 id="your-turn---complete-the-javascript">Your Turn - Complete the JavaScript:</h3>
-<ol>
-<li><strong>Fix <code>updateTimer()</code>:</strong> Make it update the timer display using <code>timerDisplay.textContent = timeLeft.toFixed(1);</code></li>
-<li><strong>Fix <code>endGame()</code>:</strong> Add the high score logic:
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">score</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;CLICK ME!&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Game Running...&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">timerInterval</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">setInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">updateTimer</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">100</span><span style="color:#1f2328">);</span>
+</span></span></code></pre></div><p><strong>What you just learned:</strong></p>
+<ul>
+<li>Resetting variables to their starting values</li>
+<li><code>.toFixed(1)</code> shows one decimal place (10.0 instead of 10)</li>
+<li><code>.disabled = false</code> makes a button clickable again</li>
+<li><code>setInterval(fn, 100)</code> calls a function every 100 milliseconds (0.1 seconds)</li>
+</ul>
+<h3 id="todo-3-end-the-game">TODO 3: End the Game</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">endGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// TODO 3: End the game!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> Stop the timer, disable the button, and check for a high score.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">clearInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">timerInterval</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Time&#39;s Up!&#34;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;PLAY AGAIN&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">score</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;NEW HIGH SCORE!&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span> <span style="color:#cf222e">else</span> <span style="color:#1f2328">{</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Game Over! Your score: &#39;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
-</span></span></code></pre></div></li>
-<li><strong>Test it:</strong> Click START and play the game - does everything work?</li>
-<li><strong>Customize:</strong> Change the button text, game duration, or add your own message</li>
-</ol>
-<hr>
-<h2 id="test-and-extend-your-game">Test and Extend Your Game</h2>
-<h3 id="full-testing-checklist">Full Testing Checklist:</h3>
-<ol>
-<li>Click START - does the timer count down?</li>
-<li>Click the big button - does the score increase?</li>
-<li>Wait for time to run out - does it show the correct message?</li>
-<li>Play again and beat your score - does it say &ldquo;NEW HIGH SCORE&rdquo;?</li>
-</ol>
-<h3 id="extra-challenges">Extra Challenges:</h3>
-<p>Once your game works, try adding these features:</p>
-<p><strong>Polish and Effects:</strong></p>
-<ol>
-<li>Make the button change colors randomly with each click</li>
-<li>Add a pulsing animation to the button during the game</li>
-<li>Display different messages based on score (0-15: &ldquo;Keep trying!&rdquo;, 16-25: &ldquo;Good!&rdquo;, 26+: &ldquo;Amazing!&rdquo;)</li>
-</ol>
-<p><strong>New Features:</strong>
-4. Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)
-5. Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code>
-6. Save high score in <code>localStorage</code> so it persists after closing the browser</p>
-<p>**Advanced:
-7. Save high score in <code>localStorage</code> so it persists even after refreshing
-8. Make the button shrink slightly with each click, then reset when time is up</p>
-<hr>
-<h2 id="advanced-save-high-score-forever">Advanced: Save High Score Forever</h2>
-<p>Want your high score to persist even after closing the browser? Use <code>localStorage</code>:</p>
-<p><strong>At the top of your JavaScript (after getting elements):</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// Load saved high score
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">parseInt</span><span style="color:#1f2328">(</span><span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">))</span> <span style="color:#0550ae">||</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
-</span></span></code></pre></div><p><strong>In <code>endGame()</code>, after updating the high score:</strong></p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">setItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">);</span>
-</span></span></code></pre></div><p>Now your high score saves automatically!</p>
-<hr>
-<h2 id="what-you-learned-today">What You Learned Today</h2>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;0.0&#39;</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p><strong>What you just learned:</strong></p>
 <ul>
-<li><strong>Intervals and Timers</strong> - <code>setInterval()</code>, <code>clearInterval()</code></li>
-<li><strong>Game State Management</strong> - Tracking multiple variables</li>
-<li><strong>Conditional Logic</strong> - <code>if</code> statements to control game flow</li>
-<li><strong>Enable/Disable UI</strong> - Controlling when buttons work</li>
-<li><strong>Number Formatting</strong> - <code>.toFixed()</code> for decimals</li>
-<li><strong>Game Loop Concept</strong> - Repeating functions that update the game</li>
+<li><code>clearInterval()</code> stops a repeating timer</li>
+<li><code>if/else</code> makes decisions based on conditions</li>
+<li>String concatenation with <code>+</code> combines text and numbers</li>
 </ul>
-<hr>
-<h2 id="next-session-preview">Next Session Preview</h2>
-<p><strong>Session 3:</strong> We will add <strong>animation and movement</strong> - build a &ldquo;Catch the Falling Objects&rdquo; game with moving elements.</p>
+<h3 id="test-it">Test It!</h3>
+<p>Save the file and check your browser. The game should now work:</p>
+<ul>
+<li>Click START → timer counts down</li>
+<li>Click the big button → score goes up</li>
+<li>Time runs out → shows your score and tracks high score</li>
+</ul>
+<h3 id="quick-customizations">Quick Customizations</h3>
+<p>Pick one:</p>
+<ol>
+<li>Change <code>timeLeft = 10</code> to <code>5</code> for hard mode</li>
+<li>Change the button gradient colors in the CSS</li>
+<li>Add <code>const cps = (score / 10).toFixed(1);</code> in endGame and display clicks-per-second</li>
+</ol>
+<h3 id="save-your-progress">Save Your Progress</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add click-game.html
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Complete click speed challenge&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="part-3-gem-catcher---expanding-your-skills">Part 3: Gem Catcher - Expanding Your Skills</h2>
+<p>Now open <code>gem-catcher.html</code>. This game uses the <strong>exact same patterns</strong> you just learned — score tracking, conditional logic, game state — but adds <strong>canvas animation</strong>.</p>
+<h3 id="what-is-canvas">What is Canvas?</h3>
+<p>The <code>&lt;canvas&gt;</code> element is like a blank drawing board. JavaScript paints shapes and animations on it frame by frame, just like a flipbook.</p>
+<h3 id="what-is-already-built">What is Already Built</h3>
+<p>Take a look through the code:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Already Built</th>
+          <th>What It Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Canvas setup</td>
+          <td><code>getContext('2d')</code> creates the drawing tool</td>
+      </tr>
+      <tr>
+          <td>Basket object</td>
+          <td>Position, size, speed, color stored in one object</td>
+      </tr>
+      <tr>
+          <td><code>createGem()</code></td>
+          <td>Makes a new gem with random position and color</td>
+      </tr>
+      <tr>
+          <td>Drawing functions</td>
+          <td><code>drawBasket()</code>, <code>drawGem()</code>, <code>clearCanvas()</code></td>
+      </tr>
+      <tr>
+          <td>Mouse + keyboard controls</td>
+          <td>Move the basket left and right</td>
+      </tr>
+      <tr>
+          <td><code>startGame()</code> / <code>endGame()</code></td>
+          <td>Reset and end the game</td>
+      </tr>
+      <tr>
+          <td>Game loop structure</td>
+          <td>The <code>gameLoop()</code> runs 60 times per second</td>
+      </tr>
+  </tbody>
+</table>
+<p>The game loop already moves gems downward and draws them. But gems pass right through the basket! You need to add the logic that makes catching and missing actually work.</p>
+<h3 id="todo-1-collision-detection">TODO 1: Collision Detection</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">checkCollision</span><span style="color:#1f2328">(</span><span style="color:#1f2328">gem</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// TODO 1: Check if a gem is touching the basket!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> Two rectangles overlap when all four of these conditions are true at the same time. Return <code>true</code> when they overlap.</p>
+<p><strong>Replace <code>return false;</code> with:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">return</span> <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">x</span> <span style="color:#0550ae">&lt;</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">x</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">width</span> <span style="color:#0550ae">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">x</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">width</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">x</span> <span style="color:#0550ae">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">y</span> <span style="color:#0550ae">&lt;</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">y</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">height</span> <span style="color:#0550ae">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">y</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">gem</span><span style="color:#1f2328">.</span><span style="color:#1f2328">height</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">basket</span><span style="color:#1f2328">.</span><span style="color:#1f2328">y</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p><strong>What you just learned:</strong></p>
+<ul>
+<li>Collision detection = checking if two rectangles overlap</li>
+<li><code>&amp;&amp;</code> means AND — all conditions must be true</li>
+<li>This is the same <code>if</code> logic from the Click Speed game, just with more conditions combined</li>
+</ul>
+<h3 id="todo-2-score-a-caught-gem">TODO 2: Score a Caught Gem</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// TODO 2: Update the score when a gem is caught!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> Just like in the Click Speed game — add 1 to score and update the display. Then remove the gem.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">score</span><span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">gems</span><span style="color:#1f2328">.</span><span style="color:#1f2328">splice</span><span style="color:#1f2328">(</span><span style="color:#1f2328">i</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">continue</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p><strong>Connection to Game 1:</strong> This is the exact same <code>score++</code> and <code>scoreDisplay.textContent = score</code> pattern! The new part is <code>splice(i, 1)</code> which removes the caught gem from the array.</p>
+<h3 id="todo-3-handle-a-missed-gem">TODO 3: Handle a Missed Gem</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// TODO 3: Handle a missed gem!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> When a gem falls off screen, lose a life. If lives hit zero, end the game.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">lives</span><span style="color:#0550ae">--</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">livesDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">lives</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">gems</span><span style="color:#1f2328">.</span><span style="color:#1f2328">splice</span><span style="color:#1f2328">(</span><span style="color:#1f2328">i</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">lives</span> <span style="color:#0550ae">&lt;=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">endGame</span><span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">return</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">continue</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p><strong>Connection to Game 1:</strong> In the Click Speed game, the game ended when time ran out. Here it ends when lives run out — same pattern, different trigger.</p>
+<h3 id="todo-4-spawn-new-gems">TODO 4: Spawn New Gems</h3>
+<p>Find:</p>
+<div class="no-copy">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// TODO 4: Spawn new gems randomly!
+</span></span></span></code></pre></div></div>
+<p><strong>Your task:</strong> Each frame, there is a small random chance a new gem appears.</p>
+<p><strong>Write this code:</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">&lt;</span> <span style="color:#0550ae">0.02</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">gems</span><span style="color:#1f2328">.</span><span style="color:#1f2328">push</span><span style="color:#1f2328">(</span><span style="color:#1f2328">createGem</span><span style="color:#1f2328">());</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p><strong>What you just learned:</strong></p>
+<ul>
+<li><code>Math.random()</code> returns a number between 0 and 1</li>
+<li><code>&lt; 0.02</code> means roughly 2% chance each frame ≈ 1-2 new gems per second</li>
+<li><code>.push()</code> adds an item to an array</li>
+</ul>
+<h3 id="test-it-1">Test It!</h3>
+<p>Save and check your browser:</p>
+<ol>
+<li>Gems should fall from the top</li>
+<li>Moving the basket under a gem catches it (score goes up)</li>
+<li>Missing a gem costs a life</li>
+<li>Game ends when lives reach 0</li>
+</ol>
+<h3 id="key-concepts-comparison">Key Concepts Comparison</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Concept</th>
+          <th>Click Speed Game</th>
+          <th>Gem Catcher</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Score tracking</td>
+          <td><code>score++</code> on click</td>
+          <td><code>score++</code> on catch</td>
+      </tr>
+      <tr>
+          <td>Game end condition</td>
+          <td>Time runs out</td>
+          <td>Lives run out</td>
+      </tr>
+      <tr>
+          <td>User input</td>
+          <td>Button click</td>
+          <td>Mouse / keyboard movement</td>
+      </tr>
+      <tr>
+          <td>Display update</td>
+          <td><code>textContent</code></td>
+          <td><code>textContent</code> + canvas redraw</td>
+      </tr>
+      <tr>
+          <td>Timing</td>
+          <td><code>setInterval</code> (fixed)</td>
+          <td><code>requestAnimationFrame</code> (smooth)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="your-turn---customize">Your Turn - Customize</h3>
+<p>Pick one or more:</p>
+<ol>
+<li><strong>Change gem colors:</strong> Edit the <code>colors</code> array in <code>createGem()</code></li>
+<li><strong>Adjust difficulty:</strong> Change <code>0.02</code> (spawn rate) or gem <code>speed</code> values</li>
+<li><strong>More lives:</strong> Change <code>lives = 3</code> to <code>lives = 5</code> in <code>startGame()</code></li>
+<li><strong>Wider basket:</strong> Change <code>basket.width</code> from <code>100</code> to <code>150</code></li>
+<li><strong>Golden gems (challenge):</strong> Add rare gems worth 5 points:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// In createGem(), before the return statement:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">isGolden</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">&lt;</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">;</span> <span style="color:#57606a">// 10% chance
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Change the return to include:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">return</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">x</span><span style="color:#0550ae">:</span> <span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">*</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">canvas</span><span style="color:#1f2328">.</span><span style="color:#1f2328">width</span> <span style="color:#0550ae">-</span> <span style="color:#0550ae">30</span><span style="color:#1f2328">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">y</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">-</span><span style="color:#0550ae">30</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">width</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">30</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">height</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">30</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">speed</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">2</span> <span style="color:#0550ae">+</span> <span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">*</span> <span style="color:#0550ae">2</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">color</span><span style="color:#0550ae">:</span> <span style="color:#1f2328">isGolden</span> <span style="color:#0550ae">?</span> <span style="color:#0a3069">&#39;#FFD700&#39;</span> <span style="color:#0550ae">:</span> <span style="color:#1f2328">randomColor</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">points</span><span style="color:#0550ae">:</span> <span style="color:#1f2328">isGolden</span> <span style="color:#0550ae">?</span> <span style="color:#0550ae">5</span> <span style="color:#0550ae">:</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">caught</span><span style="color:#0550ae">:</span> <span style="color:#cf222e">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Then in TODO 2, change: score++ to: score += gem.points;
+</span></span></span></code></pre></div><h3 id="save-and-push-to-github">Save and Push to GitHub</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Complete click speed and gem catcher games&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><hr>
+<h2 id="what-you-learned-today">What You Learned Today</h2>
+<p><strong>Developer Tools:</strong></p>
+<ul>
+<li>VS Code with Live Server for instant preview</li>
+<li>Git for saving progress and pushing to GitHub</li>
+</ul>
+<p><strong>JavaScript Patterns (used in BOTH games):</strong></p>
+<ul>
+<li><strong>Event listeners</strong> — responding to clicks, mouse moves, and key presses</li>
+<li><strong>Game state variables</strong> — tracking score, time, lives</li>
+<li><strong>Conditional logic</strong> — <code>if/else</code> for decisions (high score check, collision, game over)</li>
+<li><strong>DOM updates</strong> — changing what players see with <code>.textContent</code></li>
+</ul>
+<p><strong>New in Gem Catcher (building on Click Speed):</strong></p>
+<ul>
+<li><strong>HTML Canvas</strong> — drawing graphics with JavaScript</li>
+<li><strong>Animation loops</strong> — <code>requestAnimationFrame()</code> for smooth 60fps movement</li>
+<li><strong>Collision detection</strong> — checking if rectangles overlap</li>
+<li><strong>Arrays</strong> — managing multiple gems with <code>push()</code> and <code>splice()</code></li>
+</ul>
 <hr>
 <h2 id="homework-optional">Homework (Optional)</h2>
 <ol>
-<li>Add a &ldquo;Best Time&rdquo; feature - track the fastest time to reach 50 clicks</li>
-<li>Create sound effects (hint: use the Web Audio API or <code>&lt;audio&gt;</code> tag)</li>
-<li>Add a lives system where missing clicks costs a life</li>
-<li>Make the button move around the screen randomly!</li>
+<li><strong>Click Game:</strong> Add difficulty levels (Easy: 15s, Medium: 10s, Hard: 5s)</li>
+<li><strong>Click Game:</strong> Save high score with <code>localStorage</code> so it persists after closing</li>
+<li><strong>Gem Catcher:</strong> Add &ldquo;bomb&rdquo; objects that cost a life if caught</li>
+<li><strong>Gem Catcher:</strong> Make gems fall faster as your score increases</li>
+<li><strong>Both:</strong> Change the visual theme (colors, gradients, title text)</li>
 </ol>
 <hr>
 <h2 id="common-issues">Common Issues</h2>
-<p><strong>Problem:</strong> &ldquo;Timer does not count down&rdquo;<br>
-<strong>Solution:</strong> Check that <code>setInterval(updateTimer, 100)</code> is called in <code>startGame()</code></p>
-<p><strong>Problem:</strong> &ldquo;Cannot click button after starting&rdquo;<br>
-<strong>Solution:</strong> Make sure <code>clickButton.disabled = false;</code> is in <code>startGame()</code></p>
-<p><strong>Problem:</strong> &ldquo;High score does not update&rdquo;<br>
-<strong>Solution:</strong> Check the <code>if (score &gt; highScore)</code> condition in <code>endGame()</code></p>
+<p><strong>Problem:</strong> &ldquo;Page looks right but clicking does nothing&rdquo;
+<strong>Solution:</strong> Check that your TODO code is inside the correct function, not outside the curly braces</p>
+<p><strong>Problem:</strong> &ldquo;Timer does not count down&rdquo;
+<strong>Solution:</strong> Make sure <code>setInterval(updateTimer, 100)</code> is in your <code>startGame()</code> function</p>
+<p><strong>Problem:</strong> &ldquo;Gems pass through the basket&rdquo;
+<strong>Solution:</strong> Check your collision detection — all four <code>&amp;&amp;</code> conditions must be correct</p>
+<p><strong>Problem:</strong> &ldquo;Score does not go up when catching gems&rdquo;
+<strong>Solution:</strong> Make sure you have both <code>score++</code> and <code>scoreDisplay.textContent = score</code></p>
+<p><strong>Problem:</strong> &ldquo;Gems never appear&rdquo;
+<strong>Solution:</strong> Check TODO 4 — make sure <code>gems.push(createGem())</code> is inside the <code>if (Math.random() &lt; 0.02)</code> block</p>
+<p><strong>Problem:</strong> &ldquo;Git push failed&rdquo;
+<strong>Solution:</strong> <code>git remote -v</code> — if empty, add your remote: <code>git remote add origin YOUR-URL</code></p>
 <hr>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval">setInterval() - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Event Listeners - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval">setInterval - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame - MDN</a></li>
 </ul>
 <hr>
-<p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 →</a></strong></p>
+<p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 - React →</a></strong></p>
 
 
                 
