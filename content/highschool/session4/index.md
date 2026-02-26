@@ -1,490 +1,482 @@
 ---
 layout: page
 title: Session 4
-subtitle: Build Tic-Tac-Toe with React
+subtitle: Polish, Deploy, and Share
 date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 4: Tic-Tac-Toe with React ⭕❌
+# Session 4: Polish, Deploy, and Share
 
-**Time:** 1 hour  
-**Goal:** Learn React by building a classic Tic-Tac-Toe game with components  
-**Prerequisites:** Sessions 1-3 (HTML, CSS, JavaScript)
-
----
-
-## 🎯 What You'll Build Today
-
-A fully functional Tic-Tac-Toe game built with **React** - a modern framework used by Facebook, Netflix, and thousands of professional developers!
-
-**Features:**
-- Interactive game board
-- Win detection
-- Reset button
-- Turn indicator
-- Component-based architecture
-
-**[See the finished example →](your-demo-link-here)**
+**Goal:** Add finishing touches to your games, build a portfolio page, and publish everything to the web with a real URL
+**Prerequisites:** Sessions 1-3 (HTML, CSS, JavaScript, React)
 
 ---
 
-## 🤔 What is React?
+## What You Will Accomplish Today
 
-**React** is a JavaScript library for building user interfaces with **reusable components**.
+By the end of this session, you will have:
+- **Polished games** with animations and persistent high scores
+- **A portfolio homepage** that links to all your projects
+- **A live website** anyone can visit at `https://YOUR-USERNAME.github.io`
+- **Real developer skills** you can keep building on
 
-Think of it like LEGO blocks:
-- Instead of one giant HTML file, you build small pieces (components)
-- Each piece has its own structure, style, and behavior
-- You combine pieces to make complete applications
-
-**Why React?**
-- ✅ Reusable components (write once, use everywhere)
-- ✅ Automatic UI updates when data changes
-- ✅ Industry-standard (used by top companies)
-- ✅ Makes complex UIs easier to manage
+This is where everything comes together.
 
 ---
 
-## 🚀 Setup (10 minutes)
+## Part 1: Add Polish to Your Games
 
-### Use Vite (Modern React Setup)
+### Add CSS Animations
 
-**In Replit:**
-1. Create a new Repl
-2. Choose **"React + Vite"** template
-3. Name it: `gamecraft-session4-tictactoe`
-4. Replit will auto-install everything!
-
-**Or in your terminal:**
-```bash
-npm create vite@latest tictactoe -- --template react
-cd tictactoe
-npm install
-npm run dev
-```
-
-### 🔍 What Just Happened?
-
-Vite created a React project with:
-- `src/App.jsx` - Main React component (we'll edit this!)
-- `src/main.jsx` - Entry point
-- `package.json` - Dependencies list
-- `.jsx` files - JavaScript + XML (JSX) = React syntax
-
----
-
-## 📖 Part 1: Understanding Components (10 minutes)
-
-### React Concepts
-
-**1. Components** - Reusable UI pieces (like functions that return HTML)
-
-```jsx
-function Button() {
-    return <button>Click Me</button>;
-}
-```
-
-**2. JSX** - HTML-like syntax in JavaScript
-
-```jsx
-const name = "Player";
-return <h1>Hello, {name}!</h1>; // Outputs: Hello, Player!
-```
-
-**3. State** - Data that can change (triggers re-render)
-
-```jsx
-const [count, setCount] = useState(0); // count = 0 initially
-setCount(5); // Updates count to 5 and re-renders
-```
-
-**4. Props** - Pass data between components (like function parameters)
-
-```jsx
-<Square value="X" />
-```
-
----
-
-## 🎮 Part 2: Build the Game (35 minutes)
-
-### Step 1: Clear the Template
-
-Open `src/App.jsx` and **replace everything** with:
-
-```jsx
-import { useState } from 'react';
-import './App.css';
-
-function App() {
-  return (
-    <div className="game">
-      <h1>⭕ Tic-Tac-Toe ❌</h1>
-      <p>Let's build this together!</p>
-    </div>
-  );
-}
-
-export default App;
-```
-
-### Step 2: Create a Square Component
-
-A square is a single button in the grid.
-
-```jsx
-function Square({ value, onSquareClick }) {
-  return (
-    <button className="square" onClick={onSquareClick}>
-      {value}
-    </button>
-  );
-}
-```
-
-**🔍 What's happening?**
-- `{ value, onSquareClick }` - Props (data passed from parent)
-- `{value}` - Shows X, O, or nothing
-- `onClick={onSquareClick}` - Calls function when clicked
-
-### Step 3: Create the Board Component
-
-The board is 9 squares arranged in a grid.
-
-```jsx
-function Board({ xIsNext, squares, onPlay }) {
-  // Handle when a square is clicked
-  function handleClick(i) {
-    // Don't allow clicks if:
-    // 1. Square is already filled
-    // 2. Someone already won
-    if (squares[i] || calculateWinner(squares)) {
-      return;
-    }
-
-    // Copy the squares array
-    const nextSquares = squares.slice();
-    
-    // Set X or O depending on whose turn it is
-    if (xIsNext) {
-      nextSquares[i] = 'X';
-    } else {
-      nextSquares[i] = 'O';
-    }
-
-    // Send the new board state up to parent
-    onPlay(nextSquares);
-  }
-
-  // Determine game status
-  const winner = calculateWinner(squares);
-  let status;
-  if (winner) {
-    status = '🎉 Winner: ' + winner;
-  } else if (squares.every(square => square)) {
-    status = '🤝 Draw!';
-  } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-  }
-
-  return (
-    <>
-      <div className="status">{status}</div>
-      <div className="board">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-      </div>
-    </>
-  );
-}
-```
-
-**🔍 Key Concepts:**
-- `squares` array holds the board state: `['X', null, 'O', ...]`
-- `.slice()` creates a copy (React best practice - don't mutate state)
-- `.every()` checks if all squares are filled (draw condition)
-- We pass `handleClick(i)` to each square with the index
-
-### Step 4: Update the App Component (Main Logic)
-
-Replace your `App` function with:
-
-```jsx
-function App() {
-  // Game state
-  const [history, setHistory] = useState([Array(9).fill(null)]);
-  const [currentMove, setCurrentMove] = useState(0);
-  const xIsNext = currentMove % 2 === 0; // Even moves = X, odd = O
-  const currentSquares = history[currentMove];
-
-  // Handle a play
-  function handlePlay(nextSquares) {
-    const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
-    setHistory(nextHistory);
-    setCurrentMove(nextHistory.length - 1);
-  }
-
-  // Reset game
-  function resetGame() {
-    setHistory([Array(9).fill(null)]);
-    setCurrentMove(0);
-  }
-
-  return (
-    <div className="game">
-      <h1>⭕ Tic-Tac-Toe ❌</h1>
-      <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-      <button className="reset-button" onClick={resetGame}>
-        🔄 New Game
-      </button>
-    </div>
-  );
-}
-```
-
-**🔍 State Management:**
-- `history` - Array of board states (allows time travel!)
-- `currentMove` - Which move we're viewing
-- `xIsNext` - Calculated from current move (even = X's turn)
-
-### Step 5: Add the Win Detection Function
-
-At the **top of the file**, after imports:
-
-```jsx
-function calculateWinner(squares) {
-  // All possible winning lines
-  const lines = [
-    [0, 1, 2], // Top row
-    [3, 4, 5], // Middle row
-    [6, 7, 8], // Bottom row
-    [0, 3, 6], // Left column
-    [1, 4, 7], // Middle column
-    [2, 5, 8], // Right column
-    [0, 4, 8], // Diagonal \
-    [2, 4, 6], // Diagonal /
-  ];
-
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a]; // Return 'X' or 'O'
-    }
-  }
-  return null; // No winner yet
-}
-```
-
----
-
-## 🎨 Part 3: Styling (5 minutes)
-
-### Replace `src/App.css` with:
+Open your `click-game.html` (from Session 2) and add these animations inside the existing `<style>` block:
 
 ```css
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2) rotate(5deg); }
+    50% { transform: scale(1.2) rotate(-5deg); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
-.game {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+.click-button:not(:disabled) {
+    animation: pulse 1.5s infinite;
 }
+```
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+Now the click button gently pulses while the game is running, drawing the player's eye.
 
-.status {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  min-height: 40px;
-}
+**How it works:**
+- `@keyframes` defines an animation sequence (like a flipbook)
+- `pulse` scales the button up and back over 1.5 seconds
+- `infinite` makes it repeat forever
+- `:not(:disabled)` only animates when the button is clickable
 
-.board {
-  display: grid;
-  grid-template-columns: repeat(3, 120px);
-  grid-template-rows: repeat(3, 120px);
-  gap: 10px;
-  margin: 0 auto 30px;
-  width: fit-content;
-}
+### Add a Celebration Effect
 
-.square {
-  width: 120px;
-  height: 120px;
-  font-size: 48px;
-  font-weight: bold;
-  background-color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  color: #667eea;
-}
+In the `endGame()` function in your click game, add this after the high score check:
 
-.square:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+```javascript
+if (score > highScore) {
+    highScore = score;
+    highScoreDisplay.textContent = highScore;
+    messageDisplay.textContent = 'NEW HIGH SCORE!';
+    // Trigger celebration animation
+    clickButton.style.animation = 'celebrate 0.6s ease';
+    setTimeout(() => {
+        clickButton.style.animation = '';
+    }, 600);
 }
+```
 
-.square:active {
-  transform: translateY(0);
-}
+### Add Persistent High Scores with localStorage
 
-.reset-button {
-  font-size: 20px;
-  padding: 12px 30px;
-  background-color: #4ecdc4;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
+Right now, your high score resets when you refresh the page. Let us fix that.
 
-.reset-button:hover {
-  background-color: #3dbdb3;
-  transform: translateY(-2px);
+In your click game, find the game state variables section and update:
+
+```javascript
+// Load saved high score (or start at 0)
+let highScore = localStorage.getItem('clickGameHighScore')
+    ? parseInt(localStorage.getItem('clickGameHighScore'))
+    : 0;
+
+// Display the saved high score on load
+highScoreDisplay.textContent = highScore;
+```
+
+Then in `endGame()`, after updating `highScore`, save it:
+
+```javascript
+if (score > highScore) {
+    highScore = score;
+    highScoreDisplay.textContent = highScore;
+    messageDisplay.textContent = 'NEW HIGH SCORE!';
+    // Save to localStorage so it persists
+    localStorage.setItem('clickGameHighScore', highScore);
 }
+```
+
+**What is localStorage?**
+- A small storage area in your browser that persists between page refreshes
+- `setItem(key, value)` saves data
+- `getItem(key)` retrieves it
+- Data stays until you clear it or the user clears their browser data
+
+### Test Your Polish
+
+1. Open the click game with Live Server
+2. Play a few rounds - verify the pulse animation works
+3. Get a high score, then refresh the page - it should still be there
+4. Open the browser console (`F12` > Console) and type `localStorage` to see your saved data
+
+---
+
+## Part 2: Build Your Portfolio Homepage
+
+Now let us create a single page that ties all your work together.
+
+### Create the Portfolio Page
+
+Create a new file in your project root called `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GameCraft Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 40px 60px;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .game-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-card h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .game-card p {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .game-card .tech-tags {
+            margin-bottom: 20px;
+        }
+
+        .tech-tags span {
+            display: inline-block;
+            background: rgba(78, 205, 196, 0.3);
+            color: #4ecdc4;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin: 3px;
+        }
+
+        .play-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #4ecdc4, #44a8a0);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.6;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My GameCraft Portfolio</h1>
+        <p>Web games built with HTML, CSS, JavaScript, and React</p>
+    </header>
+
+    <div class="games-grid">
+        <div class="game-card">
+            <h2>Click Speed Challenge</h2>
+            <p>Race against a 10-second timer. How fast can you click?</p>
+            <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <a href="click-game.html" class="play-button">Play Now</a>
+        </div>
+
+        <div class="game-card">
+            <h2>Gem Catcher</h2>
+            <p>Catch falling gems with your basket before they hit the ground.</p>
+            <div class="tech-tags">
+                <span>HTML Canvas</span>
+                <span>Animation</span>
+                <span>JavaScript</span>
+            </div>
+            <a href="gem-catcher.html" class="play-button">Play Now</a>
+        </div>
+
+        <div class="game-card">
+            <h2>Tic-Tac-Toe</h2>
+            <p>A classic two-player strategy game built with React.</p>
+            <div class="tech-tags">
+                <span>React</span>
+                <span>JSX</span>
+                <span>Vite</span>
+            </div>
+            <a href="tictactoe/" class="play-button">Play Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built during GameCraft &mdash; High School Web Game Development</p>
+    </footer>
+</body>
+</html>
+```
+
+### Personalize It
+
+1. Change the heading from "My GameCraft Portfolio" to your name or a creative title
+2. Update the game descriptions to match what you built
+3. If you customized a game (different colors, golden gems, etc.), mention that
+4. Add any extra games you built during homework as new cards
+
+---
+
+## Part 3: Deploy to GitHub Pages
+
+GitHub Pages turns your repository into a live website for free.
+
+### Step 1: Make Sure Everything is Committed
+
+```bash
+git add .
+git commit -m "Add portfolio page and polish games"
+git push origin main
+```
+
+### Step 2: Enable GitHub Pages
+
+1. Go to your repository on [github.com](https://github.com)
+2. Click **Settings** (gear icon near the top)
+3. In the left sidebar, click **Pages**
+4. Under **Source**, select **Deploy from a branch**
+5. Under **Branch**, select **main** and folder **/ (root)**
+6. Click **Save**
+
+### Step 3: Wait and Visit
+
+- GitHub takes 1-2 minutes to build your site
+- Your site will be live at: `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
+- The URL appears at the top of the Pages settings when ready
+
+### Step 4: Test Your Live Site
+
+1. Visit your URL in the browser
+2. Verify the portfolio page loads
+3. Click each "Play Now" link to make sure the games work
+4. Share the link with someone and have them try it
+
+**Note about the React game:** The Tic-Tac-Toe game built with Vite needs to be built for production first. If you want it linked from your portfolio, run:
+
+```bash
+cd tictactoe
+npm run build
+```
+
+Then copy the contents of the `dist/` folder into a `tictactoe/` folder in your main project. Or simply link to it as a separate GitHub Pages site.
+
+---
+
+## Part 4: Add a README
+
+A good README tells other developers (and future you) what this project is about.
+
+Create or edit `README.md` in your project root:
+
+```markdown
+# GameCraft Portfolio
+
+A collection of web games built during the GameCraft high school program.
+
+## Games
+
+| Game | Description | Technologies |
+|------|-------------|-------------|
+| Click Speed Challenge | Race against the clock clicking game | HTML, CSS, JavaScript |
+| Gem Catcher | Catch falling gems with a basket | HTML Canvas, JavaScript |
+| Tic-Tac-Toe | Classic two-player strategy game | React, Vite |
+
+## Play Online
+
+Visit the live site: [https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/](https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/)
+
+## Built With
+
+- HTML5 and CSS3
+- JavaScript (ES6+)
+- React with Vite
+- GitHub Pages for hosting
+
+## What I Learned
+
+- Building interactive web pages from scratch
+- Game logic: timers, collision detection, win conditions
+- Canvas animation with requestAnimationFrame
+- React components, state, and props
+- Version control with Git and GitHub
+- Deploying websites with GitHub Pages
+```
+
+### Final Push
+
+```bash
+git add .
+git commit -m "Add README and final polish"
+git push origin main
 ```
 
 ---
 
-## ✅ Test Your Game!
+## Your Turn - Keep Building
 
-Click Run (Replit) or check the local server. You should have a fully working Tic-Tac-Toe game!
+Now that you have a live portfolio and the skills to build web games, here are ideas for what to build next:
 
-**Test these scenarios:**
-1. X and O alternate turns
-2. Winning shows the winner
-3. Filled board shows draw
-4. Reset button clears the board
-5. Can't click filled squares
+**Expand your existing games:**
+- Add sound effects to the click game or gem catcher
+- Build an AI opponent for tic-tac-toe
+- Add difficulty levels that unlock as you play
+- Create a leaderboard using localStorage
 
----
+**Build something new:**
+- **Snake Game** - Classic snake on a canvas grid
+- **Memory Match** - Flip cards to find matching pairs (great for React)
+- **Typing Speed Test** - Like the click game but with typing
+- **Platformer** - A simple side-scrolling jump game with canvas
 
-## 🎨 Customization Challenges
-
-**Easy:**
-1. Change colors in CSS
-2. Add emojis instead of X/O (🌟 vs 🌙)
-3. Change board size in `.board` CSS
-
-**Medium:**
-4. Add a score tracker (X wins vs O wins)
-5. Add sound effects on click and win
-6. Highlight the winning line
-
-**Hard:**
-7. Add a move history list (time travel!)
-8. Add AI opponent (hint: minimax algorithm)
-9. Make it 4x4 with different win conditions
+**Each new game you build:**
+1. Create the HTML file in your project
+2. Add a new card to your portfolio `index.html`
+3. Commit and push to GitHub
+4. It automatically appears on your live site
 
 ---
 
-## 💡 Challenge: Score Tracker
+## What You Learned Today
 
-Add this to `App` component:
-
-```jsx
-const [scores, setScores] = useState({ X: 0, O: 0 });
-
-// In handlePlay, after detecting a win:
-const winner = calculateWinner(nextSquares);
-if (winner) {
-  setScores(prev => ({ ...prev, [winner]: prev[winner] + 1 }));
-}
-
-// Display scores:
-<div className="scores">
-  <p>X: {scores.X} | O: {scores.O}</p>
-</div>
-```
+- **CSS Animations** - `@keyframes` for visual polish
+- **localStorage** - Saving data that persists between sessions
+- **Portfolio Design** - Presenting your work professionally
+- **GitHub Pages** - Deploying a website for free with a real URL
+- **README Files** - Documenting your projects
 
 ---
 
-## 📚 What You Learned Today
+## What You Learned Across All Four Sessions
 
-✅ **React Components** - Building reusable UI pieces  
-✅ **JSX Syntax** - Mixing HTML and JavaScript  
-✅ **useState Hook** - Managing component state  
-✅ **Props** - Passing data between components  
-✅ **Event Handling** - onClick in React  
-✅ **Conditional Rendering** - Showing different UI based on state  
-✅ **Array Methods** - `.map()`, `.slice()`, `.every()`
+| Session | Skills |
+|---------|--------|
+| Session 1 | HTML structure, CSS styling, JavaScript basics, CodePen |
+| Session 2 | Event listeners, game state, timers, canvas animation, collision detection, VS Code, Git |
+| Session 3 | React components, JSX, useState, props, modern tooling with Vite |
+| Session 4 | CSS animations, localStorage, portfolio building, GitHub Pages deployment |
 
----
-
-## 🚀 Next Session Preview
-
-**Session 5:** Deploy your games to the web with **GitHub Pages** and add polish (animations, sounds, high scores)!
-
----
-
-## 📦 Homework (Optional)
-
-1. Add player name inputs (let users choose names instead of X/O)
-2. Create a best-of-3 match system
-3. Add animations when someone wins
-4. Build a different game in React (Rock-Paper-Scissors, Memory Match)
+**You now have:**
+- A working web game that runs in any browser
+- Your own GitHub portfolio with published games
+- Skills in HTML, CSS, JavaScript, and React
+- The ability to turn your game ideas into reality
 
 ---
 
-## 🆘 Common Issues
+## Homework (Optional)
 
-**Problem:** "Can't click squares"  
-**Solution:** Check that `onSquareClick` prop is passed and `handleClick` is defined
-
-**Problem:** "Winner not detected"  
-**Solution:** Verify `calculateWinner` function and winning line indices
-
-**Problem:** "State not updating"  
-**Solution:** Make sure you're using `setHistory`, not modifying `history` directly
-
-**Problem:** "npm errors"  
-**Solution:** Delete `node_modules` folder and `package-lock.json`, then run `npm install`
+1. Build one more game and add it to your portfolio
+2. Customize your portfolio design (background, fonts, layout)
+3. Add a "dark mode / light mode" toggle to your portfolio
+4. Share your portfolio URL with friends and family
 
 ---
 
-## 📖 Resources
+## Common Issues
 
-- [React Official Tutorial](https://react.dev/learn/tutorial-tic-tac-toe)
-- [React Hooks - useState](https://react.dev/reference/react/useState)
-- [Thinking in React](https://react.dev/learn/thinking-in-react)
-- [Vite Documentation](https://vitejs.dev/)
+**Problem:** "GitHub Pages shows a 404"
+**Solution:** Make sure your main page is named `index.html` (not `home.html` or another name). Check that Pages is enabled in Settings > Pages.
+
+**Problem:** "Changes are not showing on the live site"
+**Solution:** Push your changes (`git push origin main`) and wait 1-2 minutes. Hard refresh with `Cmd+Shift+R`.
+
+**Problem:** "localStorage is not saving"
+**Solution:** Make sure you are using `localStorage.setItem('key', value)` and `localStorage.getItem('key')`. Open DevTools > Application > Local Storage to inspect.
+
+**Problem:** "The React game does not load on GitHub Pages"
+**Solution:** React apps built with Vite need `npm run build` first. Copy the `dist/` folder output into your project, or deploy the React app as a separate GitHub Pages repo.
+
+**Problem:** "My portfolio links are broken"
+**Solution:** Use relative paths in `href` (e.g., `click-game.html` not `/click-game.html`). Make sure the file names match exactly, including capitalization.
 
 ---
 
-**[← Session 3](/highschool/session3/) | [Back to GameCraft Home](/highschool/) | [Next: Session 5 →](/highschool/session5/)**
+## Resources
+
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [CSS Animations - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [localStorage - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [How to Write a Good README](https://www.makeareadme.com/)
+
+---
+
+**[Session 3](/highschool/session3/) | [Back to GameCraft Home](/highschool/)**

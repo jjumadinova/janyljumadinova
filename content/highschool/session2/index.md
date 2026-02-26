@@ -1,434 +1,439 @@
 ---
 layout: page
 title: Session 2
-subtitle: Build a Click Speed Game
+subtitle: Game Time - Click Speed and Gem Catcher
 date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 2: Build a Click Speed Game
+# Session 2: Game Time - Click Speed and Gem Catcher
+
+**Goal:** Set up VS Code and GitHub, then complete two games by adding the key logic yourself
+**Prerequisites:** Session 1 (HTML, CSS, JavaScript basics)
+
+---
 
 ## What You Will Build Today
 
-A "Click Speed Challenge" game where players race against a 10-second timer to click as many times as possible.
+You will start with **starter code** that has the HTML, CSS, and structure already built. Your job is to fill in the **game logic** — the JavaScript that makes the games actually work.
 
-**Features:**
-- 10-second countdown timer
-- Click counter
-- Start/Restart button
-- High score tracking
-- Victory message
+**Game 1 - Click Speed Challenge:** Race against a 10-second timer to click as many times as possible.
+You will add: the click handler, start game setup, and end game logic.
 
----
-
-## Setup
-
-### Create a New Project
-
-**In CodePen:**
-1. Go to [codepen.io](https://codepen.io/)
-2. Click **Start Coding**
-3. Name it: `click-speed-challenge`
-4. You will use all three panels: HTML, CSS, and JS
+**Game 2 - Gem Catcher:** Catch colorful falling gems by moving a basket with your mouse or keyboard.
+You will add: collision detection, scoring, lives tracking, and gem spawning — building on the same patterns from Game 1.
 
 ---
 
-## Build the Game Structure
+## Part 1: Set Up Your Developer Environment
 
-### HTML Structure
+In Session 1 we used CodePen to write code in the browser. Now we are switching to **VS Code** — a real code editor that professional developers use. This gives us files on our computer, Git version control, and the ability to build bigger projects.
 
-Start by creating the basic structure. In CodePen's HTML panel, type:
+### Open VS Code and Install Live Server
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Speed Challenge</title>
-</head>
-<body>
-    <div class="container">
-        <h1>Click Speed Challenge</h1>
-        
-        <!-- Stats display -->
-        <div class="game-info">
-            <div class="stat">
-                <p class="label">Time Left:</p>
-                <p id="timer" class="value">10.0</p>
-            </div>
-            <!-- Add two more stat boxes for Clicks and High Score -->
-        </div>
+1. Open VS Code
+2. Install the **Live Server** extension:
+   - Click the Extensions icon in the left sidebar (or press `Cmd+Shift+X`)
+   - Search for "Live Server" by Ritwick Dey
+   - Click **Install**
 
-        <!-- Main click button -->
-        <button id="clickButton" class="click-button" disabled>
-            Click START to Begin!
-        </button>
+### Clone the Starter Code
 
-        <!-- Add a start button with id="startButton" -->
+1. Open the VS Code terminal: **Terminal > New Terminal** (or press `` Ctrl+` ``)
+2. Clone the starter code repository your teacher provided:
 
-        <!-- Message display -->
-        <div id="message" class="message"></div>
-    </div>
-</body>
-</html>
+```bash
+git clone <REPOSITORY-URL>
+cd session2-starter
 ```
 
-### New Concepts:
+3. You should see these files in VS Code:
+   - `click-game.html` — Click Speed Challenge (with TODOs)
+   - `gem-catcher.html` — Gem Catcher (with TODOs)
+   - `README.md` — Instructions
 
-- **`<div class="container">`** - Groups related elements together
-- **`disabled`** - Makes a button unclickable until we are ready
-- **Multiple elements with `id`s** - So we can control each one separately
+### Preview the Starter Code
 
-### Your Turn - Complete the HTML:
-
-1. **Add the Clicks stat:** Copy the "Time Left" stat box and modify it to show "Clicks" with `id="score"`
-2. **Add the High Score stat:** Create another one for "High Score" with `id="highScore"`
-3. **Add the start button:** Create a button with `id="startButton"` and text "START GAME"
-4. **Customize:** Change the title to something creative ("Speed Clicker Pro"? "Finger Fury"?)
-5. **Preview:** Check CodePen's preview - you should see your structure (plain for now)
+1. Right-click `click-game.html` in the file explorer
+2. Select **Open with Live Server**
+3. You should see the game layout — but clicking does nothing yet! That is what you will fix.
 
 ---
 
-## Style Your Game
+## Part 2: Click Speed Challenge
 
-### Add CSS Styling
+Open `click-game.html` in VS Code. The HTML structure, CSS styling, element selectors, and game state variables are already written for you. Look for the `// TODO` comments — those are the parts you need to complete.
 
-In CodePen's CSS panel, add these styles. Notice we are using a dark background so colors show up clearly:
+### Understanding What is Already There
 
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+Scroll through the code and notice:
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
+| Already Built | What It Does |
+|---------------|-------------|
+| HTML structure | Buttons, score display, timer display |
+| CSS styling | Colors, layout, animations |
+| `document.getElementById()` | Grabs each element so JavaScript can control it |
+| Game state variables | `score`, `timeLeft`, `highScore`, `gameRunning` |
+| `updateTimer()` function | Counts down every 0.1 seconds |
+| Start button event listener | Calls `startGame()` when clicked |
 
-.container {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-}
+### TODO 1: Handle the Click Button
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.game-info {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    gap: 20px;
-}
-
-.stat {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px 25px;
-    border-radius: 12px;
-    min-width: 120px;
-}
-
-.label {
-    font-size: 14px;
-    opacity: 0.9;
-    margin-bottom: 5px;
-}
-
-.value {
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* You will style the click button - make it big and round! */
-.click-button {
-    width: 300px;
-    height: 300px;
-    font-size: 28px;
-    font-weight: bold;
-    /* Add your button colors here */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 20px 0;
-}
-
-/* Add hover and active effects for your button */
-
-/* Style the start button */
-.start-button {
-    font-size: 20px;
-    padding: 15px 40px;
-    /* Add your button color here */
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.message {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    min-height: 30px;
-}
-```
-
-### Your Turn - Complete the Styling:
-
-1. **Style the click button:** Add a background color or gradient (try `background: #e74c3c;` or `background: linear-gradient(135deg, #ff6b6b, #ee5252);`)
-2. **Add button effects:** Make it scale on hover: `.click-button:hover { transform: scale(1.05); }`
-3. **Style the start button:** Pick a color (try `background-color: #27ae60;` for green)
-4. **Experiment:** Try different colors, sizes, or border-radius values
-5. **Preview:** Your game should look colorful and inviting now
-
----
-
-## Add Game Logic
-
-### JavaScript - The Game Brain
-
-In CodePen's JS panel, let us build the game logic step by step:
+Find this section in the code:
 
 ```javascript
-// 1. GET ALL THE ELEMENTS
-const clickButton = document.getElementById('clickButton');
-const startButton = document.getElementById('startButton');
-const timerDisplay = document.getElementById('timer');
-const scoreDisplay = document.getElementById('score');
-const highScoreDisplay = document.getElementById('highScore');
-const messageDisplay = document.getElementById('message');
-
-// 2. GAME STATE VARIABLES
-let score = 0;
-let timeLeft = 10;
-let highScore = 0;
-let gameRunning = false;
-let timerInterval = null;
-
-// 3. HANDLE CLICK BUTTON
 clickButton.addEventListener('click', function() {
-    if (gameRunning) {
-        score++;
-        scoreDisplay.textContent = score;
-        
-        // Add animation feedback
-        clickButton.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-            clickButton.style.transform = 'scale(1)';
-        }, 100);
-    }
-});
+    // TODO 1: Handle the click!
+```
 
-// 4. HANDLE START BUTTON
-startButton.addEventListener('click', function() {
-    startGame();
-});
+**Your task:** When the game is running, add 1 to the score and update the display.
 
-// 5. START GAME FUNCTION
-function startGame() {
-    score = 0;
-    timeLeft = 10;
-    gameRunning = true;
-    messageDisplay.textContent = '';
-    
+**Write this code:**
+
+```javascript
+if (gameRunning) {
+    score++;
     scoreDisplay.textContent = score;
-    timerDisplay.textContent = timeLeft.toFixed(1);
-    
-    clickButton.disabled = false;
-    clickButton.textContent = 'CLICK ME!';
-    
-    startButton.textContent = 'Game Running...';
-    startButton.disabled = true;
-    
-    // Start the countdown (calls updateTimer every 0.1 seconds)
-    timerInterval = setInterval(updateTimer, 100);
 }
+```
 
-// 6. UPDATE TIMER - YOU COMPLETE THIS
-function updateTimer() {
-    timeLeft -= 0.1;
-    
-    if (timeLeft <= 0) {
-        endGame();
-    } else {
-        // Update the timer display (use .toFixed(1) to show one decimal)
-        // YOUR CODE HERE
-    }
-}
+**What you just learned:**
+- `addEventListener('click', ...)` runs code when a button is clicked
+- `score++` is shorthand for `score = score + 1`
+- `.textContent` changes what text appears on screen
 
-// 7. END GAME - YOU COMPLETE THIS
+### TODO 2: Start the Game
+
+Find:
+
+```javascript
+function startGame() {
+    // TODO 2: Set up the game to start!
+```
+
+**Your task:** Reset everything and start the timer.
+
+**Write this code:**
+
+```javascript
+score = 0;
+timeLeft = 10;
+gameRunning = true;
+messageDisplay.textContent = '';
+
+scoreDisplay.textContent = score;
+timerDisplay.textContent = timeLeft.toFixed(1);
+
+clickButton.disabled = false;
+clickButton.textContent = 'CLICK ME!';
+
+startButton.textContent = 'Game Running...';
+startButton.disabled = true;
+
+timerInterval = setInterval(updateTimer, 100);
+```
+
+**What you just learned:**
+- Resetting variables to their starting values
+- `.toFixed(1)` shows one decimal place (10.0 instead of 10)
+- `.disabled = false` makes a button clickable again
+- `setInterval(fn, 100)` calls a function every 100 milliseconds (0.1 seconds)
+
+### TODO 3: End the Game
+
+Find:
+
+```javascript
 function endGame() {
-    gameRunning = false;
-    clearInterval(timerInterval);
-    
-    clickButton.disabled = true;
-    clickButton.textContent = "Time's Up!";
-    
-    startButton.disabled = false;
-    startButton.textContent = 'PLAY AGAIN';
-    
-    // Check if this is a new high score
-    // If score > highScore:
-    //   - Update highScore
-    //   - Display high score
-    //   - Show "NEW HIGH SCORE!" message
-    // Otherwise:
-    //   - Show regular game over message
-    // YOUR CODE HERE
-    
-    timerDisplay.textContent = '0.0';
+    // TODO 3: End the game!
+```
+
+**Your task:** Stop the timer, disable the button, and check for a high score.
+
+**Write this code:**
+
+```javascript
+gameRunning = false;
+clearInterval(timerInterval);
+
+clickButton.disabled = true;
+clickButton.textContent = "Time's Up!";
+
+startButton.disabled = false;
+startButton.textContent = 'PLAY AGAIN';
+
+if (score > highScore) {
+    highScore = score;
+    highScoreDisplay.textContent = highScore;
+    messageDisplay.textContent = 'NEW HIGH SCORE!';
+} else {
+    messageDisplay.textContent = 'Game Over! Your score: ' + score;
+}
+
+timerDisplay.textContent = '0.0';
+```
+
+**What you just learned:**
+- `clearInterval()` stops a repeating timer
+- `if/else` makes decisions based on conditions
+- String concatenation with `+` combines text and numbers
+
+### Test It!
+
+Save the file and check your browser. The game should now work:
+- Click START → timer counts down
+- Click the big button → score goes up
+- Time runs out → shows your score and tracks high score
+
+### Quick Customizations
+
+Pick one:
+1. Change `timeLeft = 10` to `5` for hard mode
+2. Change the button gradient colors in the CSS
+3. Add `const cps = (score / 10).toFixed(1);` in endGame and display clicks-per-second
+
+### Save Your Progress
+
+```bash
+git add click-game.html
+git commit -m "Complete click speed challenge"
+```
+
+---
+
+## Part 3: Gem Catcher - Expanding Your Skills
+
+Now open `gem-catcher.html`. This game uses the **exact same patterns** you just learned — score tracking, conditional logic, game state — but adds **canvas animation**.
+
+### What is Canvas?
+
+The `<canvas>` element is like a blank drawing board. JavaScript paints shapes and animations on it frame by frame, just like a flipbook.
+
+### What is Already Built
+
+Take a look through the code:
+
+| Already Built | What It Does |
+|---------------|-------------|
+| Canvas setup | `getContext('2d')` creates the drawing tool |
+| Basket object | Position, size, speed, color stored in one object |
+| `createGem()` | Makes a new gem with random position and color |
+| Drawing functions | `drawBasket()`, `drawGem()`, `clearCanvas()` |
+| Mouse + keyboard controls | Move the basket left and right |
+| `startGame()` / `endGame()` | Reset and end the game |
+| Game loop structure | The `gameLoop()` runs 60 times per second |
+
+The game loop already moves gems downward and draws them. But gems pass right through the basket! You need to add the logic that makes catching and missing actually work.
+
+### TODO 1: Collision Detection
+
+Find:
+
+```javascript
+function checkCollision(gem, basket) {
+    // TODO 1: Check if a gem is touching the basket!
+```
+
+**Your task:** Two rectangles overlap when all four of these conditions are true at the same time. Return `true` when they overlap.
+
+**Replace `return false;` with:**
+
+```javascript
+return gem.x < basket.x + basket.width &&
+       gem.x + gem.width > basket.x &&
+       gem.y < basket.y + basket.height &&
+       gem.y + gem.height > basket.y;
+```
+
+**What you just learned:**
+- Collision detection = checking if two rectangles overlap
+- `&&` means AND — all conditions must be true
+- This is the same `if` logic from the Click Speed game, just with more conditions combined
+
+### TODO 2: Score a Caught Gem
+
+Find:
+
+```javascript
+// TODO 2: Update the score when a gem is caught!
+```
+
+**Your task:** Just like in the Click Speed game — add 1 to score and update the display. Then remove the gem.
+
+**Write this code:**
+
+```javascript
+score++;
+scoreDisplay.textContent = score;
+gems.splice(i, 1);
+continue;
+```
+
+**Connection to Game 1:** This is the exact same `score++` and `scoreDisplay.textContent = score` pattern! The new part is `splice(i, 1)` which removes the caught gem from the array.
+
+### TODO 3: Handle a Missed Gem
+
+Find:
+
+```javascript
+// TODO 3: Handle a missed gem!
+```
+
+**Your task:** When a gem falls off screen, lose a life. If lives hit zero, end the game.
+
+**Write this code:**
+
+```javascript
+lives--;
+livesDisplay.textContent = lives;
+gems.splice(i, 1);
+
+if (lives <= 0) {
+    endGame();
+    return;
+}
+continue;
+```
+
+**Connection to Game 1:** In the Click Speed game, the game ended when time ran out. Here it ends when lives run out — same pattern, different trigger.
+
+### TODO 4: Spawn New Gems
+
+Find:
+
+```javascript
+// TODO 4: Spawn new gems randomly!
+```
+
+**Your task:** Each frame, there is a small random chance a new gem appears.
+
+**Write this code:**
+
+```javascript
+if (Math.random() < 0.02) {
+    gems.push(createGem());
 }
 ```
 
-### Understanding the Key Concepts
+**What you just learned:**
+- `Math.random()` returns a number between 0 and 1
+- `< 0.02` means roughly 2% chance each frame ≈ 1-2 new gems per second
+- `.push()` adds an item to an array
 
-**Important concepts:**
+### Test It!
 
-1. **Variables store game state:** `score`, `timeLeft`, `gameRunning`
-2. **`setInterval(updateTimer, 100)`** - Runs `updateTimer` every 100 milliseconds (0.1 seconds)
-3. **`clearInterval()`** - Stops the repeating timer
-4. **`.toFixed(1)`** - Rounds numbers to 1 decimal place (9.9999 becomes "10.0")
+Save and check your browser:
+1. Gems should fall from the top
+2. Moving the basket under a gem catches it (score goes up)
+3. Missing a gem costs a life
+4. Game ends when lives reach 0
 
-### Your Turn - Complete the JavaScript:
+### Key Concepts Comparison
 
-1. **Fix `updateTimer()`:** Make it update the timer display using `timerDisplay.textContent = timeLeft.toFixed(1);`
-2. **Fix `endGame()`:** Add the high score logic:
-   ```javascript
-   if (score > highScore) {
-       highScore = score;
-       highScoreDisplay.textContent = highScore;
-       messageDisplay.textContent = 'NEW HIGH SCORE!';
-   } else {
-       messageDisplay.textContent = 'Game Over! Your score: ' + score;
-   }
-   ```
-3. **Test it:** Click START and play the game - does everything work?
-4. **Customize:** Change the button text, game duration, or add your own message
+| Concept | Click Speed Game | Gem Catcher |
+|---------|-----------------|-------------|
+| Score tracking | `score++` on click | `score++` on catch |
+| Game end condition | Time runs out | Lives run out |
+| User input | Button click | Mouse / keyboard movement |
+| Display update | `textContent` | `textContent` + canvas redraw |
+| Timing | `setInterval` (fixed) | `requestAnimationFrame` (smooth) |
 
----
+### Your Turn - Customize
 
-## Test and Extend Your Game
+Pick one or more:
+1. **Change gem colors:** Edit the `colors` array in `createGem()`
+2. **Adjust difficulty:** Change `0.02` (spawn rate) or gem `speed` values
+3. **More lives:** Change `lives = 3` to `lives = 5` in `startGame()`
+4. **Wider basket:** Change `basket.width` from `100` to `150`
+5. **Golden gems (challenge):** Add rare gems worth 5 points:
 
-### Full Testing Checklist:
-
-1. Click START - does the timer count down?
-2. Click the big button - does the score increase?
-3. Wait for time to run out - does it show the correct message?
-4. Play again and beat your score - does it say "NEW HIGH SCORE"?
-
-### Extra Challenges:
-
-Once your game works, try adding these features:
-
-**Polish and Effects:**
-
-1. Make the button change colors randomly with each click
-2. Add a pulsing animation to the button during the game
-3. Display different messages based on score (0-15: "Keep trying!", 16-25: "Good!", 26+: "Amazing!")
-
-**New Features:**
-
-4. Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)
-5. Show clicks-per-second at the end: `const cps = (score / 10).toFixed(1);`
-6. Add sound effects when clicking (hint: look up HTML `<audio>` tag)
-
-**Advanced:**
-
-7. Save high score in `localStorage` so it persists even after refreshing (see solution below)
-8. Make the button shrink slightly with each click, then reset when time is up
-
----
-
-## Advanced: Save High Score Forever
-
-Want your high score to persist even after closing the browser? Use `localStorage`:
-
-**At the top of your JavaScript (after getting elements):**
 ```javascript
-// Load saved high score
-highScore = parseInt(localStorage.getItem('clickGameHighScore')) || 0;
-highScoreDisplay.textContent = highScore;
+// In createGem(), before the return statement:
+const isGolden = Math.random() < 0.1; // 10% chance
+
+// Change the return to include:
+return {
+    x: Math.random() * (canvas.width - 30),
+    y: -30,
+    width: 30,
+    height: 30,
+    speed: 2 + Math.random() * 2,
+    color: isGolden ? '#FFD700' : randomColor,
+    points: isGolden ? 5 : 1,
+    caught: false
+};
+// Then in TODO 2, change: score++ to: score += gem.points;
 ```
 
-**In `endGame()`, after updating the high score:**
-```javascript
-localStorage.setItem('clickGameHighScore', highScore);
-```
+### Save and Push to GitHub
 
-Now your high score saves automatically!
+```bash
+git add .
+git commit -m "Complete click speed and gem catcher games"
+git push origin main
+```
 
 ---
 
 ## What You Learned Today
 
-- **Intervals and Timers** - `setInterval()`, `clearInterval()`  
-- **Game State Management** - Tracking multiple variables  
-- **Conditional Logic** - `if` statements to control game flow  
-- **Enable/Disable UI** - Controlling when buttons work  
-- **Number Formatting** - `.toFixed()` for decimals  
-- **Game Loop Concept** - Repeating functions that update the game
+**Developer Tools:**
+- VS Code with Live Server for instant preview
+- Git for saving progress and pushing to GitHub
 
----
+**JavaScript Patterns (used in BOTH games):**
+- **Event listeners** — responding to clicks, mouse moves, and key presses
+- **Game state variables** — tracking score, time, lives
+- **Conditional logic** — `if/else` for decisions (high score check, collision, game over)
+- **DOM updates** — changing what players see with `.textContent`
 
-## Next Session Preview
-
-**Session 3:** We will add **animation and movement** - build a "Catch the Falling Objects" game with moving elements.
+**New in Gem Catcher (building on Click Speed):**
+- **HTML Canvas** — drawing graphics with JavaScript
+- **Animation loops** — `requestAnimationFrame()` for smooth 60fps movement
+- **Collision detection** — checking if rectangles overlap
+- **Arrays** — managing multiple gems with `push()` and `splice()`
 
 ---
 
 ## Homework (Optional)
 
-1. Add a "Best Time" feature - track the fastest time to reach 50 clicks
-2. Create sound effects (hint: use the Web Audio API or `<audio>` tag)
-3. Add a lives system where missing clicks costs a life
-4. Make the button move around the screen randomly!
+1. **Click Game:** Add difficulty levels (Easy: 15s, Medium: 10s, Hard: 5s)
+2. **Click Game:** Save high score with `localStorage` so it persists after closing
+3. **Gem Catcher:** Add "bomb" objects that cost a life if caught
+4. **Gem Catcher:** Make gems fall faster as your score increases
+5. **Both:** Change the visual theme (colors, gradients, title text)
 
 ---
 
 ## Common Issues
 
-**Problem:** "Timer does not count down"  
-**Solution:** Check that `setInterval(updateTimer, 100)` is called in `startGame()`
+**Problem:** "Page looks right but clicking does nothing"
+**Solution:** Check that your TODO code is inside the correct function, not outside the curly braces
 
-**Problem:** "Cannot click button after starting"  
-**Solution:** Make sure `clickButton.disabled = false;` is in `startGame()`
+**Problem:** "Timer does not count down"
+**Solution:** Make sure `setInterval(updateTimer, 100)` is in your `startGame()` function
 
-**Problem:** "High score does not update"  
-**Solution:** Check the `if (score > highScore)` condition in `endGame()`
+**Problem:** "Gems pass through the basket"
+**Solution:** Check your collision detection — all four `&&` conditions must be correct
+
+**Problem:** "Score does not go up when catching gems"
+**Solution:** Make sure you have both `score++` and `scoreDisplay.textContent = score`
+
+**Problem:** "Gems never appear"
+**Solution:** Check TODO 4 — make sure `gems.push(createGem())` is inside the `if (Math.random() < 0.02)` block
+
+**Problem:** "Git push failed"
+**Solution:** `git remote -v` — if empty, add your remote: `git remote add origin YOUR-URL`
 
 ---
 
 ## Resources
 
-- [setInterval() - MDN](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
-- [Event Listeners - MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-- [localStorage - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [addEventListener - MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [setInterval - MDN](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+- [Canvas API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [requestAnimationFrame - MDN](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
 
 ---
 
-## Need Help?
-
-**[View Complete Solution Code →](/highschool/session2-solution/)**
-
-If you are stuck or need to catch up, check out the complete working code with all the missing parts filled in.
-
----
-
-**[← Session 1](/highschool/session1/) | [Back to GameCraft Home](/highschool/) | [Next: Session 3 →](/highschool/session3/)**
+**[← Session 1](/highschool/session1/) | [Back to GameCraft Home](/highschool/) | [Next: Session 3 - React →](/highschool/session3/)**

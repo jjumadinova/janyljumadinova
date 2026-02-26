@@ -6,7 +6,7 @@ date: 2025-01-15T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 1: Your First Interactive Web Page 🎨
+# Session 1: Your First Interactive Web Page
 
 ## What You Will Build Today
 
@@ -14,23 +14,16 @@ A web page with a button that changes color and text when you click it. Simple, 
 
 ---
 
-## 🧰 Setup
+## Setup
 
-### Option A: CodePen (Easiest - Works in Browser!)
+### CodePen (Works in Browser!)
 1. Go to [codepen.io](https://codepen.io/)
 2. Click **Start Coding** (no sign-up required!)
-3. You'll see 3 panels: HTML, CSS, and JS
-
-### Option B: VS Code (Local Installation)
-1. Download [VS Code](https://code.visualstudio.com/)
-2. Create a new folder: `gamecraft-session1`
-3. Create a file: `index.html`
-
-**We'll use Option A in class for simplicity!**
+3. You will see 3 panels: HTML, CSS, and JS
 
 ---
 
-## 📖 Part 1: HTML - The Structure
+## Part 1: HTML - The Structure
 
 HTML is like the **skeleton** of a web page. It defines what elements exist.
 
@@ -44,7 +37,7 @@ In CodePen's **HTML panel**, type this (or paste it):
 <button id="magicButton">Click Me!</button>
 ```
 
-### 🔍 What Does This Mean?
+### What Does This Mean?
 
 - `<h1>` - A big heading
 - `<p>` - A paragraph of text
@@ -53,13 +46,13 @@ In CodePen's **HTML panel**, type this (or paste it):
 
 **Note:** CodePen automatically adds the HTML structure tags (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`) for you, so we only write what goes inside the body!
 
-### ✅ Test It!
+### Test It!
 
-The page updates automatically in CodePen! You should see a plain page with a heading, text, and a button!
+The page updates automatically in CodePen! You should see a plain page with a heading, text, and a button.
 
 ---
 
-## 🎨 Part 2: CSS - The Style (15 minutes)
+## Part 2: CSS - The Style
 
 CSS is like **clothes and makeup** for your web page. It makes things look good!
 
@@ -111,7 +104,7 @@ button:hover {
 }
 ```
 
-### 🔍 What Does This Do?
+### What Does This Do?
 
 - `body { ... }` - Styles the entire page (gradient background, centered content)
 - `h1 { ... }` - Makes the heading bigger and adds a shadow
@@ -119,13 +112,13 @@ button:hover {
 - `button:hover` - Changes how the button looks when you move your mouse over it
 - `transition` - Makes changes smooth and animated
 
-### ✅ Test It!
+### Test It!
 
-The page updates automatically! **WOW!** 🎨 Much better looking!
+The page updates automatically! Much better looking!
 
 ---
 
-## ⚡ Part 3: JavaScript - The Interaction (20 minutes)
+## Part 3: JavaScript - The Interaction
 
 JavaScript is the **brain** of your web page. It makes things DO stuff!
 
@@ -164,7 +157,7 @@ function getRandomColor() {
 button.addEventListener('click', handleClick);
 ```
 
-### 🔍 Let's Break This Down!
+### Let's Break This Down
 
 1. **`const button = ...`** - Finds your button by its `id` and saves it in a variable
 2. **`let clickCount = 0`** - Creates a counter starting at 0
@@ -174,18 +167,18 @@ button.addEventListener('click', handleClick);
 6. **`button.style.backgroundColor = ...`** - Changes the button's color
 7. **`addEventListener('click', ...)`** - Says "when someone clicks, run this function"
 
-### ✅ Test It!
+### Test It!
 
 Click your button! It should:
 - Count your clicks
 - Change colors randomly
 - Update the text
 
-**Congratulations! You just made something interactive!** 🎉
+Congratulations — you just made something interactive!
 
 ---
 
-## 🎮 Part 4: Make It Your Own (5 minutes)
+## Part 4: Make It Your Own
 
 ### Challenges:
 
@@ -199,23 +192,23 @@ Click your button! It should:
 
 ---
 
-## 📚 What You Learned Today
+## What You Learned Today
 
-✅ **HTML** - Structure (headings, paragraphs, buttons)  
-✅ **CSS** - Styling (colors, sizes, effects)  
-✅ **JavaScript** - Interactivity (variables, functions, events)  
-✅ **The Browser** - How to run and test web pages  
-✅ **Three-part pattern** - Structure → Style → Behavior
-
----
-
-## 🚀 Next Session Preview
-
-**Session 2:** We'll build a **real click game** with a timer, score, and restart button. Get ready to level up!
+- **HTML** - Structure (headings, paragraphs, buttons)
+- **CSS** - Styling (colors, sizes, effects)
+- **JavaScript** - Interactivity (variables, functions, events)
+- **The Browser** - How to run and test web pages
+- **Three-part pattern** - Structure → Style → Behavior
 
 ---
 
-## 📦 Homework (Optional)
+## Next Session Preview
+
+**Session 2:** We will switch to **VS Code**, set up **GitHub**, and build **two real games** - a Click Speed Challenge with timers and a Gem Catcher with canvas animation. Get ready to level up!
+
+---
+
+## Homework (Optional)
 
 1. Change the gradient background colors (try different hex codes!)
 2. Add another button that does something different
@@ -223,7 +216,7 @@ Click your button! It should:
 
 ---
 
-## 🆘 Common Issues
+## Common Issues
 
 **Problem:** "I don't see anything"  
 **Solution:** Make sure you're on CodePen.io and clicked "Start Coding"
@@ -236,7 +229,7 @@ Click your button! It should:
 
 ---
 
-## 📖 Resources
+## Resources
 
 - [MDN HTML Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
 - [MDN CSS Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
@@ -244,4 +237,4 @@ Click your button! It should:
 
 ---
 
-**[← Back to GameCraft Home](/highschool/) | [Next: Session 2 →](/highschool/session2/)**
+**[← Back to GameCraft Home](/highschool/) | [Next: Session 2 - Click Speed and Gem Catcher →](/highschool/session2/)**
