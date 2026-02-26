@@ -37,17 +37,24 @@ In Session 1 we used CodePen to write code in the browser. Now we are switching 
    - Search for "Live Server" by Ritwick Dey (extension ID: `ritwickdey.LiveServer`)
    - Click **Install**
 
+### Accept Your GitHub Assignment
+
+1. Click this link to create your own copy of the starter code: **[Accept the Assignment](https://classroom.github.com/a/7J03_xBl)**
+2. Sign in to GitHub if prompted, then click **Accept this assignment**
+3. Wait a few seconds — GitHub will create a repository for you with the starter code
+4. Copy your repository URL (it will look like `https://github.com/...`)
+
 ### Clone the Starter Code
 
 1. Open the VS Code terminal: **Terminal > New Terminal** (or press `` Ctrl+` ``)
-2. Clone the starter code repository your teacher provided:
+2. Clone your new repository:
 
 ```bash
-git clone <REPOSITORY-URL>
-cd session2-starter
+git clone <YOUR-REPOSITORY-URL>
 ```
 
-3. You should see these files in VS Code:
+3. Open the cloned folder in VS Code: **File > Open Folder** and select the folder that was created
+4. You should see these files in VS Code:
    - `click-game.html` — Click Speed Challenge (with TODOs)
    - `gem-catcher.html` — Gem Catcher (with TODOs)
    - `README.md` — Instructions

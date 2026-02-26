@@ -201,106 +201,79 @@
                 
                 <h1 id="session-1-your-first-interactive-web-page">Session 1: Your First Interactive Web Page</h1>
 <h2 id="what-you-will-build-today">What You Will Build Today</h2>
-<p>A web page with a button that changes color and text when you click it. Simple, but it introduces the <strong>three core technologies</strong> of web development.</p>
-<p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
+<p>A web page with a button that changes color and text when you click it. Simple, but it introduces the <strong>three core technologies</strong> of web development!</p>
 <hr>
 <h2 id="setup">Setup</h2>
-<h3 id="option-a-codepen-recommended---works-in-browser">Option A: CodePen (Recommended - Works in Browser)</h3>
+<h3 id="codepen-works-in-browser">CodePen (Works in Browser!)</h3>
 <ol>
 <li>Go to <a href="https://codepen.io/">codepen.io</a></li>
-<li>Click &quot;Start Coding&quot; (no account needed to try it out)</li>
-<li>You will see three panels: HTML, CSS, and JS</li>
-<li>We will use all three panels today</li>
-</ol>
-<h3 id="option-b-vs-code-local-installation">Option B: VS Code (Local Installation)</h3>
-<ol>
-<li>Download <a href="https://code.visualstudio.com/">VS Code</a></li>
-<li>Create a new folder: <code>gamecraft-session1</code></li>
-<li>Create a file: <code>index.html</code></li>
+<li>Click <strong>Start Coding</strong> (no sign-up required!)</li>
+<li>You will see 3 panels: HTML, CSS, and JS</li>
 </ol>
 <hr>
-<h2 id="html---the-structure">HTML - The Structure</h2>
+<h2 id="part-1-html---the-structure">Part 1: HTML - The Structure</h2>
 <p>HTML is like the <strong>skeleton</strong> of a web page. It defines what elements exist.</p>
-<h3 id="create-the-basic-structure">Create the Basic Structure</h3>
-<p>In your <code>index.html</code> file, type this (or paste it):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#57606a">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span> <span style="color:#1f2328">lang</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;en&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">charset</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;UTF-8&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;viewport&#34;</span> <span style="color:#1f2328">content</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>My First Web Game<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Welcome to GameCraft!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Click the button below:<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;magicButton&#34;</span><span style="color:#1f2328">&gt;</span>Click Me!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
+<h3 id="step-1-create-the-basic-structure">Step 1: Create the Basic Structure</h3>
+<p>In CodePen&rsquo;s <strong>HTML panel</strong>, type this (or paste it):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Welcome to GameCraft!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Click the button below:<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;magicButton&#34;</span><span style="color:#1f2328">&gt;</span>Click Me!<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
 </span></span></code></pre></div><h3 id="what-does-this-mean">What Does This Mean?</h3>
 <ul>
-<li><code>&lt;!DOCTYPE html&gt;</code> - Tells the browser &ldquo;this is a web page&rdquo;</li>
-<li><code>&lt;html&gt;</code> - The container for everything</li>
-<li><code>&lt;head&gt;</code> - Information ABOUT the page (title, settings)</li>
-<li><code>&lt;body&gt;</code> - What you SEE on the page</li>
 <li><code>&lt;h1&gt;</code> - A big heading</li>
 <li><code>&lt;p&gt;</code> - A paragraph of text</li>
-<li><code>&lt;button&gt;</code> - A clickable button</li>
-<li><code>id=&quot;magicButton&quot;</code> - A name we will use later to control this button</li>
+<li><code>&lt;button&gt;</code> - A clickable button!</li>
+<li><code>id=&quot;magicButton&quot;</code> - A name we&rsquo;ll use later to control this button</li>
 </ul>
-<h3 id="test-it">Test It</h3>
-<ul>
-<li><strong>Replit:</strong> Click the green &ldquo;Run&rdquo; button at the top</li>
-<li><strong>VS Code:</strong> Right-click <code>index.html</code> → &ldquo;Open with Live Server&rdquo; (or just double-click to open in browser)</li>
-</ul>
-<p><strong>You should see:</strong> A plain page with a heading, text, and a button!</p>
+<p><strong>Note:</strong> CodePen automatically adds the HTML structure tags (<code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>) for you, so we only write what goes inside the body!</p>
+<h3 id="test-it">Test It!</h3>
+<p>The page updates automatically in CodePen! You should see a plain page with a heading, text, and a button.</p>
 <hr>
-<h2 id="-part-2-css---the-style-15-minutes">🎨 Part 2: CSS - The Style (15 minutes)</h2>
-<p>CSS is like <strong>clothes and makeup</strong> for your web page. It makes things look good.</p>
-<h3 id="add-style">Add Style</h3>
-<p>Inside your <code>&lt;head&gt;</code> section (between <code>&lt;title&gt;</code> and <code>&lt;/head&gt;</code>), add this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> Arial<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#667eea</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">%</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#764ba2</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">flex-direction</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">column</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">align-items</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+<h2 id="part-2-css---the-style">Part 2: CSS - The Style</h2>
+<p>CSS is like <strong>clothes and makeup</strong> for your web page. It makes things look good!</p>
+<h3 id="step-2-add-style">Step 2: Add Style</h3>
+<p>In CodePen&rsquo;s <strong>CSS panel</strong>, add this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> Arial<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#667eea</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">%</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#764ba2</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">flex-direction</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">column</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">align-items</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">48</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">48</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">p</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">p</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">button</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">24</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#ff6b6b</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">8</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">all</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">button</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">24</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#ff6b6b</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">8</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">all</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">button</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#ee5a52</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-3</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.4</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">button</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#ee5a52</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-3</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span><span style="color:#0550ae">0.4</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><h3 id="what-does-this-do">What Does This Do?</h3>
 <ul>
 <li><code>body { ... }</code> - Styles the entire page (gradient background, centered content)</li>
@@ -309,70 +282,69 @@
 <li><code>button:hover</code> - Changes how the button looks when you move your mouse over it</li>
 <li><code>transition</code> - Makes changes smooth and animated</li>
 </ul>
-<h3 id="test-it-1">Test It</h3>
-<p>Refresh your page. Much better looking!</p>
+<h3 id="test-it-1">Test It!</h3>
+<p>The page updates automatically! Much better looking!</p>
 <hr>
-<h2 id="javascript---the-interaction">JavaScript - The Interaction</h2>
-<p>JavaScript is the <strong>brain</strong> of your web page. It makes things DO stuff.</p>
-<h3 id="add-interactivity">Add Interactivity</h3>
-<p>Right before the closing <code>&lt;/body&gt;</code> tag, add this:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">script</span><span style="color:#1f2328">&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Step 1: Find the button on the page
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">button</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;magicButton&#39;</span><span style="color:#1f2328">);</span>
+<h2 id="part-3-javascript---the-interaction">Part 3: JavaScript - The Interaction</h2>
+<p>JavaScript is the <strong>brain</strong> of your web page. It makes things DO stuff!</p>
+<h3 id="step-3-add-interactivity">Step 3: Add Interactivity</h3>
+<p>In CodePen&rsquo;s <strong>JS panel</strong>, add this:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// Step 1: Find the button on the page
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">button</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;magicButton&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Step 2: Create a variable to count clicks
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">let</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Step 3: Define what happens when button is clicked
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Increase the count
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Step 2: Create a variable to count clicks
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">let</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Change the button text
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Clicked &#39;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#39; times!&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Step 3: Define what happens when button is clicked
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">function</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Increase the count
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Change the button text
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Clicked &#39;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">clickCount</span> <span style="color:#0550ae">+</span> <span style="color:#0a3069">&#39; times!&#39;</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Change the button color randomly
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#cf222e">const</span> <span style="color:#1f2328">randomColor</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">getRandomColor</span><span style="color:#1f2328">();</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">backgroundColor</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">randomColor</span><span style="color:#1f2328">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Step 4: Create a function to generate random colors
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">function</span> <span style="color:#1f2328">getRandomColor</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">const</span> <span style="color:#1f2328">colors</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;#ff6b6b&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#4ecdc4&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#45b7d1&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#f7b731&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#5f27cd&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#00d2d3&#39;</span><span style="color:#1f2328">];</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">const</span> <span style="color:#1f2328">randomIndex</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">floor</span><span style="color:#1f2328">(</span><span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">*</span> <span style="color:#1f2328">colors</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#cf222e">return</span> <span style="color:#1f2328">colors</span><span style="color:#1f2328">[</span><span style="color:#1f2328">randomIndex</span><span style="color:#1f2328">];</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Step 5: Tell the button to run handleClick when clicked
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">script</span><span style="color:#1f2328">&gt;</span>
-</span></span></code></pre></div><h3 id="understanding-the-code">Understanding the Code</h3>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Change the button color randomly
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">randomColor</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">getRandomColor</span><span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">backgroundColor</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">randomColor</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Step 4: Create a function to generate random colors
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">getRandomColor</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">colors</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span><span style="color:#0a3069">&#39;#ff6b6b&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#4ecdc4&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#45b7d1&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#f7b731&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#5f27cd&#39;</span><span style="color:#1f2328">,</span> <span style="color:#0a3069">&#39;#00d2d3&#39;</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">randomIndex</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">floor</span><span style="color:#1f2328">(</span><span style="color:#6639ba">Math</span><span style="color:#1f2328">.</span><span style="color:#1f2328">random</span><span style="color:#1f2328">()</span> <span style="color:#0550ae">*</span> <span style="color:#1f2328">colors</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">return</span> <span style="color:#1f2328">colors</span><span style="color:#1f2328">[</span><span style="color:#1f2328">randomIndex</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Step 5: Tell the button to run handleClick when clicked
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">button</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">);</span>
+</span></span></code></pre></div><h3 id="lets-break-this-down">Let&rsquo;s Break This Down</h3>
 <ol>
 <li><strong><code>const button = ...</code></strong> - Finds your button by its <code>id</code> and saves it in a variable</li>
 <li><strong><code>let clickCount = 0</code></strong> - Creates a counter starting at 0</li>
 <li><strong><code>function handleClick() { ... }</code></strong> - A recipe for what to do when clicked</li>
-<li><strong><code>clickCount = clickCount + 1</code></strong> - Adds 1 to the counter (like tallying scores)</li>
+<li><strong><code>clickCount = clickCount + 1</code></strong> - Adds 1 to the counter (like tallying scores!)</li>
 <li><strong><code>button.textContent = ...</code></strong> - Changes what the button says</li>
 <li><strong><code>button.style.backgroundColor = ...</code></strong> - Changes the button&rsquo;s color</li>
 <li><strong><code>addEventListener('click', ...)</code></strong> - Says &ldquo;when someone clicks, run this function&rdquo;</li>
 </ol>
-<h3 id="test-it-2">Test It</h3>
+<h3 id="test-it-2">Test It!</h3>
 <p>Click your button! It should:</p>
 <ul>
 <li>Count your clicks</li>
 <li>Change colors randomly</li>
 <li>Update the text</li>
 </ul>
-<p>Congratulations! You just made something interactive.</p>
+<p>Congratulations — you just made something interactive!</p>
 <hr>
-<h2 id="make-it-your-own">Make It Your Own</h2>
+<h2 id="part-4-make-it-your-own">Part 4: Make It Your Own</h2>
 <h3 id="challenges">Challenges:</h3>
 <ol>
 <li><strong>Easy:</strong> Change the starting button text to something fun</li>
 <li><strong>Medium:</strong> Add more colors to the <code>colors</code> array</li>
 <li><strong>Hard:</strong> Make the heading also change when you click the button</li>
 </ol>
-<p><strong>Hint for #3:</strong> You will need to get the heading with <code>document.querySelector('h1')</code> and change its text.</p>
+<p><strong>Hint for #3:</strong> You&rsquo;ll need to get the heading with <code>document.querySelector('h1')</code> and change its text!</p>
+<p><strong>CodePen Tip:</strong> Click &ldquo;Fork&rdquo; at the top to save your own copy (requires a free account)</p>
 <hr>
 <h2 id="what-you-learned-today">What You Learned Today</h2>
 <ul>
@@ -384,31 +356,31 @@
 </ul>
 <hr>
 <h2 id="next-session-preview">Next Session Preview</h2>
-<p><strong>Session 2:</strong> We&rsquo;ll build a <strong>real click game</strong> with a timer, score, and restart button. Get ready to level up!</p>
+<p><strong>Session 2:</strong> We will switch to <strong>VS Code</strong>, set up <strong>GitHub</strong>, and build <strong>two real games</strong> - a Click Speed Challenge with timers and a Gem Catcher with canvas animation. Get ready to level up!</p>
 <hr>
-<h2 id="-homework-optional">📦 Homework (Optional)</h2>
+<h2 id="homework-optional">Homework (Optional)</h2>
 <ol>
-<li>Change the gradient background colors (find &ldquo;135deg, #667eea&rdquo; in the CSS)</li>
+<li>Change the gradient background colors (try different hex codes!)</li>
 <li>Add another button that does something different</li>
-<li>Share your page with a friend (In CodePen, you can save and share the URL)</li>
+<li>Share your page! (In CodePen, click &ldquo;Save&rdquo; then share the URL)</li>
 </ol>
 <hr>
-<h2 id="-common-issues">🆘 Common Issues</h2>
+<h2 id="common-issues">Common Issues</h2>
 <p><strong>Problem:</strong> &ldquo;I don&rsquo;t see anything&rdquo;<br>
-<strong>Solution:</strong> Make sure you clicked Run (Replit) or opened the HTML file in a browser</p>
+<strong>Solution:</strong> Make sure you&rsquo;re on CodePen.io and clicked &ldquo;Start Coding&rdquo;</p>
 <p><strong>Problem:</strong> &ldquo;The button doesn&rsquo;t do anything&rdquo;<br>
-<strong>Solution:</strong> Check that the <code>&lt;script&gt;</code> is before the closing <code>&lt;/body&gt;</code> tag</p>
-<p><strong>Problem:</strong> &ldquo;I got an error in the console&rdquo;<br>
-<strong>Solution:</strong> Make sure the button&rsquo;s <code>id=&quot;magicButton&quot;</code> matches what&rsquo;s in the JavaScript</p>
+<strong>Solution:</strong> Check that the button&rsquo;s <code>id=&quot;magicButton&quot;</code> matches what&rsquo;s in the JavaScript</p>
+<p><strong>Problem:</strong> &ldquo;My code has red underlines&rdquo;<br>
+<strong>Solution:</strong> That&rsquo;s okay! CodePen sometimes shows warnings that don&rsquo;t affect functionality</p>
 <hr>
-<h2 id="-resources">📖 Resources</h2>
+<h2 id="resources">Resources</h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN HTML Basics</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics">MDN CSS Basics</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics">MDN JavaScript Basics</a></li>
 </ul>
 <hr>
-<p><strong><a href="/highschool/">← Back to GameCraft Home</a> | <a href="/highschool/session2/">Next: Session 2 →</a></strong></p>
+<p><strong><a href="/highschool/">← Back to GameCraft Home</a> | <a href="/highschool/session2/">Next: Session 2 - Click Speed and Gem Catcher →</a></strong></p>
 
 
                 
