@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -224,38 +224,38 @@
 <h2 id="build-the-game-structure">Build the Game Structure</h2>
 <h3 id="html-structure">HTML Structure</h3>
 <p>Start by creating the basic structure. In CodePen&rsquo;s HTML panel, type:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">title</span>&gt;Click Speed Challenge&lt;/<span style="color:#ff79c6">title</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;Click Speed Challenge&lt;/<span style="color:#ff79c6">h1</span>&gt;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#57606a">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span> <span style="color:#1f2328">lang</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;en&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">charset</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;UTF-8&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;viewport&#34;</span> <span style="color:#1f2328">content</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>Click Speed Challenge<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;container&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>Click Speed Challenge<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Stats display --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game-info&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;label&#34;</span>&gt;Time Left:&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>                &lt;<span style="color:#ff79c6">p</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;timer&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;value&#34;</span>&gt;10.0&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">&lt;!-- Add two more stat boxes for Clicks and High Score --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Stats display --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game-info&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;stat&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;label&#34;</span><span style="color:#1f2328">&gt;</span>Time Left:<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;timer&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;value&#34;</span><span style="color:#1f2328">&gt;</span>10.0<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#57606a">&lt;!-- Add two more stat boxes for Clicks and High Score --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Main click button --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;clickButton&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;click-button&#34;</span> <span style="color:#50fa7b">disabled</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Main click button --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;clickButton&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;click-button&#34;</span> <span style="color:#1f2328">disabled</span><span style="color:#1f2328">&gt;</span>
 </span></span><span style="display:flex;"><span>            Click START to Begin!
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Add a start button with id=&#34;startButton&#34; --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Add a start button with id=&#34;startButton&#34; --&gt;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">&lt;!-- Message display --&gt;</span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">&lt;!-- Message display --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">id</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;message&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;message&#34;</span><span style="color:#1f2328">&gt;&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
 </span></span></code></pre></div><h3 id="new-concepts">New Concepts:</h3>
 <ul>
 <li><strong><code>&lt;div class=&quot;container&quot;&gt;</code></strong> - Groups related elements together</li>
@@ -274,97 +274,97 @@
 <h2 id="style-your-game">Style Your Game</h2>
 <h3 id="add-css-styling">Add CSS Styling</h3>
 <p>In CodePen&rsquo;s CSS panel, add these styles. Notice we are using a dark background so colors show up clearly:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">*</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#0550ae">*</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-sizing</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">border-box</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">body</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#39;Segoe UI&#39;</span>, Tahoma, Geneva, Verdana, <span style="color:#ff79c6">sans-serif</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#1e3c72</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#2a5298</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">vh</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#39;Segoe UI&#39;</span><span style="color:#1f2328">,</span> Tahoma<span style="color:#1f2328">,</span> Geneva<span style="color:#1f2328">,</span> Verdana<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#1e3c72</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">%</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#2a5298</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">align-items</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">container</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.1</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>    backdrop-filter: <span style="color:#8be9fd;font-style:italic">blur</span>(<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">container</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">60</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    backdrop-filter<span style="color:#1f2328">:</span> <span style="color:#6639ba">blur</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">h1</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">42</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">42</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">game-info</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">space-around</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">gap</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">game-info</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">space-around</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">gap</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">stat</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.2</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">25</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">min-width</span>: <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">stat</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.2</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">25</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">label</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">14</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.9</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">label</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">14</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">opacity</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0.9</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">5</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">value</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">32</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">1</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">value</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">32</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* You will style the click button - make it big and round! */</span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">click-button</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">300</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* Add your button colors here */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">%</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#57606a">/* You will style the click button - make it big and round! */</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">click-button</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">300</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">300</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">/* Add your button colors here */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">%</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* Add hover and active effects for your button */</span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">/* Add hover and active effects for your button */</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">/* Style the start button */</span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">start-button</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">/* Add your button color here */</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#57606a">/* Style the start button */</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">start-button</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">/* Add your button color here */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">message</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">24</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">message</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">margin-top</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">24</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><h3 id="your-turn---complete-the-styling">Your Turn - Complete the Styling:</h3>
 <ol>
 <li><strong>Style the click button:</strong> Add a background color or gradient (try <code>background: #e74c3c;</code> or <code>background: linear-gradient(135deg, #ff6b6b, #ee5252);</code>)</li>
@@ -377,94 +377,94 @@
 <h2 id="add-game-logic">Add Game Logic</h2>
 <h3 id="javascript---the-game-brain">JavaScript - The Game Brain</h3>
 <p>In CodePen&rsquo;s JS panel, let us build the game logic step by step:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// 1. GET ALL THE ELEMENTS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> clickButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;clickButton&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> startButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;startButton&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> timerDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;timer&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> scoreDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;score&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> highScoreDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;highScore&#39;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> messageDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;message&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// 1. GET ALL THE ELEMENTS
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">clickButton</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickButton&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">startButton</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;startButton&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">timerDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;timer&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">scoreDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;score&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">highScoreDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;highScore&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">messageDisplay</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">document</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getElementById</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;message&#39;</span><span style="color:#1f2328">);</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 2. GAME STATE VARIABLES
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> timeLeft <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> highScore <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> timerInterval <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 2. GAME STATE VARIABLES
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">let</span> <span style="color:#1f2328">score</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">let</span> <span style="color:#1f2328">timerInterval</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">null</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 3. HANDLE CLICK BUTTON
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>clickButton.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (gameRunning) {
-</span></span><span style="display:flex;"><span>        score<span style="color:#ff79c6">++</span>;
-</span></span><span style="display:flex;"><span>        scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 3. HANDLE CLICK BUTTON
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">gameRunning</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">score</span><span style="color:#0550ae">++</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Add animation feedback
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clickButton.style.transform <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;scale(0.95)&#39;</span>;
-</span></span><span style="display:flex;"><span>        setTimeout(() =&gt; {
-</span></span><span style="display:flex;"><span>            clickButton.style.transform <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;scale(1)&#39;</span>;
-</span></span><span style="display:flex;"><span>        }, <span style="color:#bd93f9">100</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Add animation feedback
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">transform</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;scale(0.95)&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">setTimeout</span><span style="color:#1f2328">(()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">transform</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;scale(1)&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">},</span> <span style="color:#0550ae">100</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">});</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 4. HANDLE START BUTTON
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>startButton.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, <span style="color:#8be9fd;font-style:italic">function</span>() {
-</span></span><span style="display:flex;"><span>    startGame();
-</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 4. HANDLE START BUTTON
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">addEventListener</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;click&#39;</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">function</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startGame</span><span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">});</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 5. START GAME FUNCTION
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> startGame() {
-</span></span><span style="display:flex;"><span>    score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>    timeLeft <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
-</span></span><span style="display:flex;"><span>    gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>    messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 5. START GAME FUNCTION
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">startGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">score</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">10</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
-</span></span><span style="display:flex;"><span>    timerDisplay.textContent <span style="color:#ff79c6">=</span> timeLeft.toFixed(<span style="color:#bd93f9">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">scoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">timeLeft</span><span style="color:#1f2328">.</span><span style="color:#1f2328">toFixed</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    clickButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    clickButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;CLICK ME!&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;CLICK ME!&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Running...&#39;</span>;
-</span></span><span style="display:flex;"><span>    startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Game Running...&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Start the countdown (calls updateTimer every 0.1 seconds)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    timerInterval <span style="color:#ff79c6">=</span> setInterval(updateTimer, <span style="color:#bd93f9">100</span>);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Start the countdown (calls updateTimer every 0.1 seconds)
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">timerInterval</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">setInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">updateTimer</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">100</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 6. UPDATE TIMER - YOU COMPLETE THIS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> updateTimer() {
-</span></span><span style="display:flex;"><span>    timeLeft <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">0.1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 6. UPDATE TIMER - YOU COMPLETE THIS
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">updateTimer</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">-=</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (timeLeft <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>) {
-</span></span><span style="display:flex;"><span>        endGame();
-</span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Update the timer display (use .toFixed(1) to show one decimal)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#6272a4">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">timeLeft</span> <span style="color:#0550ae">&lt;=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">endGame</span><span style="color:#1f2328">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span> <span style="color:#cf222e">else</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#57606a">// Update the timer display (use .toFixed(1) to show one decimal)
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>        <span style="color:#57606a">// YOUR CODE HERE
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 7. END GAME - YOU COMPLETE THIS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> endGame() {
-</span></span><span style="display:flex;"><span>    gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    clearInterval(timerInterval);
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// 7. END GAME - YOU COMPLETE THIS
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">function</span> <span style="color:#1f2328">endGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">gameRunning</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clearInterval</span><span style="color:#1f2328">(</span><span style="color:#1f2328">timerInterval</span><span style="color:#1f2328">);</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    clickButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>    clickButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Time&#39;s Up!&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">true</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Time&#39;s Up!&#34;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;PLAY AGAIN&#39;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">disabled</span> <span style="color:#0550ae">=</span> <span style="color:#cf222e">false</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">startButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;PLAY AGAIN&#39;</span><span style="color:#1f2328">;</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Check if this is a new high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// If score &gt; highScore:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Update highScore
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Display high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Show &#34;NEW HIGH SCORE!&#34; message
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// Otherwise:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">//   - Show regular game over message
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// YOUR CODE HERE
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    timerDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;0.0&#39;</span>;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Check if this is a new high score
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// If score &gt; highScore:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Update highScore
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Display high score
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Show &#34;NEW HIGH SCORE!&#34; message
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// Otherwise:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">//   - Show regular game over message
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#57606a">// YOUR CODE HERE
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">timerDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;0.0&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div><h3 id="understanding-the-key-concepts">Understanding the Key Concepts</h3>
 <p><strong>Important concepts:</strong></p>
 <ol>
@@ -477,13 +477,13 @@
 <ol>
 <li><strong>Fix <code>updateTimer()</code>:</strong> Make it update the timer display using <code>timerDisplay.textContent = timeLeft.toFixed(1);</code></li>
 <li><strong>Fix <code>endGame()</code>:</strong> Add the high score logic:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (score <span style="color:#ff79c6">&gt;</span> highScore) {
-</span></span><span style="display:flex;"><span>    highScore <span style="color:#ff79c6">=</span> score;
-</span></span><span style="display:flex;"><span>    highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
-</span></span><span style="display:flex;"><span>    messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;NEW HIGH SCORE!&#39;</span>;
-</span></span><span style="display:flex;"><span>} <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>    messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Over! Your score: &#39;</span> <span style="color:#ff79c6">+</span> score;
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">score</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;NEW HIGH SCORE!&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span> <span style="color:#cf222e">else</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;Game Over! Your score: &#39;</span> <span style="color:#0550ae">+</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
 </span></span></code></pre></div></li>
 <li><strong>Test it:</strong> Click START and play the game - does everything work?</li>
 <li><strong>Customize:</strong> Change the button text, game duration, or add your own message</li>
@@ -505,26 +505,22 @@
 <li>Add a pulsing animation to the button during the game</li>
 <li>Display different messages based on score (0-15: &ldquo;Keep trying!&rdquo;, 16-25: &ldquo;Good!&rdquo;, 26+: &ldquo;Amazing!&rdquo;)</li>
 </ol>
-<p><strong>New Features:</strong></p>
-<ol start="4">
-<li>Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)</li>
-<li>Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code></li>
-<li>Add sound effects when clicking (hint: look up HTML <code>&lt;audio&gt;</code> tag)</li>
-</ol>
-<p><strong>Advanced:</strong></p>
-<ol start="7">
-<li>Save high score in <code>localStorage</code> so it persists even after refreshing (see solution below)</li>
-<li>Make the button shrink slightly with each click, then reset when time is up</li>
-</ol>
+<p><strong>New Features:</strong>
+4. Add difficulty levels with different time limits (Easy: 15s, Medium: 10s, Hard: 5s)
+5. Show clicks-per-second at the end: <code>const cps = (score / 10).toFixed(1);</code>
+6. Save high score in <code>localStorage</code> so it persists after closing the browser</p>
+<p>**Advanced:
+7. Save high score in <code>localStorage</code> so it persists even after refreshing
+8. Make the button shrink slightly with each click, then reset when time is up</p>
 <hr>
 <h2 id="advanced-save-high-score-forever">Advanced: Save High Score Forever</h2>
 <p>Want your high score to persist even after closing the browser? Use <code>localStorage</code>:</p>
 <p><strong>At the top of your JavaScript (after getting elements):</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#6272a4">// Load saved high score
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>highScore <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">parseInt</span>(localStorage.getItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>)) <span style="color:#ff79c6">||</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>highScoreDisplay.textContent <span style="color:#ff79c6">=</span> highScore;
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// Load saved high score
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#6639ba">parseInt</span><span style="color:#1f2328">(</span><span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">))</span> <span style="color:#0550ae">||</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
 </span></span></code></pre></div><p><strong>In <code>endGame()</code>, after updating the high score:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>localStorage.setItem(<span style="color:#f1fa8c">&#39;clickGameHighScore&#39;</span>, highScore);
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">setItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">);</span>
 </span></span></code></pre></div><p>Now your high score saves automatically!</p>
 <hr>
 <h2 id="what-you-learned-today">What You Learned Today</h2>
@@ -562,10 +558,6 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">Event Listeners - MDN</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
 </ul>
-<hr>
-<h2 id="need-help">Need Help?</h2>
-<p><strong><a href="/highschool/session2-solution/">View Complete Solution Code →</a></strong></p>
-<p>If you are stuck or need to catch up, check out the complete working code with all the missing parts filled in.</p>
 <hr>
 <p><strong><a href="/highschool/session1/">← Session 1</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session3/">Next: Session 3 →</a></strong></p>
 

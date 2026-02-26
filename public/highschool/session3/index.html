@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -199,505 +199,394 @@
                 post-container">
 
                 
-                <h1 id="session-3-catch-the-falling-gems-">Session 3: Catch the Falling Gems! 💎</h1>
-<p><strong>Time:</strong> 1 hour<br>
-<strong>Goal:</strong> Build a game with moving objects, collision detection, and smooth animation<br>
-<strong>Prerequisites:</strong> Sessions 1-2 (HTML, CSS, JavaScript, game loops)</p>
+                <h1 id="session-3-tic-tac-toe-with-react">Session 3: Tic-Tac-Toe with React</h1>
+<p><strong>Goal:</strong> Learn React by building a classic Tic-Tac-Toe game with components<br>
+<strong>Prerequisites:</strong> Sessions 1-2 (HTML, CSS, JavaScript)</p>
 <hr>
-<h2 id="-what-youll-build-today">🎯 What You&rsquo;ll Build Today</h2>
-<p>A &ldquo;Gem Catcher&rdquo; game where colorful gems fall from the sky and you move a basket to catch them!</p>
+<h2 id="what-you-will-build-today">What You Will Build Today</h2>
+<p>A fully functional Tic-Tac-Toe game built with <strong>React</strong> - a modern framework used by Facebook, Netflix, and thousands of professional developers.</p>
 <p><strong>Features:</strong></p>
 <ul>
-<li>Moving gems that fall down the screen</li>
-<li>Player basket controlled by keyboard or mouse</li>
-<li>Collision detection (did we catch it?)</li>
-<li>Score tracking</li>
-<li>Game over when you miss 3 gems</li>
-</ul>
-<p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
-<hr>
-<h2 id="-setup-5-minutes">🚀 Setup (5 minutes)</h2>
-<p>Create a new Repl or file: <code>gem-catcher.html</code></p>
-<hr>
-<h2 id="-part-1-html-canvas-setup-10-minutes">📖 Part 1: HTML Canvas Setup (10 minutes)</h2>
-<h3 id="step-1-the-html-structure">Step 1: The HTML Structure</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span> <span style="color:#50fa7b">lang</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">head</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">name</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;viewport&#34;</span> <span style="color:#50fa7b">content</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">title</span>&gt;Gem Catcher Game&lt;/<span style="color:#ff79c6">title</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">head</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">body</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;container&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">h1</span>&gt;💎 Gem Catcher 💎&lt;/<span style="color:#ff79c6">h1</span>&gt;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game-stats&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;Score: &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;score&#34;</span>&gt;0&lt;/<span style="color:#ff79c6">span</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;stat&#34;</span>&gt;Lives: &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;lives&#34;</span>&gt;3&lt;/<span style="color:#ff79c6">span</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">canvas</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;gameCanvas&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;600&#34;</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;500&#34;</span>&gt;&lt;/<span style="color:#ff79c6">canvas</span>&gt;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;controls&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">p</span>&gt;🖱️ Move your mouse to control the basket&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">p</span>&gt;Or use ← → arrow keys&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>            &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;startButton&#34;</span>&gt;START GAME&lt;/<span style="color:#ff79c6">button</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;message&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
-</span></span></code></pre></div><h3 id="-whats-new">🔍 What&rsquo;s New?</h3>
-<p><strong><code>&lt;canvas&gt;</code></strong> - An HTML element where we can draw graphics with JavaScript!</p>
-<ul>
-<li>Think of it like a blank piece of paper</li>
-<li>We&rsquo;ll draw our gems and basket on it</li>
-<li><code>width=&quot;600&quot; height=&quot;500&quot;</code> sets the size in pixels</li>
+<li>Interactive game board</li>
+<li>Win detection</li>
+<li>Draw detection</li>
+<li>Reset button</li>
+<li>Turn indicator</li>
+<li>Component-based architecture</li>
 </ul>
 <hr>
-<h2 id="-part-2-styling-5-minutes">🎨 Part 2: Styling (5 minutes)</h2>
-<h3 id="step-2-add-css">Step 2: Add CSS</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">style</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">body</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#39;Segoe UI&#39;</span>, Tahoma, Geneva, Verdana, <span style="color:#ff79c6">sans-serif</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#1e3c72</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#2a5298</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">vh</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">container</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.1</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.5</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">h1</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">42</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.5</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">game-stats</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">gap</span>: <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">24</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">stat</span> <span style="color:#ff79c6">span</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#4ecdc4</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    #gameCanvas {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border</span>: <span style="color:#bd93f9">3</span><span style="color:#8be9fd">px</span> <span style="color:#ff79c6">solid</span> <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">180</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#87ceeb</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#f0e68c</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.5</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">none</span>; <span style="color:#6272a4">/* Hide cursor over canvas */</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">controls</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">controls</span> <span style="color:#ff79c6">p</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">5</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">16</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">opacity</span>: <span style="color:#bd93f9">0.9</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">button</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#4ecdc4</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">button</span>:hover {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#3dbdb3</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-2</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">message</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">margin-top</span>: <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">24</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">style</span>&gt;
-</span></span></code></pre></div><hr>
-<h2 id="-part-3-game-logic-with-canvas-animation-35-minutes">⚡ Part 3: Game Logic with Canvas Animation (35 minutes)</h2>
-<h3 id="step-3-javascript---the-animation-engine">Step 3: JavaScript - The Animation Engine</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">script</span>&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 1. SETUP - Get elements and canvas context
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> canvas <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;gameCanvas&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> ctx <span style="color:#ff79c6">=</span> canvas.getContext(<span style="color:#f1fa8c">&#39;2d&#39;</span>); <span style="color:#6272a4">// Drawing context
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> startButton <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;startButton&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> scoreDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;score&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> livesDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;lives&#39;</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> messageDisplay <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#39;message&#39;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 2. GAME STATE
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> lives <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">let</span> animationId <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">null</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 3. GAME OBJECTS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// The basket (player)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> basket <span style="color:#ff79c6">=</span> {
-</span></span><span style="display:flex;"><span>        x<span style="color:#ff79c6">:</span> canvas.width <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">50</span>,  <span style="color:#6272a4">// Start in center
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        y<span style="color:#ff79c6">:</span> canvas.height <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">60</span>,      <span style="color:#6272a4">// Near bottom
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        width<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">100</span>,
-</span></span><span style="display:flex;"><span>        height<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">40</span>,
-</span></span><span style="display:flex;"><span>        speed<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">8</span>,
-</span></span><span style="display:flex;"><span>        color<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;#8B4513&#39;</span>
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Array to hold falling gems
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> gems <span style="color:#ff79c6">=</span> [];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 4. GEM FACTORY - Creates a new gem
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">function</span> createGem() {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> colors <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;#ff6b6b&#39;</span>, <span style="color:#f1fa8c">&#39;#4ecdc4&#39;</span>, <span style="color:#f1fa8c">&#39;#45b7d1&#39;</span>, <span style="color:#f1fa8c">&#39;#f7b731&#39;</span>, <span style="color:#f1fa8c">&#39;#5f27cd&#39;</span>, <span style="color:#f1fa8c">&#39;#00d2d3&#39;</span>];
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> randomColor <span style="color:#ff79c6">=</span> colors[<span style="color:#8be9fd;font-style:italic">Math</span>.floor(<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> colors.length)];
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> {
-</span></span><span style="display:flex;"><span>            x<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> (canvas.width <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">30</span>), <span style="color:#6272a4">// Random x position
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            y<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">30</span>,                                   <span style="color:#6272a4">// Start above screen
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            width<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">30</span>,
-</span></span><span style="display:flex;"><span>            height<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">30</span>,
-</span></span><span style="display:flex;"><span>            speed<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">2</span>,            <span style="color:#6272a4">// Random speed 2-4
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            color<span style="color:#ff79c6">:</span> randomColor,
-</span></span><span style="display:flex;"><span>            caught<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
-</span></span><span style="display:flex;"><span>        };
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 5. DRAWING FUNCTIONS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> drawBasket() {
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Draw basket body
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.fillStyle <span style="color:#ff79c6">=</span> basket.color;
-</span></span><span style="display:flex;"><span>        ctx.fillRect(basket.x, basket.y, basket.width, basket.height);
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Draw basket handle (arc on top)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.strokeStyle <span style="color:#ff79c6">=</span> basket.color;
-</span></span><span style="display:flex;"><span>        ctx.lineWidth <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
-</span></span><span style="display:flex;"><span>        ctx.beginPath();
-</span></span><span style="display:flex;"><span>        ctx.arc(basket.x <span style="color:#ff79c6">+</span> basket.width<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>, basket.y, <span style="color:#bd93f9">20</span>, <span style="color:#8be9fd;font-style:italic">Math</span>.PI, <span style="color:#bd93f9">0</span>);
-</span></span><span style="display:flex;"><span>        ctx.stroke();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> drawGem(gem) {
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Draw as a diamond shape
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.fillStyle <span style="color:#ff79c6">=</span> gem.color;
-</span></span><span style="display:flex;"><span>        ctx.beginPath();
-</span></span><span style="display:flex;"><span>        ctx.moveTo(gem.x <span style="color:#ff79c6">+</span> gem.width<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>, gem.y);              <span style="color:#6272a4">// Top point
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.lineTo(gem.x <span style="color:#ff79c6">+</span> gem.width, gem.y <span style="color:#ff79c6">+</span> gem.height<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>); <span style="color:#6272a4">// Right point
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.lineTo(gem.x <span style="color:#ff79c6">+</span> gem.width<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>, gem.y <span style="color:#ff79c6">+</span> gem.height); <span style="color:#6272a4">// Bottom point
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.lineTo(gem.x, gem.y <span style="color:#ff79c6">+</span> gem.height<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span>);             <span style="color:#6272a4">// Left point
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.closePath();
-</span></span><span style="display:flex;"><span>        ctx.fill();
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Add sparkle effect
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        ctx.fillStyle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;rgba(255, 255, 255, 0.5)&#39;</span>;
-</span></span><span style="display:flex;"><span>        ctx.fillRect(gem.x <span style="color:#ff79c6">+</span> gem.width<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">3</span>, gem.y <span style="color:#ff79c6">+</span> gem.height<span style="color:#ff79c6">/</span><span style="color:#bd93f9">2</span> <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">6</span>);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> clearCanvas() {
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Redraw gradient background
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">const</span> gradient <span style="color:#ff79c6">=</span> ctx.createLinearGradient(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, canvas.height);
-</span></span><span style="display:flex;"><span>        gradient.addColorStop(<span style="color:#bd93f9">0</span>, <span style="color:#f1fa8c">&#39;#87ceeb&#39;</span>);
-</span></span><span style="display:flex;"><span>        gradient.addColorStop(<span style="color:#bd93f9">1</span>, <span style="color:#f1fa8c">&#39;#f0e68c&#39;</span>);
-</span></span><span style="display:flex;"><span>        ctx.fillStyle <span style="color:#ff79c6">=</span> gradient;
-</span></span><span style="display:flex;"><span>        ctx.fillRect(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, canvas.width, canvas.height);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 6. COLLISION DETECTION
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> checkCollision(gem, basket) {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> gem.x <span style="color:#ff79c6">&lt;</span> basket.x <span style="color:#ff79c6">+</span> basket.width <span style="color:#ff79c6">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               gem.x <span style="color:#ff79c6">+</span> gem.width <span style="color:#ff79c6">&gt;</span> basket.x <span style="color:#ff79c6">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               gem.y <span style="color:#ff79c6">&lt;</span> basket.y <span style="color:#ff79c6">+</span> basket.height <span style="color:#ff79c6">&amp;&amp;</span>
-</span></span><span style="display:flex;"><span>               gem.y <span style="color:#ff79c6">+</span> gem.height <span style="color:#ff79c6">&gt;</span> basket.y;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 7. GAME LOOP - The heart of the game!
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> gameLoop() {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>gameRunning) <span style="color:#ff79c6">return</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Clear and redraw everything
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        clearCanvas();
-</span></span><span style="display:flex;"><span>        drawBasket();
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Update and draw each gem
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> gems.length <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>; i <span style="color:#ff79c6">&gt;=</span> <span style="color:#bd93f9">0</span>; i<span style="color:#ff79c6">--</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> gem <span style="color:#ff79c6">=</span> gems[i];
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Move gem down
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            gem.y <span style="color:#ff79c6">+=</span> gem.speed;
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Check if caught
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            <span style="color:#ff79c6">if</span> (checkCollision(gem, basket) <span style="color:#ff79c6">&amp;&amp;</span> <span style="color:#ff79c6">!</span>gem.caught) {
-</span></span><span style="display:flex;"><span>                gem.caught <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>                score<span style="color:#ff79c6">++</span>;
-</span></span><span style="display:flex;"><span>                scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
-</span></span><span style="display:flex;"><span>                gems.splice(i, <span style="color:#bd93f9">1</span>); <span style="color:#6272a4">// Remove from array
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>                <span style="color:#ff79c6">continue</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Check if missed (fell off screen)
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            <span style="color:#ff79c6">if</span> (gem.y <span style="color:#ff79c6">&gt;</span> canvas.height) {
-</span></span><span style="display:flex;"><span>                lives<span style="color:#ff79c6">--</span>;
-</span></span><span style="display:flex;"><span>                livesDisplay.textContent <span style="color:#ff79c6">=</span> lives;
-</span></span><span style="display:flex;"><span>                gems.splice(i, <span style="color:#bd93f9">1</span>);
-</span></span><span style="display:flex;"><span>                
-</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">if</span> (lives <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">0</span>) {
-</span></span><span style="display:flex;"><span>                    endGame();
-</span></span><span style="display:flex;"><span>                    <span style="color:#ff79c6">return</span>;
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#ff79c6">continue</span>;
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            
-</span></span><span style="display:flex;"><span>            <span style="color:#6272a4">// Draw the gem
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            drawGem(gem);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Spawn new gems randomly
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">if</span> (<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0.02</span>) { <span style="color:#6272a4">// 2% chance each frame
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>            gems.push(createGem());
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Continue the animation loop
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        animationId <span style="color:#ff79c6">=</span> requestAnimationFrame(gameLoop);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 8. PLAYER CONTROLS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Mouse control
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    canvas.addEventListener(<span style="color:#f1fa8c">&#39;mousemove&#39;</span>, (e) =&gt; {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>gameRunning) <span style="color:#ff79c6">return</span>;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> rect <span style="color:#ff79c6">=</span> canvas.getBoundingClientRect();
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">const</span> mouseX <span style="color:#ff79c6">=</span> e.clientX <span style="color:#ff79c6">-</span> rect.left;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Center basket on mouse, keep within bounds
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        basket.x <span style="color:#ff79c6">=</span> mouseX <span style="color:#ff79c6">-</span> basket.width <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span>;
-</span></span><span style="display:flex;"><span>        basket.x <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.max(<span style="color:#bd93f9">0</span>, <span style="color:#8be9fd;font-style:italic">Math</span>.min(canvas.width <span style="color:#ff79c6">-</span> basket.width, basket.x));
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Keyboard control
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> keys <span style="color:#ff79c6">=</span> {};
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">document</span>.addEventListener(<span style="color:#f1fa8c">&#39;keydown&#39;</span>, (e) =&gt; {
-</span></span><span style="display:flex;"><span>        keys[e.key] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">document</span>.addEventListener(<span style="color:#f1fa8c">&#39;keyup&#39;</span>, (e) =&gt; {
-</span></span><span style="display:flex;"><span>        keys[e.key] <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> updateBasketKeyboard() {
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (keys[<span style="color:#f1fa8c">&#39;ArrowLeft&#39;</span>] <span style="color:#ff79c6">||</span> keys[<span style="color:#f1fa8c">&#39;a&#39;</span>]) {
-</span></span><span style="display:flex;"><span>            basket.x <span style="color:#ff79c6">-=</span> basket.speed;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> (keys[<span style="color:#f1fa8c">&#39;ArrowRight&#39;</span>] <span style="color:#ff79c6">||</span> keys[<span style="color:#f1fa8c">&#39;d&#39;</span>]) {
-</span></span><span style="display:flex;"><span>            basket.x <span style="color:#ff79c6">+=</span> basket.speed;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Keep basket within bounds
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        basket.x <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.max(<span style="color:#bd93f9">0</span>, <span style="color:#8be9fd;font-style:italic">Math</span>.min(canvas.width <span style="color:#ff79c6">-</span> basket.width, basket.x));
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 9. GAME MANAGEMENT
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> startGame() {
-</span></span><span style="display:flex;"><span>        score <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>        lives <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>;
-</span></span><span style="display:flex;"><span>        gems <span style="color:#ff79c6">=</span> [];
-</span></span><span style="display:flex;"><span>        gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        scoreDisplay.textContent <span style="color:#ff79c6">=</span> score;
-</span></span><span style="display:flex;"><span>        livesDisplay.textContent <span style="color:#ff79c6">=</span> lives;
-</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Game Running...&#39;</span>;
-</span></span><span style="display:flex;"><span>        startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        gameLoop();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">function</span> endGame() {
-</span></span><span style="display:flex;"><span>        gameRunning <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>        cancelAnimationFrame(animationId);
-</span></span><span style="display:flex;"><span>        
-</span></span><span style="display:flex;"><span>        messageDisplay.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;🎮 Game Over! Final Score: &#39;</span> <span style="color:#ff79c6">+</span> score;
-</span></span><span style="display:flex;"><span>        startButton.textContent <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;PLAY AGAIN&#39;</span>;
-</span></span><span style="display:flex;"><span>        startButton.disabled <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 10. EVENT LISTENERS
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// ========================================
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    startButton.addEventListener(<span style="color:#f1fa8c">&#39;click&#39;</span>, startGame);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Initial draw
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    clearCanvas();
-</span></span><span style="display:flex;"><span>    drawBasket();
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">script</span>&gt;
-</span></span></code></pre></div><h3 id="-key-concepts-explained">🔍 Key Concepts Explained</h3>
-<p><strong>1. Canvas Context (<code>ctx</code>)</strong></p>
+<h2 id="what-is-react">What is React?</h2>
+<p><strong>React</strong> is a JavaScript library for building user interfaces with <strong>reusable components</strong>.</p>
+<p>Think of it like LEGO blocks:</p>
 <ul>
-<li>Like a paintbrush that draws on the canvas</li>
-<li><code>ctx.fillRect()</code> - Draw rectangles</li>
-<li><code>ctx.beginPath()</code> - Start drawing a custom shape</li>
-<li><code>ctx.arc()</code> - Draw curves/circles</li>
+<li>Instead of one giant HTML file, you build small pieces (components)</li>
+<li>Each piece has its own structure, style, and behavior</li>
+<li>You combine pieces to make complete applications</li>
 </ul>
-<p><strong>2. Game Loop with <code>requestAnimationFrame()</code></strong></p>
+<p><strong>Why React?</strong></p>
 <ul>
-<li>Runs at ~60 frames per second</li>
-<li>Smoother than <code>setInterval</code></li>
-<li>Browser optimizes it automatically</li>
-</ul>
-<p><strong>3. Array Management</strong></p>
-<ul>
-<li><code>gems.push(createGem())</code> - Add new gem</li>
-<li><code>gems.splice(i, 1)</code> - Remove gem at position i</li>
-<li>Loop backwards to safely remove items</li>
-</ul>
-<p><strong>4. Collision Detection</strong></p>
-<ul>
-<li>Check if rectangles overlap</li>
-<li>Classic &ldquo;AABB&rdquo; (Axis-Aligned Bounding Box) collision</li>
-</ul>
-<p><strong>5. Keyboard State Tracking</strong></p>
-<ul>
-<li>Store pressed keys in an object</li>
-<li>Check state each frame for smooth movement</li>
+<li>Reusable components (write once, use everywhere)</li>
+<li>Automatic UI updates when data changes</li>
+<li>Industry-standard (used by top companies)</li>
+<li>Makes complex UIs easier to manage</li>
 </ul>
 <hr>
-<h2 id="-part-4-test-and-customize-5-minutes">🎮 Part 4: Test and Customize (5 minutes)</h2>
-<h3 id="-testing">✅ Testing:</h3>
+<h2 id="setup">Setup</h2>
+<h3 id="create-a-react-project-with-vite">Create a React Project with Vite</h3>
 <ol>
-<li>Move your mouse - does the basket follow?</li>
-<li>Try arrow keys - does it move?</li>
-<li>Catch gems - does score increase?</li>
-<li>Miss 3 gems - does game end?</li>
+<li>Open VS Code and open your terminal (<code>Terminal &gt; New Terminal</code>)</li>
+<li>Navigate to your <code>gamecraft</code> folder (or wherever your projects live)</li>
+<li>Run these commands:</li>
 </ol>
-<h3 id="-customization-ideas">🎨 Customization Ideas:</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm create vite@latest tictactoe -- --template react
+</span></span><span style="display:flex;"><span><span style="color:#6639ba">cd</span> tictactoe
+</span></span><span style="display:flex;"><span>npm install
+</span></span><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><ol start="4">
+<li>Open your browser to <code>http://localhost:5173</code> - you should see a React welcome page</li>
+</ol>
+<h3 id="what-just-happened">What Just Happened?</h3>
+<p>Vite created a React project with:</p>
+<ul>
+<li><code>src/App.jsx</code> - Main React component (we will edit this)</li>
+<li><code>src/main.jsx</code> - Entry point</li>
+<li><code>package.json</code> - Dependencies list</li>
+<li><code>.jsx</code> files - JavaScript + XML (JSX) = React's syntax for mixing HTML and JavaScript</li>
+</ul>
+<hr>
+<h2 id="understanding-components">Understanding Components</h2>
+<p>Before we build, let us understand four key React concepts:</p>
+<h3 id="1-components---reusable-ui-pieces">1. Components - Reusable UI Pieces</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">Button</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">return</span> <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">Click</span> <span style="color:#1f2328">Me</span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>A component is a function that returns HTML-like code. You can reuse it anywhere.</p>
+<h3 id="2-jsx---html-inside-javascript">2. JSX - HTML Inside JavaScript</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">name</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#34;Player&#34;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">return</span> <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">Hello</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">{</span><span style="color:#1f2328">name</span><span style="color:#1f2328">}</span><span style="color:#0550ae">!</span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;;</span> <span style="color:#57606a">// Outputs: Hello, Player!
+</span></span></span></code></pre></div><p>Curly braces <code>{}</code> let you put JavaScript values inside HTML.</p>
+<h3 id="3-state---data-that-can-change">3. State - Data That Can Change</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">const</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">count</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">setCount</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">useState</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span> <span style="color:#57606a">// count starts at 0
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">setCount</span><span style="color:#1f2328">(</span><span style="color:#0550ae">5</span><span style="color:#1f2328">);</span> <span style="color:#57606a">// Updates count to 5 and re-renders the component
+</span></span></span></code></pre></div><p>When state changes, React automatically updates what you see on screen.</p>
+<h3 id="4-props---passing-data-between-components">4. Props - Passing Data Between Components</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;X&#34;</span> <span style="color:#1f2328">/&gt;</span>
+</span></span></code></pre></div><p>Props are like function parameters - they let parent components send data to children.</p>
+<hr>
+<h2 id="build-the-game">Build the Game</h2>
+<h3 id="step-1-clear-the-template">Step 1: Clear the Template</h3>
+<p>Open <code>src/App.jsx</code> and <strong>replace everything</strong> with:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">import</span> <span style="color:#1f2328">{</span> <span style="color:#1f2328">useState</span> <span style="color:#1f2328">}</span> <span style="color:#1f2328">from</span> <span style="color:#f6f8fa;background-color:#82071e">\</span><span style="color:#0a3069">&#39;react\&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">import \&#39;./App.css\&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">App</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">return</span> <span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">Tic</span><span style="color:#0550ae">-</span><span style="color:#1f2328">Tac</span><span style="color:#0550ae">-</span><span style="color:#1f2328">Toe</span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">Let</span> <span style="color:#1f2328">us</span> <span style="color:#1f2328">build</span> <span style="color:#cf222e">this</span> <span style="color:#1f2328">together</span><span style="color:#0550ae">!</span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">export</span> <span style="color:#cf222e">default</span> <span style="color:#1f2328">App</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p>Save and check your browser - you should see the heading.</p>
+<h3 id="step-2-add-the-win-detection-function">Step 2: Add the Win Detection Function</h3>
+<p>At the <strong>top of the file</strong>, right after the imports, add:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">calculateWinner</span><span style="color:#1f2328">(</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">const</span> <span style="color:#1f2328">lines</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">2</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Top row
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">3</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">4</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">5</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Middle row
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">6</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">7</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">8</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Bottom row
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">3</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">6</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Left column
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">1</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">4</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">7</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Middle column
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">2</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">5</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">8</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Right column
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">4</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">8</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Diagonal
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">[</span><span style="color:#0550ae">2</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">4</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">6</span><span style="color:#1f2328">],</span> <span style="color:#57606a">// Diagonal
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>  <span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">for</span> <span style="color:#1f2328">(</span><span style="color:#cf222e">let</span> <span style="color:#1f2328">i</span> <span style="color:#0550ae">=</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">i</span> <span style="color:#0550ae">&lt;</span> <span style="color:#1f2328">lines</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span><span style="color:#1f2328">;</span> <span style="color:#1f2328">i</span><span style="color:#0550ae">++</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">a</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">b</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">c</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">lines</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">a</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">a</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">===</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">b</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">a</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">===</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">c</span><span style="color:#1f2328">])</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#cf222e">return</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">a</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">return</span> <span style="color:#cf222e">null</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>This checks all 8 possible winning combinations.</p>
+<h3 id="step-3-create-a-square-component">Step 3: Create a Square Component</h3>
+<p>Add this function <strong>above</strong> the <code>App</code> function:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">Square</span><span style="color:#1f2328">({</span> <span style="color:#1f2328">value</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">onSquareClick</span> <span style="color:#1f2328">})</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">return</span> <span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;square&#34;</span> <span style="color:#1f2328">onClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">onSquareClick</span><span style="color:#1f2328">}&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">{</span><span style="color:#1f2328">value</span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>Each square receives:</p>
+<ul>
+<li><code>value</code> - what to display (X, O, or nothing)</li>
+<li><code>onSquareClick</code> - what to do when clicked</li>
+</ul>
+<h3 id="step-4-create-the-board-component">Step 4: Create the Board Component</h3>
+<p>Add this function <strong>above</strong> <code>App</code> but <strong>below</strong> <code>Square</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">Board</span><span style="color:#1f2328">({</span> <span style="color:#1f2328">xIsNext</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">onPlay</span> <span style="color:#1f2328">})</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">function</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#1f2328">i</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Don\&#39;t allow clicks if square is filled or game is won
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">||</span> <span style="color:#1f2328">calculateWinner</span><span style="color:#1f2328">(</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">))</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#cf222e">return</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">nextSquares</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">squares</span><span style="color:#1f2328">.</span><span style="color:#1f2328">slice</span><span style="color:#1f2328">();</span> <span style="color:#57606a">// Copy the array
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">xIsNext</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">nextSquares</span><span style="color:#1f2328">[</span><span style="color:#1f2328">i</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#f6f8fa;background-color:#82071e">\</span><span style="color:#0a3069">&#39;X\&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    } else {
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">      nextSquares[i] = \&#39;O\&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    }
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    onPlay(nextSquares);
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  }
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  const winner = calculateWinner(squares);
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  let status;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  if (winner) {
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    status = \&#39;Winner: \&#39; + winner + \&#39;!\&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  } else if (squares.every(square =&gt; square)) {
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    status = \&#39;Draw!\&#39;;
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">  } else {
+</span></span></span><span style="display:flex;"><span><span style="color:#0a3069">    status = \&#39;Next player: \&#39; + (xIsNext ? \&#39;X\&#39; : \&#39;O\&#39;</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">return</span> <span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;status&#34;</span><span style="color:#1f2328">&gt;{</span><span style="color:#1f2328">status</span><span style="color:#1f2328">}&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;board&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">0</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">1</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">2</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">2</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">3</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">3</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">4</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">4</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">5</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">5</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">6</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">6</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">7</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">7</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Square</span> <span style="color:#1f2328">value</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">squares</span><span style="color:#1f2328">[</span><span style="color:#0550ae">8</span><span style="color:#1f2328">]}</span> <span style="color:#1f2328">onSquareClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">handleClick</span><span style="color:#1f2328">(</span><span style="color:#0550ae">8</span><span style="color:#1f2328">)}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p><strong>Key ideas:</strong></p>
+<ul>
+<li><code>squares.slice()</code> creates a copy (React best practice - never modify state directly)</li>
+<li><code>.every()</code> checks if all squares are filled (draw condition)</li>
+<li>Each <code>Square</code> gets its own click handler with the correct index</li>
+</ul>
+<h3 id="step-5-update-the-app-component">Step 5: Update the App Component</h3>
+<p>Replace your <code>App</code> function with:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#cf222e">function</span> <span style="color:#1f2328">App</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">const</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">history</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">setHistory</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">useState</span><span style="color:#1f2328">([</span><span style="color:#6639ba">Array</span><span style="color:#1f2328">(</span><span style="color:#0550ae">9</span><span style="color:#1f2328">).</span><span style="color:#1f2328">fill</span><span style="color:#1f2328">(</span><span style="color:#cf222e">null</span><span style="color:#1f2328">)]);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">const</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">currentMove</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">setCurrentMove</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">useState</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">const</span> <span style="color:#1f2328">xIsNext</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">currentMove</span> <span style="color:#0550ae">%</span> <span style="color:#0550ae">2</span> <span style="color:#0550ae">===</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">const</span> <span style="color:#1f2328">currentSquares</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">history</span><span style="color:#1f2328">[</span><span style="color:#1f2328">currentMove</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">function</span> <span style="color:#1f2328">handlePlay</span><span style="color:#1f2328">(</span><span style="color:#1f2328">nextSquares</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">const</span> <span style="color:#1f2328">nextHistory</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">[...</span><span style="color:#1f2328">history</span><span style="color:#1f2328">.</span><span style="color:#1f2328">slice</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">currentMove</span> <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">),</span> <span style="color:#1f2328">nextSquares</span><span style="color:#1f2328">];</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">setHistory</span><span style="color:#1f2328">(</span><span style="color:#1f2328">nextHistory</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">setCurrentMove</span><span style="color:#1f2328">(</span><span style="color:#1f2328">nextHistory</span><span style="color:#1f2328">.</span><span style="color:#1f2328">length</span> <span style="color:#0550ae">-</span> <span style="color:#0550ae">1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">function</span> <span style="color:#1f2328">resetGame</span><span style="color:#1f2328">()</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">setHistory</span><span style="color:#1f2328">([</span><span style="color:#6639ba">Array</span><span style="color:#1f2328">(</span><span style="color:#0550ae">9</span><span style="color:#1f2328">).</span><span style="color:#1f2328">fill</span><span style="color:#1f2328">(</span><span style="color:#cf222e">null</span><span style="color:#1f2328">)]);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">setCurrentMove</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">return</span> <span style="color:#1f2328">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">Tic</span><span style="color:#0550ae">-</span><span style="color:#1f2328">Tac</span><span style="color:#0550ae">-</span><span style="color:#1f2328">Toe</span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">Board</span> <span style="color:#1f2328">xIsNext</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">xIsNext</span><span style="color:#1f2328">}</span> <span style="color:#1f2328">squares</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">currentSquares</span><span style="color:#1f2328">}</span> <span style="color:#1f2328">onPlay</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">handlePlay</span><span style="color:#1f2328">}</span> <span style="color:#1f2328">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">button</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;reset-button&#34;</span> <span style="color:#1f2328">onClick</span><span style="color:#0550ae">=</span><span style="color:#1f2328">{</span><span style="color:#1f2328">resetGame</span><span style="color:#1f2328">}&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">New</span> <span style="color:#1f2328">Game</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">button</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p><strong>State management explained:</strong></p>
+<ul>
+<li><code>history</code> stores every board state (enables undo in the future)</li>
+<li><code>currentMove</code> tracks which move we are on</li>
+<li><code>xIsNext</code> is calculated: even moves = X, odd moves = O</li>
+</ul>
+<h3 id="step-6-add-styling">Step 6: Add Styling</h3>
+<p>Replace everything in <code>src/App.css</code> with:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#0550ae">*</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">box-sizing</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">border-box</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> <span style="color:#f6f8fa;background-color:#82071e">\</span><span style="color:#0a3069">&#39;Segoe UI\&#39;</span><span style="color:#1f2328">,</span> Tahoma<span style="color:#1f2328">,</span> Geneva<span style="color:#1f2328">,</span> Verdana<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#667eea</span> <span style="color:#0550ae">0</span><span style="color:#cf222e">%</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#764ba2</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">%</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">flex</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">justify-content</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">align-items</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">game</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">60</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  backdrop-filter<span style="color:#1f2328">:</span> <span style="color:#6639ba">blur</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">48</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">status</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">board</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">grid</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">grid-template-columns</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">repeat</span><span style="color:#1f2328">(</span><span style="color:#0550ae">3</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">grid-template-rows</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">repeat</span><span style="color:#1f2328">(</span><span style="color:#0550ae">3</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">gap</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#cf222e">auto</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> fit-content<span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">square</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">120</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">48</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">all</span> <span style="color:#0550ae">0.2</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.2</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#667eea</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">square</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#f0f0f0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-3</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">6</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">square</span><span style="color:#1f2328">:</span><span style="color:#0550ae">active</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">reset-button</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#4ecdc4</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">cursor</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">pointer</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">8</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">all</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">reset-button</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">background-color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#3dbdb3</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-2</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><hr>
+<h2 id="test-your-game">Test Your Game</h2>
+<p>Check your browser at <code>http://localhost:5173</code>. You should have a fully working game!</p>
+<p><strong>Test these scenarios:</strong></p>
+<ol>
+<li>X and O alternate turns</li>
+<li>Winning shows the winner message</li>
+<li>Filling all squares shows &ldquo;Draw!&rdquo;</li>
+<li>Reset button clears the board</li>
+<li>You cannot click a filled square</li>
+</ol>
+<hr>
+<h2 id="your-turn---customize">Your Turn - Customize</h2>
 <p><strong>Easy:</strong></p>
 <ol>
-<li>Change gem colors in the <code>colors</code> array</li>
-<li>Adjust gem spawn rate (change <code>0.02</code> in gameLoop)</li>
-<li>Change basket size</li>
+<li>Change colors in the CSS</li>
+<li>Use emojis instead of X and O (try replacing <code>\'X\'</code> with a star emoji and <code>\'O\'</code> with a moon emoji)</li>
+<li>Change the title text</li>
 </ol>
 <p><strong>Medium:</strong>
-4. Add power-ups (bigger basket, slow-motion, extra life)
-5. Increase difficulty over time (gems fall faster)
-6. Add sound effects when catching gems</p>
-<p><strong>Hard:</strong>
-7. Add different gem types worth different points
-8. Create &ldquo;bomb&rdquo; objects that subtract points
-9. Add particle effects when catching gems</p>
-<hr>
-<h2 id="-challenge-power-up-system">💡 Challenge: Power-Up System</h2>
-<p>Add a golden gem worth 5 points:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> createGem() {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> colors <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;#ff6b6b&#39;</span>, <span style="color:#f1fa8c">&#39;#4ecdc4&#39;</span>, <span style="color:#f1fa8c">&#39;#45b7d1&#39;</span>, <span style="color:#f1fa8c">&#39;#f7b731&#39;</span>, <span style="color:#f1fa8c">&#39;#5f27cd&#39;</span>, <span style="color:#f1fa8c">&#39;#00d2d3&#39;</span>];
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> isGolden <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">0.1</span>; <span style="color:#6272a4">// 10% chance
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> {
-</span></span><span style="display:flex;"><span>        x<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> (canvas.width <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">30</span>),
-</span></span><span style="display:flex;"><span>        y<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">30</span>,
-</span></span><span style="display:flex;"><span>        width<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">30</span>,
-</span></span><span style="display:flex;"><span>        height<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">30</span>,
-</span></span><span style="display:flex;"><span>        speed<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">+</span> <span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">2</span>,
-</span></span><span style="display:flex;"><span>        color<span style="color:#ff79c6">:</span> isGolden <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;#FFD700&#39;</span> <span style="color:#ff79c6">:</span> colors[<span style="color:#8be9fd;font-style:italic">Math</span>.floor(<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> colors.length)],
-</span></span><span style="display:flex;"><span>        points<span style="color:#ff79c6">:</span> isGolden <span style="color:#ff79c6">?</span> <span style="color:#bd93f9">5</span> <span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
-</span></span><span style="display:flex;"><span>        caught<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>
-</span></span><span style="display:flex;"><span>    };
-</span></span><span style="display:flex;"><span>}
+4. Add a score tracker:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#57606a">// In App, add:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">scores</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">setScores</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">useState</span><span style="color:#1f2328">({</span> <span style="color:#1f2328">X</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">O</span><span style="color:#0550ae">:</span> <span style="color:#0550ae">0</span> <span style="color:#1f2328">});</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// In gameLoop, when caught:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>score <span style="color:#ff79c6">+=</span> gem.points;
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// In handlePlay, after setting history:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">const</span> <span style="color:#1f2328">winner</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">calculateWinner</span><span style="color:#1f2328">(</span><span style="color:#1f2328">nextSquares</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">winner</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#1f2328">setScores</span><span style="color:#1f2328">(</span><span style="color:#1f2328">prev</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">({</span> <span style="color:#1f2328">...</span><span style="color:#1f2328">prev</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">[</span><span style="color:#1f2328">winner</span><span style="color:#1f2328">]</span><span style="color:#0550ae">:</span> <span style="color:#1f2328">prev</span><span style="color:#1f2328">[</span><span style="color:#1f2328">winner</span><span style="color:#1f2328">]</span> <span style="color:#0550ae">+</span> <span style="color:#0550ae">1</span> <span style="color:#1f2328">}));</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// In the return, add above the Board:
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">className</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;scores&#34;</span><span style="color:#1f2328">&gt;</span><span style="color:#1f2328">X</span><span style="color:#0550ae">:</span> <span style="color:#1f2328">{</span><span style="color:#1f2328">scores</span><span style="color:#1f2328">.</span><span style="color:#1f2328">X</span><span style="color:#1f2328">}</span> <span style="color:#0550ae">|</span> <span style="color:#1f2328">O</span><span style="color:#0550ae">:</span> <span style="color:#1f2328">{</span><span style="color:#1f2328">scores</span><span style="color:#1f2328">.</span><span style="color:#1f2328">O</span><span style="color:#1f2328">}&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><p><strong>Hard:</strong>
+5. Add a move history list with &ldquo;Go to move #&rdquo; buttons
+6. Highlight the winning squares with a different color
+7. Add animations when placing X or O</p>
+<hr>
+<h2 id="save-and-push-to-github">Save and Push to GitHub</h2>
+<p>Stop the dev server with <code>Ctrl+C</code>, then:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Add React tic-tac-toe game&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
 </span></span></code></pre></div><hr>
-<h2 id="-what-you-learned-today">📚 What You Learned Today</h2>
-<p>✅ <strong>HTML Canvas</strong> - Drawing graphics with JavaScript<br>
-✅ <strong>Animation Loop</strong> - <code>requestAnimationFrame()</code> for smooth movement<br>
-✅ <strong>Coordinate Systems</strong> - X/Y positioning in 2D space<br>
-✅ <strong>Collision Detection</strong> - Checking if objects overlap<br>
-✅ <strong>Array Manipulation</strong> - Adding/removing items during gameplay<br>
-✅ <strong>Mouse Events</strong> - <code>mousemove</code> to track cursor position<br>
-✅ <strong>Keyboard Input</strong> - Tracking multiple keys simultaneously</p>
-<hr>
-<h2 id="-next-session-preview">🚀 Next Session Preview</h2>
-<p><strong>Session 4:</strong> We&rsquo;ll learn <strong>React</strong> and build Tic-Tac-Toe with components, making our code more organized and reusable!</p>
-<hr>
-<h2 id="-homework-optional">📦 Homework (Optional)</h2>
-<ol>
-<li>Add background clouds or stars that move</li>
-<li>Create a difficulty selector (Easy/Medium/Hard)</li>
-<li>Add a countdown timer mode (survive for 60 seconds)</li>
-<li>Make the basket bounce when it hits screen edges</li>
-</ol>
-<hr>
-<h2 id="-common-issues">🆘 Common Issues</h2>
-<p><strong>Problem:</strong> &ldquo;Canvas is blank&rdquo;<br>
-<strong>Solution:</strong> Check that <code>ctx.getContext('2d')</code> is called and <code>clearCanvas()</code> runs</p>
-<p><strong>Problem:</strong> &ldquo;Basket doesn&rsquo;t move with mouse&rdquo;<br>
-<strong>Solution:</strong> Verify <code>gameRunning</code> is true and event listener is attached</p>
-<p><strong>Problem:</strong> &ldquo;Gems don&rsquo;t appear&rdquo;<br>
-<strong>Solution:</strong> Check <code>Math.random() &lt; 0.02</code> - increase the number for more gems</p>
-<p><strong>Problem:</strong> &ldquo;Collisions don&rsquo;t work&rdquo;<br>
-<strong>Solution:</strong> Verify basket and gem coordinates/sizes in <code>checkCollision()</code></p>
-<hr>
-<h2 id="-resources">📖 Resources</h2>
+<h2 id="what-you-learned-today">What You Learned Today</h2>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame - MDN</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection">Collision Detection - MDN</a></li>
+<li><strong>React Components</strong> - Building reusable UI pieces</li>
+<li><strong>JSX Syntax</strong> - Mixing HTML and JavaScript</li>
+<li><strong>useState Hook</strong> - Managing data that changes</li>
+<li><strong>Props</strong> - Passing data between components</li>
+<li><strong>Event Handling</strong> - <code>onClick</code> in React</li>
+<li><strong>Conditional Rendering</strong> - Showing different UI based on game state</li>
+<li><strong>Modern Tooling</strong> - Vite for fast React development</li>
 </ul>
 <hr>
-<p><strong><a href="/highschool/session2/">← Session 2</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session4/">Next: Session 4 →</a></strong></p>
+<h2 id="homework-optional">Homework (Optional)</h2>
+<ol>
+<li>Add player name inputs (type names instead of X/O)</li>
+<li>Create a best-of-3 match system</li>
+<li>Add CSS animations when someone wins</li>
+<li>Build a different game in React (Connect Four, Memory Match)</li>
+</ol>
+<hr>
+<h2 id="common-issues">Common Issues</h2>
+<p><strong>Problem:</strong> &ldquo;Cannot click squares&rdquo;<br>
+<strong>Solution:</strong> Check that <code>onSquareClick</code> prop is passed correctly and <code>handleClick</code> is defined</p>
+<p><strong>Problem:</strong> &ldquo;Winner not detected&rdquo;<br>
+<strong>Solution:</strong> Verify <code>calculateWinner</code> is defined and the winning line indices are correct</p>
+<p><strong>Problem:</strong> &ldquo;State not updating&rdquo;<br>
+<strong>Solution:</strong> Use <code>setHistory()</code> - never modify <code>history</code> directly</p>
+<p><strong>Problem:</strong> &ldquo;npm errors on setup&rdquo;<br>
+<strong>Solution:</strong> Delete <code>node_modules</code> folder and <code>package-lock.json</code>, then run <code>npm install</code> again</p>
+<p><strong>Problem:</strong> &ldquo;Page is blank&rdquo;<br>
+<strong>Solution:</strong> Check the browser console (F12) for error messages - usually a typo in JSX</p>
+<hr>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://react.dev/learn/tutorial-tic-tac-toe">React Official Tutorial</a></li>
+<li><a href="https://react.dev/reference/react/useState">React Hooks - useState</a></li>
+<li><a href="https://react.dev/learn/thinking-in-react">Thinking in React</a></li>
+<li><a href="https://vitejs.dev/">Vite Documentation</a></li>
+</ul>
+<hr>
+<p><strong><a href="/highschool/session2/">Session 2</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session4/">Next: Session 4 - Deploy</a></strong></p>
 
 
                 

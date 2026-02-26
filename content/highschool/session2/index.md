@@ -34,7 +34,7 @@ In Session 1 we used CodePen to write code in the browser. Now we are switching 
 1. Open VS Code
 2. Install the **Live Server** extension:
    - Click the Extensions icon in the left sidebar (or press `Cmd+Shift+X`)
-   - Search for "Live Server" by Ritwick Dey
+   - Search for "Live Server" by Ritwick Dey (extension ID: `ritwickdey.LiveServer`)
    - Click **Install**
 
 ### Clone the Starter Code

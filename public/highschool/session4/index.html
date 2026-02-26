@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,8 @@
     <meta property="og:type" content="article">
 
     
-    <meta property="og:image" content="http://localhost:1313//">
-    <meta property="twitter:image" content="http://localhost:1313//" />
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
     
 
     
@@ -58,7 +58,7 @@
     <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="http://localhost:1313/css/accessible-theme.css">
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
 
     
     <link rel="stylesheet" href="/css/syntax-fix.css">
@@ -199,402 +199,431 @@
                 post-container">
 
                 
-                <h1 id="session-4-tic-tac-toe-with-react-">Session 4: Tic-Tac-Toe with React ⭕❌</h1>
-<p><strong>Time:</strong> 1 hour<br>
-<strong>Goal:</strong> Learn React by building a classic Tic-Tac-Toe game with components<br>
-<strong>Prerequisites:</strong> Sessions 1-3 (HTML, CSS, JavaScript)</p>
+                <h1 id="session-4-polish-deploy-and-share">Session 4: Polish, Deploy, and Share</h1>
+<p><strong>Goal:</strong> Add finishing touches to your games, build a portfolio page, and publish everything to the web with a real URL
+<strong>Prerequisites:</strong> Sessions 1-3 (HTML, CSS, JavaScript, React)</p>
 <hr>
-<h2 id="-what-youll-build-today">🎯 What You&rsquo;ll Build Today</h2>
-<p>A fully functional Tic-Tac-Toe game built with <strong>React</strong> - a modern framework used by Facebook, Netflix, and thousands of professional developers!</p>
-<p><strong>Features:</strong></p>
+<h2 id="what-you-will-accomplish-today">What You Will Accomplish Today</h2>
+<p>By the end of this session, you will have:</p>
 <ul>
-<li>Interactive game board</li>
-<li>Win detection</li>
-<li>Reset button</li>
-<li>Turn indicator</li>
-<li>Component-based architecture</li>
+<li><strong>Polished games</strong> with animations and persistent high scores</li>
+<li><strong>A portfolio homepage</strong> that links to all your projects</li>
+<li><strong>A live website</strong> anyone can visit at <code>https://YOUR-USERNAME.github.io</code></li>
+<li><strong>Real developer skills</strong> you can keep building on</li>
 </ul>
-<p><strong><a href="your-demo-link-here">See the finished example →</a></strong></p>
+<p>This is where everything comes together.</p>
 <hr>
-<h2 id="-what-is-react">🤔 What is React?</h2>
-<p><strong>React</strong> is a JavaScript library for building user interfaces with <strong>reusable components</strong>.</p>
-<p>Think of it like LEGO blocks:</p>
+<h2 id="part-1-add-polish-to-your-games">Part 1: Add Polish to Your Games</h2>
+<h3 id="add-css-animations">Add CSS Animations</h3>
+<p>Open your <code>click-game.html</code> (from Session 2) and add these animations inside the existing <code>&lt;style&gt;</code> block:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#1f2328">@</span><span style="color:#cf222e">keyframes</span> <span style="color:#0550ae">pulse</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">0</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">50</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1.05</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">100</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">@</span><span style="color:#cf222e">keyframes</span> <span style="color:#0550ae">celebrate</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">0</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">25</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1.2</span><span style="color:#1f2328">)</span> <span style="color:#6639ba">rotate</span><span style="color:#1f2328">(</span><span style="color:#0550ae">5</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">50</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1.2</span><span style="color:#1f2328">)</span> <span style="color:#6639ba">rotate</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-5</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">75</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1.1</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">100</span><span style="color:#0550ae">%</span> <span style="color:#1f2328">{</span> <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">scale</span><span style="color:#1f2328">(</span><span style="color:#0550ae">1</span><span style="color:#1f2328">);</span> <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">.</span><span style="color:#1f2328">click-button</span><span style="color:#1f2328">:</span><span style="color:#0550ae">not</span><span style="color:#0550ae">(</span><span style="color:#1f2328">:</span><span style="color:#0550ae">disabled</span><span style="color:#0550ae">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cf222e">animation</span><span style="color:#1f2328">:</span> pulse <span style="color:#0550ae">1.5</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">infinite</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p>Now the click button gently pulses while the game is running, drawing the player&rsquo;s eye.</p>
+<p><strong>How it works:</strong></p>
 <ul>
-<li>Instead of one giant HTML file, you build small pieces (components)</li>
-<li>Each piece has its own structure, style, and behavior</li>
-<li>You combine pieces to make complete applications</li>
+<li><code>@keyframes</code> defines an animation sequence (like a flipbook)</li>
+<li><code>pulse</code> scales the button up and back over 1.5 seconds</li>
+<li><code>infinite</code> makes it repeat forever</li>
+<li><code>:not(:disabled)</code> only animates when the button is clickable</li>
 </ul>
-<p><strong>Why React?</strong></p>
+<h3 id="add-a-celebration-effect">Add a Celebration Effect</h3>
+<p>In the <code>endGame()</code> function in your click game, add this after the high score check:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">score</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;NEW HIGH SCORE!&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Trigger celebration animation
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">animation</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;celebrate 0.6s ease&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">setTimeout</span><span style="color:#1f2328">(()</span> <span style="color:#1f2328">=&gt;</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">clickButton</span><span style="color:#1f2328">.</span><span style="color:#1f2328">style</span><span style="color:#1f2328">.</span><span style="color:#1f2328">animation</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">},</span> <span style="color:#0550ae">600</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><h3 id="add-persistent-high-scores-with-localstorage">Add Persistent High Scores with localStorage</h3>
+<p>Right now, your high score resets when you refresh the page. Let us fix that.</p>
+<p>In your click game, find the game state variables section and update:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#57606a">// Load saved high score (or start at 0)
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#cf222e">let</span> <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">?</span> <span style="color:#6639ba">parseInt</span><span style="color:#1f2328">(</span><span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">getItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0550ae">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#57606a">// Display the saved high score on load
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
+</span></span></code></pre></div><p>Then in <code>endGame()</code>, after updating <code>highScore</code>, save it:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#cf222e">if</span> <span style="color:#1f2328">(</span><span style="color:#1f2328">score</span> <span style="color:#0550ae">&gt;</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">)</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScore</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">score</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">highScoreDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">messageDisplay</span><span style="color:#1f2328">.</span><span style="color:#1f2328">textContent</span> <span style="color:#0550ae">=</span> <span style="color:#0a3069">&#39;NEW HIGH SCORE!&#39;</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#57606a">// Save to localStorage so it persists
+</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span>    <span style="color:#1f2328">localStorage</span><span style="color:#1f2328">.</span><span style="color:#1f2328">setItem</span><span style="color:#1f2328">(</span><span style="color:#0a3069">&#39;clickGameHighScore&#39;</span><span style="color:#1f2328">,</span> <span style="color:#1f2328">highScore</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">}</span>
+</span></span></code></pre></div><p><strong>What is localStorage?</strong></p>
 <ul>
-<li>✅ Reusable components (write once, use everywhere)</li>
-<li>✅ Automatic UI updates when data changes</li>
-<li>✅ Industry-standard (used by top companies)</li>
-<li>✅ Makes complex UIs easier to manage</li>
+<li>A small storage area in your browser that persists between page refreshes</li>
+<li><code>setItem(key, value)</code> saves data</li>
+<li><code>getItem(key)</code> retrieves it</li>
+<li>Data stays until you clear it or the user clears their browser data</li>
 </ul>
-<hr>
-<h2 id="-setup-10-minutes">🚀 Setup (10 minutes)</h2>
-<h3 id="use-vite-modern-react-setup">Use Vite (Modern React Setup)</h3>
-<p><strong>In Replit:</strong></p>
+<h3 id="test-your-polish">Test Your Polish</h3>
 <ol>
-<li>Create a new Repl</li>
-<li>Choose <strong>&ldquo;React + Vite&rdquo;</strong> template</li>
-<li>Name it: <code>gamecraft-session4-tictactoe</code></li>
-<li>Replit will auto-install everything!</li>
-</ol>
-<p><strong>Or in your terminal:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm create vite@latest tictactoe -- --template react
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> tictactoe
-</span></span><span style="display:flex;"><span>npm install
-</span></span><span style="display:flex;"><span>npm run dev
-</span></span></code></pre></div><h3 id="-what-just-happened">🔍 What Just Happened?</h3>
-<p>Vite created a React project with:</p>
-<ul>
-<li><code>src/App.jsx</code> - Main React component (we&rsquo;ll edit this!)</li>
-<li><code>src/main.jsx</code> - Entry point</li>
-<li><code>package.json</code> - Dependencies list</li>
-<li><code>.jsx</code> files - JavaScript + XML (JSX) = React syntax</li>
-</ul>
-<hr>
-<h2 id="-part-1-understanding-components-10-minutes">📖 Part 1: Understanding Components (10 minutes)</h2>
-<h3 id="react-concepts">React Concepts</h3>
-<p><strong>1. Components</strong> - Reusable UI pieces (like functions that return HTML)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> Button() {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> &lt;<span style="color:#ff79c6">button</span>&gt;Click Me&lt;/<span style="color:#ff79c6">button</span>&gt;;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>2. JSX</strong> - HTML-like syntax in JavaScript</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Player&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">return</span> &lt;<span style="color:#ff79c6">h1</span>&gt;Hello, {name}<span style="color:#ff79c6">!</span>&lt;/<span style="color:#ff79c6">h1</span>&gt;; <span style="color:#6272a4">// Outputs: Hello, Player!
-</span></span></span></code></pre></div><p><strong>3. State</strong> - Data that can change (triggers re-render)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> [count, setCount] <span style="color:#ff79c6">=</span> useState(<span style="color:#bd93f9">0</span>); <span style="color:#6272a4">// count = 0 initially
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>setCount(<span style="color:#bd93f9">5</span>); <span style="color:#6272a4">// Updates count to 5 and re-renders
-</span></span></span></code></pre></div><p><strong>4. Props</strong> - Pass data between components (like function parameters)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;X&#34;</span> /&gt;
-</span></span></code></pre></div><hr>
-<h2 id="-part-2-build-the-game-35-minutes">🎮 Part 2: Build the Game (35 minutes)</h2>
-<h3 id="step-1-clear-the-template">Step 1: Clear the Template</h3>
-<p>Open <code>src/App.jsx</code> and <strong>replace everything</strong> with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff79c6">import</span> { useState } from <span style="color:#f1fa8c">&#39;react&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">import</span> <span style="color:#f1fa8c">&#39;./App.css&#39;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> App() {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> (
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">h1</span>&gt;⭕ Tic<span style="color:#ff79c6">-</span>Tac<span style="color:#ff79c6">-</span>Toe ❌&lt;/<span style="color:#ff79c6">h1</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">p</span>&gt;Let&#39;s build <span style="color:#ff79c6">this</span> together<span style="color:#ff79c6">!</span>&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">export</span> <span style="color:#ff79c6">default</span> App;
-</span></span></code></pre></div><h3 id="step-2-create-a-square-component">Step 2: Create a Square Component</h3>
-<p>A square is a single button in the grid.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> Square({ value, onSquareClick }) {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> (
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;square&#34;</span> <span style="color:#50fa7b">onClick</span><span style="color:#ff79c6">=</span>{onSquareClick}&gt;
-</span></span><span style="display:flex;"><span>      {value}
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">button</span>&gt;
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>🔍 What&rsquo;s happening?</strong></p>
-<ul>
-<li><code>{ value, onSquareClick }</code> - Props (data passed from parent)</li>
-<li><code>{value}</code> - Shows X, O, or nothing</li>
-<li><code>onClick={onSquareClick}</code> - Calls function when clicked</li>
-</ul>
-<h3 id="step-3-create-the-board-component">Step 3: Create the Board Component</h3>
-<p>The board is 9 squares arranged in a grid.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> Board({ xIsNext, squares, onPlay }) {
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Handle when a square is clicked
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">function</span> handleClick(i) {
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Don&#39;t allow clicks if:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 1. Square is already filled
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// 2. Someone already won
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (squares[i] <span style="color:#ff79c6">||</span> calculateWinner(squares)) {
-</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">return</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Copy the squares array
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> nextSquares <span style="color:#ff79c6">=</span> squares.slice();
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Set X or O depending on whose turn it is
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (xIsNext) {
-</span></span><span style="display:flex;"><span>      nextSquares[i] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;X&#39;</span>;
-</span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>      nextSquares[i] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;O&#39;</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// Send the new board state up to parent
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    onPlay(nextSquares);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Determine game status
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> winner <span style="color:#ff79c6">=</span> calculateWinner(squares);
-</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">let</span> status;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (winner) {
-</span></span><span style="display:flex;"><span>    status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;🎉 Winner: &#39;</span> <span style="color:#ff79c6">+</span> winner;
-</span></span><span style="display:flex;"><span>  } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (squares.every(square =&gt; square)) {
-</span></span><span style="display:flex;"><span>    status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;🤝 Draw!&#39;</span>;
-</span></span><span style="display:flex;"><span>  } <span style="color:#ff79c6">else</span> {
-</span></span><span style="display:flex;"><span>    status <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;Next player: &#39;</span> <span style="color:#ff79c6">+</span> (xIsNext <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;X&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;O&#39;</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> (
-</span></span><span style="display:flex;"><span>    &lt;&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;status&#34;</span>&gt;{status}&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;board&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">0</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">0</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">1</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">1</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">2</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">2</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">3</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">3</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">4</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">4</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">5</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">5</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">6</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">6</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">7</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">7</span>)} /&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#ff79c6">Square</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span>{squares[<span style="color:#bd93f9">8</span>]} <span style="color:#50fa7b">onSquareClick</span><span style="color:#ff79c6">=</span>{() =&gt; handleClick(<span style="color:#bd93f9">8</span>)} /&gt;
-</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/&gt;
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>🔍 Key Concepts:</strong></p>
-<ul>
-<li><code>squares</code> array holds the board state: <code>['X', null, 'O', ...]</code></li>
-<li><code>.slice()</code> creates a copy (React best practice - don&rsquo;t mutate state)</li>
-<li><code>.every()</code> checks if all squares are filled (draw condition)</li>
-<li>We pass <code>handleClick(i)</code> to each square with the index</li>
-</ul>
-<h3 id="step-4-update-the-app-component-main-logic">Step 4: Update the App Component (Main Logic)</h3>
-<p>Replace your <code>App</code> function with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> App() {
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Game state
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> [history, setHistory] <span style="color:#ff79c6">=</span> useState([<span style="color:#8be9fd;font-style:italic">Array</span>(<span style="color:#bd93f9">9</span>).fill(<span style="color:#ff79c6">null</span>)]);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> [currentMove, setCurrentMove] <span style="color:#ff79c6">=</span> useState(<span style="color:#bd93f9">0</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> xIsNext <span style="color:#ff79c6">=</span> currentMove <span style="color:#ff79c6">%</span> <span style="color:#bd93f9">2</span> <span style="color:#ff79c6">===</span> <span style="color:#bd93f9">0</span>; <span style="color:#6272a4">// Even moves = X, odd = O
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> currentSquares <span style="color:#ff79c6">=</span> history[currentMove];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Handle a play
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">function</span> handlePlay(nextSquares) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> nextHistory <span style="color:#ff79c6">=</span> [...history.slice(<span style="color:#bd93f9">0</span>, currentMove <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>), nextSquares];
-</span></span><span style="display:flex;"><span>    setHistory(nextHistory);
-</span></span><span style="display:flex;"><span>    setCurrentMove(nextHistory.length <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Reset game
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">function</span> resetGame() {
-</span></span><span style="display:flex;"><span>    setHistory([<span style="color:#8be9fd;font-style:italic">Array</span>(<span style="color:#bd93f9">9</span>).fill(<span style="color:#ff79c6">null</span>)]);
-</span></span><span style="display:flex;"><span>    setCurrentMove(<span style="color:#bd93f9">0</span>);
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> (
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;game&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">h1</span>&gt;⭕ Tic<span style="color:#ff79c6">-</span>Tac<span style="color:#ff79c6">-</span>Toe ❌&lt;/<span style="color:#ff79c6">h1</span>&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">Board</span> <span style="color:#50fa7b">xIsNext</span><span style="color:#ff79c6">=</span>{xIsNext} <span style="color:#50fa7b">squares</span><span style="color:#ff79c6">=</span>{currentSquares} <span style="color:#50fa7b">onPlay</span><span style="color:#ff79c6">=</span>{handlePlay} /&gt;
-</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;reset-button&#34;</span> <span style="color:#50fa7b">onClick</span><span style="color:#ff79c6">=</span>{resetGame}&gt;
-</span></span><span style="display:flex;"><span>        🔄 New Game
-</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#ff79c6">button</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span><span style="display:flex;"><span>  );
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>🔍 State Management:</strong></p>
-<ul>
-<li><code>history</code> - Array of board states (allows time travel!)</li>
-<li><code>currentMove</code> - Which move we&rsquo;re viewing</li>
-<li><code>xIsNext</code> - Calculated from current move (even = X&rsquo;s turn)</li>
-</ul>
-<h3 id="step-5-add-the-win-detection-function">Step 5: Add the Win Detection Function</h3>
-<p>At the <strong>top of the file</strong>, after imports:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> calculateWinner(squares) {
-</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// All possible winning lines
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> lines <span style="color:#ff79c6">=</span> [
-</span></span><span style="display:flex;"><span>    [<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>], <span style="color:#6272a4">// Top row
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>], <span style="color:#6272a4">// Middle row
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">6</span>, <span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">8</span>], <span style="color:#6272a4">// Bottom row
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">6</span>], <span style="color:#6272a4">// Left column
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">7</span>], <span style="color:#6272a4">// Middle column
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">8</span>], <span style="color:#6272a4">// Right column
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">8</span>], <span style="color:#6272a4">// Diagonal \
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">6</span>], <span style="color:#6272a4">// Diagonal /
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  ];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> lines.length; i<span style="color:#ff79c6">++</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> [a, b, c] <span style="color:#ff79c6">=</span> lines[i];
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (squares[a] <span style="color:#ff79c6">&amp;&amp;</span> squares[a] <span style="color:#ff79c6">===</span> squares[b] <span style="color:#ff79c6">&amp;&amp;</span> squares[a] <span style="color:#ff79c6">===</span> squares[c]) {
-</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">return</span> squares[a]; <span style="color:#6272a4">// Return &#39;X&#39; or &#39;O&#39;
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    }
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">null</span>; <span style="color:#6272a4">// No winner yet
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
-</span></span></code></pre></div><hr>
-<h2 id="-part-3-styling-5-minutes">🎨 Part 3: Styling (5 minutes)</h2>
-<h3 id="replace-srcappcss-with">Replace <code>src/App.css</code> with:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ff79c6">*</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">0</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-sizing</span>: <span style="color:#ff79c6">border-box</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">body</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-family</span>: <span style="color:#f1fa8c">&#39;Segoe UI&#39;</span>, Tahoma, Geneva, Verdana, <span style="color:#ff79c6">sans-serif</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">linear-gradient</span>(<span style="color:#bd93f9">135</span><span style="color:#8be9fd">deg</span>, <span style="color:#bd93f9">#667eea</span> <span style="color:#bd93f9">0</span><span style="color:#8be9fd">%</span>, <span style="color:#bd93f9">#764ba2</span> <span style="color:#bd93f9">100</span><span style="color:#8be9fd">%</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">100</span><span style="color:#8be9fd">vh</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">flex</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">justify-content</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">align-items</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">game</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-align</span>: <span style="color:#ff79c6">center</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background</span>: <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">255</span>, <span style="color:#bd93f9">0.1</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">60</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>  backdrop-filter: <span style="color:#8be9fd;font-style:italic">blur</span>(<span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">h1</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">48</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">text-shadow</span>: <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">2</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">status</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">28</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin-bottom</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">min-height</span>: <span style="color:#bd93f9">40</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">board</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">display</span>: <span style="color:#ff79c6">grid</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">grid-template-columns</span>: <span style="color:#50fa7b">repeat</span>(<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">grid-template-rows</span>: <span style="color:#50fa7b">repeat</span>(<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">gap</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">margin</span>: <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">auto</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: fit-content;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">square</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">width</span>: <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">height</span>: <span style="color:#bd93f9">120</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">48</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-weight</span>: <span style="color:#ff79c6">bold</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.2</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">4</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">10</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.2</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#bd93f9">#667eea</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">square</span>:hover {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#f0f0f0</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-3</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">6</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">square</span>:active {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">0</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">reset-button</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">font-size</span>: <span style="color:#bd93f9">20</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">padding</span>: <span style="color:#bd93f9">12</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">30</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#4ecdc4</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">color</span>: <span style="color:#ff79c6">white</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border</span>: <span style="color:#ff79c6">none</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">border-radius</span>: <span style="color:#bd93f9">50</span><span style="color:#8be9fd">px</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">cursor</span>: <span style="color:#ff79c6">pointer</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">box-shadow</span>: <span style="color:#bd93f9">0</span> <span style="color:#bd93f9">8</span><span style="color:#8be9fd">px</span> <span style="color:#bd93f9">15</span><span style="color:#8be9fd">px</span> <span style="color:#8be9fd;font-style:italic">rgba</span>(<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0.3</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transition</span>: <span style="color:#ff79c6">all</span> <span style="color:#bd93f9">0.3</span><span style="color:#8be9fd">s</span> <span style="color:#ff79c6">ease</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>.<span style="color:#50fa7b">reset-button</span>:hover {
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">background-color</span>: <span style="color:#bd93f9">#3dbdb3</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">transform</span>: <span style="color:#8be9fd;font-style:italic">translateY</span>(<span style="color:#bd93f9">-2</span><span style="color:#8be9fd">px</span>);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><hr>
-<h2 id="-test-your-game">✅ Test Your Game!</h2>
-<p>Click Run (Replit) or check the local server. You should have a fully working Tic-Tac-Toe game!</p>
-<p><strong>Test these scenarios:</strong></p>
-<ol>
-<li>X and O alternate turns</li>
-<li>Winning shows the winner</li>
-<li>Filled board shows draw</li>
-<li>Reset button clears the board</li>
-<li>Can&rsquo;t click filled squares</li>
+<li>Open the click game with Live Server</li>
+<li>Play a few rounds - verify the pulse animation works</li>
+<li>Get a high score, then refresh the page - it should still be there</li>
+<li>Open the browser console (<code>F12</code> &gt; Console) and type <code>localStorage</code> to see your saved data</li>
 </ol>
 <hr>
-<h2 id="-customization-challenges">🎨 Customization Challenges</h2>
-<p><strong>Easy:</strong></p>
-<ol>
-<li>Change colors in CSS</li>
-<li>Add emojis instead of X/O (🌟 vs 🌙)</li>
-<li>Change board size in <code>.board</code> CSS</li>
-</ol>
-<p><strong>Medium:</strong>
-4. Add a score tracker (X wins vs O wins)
-5. Add sound effects on click and win
-6. Highlight the winning line</p>
-<p><strong>Hard:</strong>
-7. Add a move history list (time travel!)
-8. Add AI opponent (hint: minimax algorithm)
-9. Make it 4x4 with different win conditions</p>
-<hr>
-<h2 id="-challenge-score-tracker">💡 Challenge: Score Tracker</h2>
-<p>Add this to <code>App</code> component:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> [scores, setScores] <span style="color:#ff79c6">=</span> useState({ X<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>, O<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span> });
+<h2 id="part-2-build-your-portfolio-homepage">Part 2: Build Your Portfolio Homepage</h2>
+<p>Now let us create a single page that ties all your work together.</p>
+<h3 id="create-the-portfolio-page">Create the Portfolio Page</h3>
+<p>Create a new file in your project root called <code>index.html</code>:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#57606a">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">html</span> <span style="color:#1f2328">lang</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;en&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">charset</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;UTF-8&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">meta</span> <span style="color:#1f2328">name</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;viewport&#34;</span> <span style="color:#1f2328">content</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;width=device-width, initial-scale=1.0&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>My GameCraft Portfolio<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">title</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">*</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">box-sizing</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">border-box</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// In handlePlay, after detecting a win:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">const</span> winner <span style="color:#ff79c6">=</span> calculateWinner(nextSquares);
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (winner) {
-</span></span><span style="display:flex;"><span>  setScores(prev =&gt; ({ ...prev, [winner]<span style="color:#ff79c6">:</span> prev[winner] <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span> }));
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">body</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-family</span><span style="color:#1f2328">:</span> <span style="color:#0a3069">&#39;Segoe UI&#39;</span><span style="color:#1f2328">,</span> Tahoma<span style="color:#1f2328">,</span> Geneva<span style="color:#1f2328">,</span> Verdana<span style="color:#1f2328">,</span> <span style="color:#cf222e">sans-serif</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#0f0c29</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#302b63</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#24243e</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">min-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">100</span><span style="color:#cf222e">vh</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4">// Display scores:
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>&lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">className</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;scores&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">p</span>&gt;X<span style="color:#ff79c6">:</span> {scores.X} <span style="color:#ff79c6">|</span> O<span style="color:#ff79c6">:</span> {scores.O}&lt;/<span style="color:#ff79c6">p</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">div</span>&gt;
-</span></span></code></pre></div><hr>
-<h2 id="-what-you-learned-today">📚 What You Learned Today</h2>
-<p>✅ <strong>React Components</strong> - Building reusable UI pieces<br>
-✅ <strong>JSX Syntax</strong> - Mixing HTML and JavaScript<br>
-✅ <strong>useState Hook</strong> - Managing component state<br>
-✅ <strong>Props</strong> - Passing data between components<br>
-✅ <strong>Event Handling</strong> - onClick in React<br>
-✅ <strong>Conditional Rendering</strong> - Showing different UI based on state<br>
-✅ <strong>Array Methods</strong> - <code>.map()</code>, <code>.slice()</code>, <code>.every()</code></p>
-<hr>
-<h2 id="-next-session-preview">🚀 Next Session Preview</h2>
-<p><strong>Session 5:</strong> Deploy your games to the web with <strong>GitHub Pages</strong> and add polish (animations, sounds, high scores)!</p>
-<hr>
-<h2 id="-homework-optional">📦 Homework (Optional)</h2>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">header</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">60</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">header</span> <span style="color:#0550ae">h1</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">48</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">text-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">2</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.5</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">header</span> <span style="color:#0550ae">p</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">opacity</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0.8</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">games-grid</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">grid</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">grid-template-columns</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">repeat</span><span style="color:#1f2328">(</span><span style="color:#cf222e">auto</span><span style="color:#0550ae">-</span>fit<span style="color:#1f2328">,</span> <span style="color:#6639ba">minmax</span><span style="color:#1f2328">(</span><span style="color:#0550ae">300</span><span style="color:#cf222e">px</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">1</span>fr<span style="color:#1f2328">));</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">gap</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">max-width</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1000</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#cf222e">auto</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">60</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">game-card</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">16</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">transform</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">,</span> <span style="color:#cf222e">box-shadow</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            backdrop-filter<span style="color:#1f2328">:</span> <span style="color:#6639ba">blur</span><span style="color:#1f2328">(</span><span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">border</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1</span><span style="color:#cf222e">px</span> <span style="color:#cf222e">solid</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">255</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.1</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">game-card</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-8</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">40</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.4</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">game-card</span> <span style="color:#0550ae">h2</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">28</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">10</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">game-card</span> <span style="color:#0550ae">p</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">16</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">opacity</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0.8</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">15</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">line-height</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">1.5</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">game-card</span> <span style="color:#1f2328">.</span><span style="color:#1f2328">tech-tags</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin-bottom</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">tech-tags</span> <span style="color:#0550ae">span</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">inline-block</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">78</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">205</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">196</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.3</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">#4ecdc4</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">4</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">13</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">margin</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">3</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">play-button</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">display</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">inline-block</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">12</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">background</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">linear-gradient</span><span style="color:#1f2328">(</span><span style="color:#0550ae">135</span><span style="color:#cf222e">deg</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#4ecdc4</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">#44a8a0</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">color</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">white</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">text-decoration</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">none</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">border-radius</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">50</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">16</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-weight</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">bold</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">transition</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">all</span> <span style="color:#0550ae">0.3</span><span style="color:#cf222e">s</span> <span style="color:#cf222e">ease</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">.</span><span style="color:#1f2328">play-button</span><span style="color:#1f2328">:</span><span style="color:#0550ae">hover</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">transform</span><span style="color:#1f2328">:</span> <span style="color:#6639ba">translateY</span><span style="color:#1f2328">(</span><span style="color:#0550ae">-2</span><span style="color:#cf222e">px</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">box-shadow</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0</span> <span style="color:#0550ae">8</span><span style="color:#cf222e">px</span> <span style="color:#0550ae">20</span><span style="color:#cf222e">px</span> <span style="color:#6639ba">rgba</span><span style="color:#1f2328">(</span><span style="color:#0550ae">78</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">205</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">196</span><span style="color:#1f2328">,</span> <span style="color:#0550ae">0.4</span><span style="color:#1f2328">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#0550ae">footer</span> <span style="color:#1f2328">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">text-align</span><span style="color:#1f2328">:</span> <span style="color:#cf222e">center</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">padding</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">30</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">opacity</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">0.6</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#cf222e">font-size</span><span style="color:#1f2328">:</span> <span style="color:#0550ae">14</span><span style="color:#cf222e">px</span><span style="color:#1f2328">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">style</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">head</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">header</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>My GameCraft Portfolio<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h1</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Web games built with HTML, CSS, JavaScript, and React<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">header</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;games-grid&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game-card&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>Click Speed Challenge<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Race against a 10-second timer. How fast can you click?<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;tech-tags&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>HTML<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>CSS<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>JavaScript<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">a</span> <span style="color:#1f2328">href</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;click-game.html&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;play-button&#34;</span><span style="color:#1f2328">&gt;</span>Play Now<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">a</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game-card&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>Gem Catcher<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Catch falling gems with your basket before they hit the ground.<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;tech-tags&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>HTML Canvas<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>Animation<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>JavaScript<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">a</span> <span style="color:#1f2328">href</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;gem-catcher.html&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;play-button&#34;</span><span style="color:#1f2328">&gt;</span>Play Now<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">a</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;game-card&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>Tic-Tac-Toe<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">h2</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>A classic two-player strategy game built with React.<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">div</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;tech-tags&#34;</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>React<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>JSX<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>Vite<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">span</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">a</span> <span style="color:#1f2328">href</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;tictactoe/&#34;</span> <span style="color:#1f2328">class</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;play-button&#34;</span><span style="color:#1f2328">&gt;</span>Play Now<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">a</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">div</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">footer</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#1f2328">&lt;</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>Built during GameCraft <span style="color:#6639ba">&amp;mdash;</span> High School Web Game Development<span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">p</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">footer</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">body</span><span style="color:#1f2328">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#1f2328">&lt;/</span><span style="color:#0550ae">html</span><span style="color:#1f2328">&gt;</span>
+</span></span></code></pre></div><h3 id="personalize-it">Personalize It</h3>
 <ol>
-<li>Add player name inputs (let users choose names instead of X/O)</li>
-<li>Create a best-of-3 match system</li>
-<li>Add animations when someone wins</li>
-<li>Build a different game in React (Rock-Paper-Scissors, Memory Match)</li>
+<li>Change the heading from &ldquo;My GameCraft Portfolio&rdquo; to your name or a creative title</li>
+<li>Update the game descriptions to match what you built</li>
+<li>If you customized a game (different colors, golden gems, etc.), mention that</li>
+<li>Add any extra games you built during homework as new cards</li>
 </ol>
 <hr>
-<h2 id="-common-issues">🆘 Common Issues</h2>
-<p><strong>Problem:</strong> &ldquo;Can&rsquo;t click squares&rdquo;<br>
-<strong>Solution:</strong> Check that <code>onSquareClick</code> prop is passed and <code>handleClick</code> is defined</p>
-<p><strong>Problem:</strong> &ldquo;Winner not detected&rdquo;<br>
-<strong>Solution:</strong> Verify <code>calculateWinner</code> function and winning line indices</p>
-<p><strong>Problem:</strong> &ldquo;State not updating&rdquo;<br>
-<strong>Solution:</strong> Make sure you&rsquo;re using <code>setHistory</code>, not modifying <code>history</code> directly</p>
-<p><strong>Problem:</strong> &ldquo;npm errors&rdquo;<br>
-<strong>Solution:</strong> Delete <code>node_modules</code> folder and <code>package-lock.json</code>, then run <code>npm install</code></p>
-<hr>
-<h2 id="-resources">📖 Resources</h2>
+<h2 id="part-3-deploy-to-github-pages">Part 3: Deploy to GitHub Pages</h2>
+<p>GitHub Pages turns your repository into a live website for free.</p>
+<h3 id="step-1-make-sure-everything-is-committed">Step 1: Make Sure Everything is Committed</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Add portfolio page and polish games&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><h3 id="step-2-enable-github-pages">Step 2: Enable GitHub Pages</h3>
+<ol>
+<li>Go to your repository on <a href="https://github.com">github.com</a></li>
+<li>Click <strong>Settings</strong> (gear icon near the top)</li>
+<li>In the left sidebar, click <strong>Pages</strong></li>
+<li>Under <strong>Source</strong>, select <strong>Deploy from a branch</strong></li>
+<li>Under <strong>Branch</strong>, select <strong>main</strong> and folder <strong>/ (root)</strong></li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h3 id="step-3-wait-and-visit">Step 3: Wait and Visit</h3>
 <ul>
-<li><a href="https://react.dev/learn/tutorial-tic-tac-toe">React Official Tutorial</a></li>
-<li><a href="https://react.dev/reference/react/useState">React Hooks - useState</a></li>
-<li><a href="https://react.dev/learn/thinking-in-react">Thinking in React</a></li>
-<li><a href="https://vitejs.dev/">Vite Documentation</a></li>
+<li>GitHub takes 1-2 minutes to build your site</li>
+<li>Your site will be live at: <code>https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/</code></li>
+<li>The URL appears at the top of the Pages settings when ready</li>
+</ul>
+<h3 id="step-4-test-your-live-site">Step 4: Test Your Live Site</h3>
+<ol>
+<li>Visit your URL in the browser</li>
+<li>Verify the portfolio page loads</li>
+<li>Click each &ldquo;Play Now&rdquo; link to make sure the games work</li>
+<li>Share the link with someone and have them try it</li>
+</ol>
+<p><strong>Note about the React game:</strong> The Tic-Tac-Toe game built with Vite needs to be built for production first. If you want it linked from your portfolio, run:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6639ba">cd</span> tictactoe
+</span></span><span style="display:flex;"><span>npm run build
+</span></span></code></pre></div><p>Then copy the contents of the <code>dist/</code> folder into a <code>tictactoe/</code> folder in your main project. Or simply link to it as a separate GitHub Pages site.</p>
+<hr>
+<h2 id="part-4-add-a-readme">Part 4: Add a README</h2>
+<p>A good README tells other developers (and future you) what this project is about.</p>
+<p>Create or edit <code>README.md</code> in your project root:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span># GameCraft Portfolio
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>A collection of web games built during the GameCraft high school program.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## Games
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>| Game | Description | Technologies |
+</span></span><span style="display:flex;"><span>|------|-------------|-------------|
+</span></span><span style="display:flex;"><span>| Click Speed Challenge | Race against the clock clicking game | HTML, CSS, JavaScript |
+</span></span><span style="display:flex;"><span>| Gem Catcher | Catch falling gems with a basket | HTML Canvas, JavaScript |
+</span></span><span style="display:flex;"><span>| Tic-Tac-Toe | Classic two-player strategy game | React, Vite |
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## Play Online
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Visit the live site: [<span style="color:#0550ae">https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/</span>](<span style="color:#1f2328">https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## Built With
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> HTML5 and CSS3
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> JavaScript (ES6+)
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> React with Vite
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> GitHub Pages for hosting
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>## What I Learned
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> Building interactive web pages from scratch
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> Game logic: timers, collision detection, win conditions
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> Canvas animation with requestAnimationFrame
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> React components, state, and props
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> Version control with Git and GitHub
+</span></span><span style="display:flex;"><span><span style="color:#cf222e">-</span> Deploying websites with GitHub Pages
+</span></span></code></pre></div><h3 id="final-push">Final Push</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#0a3069">&#34;Add README and final polish&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><hr>
+<h2 id="your-turn---keep-building">Your Turn - Keep Building</h2>
+<p>Now that you have a live portfolio and the skills to build web games, here are ideas for what to build next:</p>
+<p><strong>Expand your existing games:</strong></p>
+<ul>
+<li>Add sound effects to the click game or gem catcher</li>
+<li>Build an AI opponent for tic-tac-toe</li>
+<li>Add difficulty levels that unlock as you play</li>
+<li>Create a leaderboard using localStorage</li>
+</ul>
+<p><strong>Build something new:</strong></p>
+<ul>
+<li><strong>Snake Game</strong> - Classic snake on a canvas grid</li>
+<li><strong>Memory Match</strong> - Flip cards to find matching pairs (great for React)</li>
+<li><strong>Typing Speed Test</strong> - Like the click game but with typing</li>
+<li><strong>Platformer</strong> - A simple side-scrolling jump game with canvas</li>
+</ul>
+<p><strong>Each new game you build:</strong></p>
+<ol>
+<li>Create the HTML file in your project</li>
+<li>Add a new card to your portfolio <code>index.html</code></li>
+<li>Commit and push to GitHub</li>
+<li>It automatically appears on your live site</li>
+</ol>
+<hr>
+<h2 id="what-you-learned-today">What You Learned Today</h2>
+<ul>
+<li><strong>CSS Animations</strong> - <code>@keyframes</code> for visual polish</li>
+<li><strong>localStorage</strong> - Saving data that persists between sessions</li>
+<li><strong>Portfolio Design</strong> - Presenting your work professionally</li>
+<li><strong>GitHub Pages</strong> - Deploying a website for free with a real URL</li>
+<li><strong>README Files</strong> - Documenting your projects</li>
 </ul>
 <hr>
-<p><strong><a href="/highschool/session3/">← Session 3</a> | <a href="/highschool/">Back to GameCraft Home</a> | <a href="/highschool/session5/">Next: Session 5 →</a></strong></p>
+<h2 id="what-you-learned-across-all-four-sessions">What You Learned Across All Four Sessions</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Session</th>
+          <th>Skills</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Session 1</td>
+          <td>HTML structure, CSS styling, JavaScript basics, CodePen</td>
+      </tr>
+      <tr>
+          <td>Session 2</td>
+          <td>Event listeners, game state, timers, canvas animation, collision detection, VS Code, Git</td>
+      </tr>
+      <tr>
+          <td>Session 3</td>
+          <td>React components, JSX, useState, props, modern tooling with Vite</td>
+      </tr>
+      <tr>
+          <td>Session 4</td>
+          <td>CSS animations, localStorage, portfolio building, GitHub Pages deployment</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>You now have:</strong></p>
+<ul>
+<li>A working web game that runs in any browser</li>
+<li>Your own GitHub portfolio with published games</li>
+<li>Skills in HTML, CSS, JavaScript, and React</li>
+<li>The ability to turn your game ideas into reality</li>
+</ul>
+<hr>
+<h2 id="homework-optional">Homework (Optional)</h2>
+<ol>
+<li>Build one more game and add it to your portfolio</li>
+<li>Customize your portfolio design (background, fonts, layout)</li>
+<li>Add a &ldquo;dark mode / light mode&rdquo; toggle to your portfolio</li>
+<li>Share your portfolio URL with friends and family</li>
+</ol>
+<hr>
+<h2 id="common-issues">Common Issues</h2>
+<p><strong>Problem:</strong> &ldquo;GitHub Pages shows a 404&rdquo;
+<strong>Solution:</strong> Make sure your main page is named <code>index.html</code> (not <code>home.html</code> or another name). Check that Pages is enabled in Settings &gt; Pages.</p>
+<p><strong>Problem:</strong> &ldquo;Changes are not showing on the live site&rdquo;
+<strong>Solution:</strong> Push your changes (<code>git push origin main</code>) and wait 1-2 minutes. Hard refresh with <code>Cmd+Shift+R</code>.</p>
+<p><strong>Problem:</strong> &ldquo;localStorage is not saving&rdquo;
+<strong>Solution:</strong> Make sure you are using <code>localStorage.setItem('key', value)</code> and <code>localStorage.getItem('key')</code>. Open DevTools &gt; Application &gt; Local Storage to inspect.</p>
+<p><strong>Problem:</strong> &ldquo;The React game does not load on GitHub Pages&rdquo;
+<strong>Solution:</strong> React apps built with Vite need <code>npm run build</code> first. Copy the <code>dist/</code> folder output into your project, or deploy the React app as a separate GitHub Pages repo.</p>
+<p><strong>Problem:</strong> &ldquo;My portfolio links are broken&rdquo;
+<strong>Solution:</strong> Use relative paths in <code>href</code> (e.g., <code>click-game.html</code> not <code>/click-game.html</code>). Make sure the file names match exactly, including capitalization.</p>
+<hr>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://docs.github.com/en/pages">GitHub Pages Documentation</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations">CSS Animations - MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage - MDN</a></li>
+<li><a href="https://www.makeareadme.com/">How to Write a Good README</a></li>
+</ul>
+<hr>
+<p><strong><a href="/highschool/session3/">Session 3</a> | <a href="/highschool/">Back to GameCraft Home</a></strong></p>
 
 
                 
