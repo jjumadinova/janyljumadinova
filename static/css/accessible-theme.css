@@ -649,7 +649,7 @@ th {
   align-items: center !important;
   justify-content: center !important;
   margin-bottom: 0 !important;
-  padding: 0 !important;
+  padding: 60px 0 0 0 !important;
 }
 
 /* Remove overlay for text-only design */
@@ -693,7 +693,7 @@ th {
   border-bottom: none !important;
   min-height: 120px !important;
   margin-bottom: 0 !important;
-  padding: 0 !important;
+  padding: 60px 0 0 0 !important;
 }
 
 .intro-header.style-text::before {

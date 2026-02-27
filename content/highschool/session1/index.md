@@ -21,6 +21,10 @@ A web page with a button that changes color and text when you click it. Simple, 
 2. Click **Start Coding** (no sign-up required!)
 3. You will see 3 panels: HTML, CSS, and JS
 
+## [Accept Your GitHub Assignment](https://classroom.github.com/a/GQaIGkVZ)
+
+Click the link above to create your own GitHub repository for this course. You will use it to save your work.
+
 ---
 
 ## Part 1: HTML - The Structure

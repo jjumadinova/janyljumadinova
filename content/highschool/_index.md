@@ -10,10 +10,6 @@ author: Janyl Jumadinova
 
 Welcome to GameCraft! Over four sessions, you will learn to create your own interactive web games from scratch — **no programming experience required!**
 
-## [Accept Your GitHub Assignment](https://classroom.github.com/a/GQaIGkVZ)
-
-Click the link above to create your own GitHub repository for this course. You will use it to save your work and publish your games with GitHub Pages.
-
 ---
 
 ## What You Will Build
