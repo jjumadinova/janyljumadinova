@@ -34,8 +34,6 @@ In Session 3 you used an L298N motor driver — a large board wired up with many
 
 ## Part 1: Connect the Motor:bit Board
 
-Do this **before** any cardboard cutting. Getting the wiring right first means you can test each motor before it is mounted inside the chassis.
-
 ### Step 1: Plug in the micro:bit
 
 Slide your micro:bit into the edge-connector slot on the Motor:bit board. The LED display should face up and away from the board. Press it in firmly until it seats fully.
@@ -65,21 +63,9 @@ The Motor:bit has power terminals labeled **VIN** and **GND**.
 
 > ⚠️ **Keep the battery pack switched OFF while connecting wires.** Only turn it on when you are ready to test.
 
-### Step 4: Quick wiring check
-
-Before powering on, go through this checklist with your partner:
-
-- [ ] micro:bit is seated firmly in the edge connector
-- [ ] M1+ has the red motor wire, M1− has the black motor wire
-- [ ] M2+ has the red motor wire, M2− has the black motor wire
-- [ ] VIN has the red battery wire, GND has the black battery wire
-- [ ] All screw terminals are tight (no wire pulls out with a gentle tug)
-
-**Show your wiring to the teacher before switching the battery on.**
-
 ### Step 5: Test the motors with code
 
-Open [MakeCode](https://makecode.microbit.org/) and create a new project. Use the same pin blocks from Session 3 — the Motor:bit exposes the same pins:
+Open [MakeCode](https://makecode.microbit.org/) and create a new project or use your code from Session 3. Use the same pin blocks from Session 3 — the Motor:bit exposes the same pins:
 
 | Function | Pin in code | What it controls |
 |---|---|---|
@@ -89,21 +75,14 @@ Open [MakeCode](https://makecode.microbit.org/) and create a new project. Use th
 
 **Quick test program:**
 
+Test one motor:
+
 - **`on button A pressed`**
   1. `digital write pin P1 to 1`
-  2. `digital write pin P2 to 1`
+  2. `digital write pin P2 to 0`
   3. `analog write pin P0 to 600`
 
-- **`on button B pressed`**
-  1. `digital write pin P1 to 0`
-  2. `digital write pin P2 to 0`
-  3. `analog write pin P0 to 0`
-
-Download the code, switch the battery on, and press **A** — both motors should spin. Press **B** — they stop. If a motor spins the wrong direction, swap its M+ and M− wires.
-
-> **Reminder from Session 3:** `digital write P1 to 1` + `digital write P2 to 0` = forward on that motor channel; `digital write P1 to 0` + `digital write P2 to 1` = reverse. `analog write P0 to 0` cuts power to both motors.
-
-Once both motors pass the test, switch the battery off and move on to building the chassis.
+Download the code, switch the battery on, and press **A** — motor should forward spin. 
 
 ---
 
@@ -120,7 +99,7 @@ A **two-wheeled robot chassis** made from cardboard. Your finished chassis must 
 
 ---
 
-## Step 1: Sketch Your Design (10 min)
+## Step 1: Sketch Your Design 
 
 Before cutting anything, **draw a top-down blueprint** of your chassis on paper.
 
@@ -149,8 +128,8 @@ Before cutting anything, **draw a top-down blueprint** of your chassis on paper.
 Each team needs:
 
 - Several sheets of **corrugated cardboard** (cardboard boxes are best; cereal boxes work for smaller pieces)
-- **Scissors** and/or a box cutter *(box cutter — teacher use only)*
-- **Masking tape** and **hot glue** *(hot glue station — ask teacher before using)*
+- **Scissors** and/or a box cutter 
+- **Masking tape** and **hot glue** 
 - **Ruler** and **pencil/marker** for measuring and marking
 - All robot components: 2 motors, 2 wheels, battery pack, Motor:bit board, micro:bit
 
@@ -279,7 +258,7 @@ Measure the gap between the bottom of the base plate and the floor. Aim for at l
 
 ## What's Next?
 
-In **Session 5** you'll wire the motors and battery pack to the Motor:bit board and write your first MakeCode program to make the robot drive forward, turn, and stop — your chassis will finally move under its own power!
+In **Session 5** you'll wire the motors and battery pack to the Motor:bit board and write your full MakeCode program to make the robot drive forward, turn, and stop — your chassis will finally move under its own power!
 
 **Think About It:**
 - What would you change about your chassis design now that it's built?

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://janyljumadinova.com//">
+    <meta property="twitter:image" content="https://janyljumadinova.com//" />
+    
+
+    
+    <meta name="title" content="Session 4" />
+    <meta property="og:title" content="Session 4" />
+    <meta property="twitter:title" content="Session 4" />
+    
+
+    
+    <meta name="description" content="Janyl Jumadinova。Teacher. Researcher. Mother.">
+    <meta property="og:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    <meta property="twitter:description" content="Janyl Jumadinova。Teacher. Researcher. Mother." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="janyl, jumadinova, janyl jumadinova, allegheny college, computer science, robotics, multi-agent">
+    
+    
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
+
+    <title>Session 4 | Janyl Jumadinova</title>
+
+    <link rel="canonical" href="/middleschool/session4/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://janyljumadinova.com/css/accessible-theme.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax-fix.css">
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+<a href="#main-content" class="skip-navigation">Skip to main content</a>
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" role="navigation" aria-label="Main navigation">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" aria-expanded="false" aria-controls="huxblog_navbar" aria-label="Toggle navigation menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" aria-label="Home - "></a>
+            <span class="navbar-descriptive"><strong>JJ:</strong> Teacher. Researcher. Engineer.</span>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" role="menubar">
+                    <li role="none">
+                        <a href="/" role="menuitem">Home</a>
+                    </li>
+                    
+
+		    
+                        <li role="none"><a href="/courses/" role="menuitem">COURSES</a></li>
+                    
+                        <li role="none"><a href="/highschool/" role="menuitem">HighSchool</a></li>
+                    
+                        <li role="none"><a href="/middleschool/" role="menuitem">MiddleSchool</a></li>
+                    
+                        <li role="none"><a href="/research/" role="menuitem">RESEARCH</a></li>
+                    
+                        <li role="none"><a href="/schedule/" role="menuitem">OFFICE HOURS</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<main id="main-content" role="main" aria-label="Main content">
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="session-4-design-and-build-your-robot-chassis">Session 4: Design and Build Your Robot Chassis</h1>
+<p><strong>Goal:</strong> Plan and build a cardboard chassis that fits all your robot&rsquo;s components — two motors, two wheels, a battery pack, and the Motor:bit Breakout Board with the micro:bit mounted on top.</p>
+<hr>
+<h2 id="why-were-switching-to-the-motorbit-board">Why We&rsquo;re Switching to the Motor:bit Board</h2>
+<p>In Session 3 you used an L298N motor driver — a large board wired up with many jumper wires. Today we&rsquo;re upgrading to the <strong>Motor:bit Breakout Board</strong>, which is a much better fit for a compact robot.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Feature</th>
+          <th>L298N Motor Driver</th>
+          <th>Motor:bit Breakout Board</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Connects to micro:bit</td>
+          <td>Many jumper wires</td>
+          <td>micro:bit plugs directly into board</td>
+      </tr>
+      <tr>
+          <td>Size</td>
+          <td>Large / bulky</td>
+          <td>Small and compact</td>
+      </tr>
+      <tr>
+          <td>Mounting</td>
+          <td>Harder to attach</td>
+          <td>Flat board, easy to platform-mount</td>
+      </tr>
+      <tr>
+          <td>Wiring complexity</td>
+          <td>High</td>
+          <td>Low</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>How the Motor:bit works:</strong></p>
+<ul>
+<li>Your <strong>micro:bit slides directly into the edge-connector slot</strong> on the Motor:bit board — no wires needed between them</li>
+<li>The board has built-in motor driver circuits — no separate L298N</li>
+<li><strong>M1 terminals</strong> → left motor; <strong>M2 terminals</strong> → right motor</li>
+<li>It accepts power from a battery pack (4 × AA recommended)</li>
+<li>All micro:bit pins are still accessible for sensors</li>
+</ul>
+<hr>
+<h2 id="part-1-connect-the-motorbit-board">Part 1: Connect the Motor:bit Board</h2>
+<h3 id="step-1-plug-in-the-microbit">Step 1: Plug in the micro:bit</h3>
+<p>Slide your micro:bit into the edge-connector slot on the Motor:bit board. The LED display should face up and away from the board. Press it in firmly until it seats fully.</p>
+<h3 id="step-2-connect-the-motors">Step 2: Connect the motors</h3>
+<p>The Motor:bit has screw terminals labeled <strong>M1+</strong>, <strong>M1−</strong>, <strong>M2+</strong>, and <strong>M2−</strong>.</p>
+<p>For each motor:</p>
+<ol>
+<li>Use a small screwdriver to <strong>loosen</strong> the two screws on the terminal slightly.</li>
+<li>Insert the wires:
+<ul>
+<li><strong>Red wire</strong> from the motor → <strong>M1+</strong> (left motor) or <strong>M2+</strong> (right motor)</li>
+<li><strong>Black wire</strong> from the motor → <strong>M1−</strong> (left motor) or <strong>M2−</strong> (right motor)</li>
+</ul>
+</li>
+<li><strong>Tighten</strong> the screws firmly so the wires cannot be pulled out.</li>
+</ol>
+<blockquote>
+<p><strong>Which motor is M1 and which is M2?</strong> It doesn&rsquo;t matter yet — you can swap them later if a wheel spins the wrong way. For now, use M1 for the left motor and M2 for the right motor.</p></blockquote>
+<h3 id="step-3-connect-the-battery-pack">Step 3: Connect the battery pack</h3>
+<p>The Motor:bit has power terminals labeled <strong>VIN</strong> and <strong>GND</strong>.</p>
+<ol>
+<li><strong>Loosen</strong> the VIN and GND screws.</li>
+<li>Insert the wires:
+<ul>
+<li><strong>Red wire</strong> from the battery pack → <strong>VIN</strong></li>
+<li><strong>Black wire</strong> from the battery pack → <strong>GND</strong></li>
+</ul>
+</li>
+<li><strong>Tighten</strong> both screws.</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Keep the battery pack switched OFF while connecting wires.</strong> Only turn it on when you are ready to test.</p></blockquote>
+<h3 id="step-5-test-the-motors-with-code">Step 5: Test the motors with code</h3>
+<p>Open <a href="https://makecode.microbit.org/">MakeCode</a> and create a new project or use your code from Session 3. Use the same pin blocks from Session 3 — the Motor:bit exposes the same pins:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Pin in code</th>
+          <th>What it controls</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Motor M1 direction A</td>
+          <td><code>digital write pin P1</code></td>
+          <td>Left motor direction</td>
+      </tr>
+      <tr>
+          <td>Motor M2 direction B</td>
+          <td><code>digital write pin P2</code></td>
+          <td>Right motor direction</td>
+      </tr>
+      <tr>
+          <td>Speed (both motors)</td>
+          <td><code>analog write pin P0</code></td>
+          <td>0 = stop, 1023 = full speed</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Quick test program:</strong></p>
+<p>Test one motor:</p>
+<ul>
+<li><strong><code>on button A pressed</code></strong>
+<ol>
+<li><code>digital write pin P1 to 1</code></li>
+<li><code>digital write pin P2 to 0</code></li>
+<li><code>analog write pin P0 to 600</code></li>
+</ol>
+</li>
+</ul>
+<p>Download the code, switch the battery on, and press <strong>A</strong> — motor should forward spin.</p>
+<hr>
+<h2 id="part-2-build-the-chassis">Part 2: Build the Chassis</h2>
+<p>A <strong>two-wheeled robot chassis</strong> made from cardboard. Your finished chassis must hold every component securely:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2 × DC motors</td>
+          <td>One per side, each driving one wheel</td>
+      </tr>
+      <tr>
+          <td>2 × wheels</td>
+          <td>Attached directly to motor shafts</td>
+      </tr>
+      <tr>
+          <td>1 × battery pack</td>
+          <td>Powers everything</td>
+      </tr>
+      <tr>
+          <td>1 × Motor:bit board + micro:bit</td>
+          <td>The robot&rsquo;s brain, sitting on a raised platform</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="step-1-sketch-your-design">Step 1: Sketch Your Design</h2>
+<p>Before cutting anything, <strong>draw a top-down blueprint</strong> of your chassis on paper.</p>
+<p><strong>Questions to answer in your sketch:</strong></p>
+<ol>
+<li><strong>How big does the base need to be?</strong> Lay all your components on a piece of paper and trace around them first — add ~2 cm margin on each side.</li>
+<li><strong>Where do the motors go?</strong> Motors go on opposite left and right sides, near the back, so wheels drive from the rear.</li>
+<li><strong>Where does the battery pack go?</strong> Heavy things should sit low and centered so the robot doesn&rsquo;t tip. Make sure you can still flip the switch.</li>
+<li><strong>Where does the Motor:bit platform go?</strong> It needs a flat raised surface near the center; the micro:bit LED display should face up so you can read it.</li>
+<li><strong>Where do wires run?</strong> Sketch rough paths from the motors and battery to the Motor:bit board so wires won&rsquo;t get caught in wheels.</li>
+</ol>
+<p><strong>Sketch checklist before you continue:</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> Base plate dimensions marked</li>
+<li><input disabled="" type="checkbox"> Left motor location</li>
+<li><input disabled="" type="checkbox"> Right motor location</li>
+<li><input disabled="" type="checkbox"> Battery pack location (switch side accessible)</li>
+<li><input disabled="" type="checkbox"> Motor:bit platform location</li>
+<li><input disabled="" type="checkbox"> Wire routing paths sketched</li>
+</ul>
+<blockquote>
+<p><strong>Tip:</strong> There is no single right answer — compare your design with teammates and discuss the trade-offs!</p></blockquote>
+<hr>
+<h2 id="step-2-gather-your-materials">Step 2: Gather Your Materials</h2>
+<p>Each team needs:</p>
+<ul>
+<li>Several sheets of <strong>corrugated cardboard</strong> (cardboard boxes are best; cereal boxes work for smaller pieces)</li>
+<li><strong>Scissors</strong> and/or a box cutter</li>
+<li><strong>Masking tape</strong> and <strong>hot glue</strong></li>
+<li><strong>Ruler</strong> and <strong>pencil/marker</strong> for measuring and marking</li>
+<li>All robot components: 2 motors, 2 wheels, battery pack, Motor:bit board, micro:bit</li>
+</ul>
+<hr>
+<h2 id="step-3-cut-your-base-plate">Step 3: Cut Your Base Plate</h2>
+<ol>
+<li>Using your sketch measurements, mark a rectangle on cardboard.</li>
+<li>Add <strong>at least 1 cm margin</strong> on all sides so nothing hangs off the edge.</li>
+<li>Cut along the lines. Ask the teacher if you need help with the box cutter.</li>
+<li><strong>Strength test:</strong> Hold the base by one corner. Does it flex? If yes, cut a second identical piece and glue the two layers together — this doubles the stiffness.</li>
+</ol>
+<blockquote>
+<p><strong>Check:</strong> Place all components on the cut base plate. Do they all fit with room to spare? Adjust before moving on.</p></blockquote>
+<hr>
+<h2 id="step-4-mount-the-motors">Step 4: Mount the Motors</h2>
+<p>Motors must be held firmly — they twist hard when driving wheels and will pop loose if just taped flat.</p>
+<p><strong>Method A — Cardboard bracket:</strong></p>
+<ol>
+<li>Cut two strips of cardboard (~3 cm × 10 cm each).</li>
+<li>Fold each strip into a U-shape that wraps snugly around the motor body.</li>
+<li>Glue and tape the bracket flat to the base plate.</li>
+<li>Slide the motor into the bracket and tape or glue it in place.</li>
+</ol>
+<p><strong>Method B — Side wall with shaft notch:</strong></p>
+<ol>
+<li>Cut two side-wall panels and glue them vertically along the left and right edges of the base.</li>
+<li>Cut a circular notch in each wall just large enough for the motor shaft to pass through.</li>
+<li>Slot the motor in so the shaft sticks out through the notch; glue/tape the motor body to the wall.</li>
+</ol>
+<p><strong>Rules for both methods:</strong></p>
+<ul>
+<li>Motors go on <strong>opposite sides</strong> (one left, one right).</li>
+<li>Motor shafts point <strong>outward</strong> so wheels mount on the outside of the chassis.</li>
+<li>Both motors must be at the <strong>same height</strong> so the robot rolls flat.</li>
+</ul>
+<hr>
+<h2 id="step-5-add-a-front-skid">Step 5: Add a Front Skid</h2>
+<p>Two drive wheels alone will let the front of the robot drag on the ground. Add a simple skid:</p>
+<ol>
+<li>Cut a small cardboard square (~4 cm × 4 cm).</li>
+<li>Stack and glue 2–3 layers until it&rsquo;s the same height as the bottom of the wheels.</li>
+<li>Tape or glue it to the underside of the <strong>front center</strong> of the base plate.</li>
+<li>Optional: tape a smooth bottle cap or a small piece of packing tape on the bottom of the skid to reduce friction.</li>
+</ol>
+<blockquote>
+<p>This is your <strong>third contact point</strong> with the ground — it keeps the front from nose-diving!</p></blockquote>
+<hr>
+<h2 id="step-6-build-a-raised-platform-for-the-motorbit-board">Step 6: Build a Raised Platform for the Motor:bit Board</h2>
+<p>The Motor:bit board (with micro:bit plugged in) needs to sit <strong>flat, stable, and easy to reach</strong>.</p>
+<ol>
+<li>Cut a cardboard platform about 1 cm larger than the Motor:bit board on all sides.</li>
+<li>Cut <strong>4 cardboard pillars</strong> (~2–3 cm tall each) and glue one under each corner of the platform piece.</li>
+<li>Glue the assembled platform (pillars + top) onto your chassis base in your planned location.</li>
+<li>Set the Motor:bit board on top — do <strong>not</strong> glue the board itself, since you need to plug/unplug the micro:bit and connect motor wires.</li>
+</ol>
+<blockquote>
+<p><strong>Why raised?</strong> It protects the board from floor bumps, keeps wires accessible, and lets you read the micro:bit LED display.</p></blockquote>
+<hr>
+<h2 id="step-7-secure-the-battery-pack">Step 7: Secure the Battery Pack</h2>
+<ol>
+<li>Set the battery pack in its planned location on the base.</li>
+<li>Create <strong>two strap loops</strong> using strips of tape or thin cardboard fed through small slots cut in the base plate — like a seatbelt for the battery.</li>
+<li>Alternatively, build a cardboard pocket around three sides and tape across the top.</li>
+</ol>
+<p><strong>Must-haves:</strong></p>
+<ul>
+<li>The <strong>on/off switch</strong> remains accessible without tools.</li>
+<li>The <strong>connector cable</strong> has enough slack to reach the Motor:bit board.</li>
+</ul>
+<hr>
+<h2 id="step-8-route-and-tidy-your-wires">Step 8: Route and Tidy Your Wires</h2>
+<p>Before everything is sealed up:</p>
+<ol>
+<li>Lay motor wires flat along the base and tape them at intervals so they cannot sag below the chassis.</li>
+<li>Route all wires toward the Motor:bit platform — leave a small loop of slack near the board so it can be lifted slightly without ripping a connection.</li>
+<li>Check that <strong>no wire dangles below the base plate</strong> — wires on the floor will drag and get caught.</li>
+</ol>
+<hr>
+<h2 id="-chassis-checklist">✅ Chassis Checklist</h2>
+<p>Run through every item before calling the build done:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Base plate is stiff (holds its shape when picked up by one corner)</li>
+<li><input disabled="" type="checkbox"> Both motors are firmly attached and don&rsquo;t wobble</li>
+<li><input disabled="" type="checkbox"> Both wheels attach to motor shafts and spin freely by hand</li>
+<li><input disabled="" type="checkbox"> Front skid is the correct height — robot sits level on a flat surface</li>
+<li><input disabled="" type="checkbox"> Motor:bit platform is flat and the board sits securely on top</li>
+<li><input disabled="" type="checkbox"> micro:bit can be plugged into and unplugged from the Motor:bit board without disassembly</li>
+<li><input disabled="" type="checkbox"> Battery pack is strapped down and the switch is reachable</li>
+<li><input disabled="" type="checkbox"> All wires are routed away from wheels and above floor level</li>
+</ul>
+<hr>
+<h2 id="-design-challenges">🎯 Design Challenges</h2>
+<p>Once your chassis passes the checklist, try one or more of these:</p>
+<p><strong>A — Straight Roll Test</strong>
+Set the robot down on a flat surface and give it a gentle push. Does it roll in a straight line? If it veers, check whether both motors are perfectly parallel to each other. Realign and retest.</p>
+<p><strong>B — Stress Test</strong>
+Pick the assembled robot up by the Motor:bit platform. Does anything shift, flex, or fall off? Reinforce weak spots with extra tape or a folded cardboard gusset in the corner.</p>
+<p><strong>C — Ground Clearance Check</strong>
+Measure the gap between the bottom of the base plate and the floor. Aim for at least <strong>5 mm of clearance</strong> — too little and the robot will high-center on uneven ground.</p>
+<hr>
+<h2 id="key-concepts-you-learned">Key Concepts You Learned</h2>
+<ul>
+<li><strong>Chassis design</strong>: sketching and planning component placement before cutting</li>
+<li><strong>Motor:bit Breakout Board</strong>: how it replaces the L298N and hosts the micro:bit directly</li>
+<li><strong>Structural cardboard engineering</strong>: layers, brackets, pillars, and gussets for rigidity</li>
+<li><strong>Cable management</strong>: routing and securing wires so they don&rsquo;t interfere with moving parts</li>
+<li><strong>Iterative design process</strong>: sketch → build → test → improve</li>
+</ul>
+<hr>
+<h2 id="whats-next">What&rsquo;s Next?</h2>
+<p>In <strong>Session 5</strong> you&rsquo;ll wire the motors and battery pack to the Motor:bit board and write your full MakeCode program to make the robot drive forward, turn, and stop — your chassis will finally move under its own power!</p>
+<p><strong>Think About It:</strong></p>
+<ul>
+<li>What would you change about your chassis design now that it&rsquo;s built?</li>
+<li>How does placing heavy components low and centered affect balance?</li>
+<li>Why is it important to keep every component accessible even after the robot is assembled?</li>
+</ul>
+
+
+                
+
+                <hr>
+                
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+</main>
+
+
+
+
+<footer role="contentinfo" aria-label="Site footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center" role="list" aria-label="Social media links">
+                    
+                    <li role="listitem">
+                        <a href="mailto:jjumadinova@allegheny.edu" aria-label="Email">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/jjumadinova/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://linkedin.com/in/janyl-jumadinova">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy;  2026
+                    <br>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18WYHLKCBH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18WYHLKCBH');
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+<script src="/js/copy-code.js"></script>
+</body>
+</html>
