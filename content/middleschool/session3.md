@@ -1,212 +1,210 @@
 ---
 layout: page
 title: Session 3
-subtitle: Design and Build Your Robot Chassis
-date: 2026-03-12T00:00:00.000Z
+subtitle: Motors and Movement
+date: 2025-01-22T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 3: Design and Build Your Robot Chassis
+# Session 3: Motors and Movement
 
-**Goal:** Plan and build a cardboard chassis that fits all your robot's components — two motors, two wheels, a battery pack, and the Motor:bit Breakout Board with the micro:bit mounted on top.
-
----
-
-## Why We're Switching to the Motor:bit Board
-
-In Session 2 you saw the L298N motor driver — a large board wired up with many jumper wires. Today we're upgrading to the **Motor:bit Breakout Board**, which is a much better fit for a compact robot.
-
-| Feature | L298N Motor Driver | Motor:bit Breakout Board |
-|---|---|---|
-| Connects to micro:bit | Many jumper wires | micro:bit plugs directly into board |
-| Size | Large / bulky | Small and compact |
-| Mounting | Harder to attach | Flat board, easy to platform-mount |
-| Wiring complexity | High | Low |
-
-**How the Motor:bit works:**
-- Your **micro:bit slides directly into the edge-connector slot** on the Motor:bit board — no wires needed between them
-- The board has built-in motor driver circuits — no separate L298N
-- **M1 terminals** → left motor; **M2 terminals** → right motor
-- It accepts power from a battery pack (4 × AA recommended)
-- All micro:bit pins are still accessible for sensors
+**Goal:** Connect a yellow DC motor to the micro:bit using an L298N motor driver and learn to control speed and direction — the first step toward building a moving robot!
 
 ---
 
-## What You're Building Today
+## 📺 Watch First
 
-A **two-wheeled robot chassis** made from cardboard. Your finished chassis must hold every component securely:
+Before we start wiring, watch this short video that walks through connecting a motor to a micro:bit with an L298N driver:
 
-| Component | Notes |
-|---|---|
-| 2 × DC motors | One per side, each driving one wheel |
-| 2 × wheels | Attached directly to motor shafts |
-| 1 × battery pack | Powers everything |
-| 1 × Motor:bit board + micro:bit | The robot's brain, sitting on a raised platform |
+**[▶ Motor Driver + micro:bit Tutorial](https://www.youtube.com/watch?v=8rn5wmpo8vA)**
+
+Follow along — we'll be doing the same setup in class!
 
 ---
 
-## Step 1: Sketch Your Design (10 min)
+## What Are We Building?
 
-Before cutting anything, **draw a top-down blueprint** of your chassis on paper.
-
-**Questions to answer in your sketch:**
-
-1. **How big does the base need to be?** Lay all your components on a piece of paper and trace around them first — add ~2 cm margin on each side.
-2. **Where do the motors go?** Motors go on opposite left and right sides, near the back, so wheels drive from the rear.
-3. **Where does the battery pack go?** Heavy things should sit low and centered so the robot doesn't tip. Make sure you can still flip the switch.
-4. **Where does the Motor:bit platform go?** It needs a flat raised surface near the center; the micro:bit LED display should face up so you can read it.
-5. **Where do wires run?** Sketch rough paths from the motors and battery to the Motor:bit board so wires won't get caught in wheels.
-
-**Sketch checklist before you continue:**
-- [ ] Base plate dimensions marked
-- [ ] Left motor location
-- [ ] Right motor location
-- [ ] Battery pack location (switch side accessible)
-- [ ] Motor:bit platform location
-- [ ] Wire routing paths sketched
-
-> **Tip:** There is no single right answer — compare your design with teammates and discuss the trade-offs!
+By the end of this session you will have **one motor** wired up and controllable from the micro:bit. You'll write `forward`, `backward`, and `stop` functions — the building blocks of any robot.
 
 ---
 
-## Step 2: Gather Your Materials
+## Meet Your Components
 
-Each team needs:
+### Yellow TT DC Motor
 
-- Several sheets of **corrugated cardboard** (cardboard boxes are best; cereal boxes work for smaller pieces)
-- **Scissors** and/or a box cutter *(box cutter — teacher use only)*
-- **Masking tape** and **hot glue** *(hot glue station — ask teacher before using)*
-- **Ruler** and **pencil/marker** for measuring and marking
-- All robot components: 2 motors, 2 wheels, battery pack, Motor:bit board, micro:bit
+The yellow "TT" (transparent tire) gear motor is the workhorse of hobby robotics:
+- **Operating voltage:** 3 V – 6 V (we'll use ~5–6 V from a battery pack)
+- **Built-in gearbox** that trades speed for torque — perfect for driving wheels
+- **Two solder tabs** for power (no polarity marking — swapping the wires just reverses the direction)
 
----
+### L298N Motor Driver Board
 
-## Step 3: Cut Your Base Plate
+The micro:bit's pins can only supply a tiny amount of current. A motor can draw **100–200 mA** — way too much! The **L298N dual H-bridge driver** sits between the micro:bit and the motor and does the heavy lifting.
 
-1. Using your sketch measurements, mark a rectangle on cardboard.
-2. Add **at least 1 cm margin** on all sides so nothing hangs off the edge.
-3. Cut along the lines. Ask the teacher if you need help with the box cutter.
-4. **Strength test:** Hold the base by one corner. Does it flex? If yes, cut a second identical piece and glue the two layers together — this doubles the stiffness.
+![L298N Motor Driver Board](/middleschool/motor_driver.png)
 
-> **Check:** Place all components on the cut base plate. Do they all fit with room to spare? Adjust before moving on.
+The key parts of the board we'll use:
+- **OUT1 & OUT2** — connect your motor wires here
+- **+12V (VMS)** — motor power input (battery pack positive)
+- **GND** — common ground (battery negative **and** micro:bit GND)
+- **ENA** — enable / speed control (PWM from micro:bit)
+- **IN1, IN2** — direction control pins
 
----
-
-## Step 4: Mount the Motors
-
-Motors must be held firmly — they twist hard when driving wheels and will pop loose if just taped flat.
-
-**Method A — Cardboard bracket:**
-1. Cut two strips of cardboard (~3 cm × 10 cm each).
-2. Fold each strip into a U-shape that wraps snugly around the motor body.
-3. Glue and tape the bracket flat to the base plate.
-4. Slide the motor into the bracket and tape or glue it in place.
-
-**Method B — Side wall with shaft notch:**
-1. Cut two side-wall panels and glue them vertically along the left and right edges of the base.
-2. Cut a circular notch in each wall just large enough for the motor shaft to pass through.
-3. Slot the motor in so the shaft sticks out through the notch; glue/tape the motor body to the wall.
-
-**Rules for both methods:**
-- Motors go on **opposite sides** (one left, one right).
-- Motor shafts point **outward** so wheels mount on the outside of the chassis.
-- Both motors must be at the **same height** so the robot rolls flat.
+> **Key idea:** IN1/IN2 set the *direction*; ENA sets the *speed*.
 
 ---
 
-## Step 5: Add a Front Skid
+## Wiring It Up
 
-Two drive wheels alone will let the front of the robot drag on the ground. Add a simple skid:
+### Components You'll Need
 
-1. Cut a small cardboard square (~4 cm × 4 cm).
-2. Stack and glue 2–3 layers until it's the same height as the bottom of the wheels.
-3. Tape or glue it to the underside of the **front center** of the base plate.
-4. Optional: tape a smooth bottle cap or a small piece of packing tape on the bottom of the skid to reduce friction.
+- micro:bit + breakout board (edge connector)
+- L298N motor driver module
+- 1 × yellow TT DC motor (with wheel attached)
+- 4 × AA battery holder (6 V)
+- Jumper wires (male-to-female recommended)
+- Small screwdriver for the L298N screw terminals
 
-> This is your **third contact point** with the ground — it keeps the front from nose-diving!
+### Pin Assignments
 
----
+The micro:bit has **three large pins** you can easily connect with alligator clips or a breakout board: **Pin 0, Pin 1, and Pin 2**. We'll use them like this:
 
-## Step 6: Build a Raised Platform for the Motor:bit Board
+- **Pin 0** → **ENA** (speed control — PWM)
+- **Pin 1** → **IN1** (direction control)
+- **Pin 2** → **IN2** (direction control)
 
-The Motor:bit board (with micro:bit plugged in) needs to sit **flat, stable, and easy to reach**.
+### Step-by-Step Wiring
 
-1. Cut a cardboard platform about 1 cm larger than the Motor:bit board on all sides.
-2. Cut **4 cardboard pillars** (~2–3 cm tall each) and glue one under each corner of the platform piece.
-3. Glue the assembled platform (pillars + top) onto your chassis base in your planned location.
-4. Set the Motor:bit board on top — do **not** glue the board itself, since you need to plug/unplug the micro:bit and connect motor wires.
+> ⚠️ **Keep the battery pack switched OFF (or disconnected) while wiring!**
 
-> **Why raised?** It protects the board from floor bumps, keeps wires accessible, and lets you read the micro:bit LED display.
+1. **Remove the ENA jumper cap** on the L298N board — we will control speed with PWM from the micro:bit instead of running at full speed.
 
----
+2. **Connect the motor**
+   - Loosen the screw terminals on **OUT1/OUT2** and insert the two wires from the motor. Tighten.
 
-## Step 7: Secure the Battery Pack
+3. **Connect power**
+   - Battery pack **positive (+)** → L298N **+12V** terminal.
+   - Battery pack **negative (–)** → L298N **GND** terminal.
+   - Run a wire from L298N **GND** to the micro:bit **GND** pin (common ground is essential!).
 
-1. Set the battery pack in its planned location on the base.
-2. Create **two strap loops** using strips of tape or thin cardboard fed through small slots cut in the base plate — like a seatbelt for the battery.
-3. Alternatively, build a cardboard pocket around three sides and tape across the top.
+4. **Connect control pins** (micro:bit → L298N)
+   - **Pin 0** → **ENA** (speed)
+   - **Pin 1** → **IN1** (direction)
+   - **Pin 2** → **IN2** (direction)
 
-**Must-haves:**
-- The **on/off switch** remains accessible without tools.
-- The **connector cable** has enough slack to reach the Motor:bit board.
-
----
-
-## Step 8: Route and Tidy Your Wires
-
-Before everything is sealed up:
-
-1. Lay motor wires flat along the base and tape them at intervals so they cannot sag below the chassis.
-2. Route all wires toward the Motor:bit platform — leave a small loop of slack near the board so it can be lifted slightly without ripping a connection.
-3. Check that **no wire dangles below the base plate** — wires on the floor will drag and get caught.
+5. **Double-check** every connection with your partner, then have the teacher verify before powering on.
 
 ---
 
-## ✅ Chassis Checklist
+## How Motor Direction Works
 
-Run through every item before calling the build done:
+The L298N uses two input pins to set direction:
 
-- [ ] Base plate is stiff (holds its shape when picked up by one corner)
-- [ ] Both motors are firmly attached and don't wobble
-- [ ] Both wheels attach to motor shafts and spin freely by hand
-- [ ] Front skid is the correct height — robot sits level on a flat surface
-- [ ] Motor:bit platform is flat and the board sits securely on top
-- [ ] micro:bit can be plugged into and unplugged from the Motor:bit board without disassembly
-- [ ] Battery pack is strapped down and the switch is reachable
-- [ ] All wires are routed away from wheels and above floor level
+- **IN1 = HIGH, IN2 = LOW** → Motor spins **forward**
+- **IN1 = LOW, IN2 = HIGH** → Motor spins **backward**
+- **IN1 = LOW, IN2 = LOW** → Motor **stops** (coast)
+
+The **ENA** pin controls speed using PWM — a value from **0** (stopped) to **1023** (full speed).
 
 ---
 
-## 🎯 Design Challenges
+## Programming the Motor
 
-Once your chassis passes the checklist, try one or more of these:
+### Activity 1: Make the Motor Spin
 
-**A — Straight Roll Test**
-Set the robot down on a flat surface and give it a gentle push. Does it roll in a straight line? If it veers, check whether both motors are perfectly parallel to each other. Realign and retest.
+**In MakeCode** — open a new project.
 
-**B — Stress Test**
-Pick the assembled robot up by the Motor:bit platform. Does anything shift, flex, or fall off? Reinforce weak spots with extra tape or a folded cardboard gusset in the corner.
+**On button A pressed:**
+1. From **Pins** (under Advanced), add `digital write pin P1 to 1`
+2. Add `digital write pin P2 to 0`
+3. Add `analog write pin P0 to 600`
 
-**C — Ground Clearance Check**
-Measure the gap between the bottom of the base plate and the floor. Aim for at least **5 mm of clearance** — too little and the robot will high-center on uneven ground.
+This sets the motor to spin forward at moderate speed.
+
+**On button B pressed:**
+1. `digital write pin P1 to 0`
+2. `digital write pin P2 to 0`
+3. `analog write pin P0 to 0`
+
+This stops the motor.
+
+**Test it!** Press A — the motor should spin. Press B — it stops.
+
+> **Troubleshooting:** If the motor doesn't turn, check:
+> - Is the battery pack switched on?
+> - Is GND shared between battery, L298N, and micro:bit?
+> - Did you remove the ENA jumper cap?
+> - Are IN1/IN2 connected to P1/P2 (not swapped)?
+
+### Activity 2: Create Forward, Backward, and Stop Functions
+
+In MakeCode, go to **Advanced** → **Functions** → **Make a Function**. We'll create three functions:
+
+**Function: `forward`**
+1. `digital write pin P1 to 1`
+2. `digital write pin P2 to 0`
+3. `analog write pin P0 to 700`
+4. `show arrow North` (up arrow on LEDs)
+
+**Function: `backward`**
+1. `digital write pin P1 to 0`
+2. `digital write pin P2 to 1`
+3. `analog write pin P0 to 700`
+4. `show arrow South` (down arrow on LEDs)
+
+**Function: `stop`**
+1. `digital write pin P1 to 0`
+2. `digital write pin P2 to 0`
+3. `analog write pin P0 to 0`
+4. `show icon X` (stop symbol on LEDs)
+
+Now call the functions from a **forever** loop to make the motor run a repeating pattern automatically:
+
+**In the `forever` block:**
+1. Call `forward`
+2. `pause 2000 ms` (run forward for 2 seconds)
+3. Call `stop`
+4. `pause 1000 ms` (pause for 1 second)
+5. Call `backward`
+6. `pause 2000 ms` (run backward for 2 seconds)
+7. Call `stop`
+8. `pause 1000 ms` (pause for 1 second)
+
+The motor will now repeat the sequence on its own — forward, stop, backward, stop — forever! This is exactly how a real robot would follow a programmed path.
+
+**Test it!** Watch the LED arrows change as the motor changes direction.
+
+---
+
+## 🎯 Challenge: Design Your Own Motor Program
+
+> **Your Task:** Use the `forward`, `backward`, and `stop` functions to create something interesting — you decide what it does!
+
+Here are some ideas to get you thinking, but feel free to come up with your own:
+
+- **Dance pattern** — a timed sequence of forward/backward/stop moves set to a beat using the Music blocks
+- **Morse code motor** — use short and long motor bursts to "spell out" a letter or word
+- **Countdown launcher** — count down from 5 on the LEDs, then run a sequence
+- **Sensor-triggered** — combine what you learned in Session 2: use the IR sensor to decide when to run forward or stop
+- **Something totally different** — surprise us!
+
+There's no single right answer. Experiment, break things, fix them, and have fun.
 
 ---
 
 ## Key Concepts You Learned
 
-- **Chassis design**: sketching and planning component placement before cutting
-- **Motor:bit Breakout Board**: how it replaces the L298N and hosts the micro:bit directly
-- **Structural cardboard engineering**: layers, brackets, pillars, and gussets for rigidity
-- **Cable management**: routing and securing wires so they don't interfere with moving parts
-- **Iterative design process**: sketch → build → test → improve
+- How a **DC motor** converts electricity into rotation
+- Why we need a **motor driver** (the micro:bit can't power motors directly)
+- **L298N wiring**: direction pins (IN1/IN2 on P1/P2) and speed pin (ENA on P0)
+- **PWM** (0–1023) to control motor speed like a dimmer switch
+- Using **functions** to organize your code into reusable blocks
+
+**Think About It:**
+- What would you need to change to control **two** motors at once?
+- How could you combine the IR sensor from Session 2 with a motor to make a robot that avoids obstacles?
+- What other sensors could help a robot navigate?
 
 ---
 
-## What's Next?
-
-In **Session 4** you'll wire the motors and battery pack to the Motor:bit board and write your first MakeCode program to make the robot drive forward, turn, and stop — your chassis will finally move under its own power!
-
-**Think About It:**
-- What would you change about your chassis design now that it's built?
-- How does placing heavy components low and centered affect balance?
-- Why is it important to keep every component accessible even after the robot is assembled?
+**Next Session Preview:** We'll add a second motor and mount everything onto a chassis to build a rolling robot! 🤖

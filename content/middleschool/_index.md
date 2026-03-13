@@ -37,10 +37,17 @@ Get ready to build your own robots from the ground up! In **Engineering Robots: 
 
 ---
 
-### [Session 3: Design and Build Your Robot Chassis](/middleschool/session3/)
+### [Session 3: Motors and Movement](/middleschool/session3/)
+**Build:** A motor control system with speed and direction control  
+**Learn:** DC motors, the L298N motor driver, PWM speed control, differential drive  
+**Prerequisites:** Sessions 1–2
+
+---
+
+### [Session 4: Design and Build Your Robot Chassis](/middleschool/session4/)
 **Build:** A cardboard robot chassis that fits two motors, two wheels, a battery pack, and the Motor:bit board  
 **Learn:** Chassis design and planning, the Motor:bit Breakout Board (replaces L298N), structural cardboard techniques, cable management  
-**Prerequisites:** Sessions 1–2
+**Prerequisites:** Sessions 1–3
 
 ---
 
