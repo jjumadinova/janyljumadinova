@@ -25,30 +25,30 @@ By the end of this course, you will have:
 ## Course Sessions
 
 ### [Session 1: Your First Interactive Web Page](/highschool/session1/)
-**Build:** A colorful button that responds to clicks
-**Learn:** HTML structure, CSS styling, JavaScript basics
+**Build:** A colorful button that responds to clicks  
+**Learn:** HTML structure, CSS styling, JavaScript basics  
 **No prerequisites** — we start from zero!
 
 ---
 
 ### [Session 2: Game Time — Click Speed and Gem Catcher](/highschool/session2/)
-**Build:** A click speed challenge and a gem catcher game with canvas animation
-**Learn:** Event listeners, game state, timers, collision detection, VS Code, Git
+**Build:** A click speed challenge and a gem catcher game with canvas animation  
+**Learn:** Event listeners, game state, timers, collision detection, VS Code, Git  
 **Prerequisites:** Session 1
 
 ---
 
 ### [Session 3: Polish, Portfolio, and Publish](/highschool/session3/)
-**Build:** Better versions of your Session 2 games plus a portfolio homepage
-**Learn:** localStorage, CSS polish, portfolio design, GitHub Pages deployment
-**Prerequisites:** Sessions 1-2
+**Build:** Better versions of your Session 2 games plus a portfolio homepage  
+**Learn:** localStorage, CSS animations, portfolio design, GitHub Pages deployment  
+**Prerequisites:** Sessions 1–2
 
 ---
 
 ### [Session 4: React Without npm](/highschool/session4/)
-**Build:** Tic-Tac-Toe with React in a single HTML file
-**Learn:** React components, JSX, state management, props, CDN-based workflow
-**Prerequisites:** Sessions 1-3
+**Build:** Tic-Tac-Toe with React in a single HTML file  
+**Learn:** React components, JSX, state management, props, CDN-based workflow  
+**Prerequisites:** Sessions 1–3
 
 ---
 
