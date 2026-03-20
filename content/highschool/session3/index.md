@@ -8,7 +8,7 @@ author: Janyl Jumadinova
 
 # Session 3: Polish, Portfolio, and Publish
 
-**Goal:** Expand the games from Session 2, make them feel more professional, and publish them with GitHub Pages  
+**Goal:** Get your games live on the web, build a portfolio homepage, then keep improving the games  
 **Prerequisites:** Sessions 1-2 (HTML, CSS, JavaScript, VS Code, GitHub)
 
 ---
@@ -16,136 +16,46 @@ author: Janyl Jumadinova
 ## What You Will Accomplish Today
 
 By the end of this session, you will have:
-- Better versions of the games you already built
-- A simple portfolio homepage that links to your projects
 - A live GitHub Pages URL you can share with anyone
-- A workflow for updating and republishing your work
+- A portfolio homepage that links to all your games
+- Better versions of the games from Session 2
 
-This session keeps building on the exact tools the students already used. No extra installs are required.
+No extra installs needed — just the tools you already used.
 
 ---
 
-## Part 1: Improve Your Existing Games
+## Part 1: Deploy with GitHub Pages
 
-Instead of starting a new framework today, we are going deeper with plain HTML, CSS, and JavaScript.
+Your repo already has the games and a README, so the site is ready to publish immediately.
 
-### Upgrade 1: Save High Scores in Click Speed Challenge
+### Step 1: Turn On GitHub Pages
 
-Open `click-game.html` and find the game state variables.
+1. Open your repository on GitHub
+2. Click **Settings**
+3. Click **Pages** in the left sidebar
+4. Under **Source**, choose **Deploy from a branch**
+5. Under **Branch**, choose **main** and folder **/ (root)**
+6. Click **Save**
 
-Replace the old high score line with:
+### Step 2: Visit Your Live Site
 
-```javascript
-let highScore = localStorage.getItem('clickGameHighScore')
-    ? parseInt(localStorage.getItem('clickGameHighScore'))
-    : 0;
+After about a minute, GitHub shows a URL at the top of the Pages settings:
 
-highScoreDisplay.textContent = highScore;
-```
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
 
-Then in `endGame()`, save the new score when a record is set:
+Open it. Your games are already accessible at their normal filenames — for example:
 
-```javascript
-if (score > highScore) {
-    highScore = score;
-    highScoreDisplay.textContent = highScore;
-    messageDisplay.textContent = 'NEW HIGH SCORE!';
-    localStorage.setItem('clickGameHighScore', highScore);
-} else {
-    messageDisplay.textContent = 'Game Over! Your score: ' + score;
-}
-```
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/click-game.html`
 
-**Why this matters:**
-- `localStorage` keeps data even after refresh
-- The game now remembers progress between play sessions
-- Students see that browser apps can store useful information
-
-### Upgrade 2: Add a Little Motion
-
-Inside the existing `<style>` block, add:
-
-```css
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
-
-@keyframes celebrate {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.15) rotate(4deg); }
-    50% { transform: scale(1.15) rotate(-4deg); }
-    100% { transform: scale(1); }
-}
-
-.click-button:not(:disabled) {
-    animation: pulse 1.5s infinite;
-}
-```
-
-Then in `endGame()`, after a new high score, add:
-
-```javascript
-clickButton.style.animation = 'celebrate 0.6s ease';
-setTimeout(() => {
-    clickButton.style.animation = '';
-}, 600);
-```
-
-### Upgrade 3: Make Gem Catcher More Interesting
-
-Choose one feature and build it as a class challenge.
-
-**Option A: Golden gem bonus**
-
-Update `createGem()` so some gems are special:
-
-```javascript
-function createGem() {
-    const isGolden = Math.random() < 0.15;
-
-    return {
-        x: Math.random() * (canvas.width - 30),
-        y: -30,
-        width: 30,
-        height: 30,
-        speed: 2 + Math.random() * 3,
-        color: isGolden ? '#ffd700' : ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f7b731'][Math.floor(Math.random() * 4)],
-        points: isGolden ? 5 : 1
-    };
-}
-```
-
-When a gem is caught, add:
-
-```javascript
-score += gem.points;
-```
-
-**Option B: Difficulty increase**
-
-As the score gets higher, make gems fall faster:
-
-```javascript
-gem.y += gem.speed + score * 0.05;
-```
-
-**Option C: Show a restart hint**
-
-In `endGame()`, update the message:
-
-```javascript
-messageDisplay.textContent = 'Game Over! Click START GAME to try again.';
-```
+Share the link. These URLs work for anyone, anywhere.
 
 ---
 
 ## Part 2: Build a Portfolio Homepage
 
-Now create one page that links all student projects together.
+Right now the site root either shows a directory listing or a 404. An `index.html` file in the root folder becomes the landing page automatically.
 
-Create a file named `index.html` in the root of the project.
+Create a new file named `index.html` in the root of your project and paste this:
 
 ```html
 <!DOCTYPE html>
@@ -271,7 +181,7 @@ Create a file named `index.html` in the root of the project.
             <div class="tech-tags">
                 <span>React</span>
                 <span>Components</span>
-                <span>UI</span>
+                <span>JSX</span>
             </div>
             <a class="play-button" href="#">Soon</a>
         </section>
@@ -280,125 +190,198 @@ Create a file named `index.html` in the root of the project.
 </html>
 ```
 
-### Personalization Ideas
+### Preview Locally First
 
-1. Replace "My GameCraft Portfolio" with the student name
-2. Change the colors to match the style of the games
-3. Add a short bio or favorite game
-4. Add screenshots later if there is time
+Right-click `index.html` in the VS Code file explorer and choose **Open with Live Server**. Check that both game links work.
 
----
-
-## Part 3: Deploy with GitHub Pages
-
-This is the best time to deploy because the project is still plain HTML files.
-
-### Step 1: Commit Your Work
+### Commit and Push
 
 ```bash
-git add .
-git commit -m "Polish games and add portfolio"
+git add index.html
+git commit -m "Add portfolio homepage"
 git push origin main
 ```
 
-### Step 2: Turn On GitHub Pages
+Wait about a minute and reload the GitHub Pages root URL — the portfolio should now load as the landing page instead of a 404.
 
-1. Open the repository on GitHub
-2. Click **Settings**
-3. Click **Pages** in the left sidebar
-4. Under **Source**, choose **Deploy from a branch**
-5. Choose branch **main** and folder **/ (root)**
-6. Click **Save**
+### Personalize
 
-### Step 3: Open the Published Site
+After confirming it works, try one quick customization:
 
-After a minute or two, GitHub will show a URL that looks like:
+1. Change "My GameCraft Portfolio" to your name
+2. Update the game descriptions to match what you actually built
+3. Push again and see the live site update
 
-`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
+---
 
-Test the portfolio and make sure each game link works.
+## Part 3: Improve Your Existing Games
 
-### Step 4: Update and Republish
+Now that the site is live, every improvement is immediately visible to anyone with your link.
 
-Every time students change their files, they republish with:
+### Upgrade 1: Persistent High Score in Click Speed Challenge
+
+Right now the high score resets every time the page refreshes. `localStorage` fixes that.
+
+Open `click-game.html` and find where the high score variable is declared. Replace it with:
+
+```javascript
+let highScore = localStorage.getItem('clickGameHighScore')
+    ? parseInt(localStorage.getItem('clickGameHighScore'))
+    : 0;
+
+highScoreDisplay.textContent = highScore;
+```
+
+Then in `endGame()`, save the score when it is a new record:
+
+```javascript
+if (score > highScore) {
+    highScore = score;
+    highScoreDisplay.textContent = highScore;
+    messageDisplay.textContent = 'NEW HIGH SCORE!';
+    localStorage.setItem('clickGameHighScore', highScore);
+} else {
+    messageDisplay.textContent = 'Game Over! Your score: ' + score;
+}
+```
+
+Test it: get a high score, refresh the page — it should still be there. Open DevTools (`F12`) → **Application** → **Local Storage** to see the value saved.
+
+Commit:
 
 ```bash
-git add .
-git commit -m "Update portfolio"
+git add click-game.html
+git commit -m "Add persistent high score"
+git push origin main
+```
+
+### Upgrade 2: Add a Pulse Animation to the Click Button
+
+Inside the existing `<style>` block in `click-game.html`, add:
+
+```css
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.15) rotate(4deg); }
+    50% { transform: scale(1.15) rotate(-4deg); }
+    100% { transform: scale(1); }
+}
+
+.click-button:not(:disabled) {
+    animation: pulse 1.5s infinite;
+}
+```
+
+Then in `endGame()`, right after a new high score is saved, add:
+
+```javascript
+clickButton.style.animation = 'celebrate 0.6s ease';
+setTimeout(() => {
+    clickButton.style.animation = '';
+}, 600);
+```
+
+The button gently pulses during play and does a small celebration shake on a record.
+
+Commit:
+
+```bash
+git add click-game.html
+git commit -m "Add button animations"
+git push origin main
+```
+
+### Upgrade 3: Make Gem Catcher More Interesting
+
+Pick one option and try it.
+
+**Option A: Golden gem bonus** — Update `createGem()`:
+
+```javascript
+function createGem() {
+    const isGolden = Math.random() < 0.15;
+
+    return {
+        x: Math.random() * (canvas.width - 30),
+        y: -30,
+        width: 30,
+        height: 30,
+        speed: 2 + Math.random() * 3,
+        color: isGolden ? '#ffd700' : ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f7b731'][Math.floor(Math.random() * 4)],
+        points: isGolden ? 5 : 1
+    };
+}
+```
+
+Then where a gem is caught, use `score += gem.points` instead of `score++`.
+
+**Option B: Difficulty scaling** — Make gems fall faster as score increases:
+
+```javascript
+gem.y += gem.speed + score * 0.05;
+```
+
+**Option C: Clearer game-over hint** — In `endGame()`:
+
+```javascript
+messageDisplay.textContent = 'Game Over! Click START GAME to try again.';
+```
+
+Commit whichever you chose:
+
+```bash
+git add gem-catcher.html
+git commit -m "Improve gem catcher"
 git push origin main
 ```
 
 ---
 
-## Part 4: Add a README
+## What You Learned Today
 
-Create or update `README.md` in the project root.
-
-```markdown
-# GameCraft Portfolio
-
-A collection of browser games built during GameCraft.
-
-## Games
-
-- Click Speed Challenge
-- Gem Catcher
-- More coming soon
-
-## Built With
-
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages
-
-## Play Online
-
-Add your GitHub Pages link here.
-```
-
----
-
-## What Students Learned Today
-
-- **Polish matters**: small UI details make projects feel complete
-- **localStorage**: browser apps can remember information
-- **Portfolio thinking**: one homepage can connect multiple projects
-- **Deployment**: pushing to GitHub can publish a real website
-- **Iteration**: existing projects can keep improving instead of being thrown away
+- **GitHub Pages** — turn a GitHub repo into a live website instantly
+- **Portfolio homepage** — one `index.html` ties all your projects together
+- **localStorage** — browsers can store data that survives page refreshes
+- **CSS animations** — small motion details make games feel more polished
+- **The push → publish loop** — every commit updates the live site automatically
 
 ---
 
 ## Homework (Optional)
 
-1. Add one more improvement to Click Speed Challenge
-2. Add one more improvement to Gem Catcher
-3. Customize the portfolio homepage design
-4. Share the GitHub Pages link with a friend or family member
+1. Customize the portfolio with your name and different colors
+2. Implement all three Gem Catcher upgrades
+3. Share the GitHub Pages link with someone and have them play
 
 ---
 
 ## Common Issues
 
-**Problem:** "GitHub Pages shows a 404"  
-**Solution:** Make sure the main page is named `index.html` and Pages is enabled for the `main` branch root folder.
+**Problem:** "GitHub Pages shows a 404 at the root"  
+**Solution:** Make sure the file is named exactly `index.html` (lowercase) and Pages is enabled for the `main` branch root folder.
 
-**Problem:** "My new changes are not live yet"  
-**Solution:** Push your changes and wait 1-2 minutes, then hard refresh with `Cmd+Shift+R`.
+**Problem:** "My changes are not showing on the live site"  
+**Solution:** Make sure you pushed (`git push origin main`) and waited 1-2 minutes. Hard refresh with `Cmd+Shift+R`.
 
-**Problem:** "My portfolio links are broken"  
-**Solution:** Use relative paths like `click-game.html` and `gem-catcher.html`, not full local file paths.
+**Problem:** "The game links on my portfolio are broken"  
+**Solution:** Use relative paths — `href="click-game.html"` not `href="/click-game.html"` or a full file path.
 
-**Problem:** "The score does not stay after refresh"  
-**Solution:** Check that `localStorage.setItem(...)` is inside the code path that runs when a new high score is reached.
+**Problem:** "The high score resets after refresh"  
+**Solution:** Confirm `localStorage.setItem(...)` is inside the `if (score > highScore)` branch in `endGame()`.
 
 ---
 
 ## Resources
 
 - [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [localStorage - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-- [CSS Animations - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [localStorage — MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [CSS Animations — MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 
 ---
 
