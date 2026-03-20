@@ -15,7 +15,7 @@ Welcome to GameCraft! Over four one-hour sessions, you will learn to create your
 By the end of this course, you will have:
 - A working web game that runs in any browser
 - Your own GitHub portfolio with published games
-- Skills in HTML, CSS, JavaScript, and React
+- Skills in HTML, CSS, JavaScript, GitHub Pages, and React
 - The ability to turn your game ideas into reality
 
 ---
@@ -36,16 +36,16 @@ By the end of this course, you will have:
 
 ---
 
-### [Session 3: Modern Web with React](/highschool/session3/)
-**Build:** Tic-Tac-Toe with reusable components  
-**Learn:** React fundamentals, components, state management, props  
+### [Session 3: Polish, Portfolio, and Publish](/highschool/session3/)
+**Build:** Better versions of your Session 2 games plus a portfolio homepage  
+**Learn:** localStorage, CSS polish, portfolio design, GitHub Pages deployment  
 **Prerequisites:** Sessions 1-2
 
 ---
 
-### [Session 4: Polish, Deploy and Share](/highschool/session4/)
-**Build:** A polished portfolio with all your games, deployed to the web  
-**Learn:** GitHub Pages deployment, CSS animations, high scores, sharing your work  
+### [Session 4: React Without npm](/highschool/session4/)
+**Build:** Tic-Tac-Toe with React in a single HTML file  
+**Learn:** React fundamentals, components, state management, props, CDN-based workflow  
 **Prerequisites:** Sessions 1-3
 
 ---
@@ -62,7 +62,8 @@ By the end of this course, you will have:
 
 - Build interactive web pages using HTML, CSS, and JavaScript
 - Use canvas animation and collision detection for game mechanics
-- Build modern UIs with React components
+- Publish web projects with GitHub Pages
+- Build modern UIs with React components without needing a package install
 - Use VS Code, Git, and GitHub for real-world development workflow
 - Deploy your projects to the web
 
