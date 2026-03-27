@@ -44,10 +44,17 @@ Get ready to build your own robots from the ground up! In **Engineering Robots: 
 
 ---
 
-### [Session 4: Design and Build Your Robot Chassis](/middleschool/session4/)
+### [Sessions 4 and 5: Design and Build Your Robot Chassis](/middleschool/session4/)
 **Build:** A cardboard robot chassis that fits two motors, two wheels, a battery pack, and the Motor:bit board  
 **Learn:** Chassis design and planning, the Motor:bit Breakout Board (replaces L298N), structural cardboard techniques, cable management  
 **Prerequisites:** Sessions 1–3
+
+---
+
+### [Session 6: Code Your Robot](/middleschool/session6/)
+**Build:** A fully working robot that moves, turns, and responds to sensors  
+**Learn:** Applying micro:bit programming, sensor logic, and motor control from Sessions 1–3 to drive your completed chassis  
+**Prerequisites:** Sessions 1–5
 
 ---
 

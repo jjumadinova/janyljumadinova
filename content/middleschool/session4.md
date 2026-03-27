@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Session 4
+title: Sessions 4 and 5
 subtitle: Design and Build Your Robot Chassis
 date: 2026-03-12T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 4: Design and Build Your Robot Chassis
+# Sessions 4 and 5: Design and Build Your Robot Chassis
 
 **Goal:** Plan and build a cardboard chassis that fits all your robot's components — two motors, two wheels, a battery pack, and the Motor:bit Breakout Board with the micro:bit mounted on top.
 
@@ -258,7 +258,7 @@ Measure the gap between the bottom of the base plate and the floor. Aim for at l
 
 ## What's Next?
 
-In **Session 5** you'll wire the motors and battery pack to the Motor:bit board and write your full MakeCode program to make the robot drive forward, turn, and stop — your chassis will finally move under its own power!
+In **Session 6** you'll use everything you learned in Sessions 1–3 — micro:bit programming, sensor logic, and motor control — to write the full MakeCode program that makes your robot drive forward, turn, and stop under its own power!
 
 **Think About It:**
 - What would you change about your chassis design now that it's built?
