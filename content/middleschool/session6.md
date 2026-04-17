@@ -6,29 +6,99 @@ date: 2026-03-12T00:00:00.000Z
 author: Janyl Jumadinova
 ---
 
-# Session 6: Code Your Robot
+# Session 6: Make Your Robot Move!
 
-**Goal:** Use everything you learned in Sessions 1–3 — micro:bit programming, IR sensor logic, and motor control — to write a MakeCode program that makes your completed robot chassis move, turn, and respond to the world around it.
+**Goal:** Use what you learned in Sessions 1–3 — micro:bit programming, buttons, and motor control — to write a MakeCode program that makes your robot move in a motion pattern of your choice.
 
 ---
 
-## Putting It All Together
+## Requirements
 
-In the first three sessions you built up three core skills:
+Your final program must meet these three rules:
 
-| Session | What You Learned | How You'll Use It Today |
-|---|---|---|
-| Session 1 | micro:bit basics — MakeCode, LEDs, buttons, variables | Program structure, button controls, display feedback |
-| Session 2 | IR sensors — wiring, digital readings, conditional logic | Obstacle detection to stop or turn the robot |
-| Session 3 | Motors — L298N driver, PWM speed control, differential drive | Drive the robot forward, backward, and turn |
+1. **At least two functions** — for example `moveForward` and `stopRobot`, or `turnLeft` and `turnRight`. Functions make your code reusable and easier to read.
+2. **At least one working button** — even if all it does is act as an emergency stop (`on button B pressed` → `stopRobot`). You may use both buttons for more control.
+3. **A motion pattern** — pick one of the options below (or propose your own to an instructor).
 
-Today all three come together in one robot program.
+---
+
+## Choose Your Motion Pattern
+
+Read through all three options, then pick the one that interests you most.
+
+### Option A — Wall Following
+
+Drive the robot along a wall (or a line of boxes).
+
+| Button | Action |
+|---|---|
+| **A** | Start driving forward |
+| **B** | Turn left **or** right (whichever steers the robot away from the wall) |
+
+**How it works:**
+
+1. Place the robot next to a wall.
+2. Press **A** to start moving forward.
+3. When the robot reaches a corner or gets too close, press **B** to turn it away from the wall.
+4. Press **A** again to continue forward along the next stretch.
+
+> Tip: You can add **A+B** as an emergency stop, or make **B** alternate between turning left and turning right each time it is pressed.
+
+---
+
+### Option B — Predefined Pattern
+
+Program the robot to follow a fixed route automatically — no button presses needed after starting it.
+
+**Ideas:**
+
+- **Drive around a table** — forward, turn 90°, forward, turn 90°, repeat four times to make a rectangle.
+- **Navigate the hallway** — drive forward for a set time, turn around, and come back.
+- **Figure eight** — forward, turn right, forward, turn left, repeat.
+
+**How it works:**
+
+1. Use a sequence of function calls with `pause` blocks between them to control timing:
+
+```
+on button A pressed:
+    moveForward
+    pause 2000 ms
+    turnRight
+    pause 500 ms
+    moveForward
+    pause 2000 ms
+    turnRight
+    pause 500 ms
+    ... (repeat for the full shape)
+    stopRobot
+```
+
+2. Press **A** to start the pattern. Use **B** as an emergency stop at any time.
+
+> Tip: Adjust the `pause` durations to tune distances and turn angles. Shorter pause = shorter distance or smaller turn.
+
+---
+
+### Option C — Button-Controlled Driving
+
+Drive the robot entirely by hand using the micro:bit buttons — like a remote control.
+
+| Button | Action |
+|---|---|
+| **A** | Move forward |
+| **B** | Turn left or right (your choice) |
+| **A+B** | Stop the robot |
+
+Each button press triggers the action for a short burst (e.g., 500 ms of movement, then stop), so you tap repeatedly to steer the robot through a space.
+
+> Tip: You can use a variable to toggle between turning left and turning right each time **B** is pressed.
 
 ---
 
 ## Part 1: Review Your Motor Setup
 
-Your robot now uses the **Motor:bit Breakout Board** instead of the L298N from Session 3. The pin mapping is the same:
+Your robot uses the **Motor:bit Breakout Board**. The pin mapping:
 
 | Function | Pin in code | What it controls |
 |---|---|---|
@@ -36,17 +106,15 @@ Your robot now uses the **Motor:bit Breakout Board** instead of the L298N from S
 | Motor M2 direction B | `digital write pin P2` | Right motor direction |
 | Speed (both motors) | `analog write pin P0` | 0 = stop, 1023 = full speed |
 
-If a wheel spins the wrong direction when you test, swap the `1` and `0` values for that motor's direction pin.
+If a wheel spins the wrong direction, swap the `1` and `0` values for that motor's direction pin.
 
 ---
 
-## Part 2: Write Your Drive Program
+## Part 2: Build Your Functions
 
 Open [MakeCode](https://makecode.microbit.org/) and create a new project called **My Robot**.
 
-### Step 1: Create helper functions
-
-Use the **Make a Function** block (under Advanced → Functions) to create reusable move commands:
+Use **Make a Function** (Advanced → Functions) to create at least two of these:
 
 **`moveForward`**
 - `digital write pin P1 to 1`
@@ -71,25 +139,62 @@ Use the **Make a Function** block (under Advanced → Functions) to create reusa
 **`stopRobot`**
 - `analog write pin P0 to 0`
 
----
-
-### Step 2: Basic button controls
-
-Wire up button A and B (from Session 1) to your new functions:
-
-- **`on button A pressed`** → call `moveForward`
-- **`on button B pressed`** → call `stopRobot`
-- **`on button A+B pressed`** → call `turnLeft`
-
-Test this first — download the program, turn on the battery pack, and press the buttons to confirm each motor behaves as expected.
+You do not need all five — just the ones your chosen motion pattern requires (minimum two).
 
 ---
 
-### Step 3: Add IR sensor obstacle detection
+## Part 3: Wire Up Your Buttons
 
-Connect your IR sensor (from Session 2) to **pin P8** (or the same pin you used in Session 2).
+Add button handlers based on your chosen option. At minimum you need **one button that stops the robot** so you can halt it in an emergency:
 
-Add a **`forever`** loop:
+```
+on button B pressed:
+    call stopRobot
+    show icon (square)
+```
+
+Then add your movement button(s). For example, if you chose **Option A — Wall Following**:
+
+```
+on button A pressed:
+    call moveForward
+    show icon (arrow north)
+
+on button B pressed:
+    call turnLeft
+    pause 400 ms
+    call stopRobot
+```
+
+---
+
+## Part 4: Test and Tune
+
+Work through these tests in order. Fix one issue before moving to the next.
+
+### Test 1 — Straight line
+Place the robot on a flat surface. Press **A**. Does it drive forward in a roughly straight line?
+- If it veers left → try reducing the speed or swapping wires on the left motor
+- If it veers right → adjust the right motor the same way
+
+### Test 2 — Turns
+Test your turn function(s). Does the robot turn roughly 90°?
+- Adjust the `pause` duration after a turn call (shorter pause = smaller turn angle)
+
+### Test 3 — Emergency stop
+While the robot is moving, press your stop button. Does it stop immediately?
+
+### Test 4 — Full run
+Run your complete motion pattern in an open space. Does the robot complete the pattern as expected?
+
+---
+
+## Extension Challenges
+
+If you finish early, try one or more of these:
+
+**A — Add the IR Sensor for Obstacle Detection**
+Connect your IR sensor from Session 2 to **pin P8**. Add a `forever` loop that checks the sensor and stops the robot automatically when an obstacle is detected:
 
 ```
 forever:
@@ -99,75 +204,31 @@ forever:
         pause 500 ms
         turnLeft
         pause 400 ms
-    else:
-        (do nothing / keep current movement)
 ```
 
-> **Recall from Session 2:** The IR sensor outputs `0` when it detects an obstacle close in front. Use that same logic here to make the robot stop and turn away automatically.
+This turns your robot into an autonomous obstacle-avoider — combining everything from Sessions 1–3.
 
----
-
-### Step 4: Combine manual and automatic control
-
-A complete robot program lets you **start moving with a button** and **stop automatically when it hits an obstacle**:
-
-- **`on button A pressed`** → set a variable `driving` to `true`, call `moveForward`
-- **`on button B pressed`** → set `driving` to `false`, call `stopRobot`
-- **`forever`** loop:
-  - `if driving = true and IR sensor reads 0` → `stopRobot`, show icon, pause, `turnLeft`, pause, `moveForward`
-
----
-
-## Part 3: Test and Tune
-
-Work through these tests in order. Fix one issue before moving to the next.
-
-### Test 1 — Straight line
-Place the robot on a flat surface. Press A. Does it drive forward in a straight line?
-- If it veers left → reduce the speed on the left motor (lower the P0 value while P1 is active, or swap wires for fine-tuning)
-- If it veers right → adjust the right motor the same way
-
-### Test 2 — Turn accuracy
-Test `turnLeft` and `turnRight`. Does the robot turn roughly 90°?
-- Adjust the `pause` duration inside the turn functions (shorter pause = smaller turn angle)
-
-### Test 3 — Obstacle stop
-Hold a book in front of the IR sensor. Does the robot stop and turn away?
-- If not, check your IR sensor wiring from Session 2 and the pin number in your code
-
-### Test 4 — Full run
-Clear a space on the floor. Start the robot with button A and let it drive. It should stop and turn whenever it detects an obstacle and continue on its own.
-
----
-
-## Design Challenges
-
-Once your robot passes all four tests, try one or more of these:
-
-**A — Speed Ramp**
+**B — Speed Ramp**
 Make the robot gradually speed up from 0 to 800 over 1 second using a loop that increases `analog write pin P0` in steps of 100.
 
-**B — Three-obstacle avoidance**
-If the robot has attempted to turn 3 times in a row without clearing an obstacle, make it drive backward for 1 second before trying again.
+**C — LED Feedback**
+Show different icons on the micro:bit display for each state: an arrow for forward, a turning arrow for turns, a square for stopped.
 
-**C — Figure Eight**
-Program the robot to drive forward for 2 seconds, turn right for 0.5 seconds, and repeat 8 times to trace a figure-eight shape. Tune the timing until the path closes cleanly.
-
-**D — Sensor display**
-Show the IR sensor reading live on the micro:bit LED display — a filled square when an obstacle is detected, an empty square when the path is clear.
+**D — Combine Options**
+Already finished one motion pattern? Try a second one in a new project.
 
 ---
 
 ## Key Concepts You Used Today
 
-- **Applying prior knowledge**: combining micro:bit, IR sensors, and motors from Sessions 1–3 into a single working system
+- **Applying prior knowledge**: combining micro:bit buttons and motor control from earlier sessions into a working robot program
 - **Functions**: reusable blocks that make programs easier to read and modify
-- **Variables for state**: using a `driving` variable to track whether the robot should be moving
-- **Sensor-driven behavior**: reading the IR sensor to change the robot's action automatically
+- **Button input**: using physical buttons to control robot behavior
 - **Iterative testing**: testing each feature in isolation before combining them
+- **Timing and tuning**: adjusting pause durations to control distances and turn angles
 
 ---
 
 ## Congratulations!
 
-You have designed, built, wired, and programmed a working autonomous robot from scratch. You moved from blinking LEDs in Session 1 all the way to a robot that drives itself and avoids obstacles — great work!
+You have designed, built, wired, and programmed a working robot from scratch. You moved from blinking LEDs in Session 1 all the way to a robot that drives and turns on command — great work!
