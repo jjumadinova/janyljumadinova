@@ -13,6 +13,32 @@ author: Janyl Jumadinova
 
 ---
 
+## Before You Start
+
+Sync your repo to get the latest files:
+
+**If you already cloned your repo:**
+
+```bash
+git pull origin main
+```
+
+**If you haven't cloned it yet:**
+
+```bash
+git clone https://github.com/HSWebGame/webgame-v2-YOURNAME.git
+cd webgame-v2-YOURNAME
+code .
+```
+
+> **What's new in your repo:**
+> - A **Home** button has been added to your click game and gem catcher pages. Open either game to see it in the top-left corner.
+> - A starter file `react-tictactoe.html` has been added. You will build on it today.
+
+Open `react-tictactoe.html` with Live Server to confirm it loads before continuing. You should see a "Tic-Tac-Toe" heading.
+
+---
+
 ## Why This Version of React?
 
 Normally React projects use tools like Vite and `npm`, but that only works when students can install packages.
@@ -34,123 +60,35 @@ A Tic-Tac-Toe game with:
 - State that updates the screen automatically
 - Win and draw detection
 - A reset button
-- A file that can be added directly to the existing portfolio
+- A file that is already part of the existing portfolio
 
 ---
 
-## Part 1: Create the File
+## Part 1: Look at the Starter File
 
-Create a new file named `react-tictactoe.html`.
+Open `react-tictactoe.html` from your repo. The HTML structure, styles, and CDN script tags are already set up — you don't need to write any of that.
 
-Paste this starter structure:
+Scroll to the bottom and find this section:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Tic-Tac-Toe</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<script type="text/babel">
+    const { useState } = React;
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #312e81, #1d4ed8, #0891b2);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            padding: 24px;
-        }
+    function App() {
+        return (
+            <div className="game">
+                <h1>Tic-Tac-Toe</h1>
+                <p>React can run in one HTML file too.</p>
+            </div>
+        );
+    }
 
-        .game {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 20px;
-            padding: 32px;
-            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .status {
-            min-height: 32px;
-            font-size: 22px;
-            font-weight: bold;
-            margin: 18px 0;
-        }
-
-        .board {
-            display: grid;
-            grid-template-columns: repeat(3, 110px);
-            gap: 10px;
-            margin: 0 auto 20px;
-            width: fit-content;
-        }
-
-        .square {
-            width: 110px;
-            height: 110px;
-            border: none;
-            border-radius: 14px;
-            font-size: 42px;
-            font-weight: bold;
-            cursor: pointer;
-            background: white;
-            color: #1d4ed8;
-            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
-        }
-
-        .reset-button {
-            border: none;
-            border-radius: 999px;
-            background: #22c55e;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 22px;
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div id="root"></div>
-
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/babel">
-        const { useState } = React;
-
-        function App() {
-            return (
-                <div className="game">
-                    <h1>Tic-Tac-Toe</h1>
-                    <p>React can run in one HTML file too.</p>
-                </div>
-            );
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
-    </script>
-</body>
-</html>
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+</script>
 ```
 
-Open it with Live Server. If students see the heading, the setup is working.
+This is your starting point. In **Part 3** you will replace this script block with the full game. But first — the concepts.
 
 ---
 
@@ -189,7 +127,7 @@ When `setCount(...)` runs, React redraws the page with the new value.
 
 ## Part 3: Add the Game Logic
 
-Replace the code inside `<script type="text/babel">` with this full version:
+Replace **the entire `<script type="text/babel">` block** in your file with this:
 
 ```html
 <script type="text/babel">
@@ -294,6 +232,8 @@ Replace the code inside `<script type="text/babel">` with this full version:
 </script>
 ```
 
+Save and refresh. You should have a working Tic-Tac-Toe game.
+
 ---
 
 ## How This Connects to Earlier Sessions
@@ -315,11 +255,11 @@ So this is not starting over. It is reorganizing the same JavaScript ideas in a 
 
 ---
 
-## Part 4: Add It to the Portfolio
+## Part 4: Publish to Your Portfolio
 
-Go back to the portfolio `index.html` from Session 3 and change the "Coming Next" card.
+Your `index.html` already has a "Coming Next" card for the React game. Update it to link to the file you just finished:
 
-Replace it with:
+Find the coming-next card and change it to:
 
 ```html
 <section class="game-card">
@@ -334,7 +274,7 @@ Replace it with:
 </section>
 ```
 
-Then publish the update:
+Then push everything:
 
 ```bash
 git add .
@@ -346,24 +286,60 @@ Because the React version is still just an HTML file, GitHub Pages can host it d
 
 ---
 
-## Customization Ideas
+## Customize Your Game
 
-1. Use emoji instead of X and O
-2. Change the board colors
-3. Add a score tracker for multiple rounds
-4. Add player name inputs
-5. Highlight the winning line
+Once the game works, make it your own. Here are some ideas with the exact changes to make:
 
----
+### Change the color scheme
 
-## What Students Learned Today
+In the `<style>` block, find the `body` rule and change the gradient colors:
 
-- **React components**: splitting UI into pieces
-- **JSX**: writing HTML-like syntax inside JavaScript
-- **State**: updating the UI by changing data
-- **Props**: passing data to child components
-- **CDN workflow**: using a library without package installation
-- **Portfolio growth**: adding a new project to an existing published site
+```css
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+```
+
+Try any combination — pick colors at [coolors.co](https://coolors.co).
+
+### Use emoji instead of X and O
+
+In the `handleClick` function inside `Board`, change:
+
+```js
+nextSquares[index] = xIsNext ? 'X' : 'O';
+```
+
+to something like:
+
+```js
+nextSquares[index] = xIsNext ? '⭐' : '🔥';
+```
+
+### Change the square and button colors
+
+In `<style>`, find `.square` and `.reset-button`:
+
+```css
+.square {
+    background: #1e293b;
+    color: #38bdf8;
+}
+
+.reset-button {
+    background: #f59e0b;
+}
+```
+
+### Add a score tracker
+
+Inside `App`, add a score state and update it when there's a winner:
+
+```jsx
+const [scores, setScores] = useState({ X: 0, O: 0 });
+```
+
+Then in `handlePlay`, check if the move caused a win and call `setScores`.
 
 ---
 
