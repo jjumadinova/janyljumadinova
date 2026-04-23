@@ -367,4 +367,101 @@ Then in `handlePlay`, check if the move caused a win and call `setScores`.
 
 ---
 
+## Bonus: Give Your Whole Site a Unique Look
+
+If you have extra time, pick one or two changes below and apply them across **all your game pages and your home page** (`index.html`). Small tweaks to color and font can make the whole site feel like it was made by you, not copied from a template.
+
+### 1. Change the background gradient
+
+Every page uses a `background: linear-gradient(...)` on the `body`. Try swapping the colors to create a new mood:
+
+```css
+/* Deep space */
+background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+/* Sunset */
+background: linear-gradient(135deg, #f7971e, #ffd200);
+
+/* Forest */
+background: linear-gradient(135deg, #134e5e, #71b280);
+
+/* Candy */
+background: linear-gradient(135deg, #f953c6, #b91d73);
+```
+
+Pick colors at [coolors.co](https://coolors.co) and paste them in.
+
+### 2. Change the font
+
+Add one line inside `<head>` to load a font from Google Fonts:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+```
+
+Then update the `font-family` in `body`:
+
+```css
+font-family: 'Orbitron', sans-serif;
+```
+
+Other fonts that work well for games: `Press Start 2P`, `Exo 2`, `Rajdhani`, `Nunito`.
+
+### 3. Pick a card accent color on the home page
+
+In `index.html`, find the `.game-card` rule and add a left border or change the background tint to create a color accent:
+
+```css
+.game-card {
+    border-left: 4px solid #f59e0b;   /* gold accent */
+    background: rgba(245, 158, 11, 0.08);
+}
+```
+
+Change `#f59e0b` to any color to match your theme.
+
+### 4. Style the Play buttons
+
+In `index.html`, find `.play-button` and change the color and shape:
+
+```css
+.play-button {
+    background: #7c3aed;
+    border-radius: 6px;          /* squarer corners */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+```
+
+### 5. Add a title or tagline to your home page
+
+Open `index.html` and find the `<h1>` at the top. Change the site name and add a short tagline below it:
+
+```html
+<h1>Your Name's Arcade</h1>
+<p class="tagline">Three games. Built from scratch.</p>
+```
+
+Then style the tagline:
+
+```css
+.tagline {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-top: 4px;
+}
+```
+
+---
+
+## Resources
+
+- [React Official Tutorial](https://react.dev/learn/tutorial-tic-tac-toe)
+- [React `useState`](https://react.dev/reference/react/useState)
+- [Babel Standalone](https://babeljs.io/docs/babel-standalone)
+
+---
+
 **[Session 3](/highschool/session3/) | [Back to GameCraft Home](/highschool/)**
