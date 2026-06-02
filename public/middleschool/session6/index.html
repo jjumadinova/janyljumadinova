@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="Research" />
-    <meta property="og:title" content="Research" />
-    <meta property="twitter:title" content="Research" />
+    <meta name="title" content="Session 6" />
+    <meta property="og:title" content="Session 6" />
+    <meta property="twitter:title" content="Session 6" />
     
 
     
@@ -39,9 +39,9 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png">
 
-    <title>Research | Janyl Jumadinova</title>
+    <title>Session 6 | Janyl Jumadinova</title>
 
-    <link rel="canonical" href="/research/">
+    <link rel="canonical" href="/middleschool/session6/">
 
     
     
@@ -199,29 +199,232 @@
                 post-container">
 
                 
-                <h1 id="research">Research</h1>
-<h2 id="ethical-cs">Ethical CS</h2>
-<p>Over the last three years I along with my colleagues in the <a href="https://www.cs.allegheny.edu/">Department of Computer Science at Allegheny College</a>, have been working on the Responsible Computer Science effort. <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uvXBEaByh6k?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
- <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rmX7gCEkpQw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-     </div>
-</p>
-<h2 id="monitoring-with-robots">Monitoring with Robots</h2>
-<h3 id="system-monitoring">System Monitoring</h3>
-<p>We are currently building a hardware/software solution that is capable of monitoring a complete system. Our solution consists of a multi-sensor unit equipped with predictive modeling software. We are testing our solution on an aquaponics system.</p>
-<h3 id="water-monitoring">Water Monitoring</h3>
-<p>Underwater robotic unit equipped with multiple sensors that are able to collect data autonomously. <a href="https://sites.allegheny.edu/news/2019/02/19/allegheny-faculty-student-team-helps-develop-underwater-robots-to-perform-lake-research/">Read an Allegheny news story.</a> <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/XLj_H2UTrLg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-</p>
-<p>Latest conference talk slides (NSF context): <a href="/aquagator/">AquaGator presentation</a>.</p>
-<h3 id="well-being-monitoring">Well-being Monitoring</h3>
-<p>A system comprising of multiple robots and wearable sensors with a goal of monitoring a person&rsquo;s well-being.. <a href="https://sites.allegheny.edu/news/2015/08/28/looking-for-a-health-coach-try-a-robot/">Read an Allegheny news story.</a> <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TDzP5kkIrro?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-</p>
+                <h1 id="session-6-make-your-robot-move">Session 6: Make Your Robot Move!</h1>
+<p><strong>Goal:</strong> Use what you learned in Sessions 1–3 — micro:bit programming, buttons, and motor control — to write a MakeCode program that makes your robot move in a motion pattern of your choice.</p>
+<hr>
+<h2 id="requirements">Requirements</h2>
+<p>Your final program must meet these three rules:</p>
+<ol>
+<li><strong>At least two functions</strong> — for example <code>moveForward</code> and <code>stopRobot</code>, or <code>turnLeft</code> and <code>turnRight</code>. Functions make your code reusable and easier to read.</li>
+<li><strong>At least one working button</strong> — even if all it does is act as an emergency stop (<code>on button B pressed</code> → <code>stopRobot</code>). You may use both buttons for more control.</li>
+<li><strong>A motion pattern</strong> — pick one of the options below (or propose your own to an instructor).</li>
+</ol>
+<hr>
+<h2 id="choose-your-motion-pattern">Choose Your Motion Pattern</h2>
+<p>Read through all three options, then pick the one that interests you most.</p>
+<h3 id="option-a--wall-following">Option A — Wall Following</h3>
+<p>Drive the robot along a wall (or a line of boxes).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Button</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A</strong></td>
+          <td>Start driving forward</td>
+      </tr>
+      <tr>
+          <td><strong>B</strong></td>
+          <td>Turn left <strong>or</strong> right (whichever steers the robot away from the wall)</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>Place the robot next to a wall.</li>
+<li>Press <strong>A</strong> to start moving forward.</li>
+<li>When the robot reaches a corner or gets too close, press <strong>B</strong> to turn it away from the wall.</li>
+<li>Press <strong>A</strong> again to continue forward along the next stretch.</li>
+</ol>
+<blockquote>
+<p>Tip: You can add <strong>A+B</strong> as an emergency stop, or make <strong>B</strong> alternate between turning left and turning right each time it is pressed.</p></blockquote>
+<hr>
+<h3 id="option-b--predefined-pattern">Option B — Predefined Pattern</h3>
+<p>Program the robot to follow a fixed route automatically — no button presses needed after starting it.</p>
+<p><strong>Ideas:</strong></p>
+<ul>
+<li><strong>Drive around a table</strong> — forward, turn 90°, forward, turn 90°, repeat four times to make a rectangle.</li>
+<li><strong>Navigate the hallway</strong> — drive forward for a set time, turn around, and come back.</li>
+<li><strong>Figure eight</strong> — forward, turn right, forward, turn left, repeat.</li>
+</ul>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>Use a sequence of function calls with <code>pause</code> blocks between them to control timing:</li>
+</ol>
+<pre tabindex="0"><code>on button A pressed:
+    moveForward
+    pause 2000 ms
+    turnRight
+    pause 500 ms
+    moveForward
+    pause 2000 ms
+    turnRight
+    pause 500 ms
+    ... (repeat for the full shape)
+    stopRobot
+</code></pre><ol start="2">
+<li>Press <strong>A</strong> to start the pattern. Use <strong>B</strong> as an emergency stop at any time.</li>
+</ol>
+<blockquote>
+<p>Tip: Adjust the <code>pause</code> durations to tune distances and turn angles. Shorter pause = shorter distance or smaller turn.</p></blockquote>
+<hr>
+<h3 id="option-c--button-controlled-driving">Option C — Button-Controlled Driving</h3>
+<p>Drive the robot entirely by hand using the micro:bit buttons — like a remote control.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Button</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A</strong></td>
+          <td>Move forward</td>
+      </tr>
+      <tr>
+          <td><strong>B</strong></td>
+          <td>Turn left or right (your choice)</td>
+      </tr>
+      <tr>
+          <td><strong>A+B</strong></td>
+          <td>Stop the robot</td>
+      </tr>
+  </tbody>
+</table>
+<p>Each button press triggers the action for a short burst (e.g., 500 ms of movement, then stop), so you tap repeatedly to steer the robot through a space.</p>
+<blockquote>
+<p>Tip: You can use a variable to toggle between turning left and turning right each time <strong>B</strong> is pressed.</p></blockquote>
+<hr>
+<h2 id="part-1-review-your-motor-setup">Part 1: Review Your Motor Setup</h2>
+<p>Your robot uses the <strong>Motor:bit Breakout Board</strong>. The pin mapping:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Function</th>
+          <th>Pin in code</th>
+          <th>What it controls</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Motor M1 direction A</td>
+          <td><code>digital write pin P1</code></td>
+          <td>Left motor direction</td>
+      </tr>
+      <tr>
+          <td>Motor M2 direction B</td>
+          <td><code>digital write pin P2</code></td>
+          <td>Right motor direction</td>
+      </tr>
+      <tr>
+          <td>Speed (both motors)</td>
+          <td><code>analog write pin P0</code></td>
+          <td>0 = stop, 1023 = full speed</td>
+      </tr>
+  </tbody>
+</table>
+<p>If a wheel spins the wrong direction, swap the <code>1</code> and <code>0</code> values for that motor&rsquo;s direction pin.</p>
+<hr>
+<h2 id="part-2-build-your-functions">Part 2: Build Your Functions</h2>
+<p>Open <a href="https://makecode.microbit.org/">MakeCode</a> and create a new project called <strong>My Robot</strong>.</p>
+<p>Use <strong>Make a Function</strong> (Advanced → Functions) to create at least two of these:</p>
+<p><strong><code>moveForward</code></strong></p>
+<ul>
+<li><code>digital write pin P1 to 1</code></li>
+<li><code>digital write pin P2 to 1</code></li>
+<li><code>analog write pin P0 to 600</code></li>
+</ul>
+<p><strong><code>moveBackward</code></strong></p>
+<ul>
+<li><code>digital write pin P1 to 0</code></li>
+<li><code>digital write pin P2 to 0</code></li>
+<li><code>analog write pin P0 to 600</code></li>
+</ul>
+<p><strong><code>turnLeft</code></strong></p>
+<ul>
+<li><code>digital write pin P1 to 0</code></li>
+<li><code>digital write pin P2 to 1</code></li>
+<li><code>analog write pin P0 to 600</code></li>
+</ul>
+<p><strong><code>turnRight</code></strong></p>
+<ul>
+<li><code>digital write pin P1 to 1</code></li>
+<li><code>digital write pin P2 to 0</code></li>
+<li><code>analog write pin P0 to 600</code></li>
+</ul>
+<p><strong><code>stopRobot</code></strong></p>
+<ul>
+<li><code>analog write pin P0 to 0</code></li>
+</ul>
+<p>You do not need all five — just the ones your chosen motion pattern requires (minimum two).</p>
+<hr>
+<h2 id="part-3-wire-up-your-buttons">Part 3: Wire Up Your Buttons</h2>
+<p>Add button handlers based on your chosen option. At minimum you need <strong>one button that stops the robot</strong> so you can halt it in an emergency:</p>
+<pre tabindex="0"><code>on button B pressed:
+    call stopRobot
+    show icon (square)
+</code></pre><p>Then add your movement button(s). For example, if you chose <strong>Option A — Wall Following</strong>:</p>
+<pre tabindex="0"><code>on button A pressed:
+    call moveForward
+    show icon (arrow north)
+
+on button B pressed:
+    call turnLeft
+    pause 400 ms
+    call stopRobot
+</code></pre><hr>
+<h2 id="part-4-test-and-tune">Part 4: Test and Tune</h2>
+<p>Work through these tests in order. Fix one issue before moving to the next.</p>
+<h3 id="test-1--straight-line">Test 1 — Straight line</h3>
+<p>Place the robot on a flat surface. Press <strong>A</strong>. Does it drive forward in a roughly straight line?</p>
+<ul>
+<li>If it veers left → try reducing the speed or swapping wires on the left motor</li>
+<li>If it veers right → adjust the right motor the same way</li>
+</ul>
+<h3 id="test-2--turns">Test 2 — Turns</h3>
+<p>Test your turn function(s). Does the robot turn roughly 90°?</p>
+<ul>
+<li>Adjust the <code>pause</code> duration after a turn call (shorter pause = smaller turn angle)</li>
+</ul>
+<h3 id="test-3--emergency-stop">Test 3 — Emergency stop</h3>
+<p>While the robot is moving, press your stop button. Does it stop immediately?</p>
+<h3 id="test-4--full-run">Test 4 — Full run</h3>
+<p>Run your complete motion pattern in an open space. Does the robot complete the pattern as expected?</p>
+<hr>
+<h2 id="extension-challenges">Extension Challenges</h2>
+<p>If you finish early, try one or more of these:</p>
+<p><strong>A — Add the IR Sensor for Obstacle Detection</strong>
+Connect your IR sensor from Session 2 to <strong>pin P8</strong>. Add a <code>forever</code> loop that checks the sensor and stops the robot automatically when an obstacle is detected:</p>
+<pre tabindex="0"><code>forever:
+    if digital read pin P8 = 0:
+        stopRobot
+        show icon (sad face)
+        pause 500 ms
+        turnLeft
+        pause 400 ms
+</code></pre><p>This turns your robot into an autonomous obstacle-avoider — combining everything from Sessions 1–3.</p>
+<p><strong>B — Speed Ramp</strong>
+Make the robot gradually speed up from 0 to 800 over 1 second using a loop that increases <code>analog write pin P0</code> in steps of 100.</p>
+<p><strong>C — LED Feedback</strong>
+Show different icons on the micro:bit display for each state: an arrow for forward, a turning arrow for turns, a square for stopped.</p>
+<p><strong>D — Combine Options</strong>
+Already finished one motion pattern? Try a second one in a new project.</p>
+<hr>
+<h2 id="key-concepts-you-used-today">Key Concepts You Used Today</h2>
+<ul>
+<li><strong>Applying prior knowledge</strong>: combining micro:bit buttons and motor control from earlier sessions into a working robot program</li>
+<li><strong>Functions</strong>: reusable blocks that make programs easier to read and modify</li>
+<li><strong>Button input</strong>: using physical buttons to control robot behavior</li>
+<li><strong>Iterative testing</strong>: testing each feature in isolation before combining them</li>
+<li><strong>Timing and tuning</strong>: adjusting pause durations to control distances and turn angles</li>
+</ul>
+<hr>
+<h2 id="congratulations">Congratulations!</h2>
+<p>You have designed, built, wired, and programmed a working robot from scratch. You moved from blinking LEDs in Session 1 all the way to a robot that drives and turns on command — great work!</p>
 
 
                 

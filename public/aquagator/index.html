@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaGator: Science Driver Within PA Science DMZ</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+        --primary: #0277bd;
+        --secondary: #0288d1;
+        --success: #2e7d32;
+        --info: #00838f;
+        --warning: #f57f17;
+        --danger: #c62828;
+        --light: #f8f9fa;
+        --dark: #0a2f52;
+    }
+
+    .reveal {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size: 30px;
+    }
+
+    .reveal h1 {
+        color: var(--primary);
+        font-size: 1.7em;
+        font-weight: 700;
+        margin-bottom: 0.2em;
+    }
+
+    .reveal h2 {
+        color: var(--primary);
+        font-size: 1.05em;
+        font-weight: 600;
+        margin-bottom: 0.3em;
+    }
+
+    .reveal h3 {
+        color: var(--secondary);
+        font-size: 0.82em;
+        font-weight: 600;
+    }
+
+    .reveal .subtitle {
+        color: var(--dark);
+        font-size: 0.88em;
+        margin-top: 0;
+    }
+
+    .reveal ul {
+        font-size: 0.76em;
+        line-height: 1.45;
+    }
+
+    .reveal li {
+        margin: 0.2em 0;
+    }
+
+    .reveal .highlight {
+        color: var(--danger);
+        font-weight: 600;
+    }
+
+    /* Colored box variants */
+    .reveal .box {
+        background: var(--light);
+        padding: 10px 15px;
+        border-radius: 8px;
+        border-left: 4px solid var(--primary);
+        margin: 6px auto;
+        font-size: 0.78em;
+    }
+    .reveal .box-success { background: #e8f5e9; border-left-color: var(--success); }
+    .reveal .box-info    { background: #e0f7fa; border-left-color: var(--info); }
+    .reveal .box-warning { background: #fff8e1; border-left-color: var(--warning); }
+    .reveal .box-danger  { background: #ffebee; border-left-color: var(--danger); }
+
+    .reveal .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .reveal .col-item {
+        background: var(--light);
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .reveal .col-item-blue   { background: #e3f2fd; border-left: 4px solid var(--primary); padding: 10px; border-radius: 8px; }
+    .reveal .col-item-green  { background: #e8f5e9; border-left: 4px solid var(--success); padding: 10px; border-radius: 8px; }
+    .reveal .col-item-teal   { background: #e0f7fa; border-left: 4px solid var(--info);    padding: 10px; border-radius: 8px; }
+    .reveal .col-item-amber  { background: #fff8e1; border-left: 4px solid var(--warning); padding: 10px; border-radius: 8px; }
+    .reveal .col-item-red    { background: #ffebee; border-left: 4px solid var(--danger);  padding: 10px; border-radius: 8px; }
+
+    .reveal .small-text {
+        font-size: 0.7em;
+        color: #666;
+    }
+
+    .reveal table {
+        font-size: 0.7em;
+        margin: 8px auto;
+    }
+
+    .reveal th {
+        background: var(--primary);
+        color: white;
+        padding: 8px;
+    }
+
+    .reveal td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .reveal img {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .reveal .progress {
+        background: rgba(2, 119, 189, 0.2);
+    }
+
+    .reveal .progress span {
+        background: var(--primary);
+    }
+
+    .reveal .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.7em;
+        font-weight: 600;
+        margin: 0 5px;
+    }
+    .reveal .badge-primary { background: var(--primary); color: white; }
+    .reveal .badge-success  { background: var(--success); color: white; }
+    .reveal .badge-info     { background: var(--info);    color: white; }
+    .reveal .badge-warning  { background: var(--warning); color: white; }
+    .reveal .badge-danger   { background: var(--danger);  color: white; }
+
+    /* layout grids */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr;            gap: 10px; margin-top: 8px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3,1fr);      gap: 8px;  margin-top: 8px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4,1fr);      gap: 8px;  margin-top: 8px; }
+    .metric-pair { display: grid; grid-template-columns: 1fr 1fr;       gap: 10px; margin-top: 8px; }
+    .two-images  { display: grid; grid-template-columns: 1fr 1fr;       gap: 10px; margin-top: 8px; }
+    .timeline    { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px;  margin-top: 8px; }
+
+    /* card - neutral */
+    .card {
+        background: var(--light);
+        border-radius: 8px;
+        padding: 14px;
+    }
+    .card h3 { margin-top: 0; margin-bottom: 5px; }
+    .card p, .card li { font-size: 0.76em; margin-bottom: 3px; }
+    .card ul { margin-left: 1.2em; }
+
+    /* colored card variants */
+    .card-blue   { background: #e3f2fd; border-left: 4px solid var(--primary); border-radius: 8px; padding: 14px; }
+    .card-green  { background: #e8f5e9; border-left: 4px solid var(--success); border-radius: 8px; padding: 14px; }
+    .card-teal   { background: #e0f7fa; border-left: 4px solid var(--info);    border-radius: 8px; padding: 14px; }
+    .card-amber  { background: #fff8e1; border-left: 4px solid var(--warning); border-radius: 8px; padding: 14px; }
+    .card-red    { background: #ffebee; border-left: 4px solid var(--danger);  border-radius: 8px; padding: 14px; }
+    .card-blue h3, .card-green h3, .card-teal h3, .card-amber h3, .card-red h3 { margin-top: 0; margin-bottom: 5px; }
+    .card-blue p, .card-blue li,
+    .card-green p, .card-green li,
+    .card-teal p, .card-teal li,
+    .card-amber p, .card-amber li,
+    .card-red p, .card-red li { font-size: 0.76em; margin-bottom: 3px; }
+    .card-blue ul, .card-green ul, .card-teal ul, .card-amber ul, .card-red ul { margin-left: 1.2em; }
+
+    .metric {
+        border-left: 5px solid var(--primary);
+        padding: 24px 28px;
+        background: #e3f2fd;
+        border-radius: 8px;
+    }
+    .metric-label { font-size: 0.72em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #555; margin-bottom: 6px; }
+    .metric-value { font-size: 2em; font-weight: 700; color: var(--primary); line-height: 1.2; }
+
+    .timeline-node {
+        background: #e3f2fd;
+        border-left: 4px solid var(--primary);
+        border-radius: 8px;
+        padding: 8px 10px;
+        text-align: left;
+    }
+    .timeline-node h4 { font-size: 0.78em; font-weight: 700; color: var(--primary); margin: 0 0 4px 0; }
+    .timeline-node p  { font-size: 0.68em; margin: 0; }
+
+    .img-placeholder {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #e3f2fd;
+        border: 2px dashed var(--primary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85em;
+        color: var(--primary);
+        font-weight: 600;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .img-real {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .accent-box {
+        background: #e0f7fa;
+        border-left: 4px solid var(--info);
+        padding: 7px 12px;
+        border-radius: 8px;
+        margin-top: 8px;
+    }
+    .accent-box p { margin: 0; font-size: 0.78em; font-weight: 500; }
+
+    .kicker {
+        display: inline-block;
+        font-size: 0.62em;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: white;
+        background: var(--primary);
+        border-radius: 999px;
+        padding: 3px 12px;
+        margin-bottom: 6px;
+    }
+
+    .slide-title-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+    .slide-title-row .kicker { margin-bottom: 0; }
+    .slide-title-row h2 { margin: 0; }
+
+    .hero-title {
+        display: flex;
+        min-height: 480px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-title-inner { width: min(100%, 860px); }
+
+    .title-meta {
+        margin-top: 12px;
+        font-size: 0.76em;
+        color: #555;
+        line-height: 1.5;
+    }
+    .title-meta strong { color: var(--dark); }
+
+    .slide-logo {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        z-index: 200;
+        width: 46px;
+        opacity: 0.82;
+    }
+
+    .reveal .slides section {
+        overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Title -->
+      <section>
+        <div class="hero-title">
+          <div class="hero-title-inner">
+            <img src="../img/aquagator/robot-logo.png" alt="AquaGator" style="width: 72px; margin-bottom: 10px; opacity: 0.9;">
+            <div class="kicker">NSF CC* Science Driver Presentation &middot; May 28, 2026</div>
+            <h1>AquaGator</h1>
+            <h2 style="margin-top: 0.05em;">Autonomous Water-Quality Robotics</h2>
+            <p class="subtitle" style="max-width: 860px; margin-top: 0.2em;">
+              A field-deployed underwater robot platform for longitudinal monitoring of lake water quality, positioned to scale from local deployments to networked, near real-time environmental intelligence through the PA Science DMZ.
+            </p>
+            <div class="title-meta" style="margin-top: 1.1em; gap: 0.45em;">
+              <div><strong>Dr. Janyl Jumadinova</strong> &middot; Allegheny College &middot; Computer and Information Science</div>
+              <div><strong>Student researchers:</strong> Pallas Cain, Trang Hoang, Benedek Kaibas, Josephine Reiter, Miguel Orti-Vila</div>
+            </div>
+            <img src="../img/aquagator/sponsors.png" alt="Sponsors" style="margin-top: 18px; max-width: 480px; width: 100%; opacity: 0.9;">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: Problem & Motivation -->
+      <section>
+        <div class="kicker">Environmental Challenge</div>
+        <h2>Monitoring Gap</h2>
+        <div class="grid-2">
+          <div class="card-amber">
+            <h3>Blooms</h3>
+            <p>NW PA lakes face recurring toxic cyanobacteria outbreaks that threaten ecosystems and human health.</p>
+            <p style="margin-top: 8px;"><strong>Current reality:</strong> Manual sampling is sparse in both time and depth, missing the dynamics that drive bloom formation.</p>
+          </div>
+          <div class="card-blue">
+            <h3>Data Gap</h3>
+            <p>Most water-quality monitoring occurs at the surface. Critical dynamics in the water column go unseen.</p>
+            <p style="margin-top: 8px;"><strong>Research question:</strong> How does dissolved oxygen (DO) vary with depth throughout the year?</p>
+          </div>
+        </div>
+        <div class="box box-success" style="margin-top: 15px;">
+          <p><strong>End user:</strong> The French Creek Valley Conservancy (FCVC) needs reliable, depth-resolved water quality data to assess ecosystem health and guide lake management. Current manual methods cannot provide this affordably or at scale.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE: Why DO Matters -->
+      <section>
+        <div class="kicker">Research Focus</div>
+        <h2>Dissolved Oxygen (DO)</h2>
+        <div class="two-col" style="align-items: start; margin-top: 8px;">
+          <div>
+            <div class="card-blue" style="margin-bottom: 8px;">
+              <h3>Depth and Temperature Variation</h3>
+              <p>DO levels change significantly with depth within the water column and are closely tied to water temperature, not just surface conditions.</p>
+            </div>
+            <div class="card-amber" style="margin-bottom: 8px;">
+              <h3>Biological Impact</h3>
+              <p>DO directly affects respiration and reproduction in aquatic organisms. Low-oxygen zones limit the resources available to larger predators.</p>
+            </div>
+            <div class="card-green">
+              <h3>Habitat Mapping</h3>
+              <p>Profiling DO at multiple depths reveals where ideal species habitat exists within the water column, enabling targeted conservation decisions.</p>
+            </div>
+          </div>
+          <img class="img-real" src="../img/aquagator/DO%20variations.png" alt="Dissolved oxygen variation with depth">
+        </div>
+      </section>
+
+      <!-- SLIDE 3: Robot Design -->
+      <section>
+        <div class="kicker">Hardware Platform</div>
+        <h2>AquaGator Design</h2>
+        <div class="two-col" style="align-items: start; margin-top: 8px;">
+          <div>
+            <div class="card-blue" style="margin-bottom: 8px;">
+              <h3>Physical Platform</h3>
+              <ul>
+                <li>PVC pipe frame for structure and buoyancy</li>
+                <li>4-motor design for vertical motion control</li>
+                <li>50 ft tether to dock for power and control</li>
+              </ul>
+            </div>
+            <div class="card-teal">
+              <h3>Two Robots Deployed</h3>
+              <ul>
+                <li><strong>Robot 1:</strong> 30 ft (9 m) — deep-column profiling</li>
+                <li><strong>Robot 2:</strong> 15 ft (4.5 m) — nearshore and shallow surveys</li>
+              </ul>
+            </div>
+          </div>
+          <div class="two-images">
+            <img class="img-real" src="../img/aquagator/robot.jpg" alt="AquaGator robot">
+            <img class="img-real" src="../img/aquagator/robot%20manual%20control.jpg" alt="Robot manual control">
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: Sensor Suite -->
+      <section>
+        <div class="kicker">Water-Quality Instrumentation</div>
+        <h2>Sensor Suite</h2>
+        <p style="margin: 4px 0 10px; font-size: 0.82em; color: #444;">Atlas Scientific sensors: pH, Dissolved Oxygen, Conductivity (EC), ORP, and Temperature</p>
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 8px;">
+          <img class="img-real" src="../img/aquagator/sensor-box.jpg" alt="AquaGator sensor box" style="aspect-ratio: 4/3; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/atlas-iot-01.webp" alt="Atlas Scientific IoT sensor 1" style="aspect-ratio: 4/3; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/atlas-iot-02.webp" alt="Atlas Scientific IoT sensor 2" style="aspect-ratio: 4/3; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/atlas-iot-03.webp" alt="Atlas Scientific IoT sensor 3" style="aspect-ratio: 4/3; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/atlas-iot-08.webp" alt="Atlas Scientific IoT sensor 8" style="aspect-ratio: 4/3; object-fit: cover;">
+        </div>
+      </section>
+
+      <!-- SLIDE 3b: Robot Capabilities -->
+      <section>
+        <div class="kicker">Robot Capabilities</div>
+        <h2>AquaGator Capabilities</h2>
+        <div class="grid-2" style="margin-top: 8px;">
+          <div class="card-teal">
+            <h3>Remote and Autonomous Operation</h3>
+            <p>Supports both manual remote control and fully autonomous dive missions without operator intervention.</p>
+          </div>
+          <div class="card-green">
+            <h3>User-Specified Depth Targeting</h3>
+            <p>Operators define target depths; the robot autonomously reaches and holds position for data collection at each waypoint.</p>
+          </div>
+          <div class="card-amber">
+            <h3>Autonomous DO Variation Detection</h3>
+            <p>Continuously profiles dissolved oxygen with depth, autonomously identifying zones of hypoxia or stratification within the water column.</p>
+          </div>
+          <div class="card-blue">
+            <h3>Camera</h3>
+            <p>Onboard camera enables passive wildlife monitoring and automated species detection during dive missions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: Mission Profile -->
+      <section>
+        <div class="kicker">Autonomous Behavior</div>
+        <h2>Mission Control</h2>
+        <div class="grid-2" style="margin-top: 8px;">
+          <div class="card-blue">
+            <h3>User-Specified Input</h3>
+            <ul>
+              <li>Target depth via serial command (0.1 - 10.0 m)</li>
+              <li>Mission profile selection - pre-set or custom depth sequence</li>
+              <li>Motor power and hold duration tuning</li>
+              <li>Real-time mid-mission control: change depth or surface immediately</li>
+            </ul>
+          </div>
+          <div class="card-teal">
+            <h3>Continuous Autonomous Movement</h3>
+            <ul>
+              <li>Autonomously travels through a user-defined depth sequence</li>
+              <li>Descends to each target depth and pauses to collect sensor data</li>
+              <li>Continues to the next depth without any operator input</li>
+              <li>Completes the mission or responds to interrupt commands</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5b: DO Variation Detection -->
+      <section>
+        <div class="kicker">Intelligent Monitoring</div>
+        <h2>DO Variation Detection</h2>
+        <div class="two-col" style="align-items: start; margin-top: 8px;">
+          <div>
+            <div class="card-blue" style="margin-bottom: 8px;">
+              <h3>Primary Ecosystem Indicator</h3>
+              <p>DO is the key signal for aquatic health — low-oxygen zones directly restrict habitat for fish and aquatic life.</p>
+            </div>
+            <div class="card-amber" style="margin-bottom: 8px;">
+              <h3>Depth-Linked Profiling</h3>
+              <p>The robot maps DO from surface to floor, revealing stratification layers invisible to surface sensors.</p>
+            </div>
+            <div class="card-green">
+              <h3>Motion Linked to Sensing</h3>
+              <p>AquaGator links depth control to DO readings, autonomously flagging zones where DO drops below critical thresholds.</p>
+            </div>
+          </div>
+          <img class="img-real" src="../img/aquagator/do%20graph.png" alt="Dissolved oxygen vs depth graph">
+        </div>
+      </section>
+
+      <!-- SLIDE: Aquatic Life Detection -->
+      <section>
+        <div class="kicker">Computer Vision</div>
+        <h2>Aquatic Life Detection</h2>
+        <div class="grid-2" style="margin-top: 10px;">
+          <div class="card-teal">
+            <h3>Onboard Camera</h3>
+            <p>Records video during autonomous dive missions for passive aquatic monitoring at depth</p>
+          </div>
+          <div class="card-blue">
+            <h3>Trained ML Model</h3>
+            <p>Custom model trained on aquatic plants native to our local region — currently in testing</p>
+          </div>
+          <div class="card-green">
+            <h3>Species Identification</h3>
+            <p>Identifies aquatic plant species from video frames; extending to aquatic animals over time</p>
+          </div>
+          <div class="card-amber">
+            <h3>Lake Health Feedback</h3>
+            <p>Plant presence and health feed into an ecosystem assessment of overall lake condition</p>
+          </div>
+        </div>
+        <div class="box box-info" style="margin-top: 10px;">
+          <p><strong>Expanding:</strong> Field data from each mission continuously retrains the model — improving detection accuracy and species coverage over time.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: Data Retrieval -->
+      <section>
+        <div class="kicker">Data Pipeline</div>
+        <h2>Data Retrieval</h2>
+        <p style="margin: 4px 0 12px; font-size: 0.82em; color: #444;">MicroSD card or live USB transfer to lab, processed via Python (Pandas, NumPy, Matplotlib)</p>
+        <div class="metric-pair" style="margin-top: 12px;">
+          <div class="metric">
+            <div class="metric-label">Current Data Size Per Mission</div>
+            <div class="metric-value">100+ GB</div>
+            <p style="font-size: 0.9em; margin-top: 0.5em;">Multiple sensors × high-frequency sampling</p>
+          </div>
+          <div class="metric">
+            <div class="metric-label">Frequency Today</div>
+            <div class="metric-value">Monthly</div>
+            <p style="font-size: 0.9em; margin-top: 0.5em;">Physical retrieval limits deployment cadence</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE: Pool and Field Testing -->
+      <section>
+        <div class="kicker">Validation</div>
+        <h2>Pool and Field Testing</h2>
+        <div class="two-col" style="align-items: center; margin-top: 8px;">
+          <div>
+            <div class="card-blue" style="margin-bottom: 8px;">
+              <h3>Pool Testing</h3>
+              <ul>
+                <li>Depth sensor accuracy and stability</li>
+                <li>Motor control response at depth</li>
+                <li>Hold-position logic and state machine</li>
+              </ul>
+            </div>
+            <div class="card-teal">
+              <h3>Field Testing</h3>
+              <ul>
+                <li>Sensor accuracy in open-water conditions</li>
+                <li>Motor function in non-controlled environments</li>
+                <li>Buoyancy and tether handling on dock</li>
+                <li>Multi-mission endurance runs</li>
+              </ul>
+            </div>
+          </div>
+          <img class="img-real" src="../img/aquagator/pooltesting.gif" alt="Pool testing motion sequence" style="max-height: 260px; width: 100%; object-fit: cover;">
+        </div>
+      </section>
+
+      <!-- SLIDE: Field Photos -->
+      <section>
+        <div class="kicker">In the Field</div>
+        <div class="grid-2" style="margin-top: 8px;">
+          <img class="img-real" src="../img/aquagator/dock.jpg" alt="AquaGator at the dock" style="aspect-ratio: 16/9; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/dock_josephine.jpg" alt="Josephine at the dock" style="aspect-ratio: 16/9; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/robot-in-the-water.jpg" alt="Robot in the water" style="aspect-ratio: 16/9; object-fit: cover;">
+          <img class="img-real" src="../img/aquagator/boat.jpg" alt="Boat at field site" style="aspect-ratio: 16/9; object-fit: cover;">
+        </div>
+      </section>
+
+      <!-- SLIDE: Current Constraints -->
+      <section>
+        <div class="kicker">Current Constraints</div>
+        <h2>Where We Lose Time and Insight</h2>
+        <div class="grid-2">
+          <div class="card-red">
+            <h3>Physical Data Movement</h3>
+            <ul>
+              <li>Field data physically carried back to lab after each mission</li>
+              <li>Days to weeks between collection and analysis</li>
+              <li>Difficult to issue timely alerts to conservation partners</li>
+            </ul>
+          </div>
+          <div class="card-amber">
+            <h3>Limited Connectivity</h3>
+            <ul>
+              <li>No remote access today — tethered operation only</li>
+              <li>Limited deployment frequency and remote-site coverage</li>
+              <li>Starlink + campus DMZ can enable near real-time monitoring</li>
+            </ul>
+          </div>
+        </div>
+        <div class="box box-info" style="margin-top: 15px;">
+          <p><strong>The transformation:</strong> NSF CC* PA Science DMZ funding provides high-bandwidth connectivity, HPC storage, and campus infrastructure to close these gaps.</p>
+        </div>
+      </section>
+
+      <!-- SLIDE: Current & Future Work -->
+      <section>
+        <div class="kicker">Research Roadmap</div>
+        <h2>Current &amp; Future Work</h2>
+        <div class="grid-2">
+          <div class="card-amber">
+            <h3>Smaller, Untethered Design</h3>
+            <ul>
+              <li>Reduced form factor for easier transport and deployment</li>
+              <li>Wireless operation — eliminate or minimize tether constraint</li>
+            </ul>
+          </div>
+          <div class="card-green">
+            <h3>GPS Integration</h3>
+            <ul>
+              <li>Precise location tagging for every water-quality measurement</li>
+              <li>GPS-guided waypoint navigation and georeferenced data maps</li>
+            </ul>
+          </div>
+          <div class="card-blue">
+            <h3>Longitudinal Data Collection</h3>
+            <ul>
+              <li>Multi-season and multi-year datasets for trend analysis</li>
+              <li>Establish DO baselines to track environmental change over time</li>
+            </ul>
+          </div>
+          <div class="card-teal">
+            <h3>Real-Time Streaming &amp; Analytics</h3>
+            <ul>
+              <li>Live data to campus HPC storage via Starlink</li>
+              <li>ML-based DO anomaly detection and automated partner alerts</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+        hash: true,
+        transition: 'slide',
+        transitionSpeed: 'default',
+        controls: true,
+        progress: true,
+        center: true,
+        slideNumber: 'c/t',
+        showSlideNumber: 'all'
+    });
+  </script>
+</body>
+</html>

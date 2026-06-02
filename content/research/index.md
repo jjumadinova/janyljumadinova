@@ -22,6 +22,8 @@ We are currently building a hardware/software solution that is capable of monito
 
 Underwater robotic unit equipped with multiple sensors that are able to collect data autonomously. [Read an Allegheny news story.](https://sites.allegheny.edu/news/2019/02/19/allegheny-faculty-student-team-helps-develop-underwater-robots-to-perform-lake-research/) {{< youtube XLj_H2UTrLg >}}
 
+Latest conference talk slides (NSF context): [AquaGator presentation](/aquagator/).
+
 ### Well-being Monitoring
 
 A system comprising of multiple robots and wearable sensors with a goal of monitoring a person's well-being.. [Read an Allegheny news story.](https://sites.allegheny.edu/news/2015/08/28/looking-for-a-health-coach-try-a-robot/) {{< youtube TDzP5kkIrro >}}

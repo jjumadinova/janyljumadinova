@@ -9,11 +9,18 @@
     <lastBuildDate>Thu, 12 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://janyljumadinova.com/middleschool/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Session 4</title>
+      <title>Session 6</title>
+      <link>https://janyljumadinova.com/middleschool/session6/</link>
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://janyljumadinova.com/middleschool/session6/</guid>
+      <description>&lt;h1 id=&#34;session-6-make-your-robot-move&#34;&gt;Session 6: Make Your Robot Move!&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Use what you learned in Sessions 1–3 — micro:bit programming, buttons, and motor control — to write a MakeCode program that makes your robot move in a motion pattern of your choice.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;requirements&#34;&gt;Requirements&lt;/h2&gt;&#xA;&lt;p&gt;Your final program must meet these three rules:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;At least two functions&lt;/strong&gt; — for example &lt;code&gt;moveForward&lt;/code&gt; and &lt;code&gt;stopRobot&lt;/code&gt;, or &lt;code&gt;turnLeft&lt;/code&gt; and &lt;code&gt;turnRight&lt;/code&gt;. Functions make your code reusable and easier to read.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;At least one working button&lt;/strong&gt; — even if all it does is act as an emergency stop (&lt;code&gt;on button B pressed&lt;/code&gt; → &lt;code&gt;stopRobot&lt;/code&gt;). You may use both buttons for more control.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;A motion pattern&lt;/strong&gt; — pick one of the options below (or propose your own to an instructor).&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;choose-your-motion-pattern&#34;&gt;Choose Your Motion Pattern&lt;/h2&gt;&#xA;&lt;p&gt;Read through all three options, then pick the one that interests you most.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sessions 4 and 5</title>
       <link>https://janyljumadinova.com/middleschool/session4/</link>
       <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://janyljumadinova.com/middleschool/session4/</guid>
-      <description>&lt;h1 id=&#34;session-4-design-and-build-your-robot-chassis&#34;&gt;Session 4: Design and Build Your Robot Chassis&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Plan and build a cardboard chassis that fits all your robot&amp;rsquo;s components — two motors, two wheels, a battery pack, and the Motor:bit Breakout Board with the micro:bit mounted on top.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;why-were-switching-to-the-motorbit-board&#34;&gt;Why We&amp;rsquo;re Switching to the Motor:bit Board&lt;/h2&gt;&#xA;&lt;p&gt;In Session 3 you used an L298N motor driver — a large board wired up with many jumper wires. Today we&amp;rsquo;re upgrading to the &lt;strong&gt;Motor:bit Breakout Board&lt;/strong&gt;, which is a much better fit for a compact robot.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;sessions-4-and-5-design-and-build-your-robot-chassis&#34;&gt;Sessions 4 and 5: Design and Build Your Robot Chassis&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Goal:&lt;/strong&gt; Plan and build a cardboard chassis that fits all your robot&amp;rsquo;s components — two motors, two wheels, a battery pack, and the Motor:bit Breakout Board with the micro:bit mounted on top.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;why-were-switching-to-the-motorbit-board&#34;&gt;Why We&amp;rsquo;re Switching to the Motor:bit Board&lt;/h2&gt;&#xA;&lt;p&gt;In Session 3 you used an L298N motor driver — a large board wired up with many jumper wires. Today we&amp;rsquo;re upgrading to the &lt;strong&gt;Motor:bit Breakout Board&lt;/strong&gt;, which is a much better fit for a compact robot.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Session 1</title>
